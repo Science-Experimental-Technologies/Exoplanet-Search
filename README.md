@@ -116,6 +116,16 @@ These commands can download public mission data and perform expensive BLS search
 
 ## Methodology Summary
 
+```mermaid
+flowchart LR
+    A[Phase 0-2: Environment and data preparation] --> B[Phase 3: BLS detection]
+    B --> C[Phase 4-6: ML vetting and catalog checks]
+    C --> D[Phase 7: Scale-up and model selection]
+    D --> E[Phase 8: Candidate search]
+    E --> F[Phase 9: Independent validation]
+    F --> G[Phase 10-11: Publication and public release]
+```
+
 1. **Phase 0 — Environment:** pin dependencies, seeds, configuration, and artifact conventions.
 2. **Phases 1–2 — Data preparation:** acquire Kepler products, filter quality flags, normalize segments, and detrend flux.
 3. **Phase 3 — Detection:** search 0.5–50 day periods with BLS and retain five distinct peaks per target.
@@ -142,6 +152,8 @@ The live MAST smoke test is intentionally opt-in:
 $env:SXS_RUN_NETWORK_TESTS = "1"
 python -m pytest -m network tests/test_mast_client_network.py
 ```
+
+Hosted CI runs the deterministic non-network suite on Ubuntu with Python 3.11 and 3.12 using `requirements-core.txt`. Windows remains validated manually, and changes to RF/CNN or MLflow-dependent paths require a local full-stack run with `requirements.txt` before review.
 
 Primary result records:
 

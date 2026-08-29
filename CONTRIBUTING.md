@@ -15,6 +15,8 @@ python -m pip install -r requirements.txt
 
 On Linux or macOS, activate with `source .venv/bin/activate`. Use `requirements-core.txt` when working only on acquisition, preprocessing, or BLS components; use the full requirements for ML and complete test coverage.
 
+GitHub Actions installs only `requirements-core.txt` and runs the deterministic non-network suite on Ubuntu with Python 3.11 and 3.12. Contributors changing Random Forest, CNN, TensorFlow, MLflow, or full-pipeline behavior must additionally install `requirements.txt` and run the relevant full-stack checks locally before opening a pull request. Windows validation remains manual/local rather than a hosted CI claim.
+
 ## Tests and style
 
 Run the deterministic suite before opening a pull request:

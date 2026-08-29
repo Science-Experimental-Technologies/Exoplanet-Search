@@ -1,10 +1,10 @@
 # SXS: A Reproducible Kepler Transit-Recovery and Independent Vetting Pipeline
 
-**SCIX**
+**Rasya Andrean — Science Experimental Technologies**
 
 **Draft date:** 28 August 2026
 
-**Version:** 2.0.0
+**Version:** public software release 1.0.0; internal research milestone 2.0.0
 
 **Suggested venue:** arXiv astro-ph.EP or Research Notes of the AAS
 
@@ -206,7 +206,7 @@ The primary commands are documented in `README.md`. The default test command is 
 
 ## 8. Conclusion
 
-SXS v2.0.0 is a complete, auditable computational astronomy workflow spanning official data acquisition, preprocessing, transit recovery, target-grouped model evaluation, bounded candidate search, and independent vetting. Its strongest positive benchmark result is the feature-based vetter's reduction of v1 candidate false-positive rate from 1.00 at the BLS-only stage to 0.07 while retaining 12 of 15 BLS-recovered planets. Its most important search result is negative: among 20 ML-prioritized signals, independent validation identifies no strong candidate, one weak candidate, and 19 likely false positives.
+The internal SXS 2.0.0 research milestone, distributed in public software release 1.0.0, is a complete, auditable computational astronomy workflow spanning official data acquisition, preprocessing, transit recovery, target-grouped model evaluation, bounded candidate search, and independent vetting. Its strongest positive benchmark result is the feature-based vetter's reduction of v1 candidate false-positive rate from 1.00 at the BLS-only stage to 0.07 while retaining 12 of 15 BLS-recovered planets. Its most important search result is negative: among 20 ML-prioritized signals, independent validation identifies no strong candidate, one weak candidate, and 19 likely false positives.
 
 This outcome supports the project's central methodological claim rather than a discovery claim. A reproducible candidate-search pipeline should be able to reject its own highly ranked outputs when independent evidence is insufficient. KIC 8300900-r1 remains an unconfirmed weak signal requiring analysis beyond SXS. No object reported here is a confirmed exoplanet or a claimed new discovery.
 
