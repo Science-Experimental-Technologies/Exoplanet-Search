@@ -80,7 +80,7 @@
       "cnn_stability_passed": false,
       "cnn_role": "secondary_diagnostic"
     },
-    "phase8_authorized_by_artifacts": true
+    "search_authorized_by_artifacts": true
   },
   "finished_at_utc": "2026-08-26T09:56:31.115053+00:00"
 }

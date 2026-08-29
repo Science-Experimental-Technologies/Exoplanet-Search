@@ -1,12 +1,12 @@
 project:
   name: SCIX Exoplanet Search
-  version: sxs-v2-phase8
+  version: sxs-candidate-search-v1
   random_seed: 42
 
 paths:
-  raw: data/raw/phase8_unknown
-  processed: data/phase8/processed
-  catalog: data/phase8/catalog
+  raw: data/raw/search_targets
+  processed: data/search/processed
+  catalog: data/search/catalog
   reports: reports
 
 ingest:
@@ -45,20 +45,20 @@ candidate_search:
   minimum_kepler_magnitude: 10.0
   maximum_kepler_magnitude: 15.0
   model_path: models/rf_v2.joblib
-  model_selection: models/phase7_model_selection.json
+  model_selection: models/production_model_selection.json
   shortlist_size: 20
   required_label: unvalidated_candidate_requires_independent_confirmation
   odd_even_mismatch_max: 0.5
   secondary_to_primary_ratio_max: 0.2
   centroid_significance_max: 3.0
   artifacts:
-    eligible_pool: data/phase8/catalog/eligible_unknown_pool.parquet
-    selected_targets: data/phase8/catalog/selected_unknown_targets.yaml
-    selection_summary: data/phase8/catalog/selection_summary.json
-    processing_summary: data/phase8/processed/processing_summary.json
-    candidates: data/phase8/processed/scored_candidates.parquet
-    shortlist: data/phase8/processed/shortlist_top20.csv
-    figures: reports/phase8_candidates
-    report: reports/phase8_candidate_search.md
-    catalog_recheck: reports/phase8_catalog_recheck.json
-    run_record: reports/phase8_run_latest.json
+    eligible_pool: data/search/catalog/eligible_unknown_pool.parquet
+    selected_targets: data/search/catalog/selected_unknown_targets.yaml
+    selection_summary: data/search/catalog/selection_summary.json
+    processing_summary: data/search/processed/processing_summary.json
+    candidates: data/search/processed/scored_candidates.parquet
+    shortlist: data/search/processed/shortlist_top20.csv
+    figures: reports/candidate_figures
+    report: reports/candidate_screening.md
+    catalog_recheck: reports/candidate_catalog_recheck.json
+    run_record: reports/search_run_latest.json

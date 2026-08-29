@@ -1,10 +1,10 @@
-# Phase 7 — Scale-up and retraining
+# Scaled Model Qualification
 
 ## Acceptance result
 
-Phase 7 uses **371 confirmed hosts / 434 planets** and **400 balanced official false-positive hosts**, versus 20 + 20 systems in v1. The candidate-level ML dataset contains 2227 rows (227 positive, 2000 negative) across 619 target groups.
+scale-up qualification uses **371 confirmed hosts / 434 planets** and **400 balanced official false-positive hosts**, versus 20 + 20 systems in v1. The candidate-level ML dataset contains 2227 rows (227 positive, 2000 negative) across 619 target groups.
 
-The production model selected for Phase 8 is **rf_v2** at threshold **0.221107**. Phase 8 is not executed by this report.
+The production model selected for candidate screening is **rf_v2** at threshold **0.221107**. candidate screening is not executed by this report.
 
 ## Selection and resource policy
 
@@ -47,7 +47,7 @@ The operating point is selected from grouped out-of-fold precision–recall pred
 
 - RF: threshold 0.221107, precision 0.412, recall 0.903.
 - CNN: threshold 0.394803, precision 0.198, recall 0.912.
-- Complete OOF precision–recall operating points are stored in `reports/experiments/phase7/rf_v2_pr_curve.csv` and `cnn_v2_pr_curve.csv`.
+- Complete OOF precision–recall operating points are stored in `reports/experiments/scaleup/rf_v2_pr_curve.csv` and `cnn_v2_pr_curve.csv`.
 
 ## CNN stability and production decision
 

@@ -1,4 +1,4 @@
-# Phase 3 — BLS Recall Baseline
+# BLS Transit-Recovery Benchmark
 
 ## Primary result
 
@@ -10,7 +10,7 @@ The full validation sample has 47 planets; 11 are outside the configured period 
 
 ## Search method
 
-- Input: Phase 2 detrended flux; interpolated samples excluded.
+- Input: preprocessing detrended flux; interpolated samples excluded.
 - Period range: 0.5–50.0 days.
 - Trial durations: [1.0, 2.0, 4.0, 8.0, 12.0] hours; values not shorter than the minimum period are rejected.
 - Frequency oversampling: 5.0 relative to the Rayleigh resolution `1/baseline`.

@@ -1,10 +1,10 @@
-# SXS Phase 12: CI, Release, Metadata, and DOI
+# SXS Release Operations: CI, Metadata, and DOI
 
 Date: 2026-08-29
 
 Repository: https://github.com/Science-Experimental-Technologies/Exoplanet-Search
 
-Scope: infrastructure, release packaging, discoverability metadata, and archival guidance only. Phase 12 does not change any scientific algorithm, metric, candidate classification, or interpretation.
+Scope: infrastructure, release packaging, discoverability metadata, and archival guidance only. This work does not change any scientific algorithm, metric, candidate classification, or interpretation.
 
 ## Status
 
@@ -14,7 +14,7 @@ Scope: infrastructure, release packaging, discoverability metadata, and archival
 | GitHub Release `v1.0.0` | Pending execution | The tag is present on the remote. Release creation and PDF upload remain to be completed and verified. |
 | Repository About metadata | Pending execution | Final description, topics, and website are specified below. |
 | Zenodo DOI | Documented - pending RA account action | GitHub-Zenodo linking requires the repository owner's Zenodo session. No DOI is claimed until Zenodo returns one. |
-| README methodology diagram | Done locally | A native Mermaid flowchart complements the existing numbered methodology summary. |
+| README methodology diagram | Done locally | A native Mermaid flowchart presents the workflow by scientific responsibility. |
 
 ## Continuous integration design
 
@@ -40,10 +40,10 @@ Release notes below are reformatted directly from the `[1.0.0]` entry in `CHANGE
 
 - Reproducible Kepler light-curve acquisition, preprocessing, Box Least Squares transit recovery, candidate-level feature construction, and catalog validation.
 - Target-grouped Random Forest and compact one-dimensional CNN benchmark evaluations.
-- Phase 7 scale-up to 371 confirmed hosts, 434 eligible planets, and 400 official false-positive targets.
+- Scaled benchmark of 371 confirmed hosts, 434 eligible planets, and 400 official false-positive targets.
 - Frozen RF v2 selection policy and exploratory manual-review threshold.
-- Deterministic Phase 8 search of 250 targets without cumulative-KOI or confirmed-Kepler-name history.
-- Phase 9 independent validation using empirical shuffle FAP, odd/even and secondary tests, limb-darkened transit fitting, Gaia DR3 scene checks, TESS photometry, and an ExoFOP-derived TOI lookup.
+- Deterministic screening of 250 targets without cumulative-KOI or confirmed-Kepler-name history.
+- Independent validation using empirical shuffle FAP, odd/even and secondary tests, limb-darkened transit fitting, Gaia DR3 scene checks, TESS photometry, and an ExoFOP-derived TOI lookup.
 - Full research report, RNAAS-length manuscript draft, verified preprint PDF, citation metadata, contribution guidance, security policy, code of conduct, and scientific disclaimer.
 
 ### Scientific result
@@ -56,13 +56,13 @@ Release notes below are reformatted directly from the `[1.0.0]` entry in `CHANGE
 
 ### Development history
 
-- **Internal SXS v1, Phases 0-6:** established the 20-system baseline pipeline, target-grouped ML evaluation, and catalog cross-checking.
-- **Internal SXS v2, Phases 7-10:** expanded the labeled data, retrained and froze model selection, conducted the bounded candidate search, completed independent validation, and prepared publication artifacts.
+- **Baseline research program:** established the 20-system recovery pipeline, target-grouped ML evaluation, and catalog cross-checking.
+- **Scale-up research program:** expanded the labeled data, retrained and froze model selection, conducted the bounded candidate search, completed independent validation, and prepared publication artifacts.
 - Public version numbering begins with this `1.0.0` release.
 
 Release asset:
 
-- Attach the verified preprint PDF as `sxs_preprint_v1.0.0.pdf`. Its metadata and page header identify public release 1.0.0 while the manuscript explicitly records internal research milestone 2.0.0; all eight rendered pages passed visual inspection.
+- Attach the verified preprint PDF as `sxs_preprint_v1.0.0.pdf`. Its metadata and page header identify public release 1.0.0; all eight rendered pages passed visual inspection.
 - For later releases, publish revised PDFs as release assets rather than repeatedly committing generated PDF builds under `output/pdf/`.
 
 ## Repository About metadata
@@ -98,4 +98,4 @@ A DOI provides a durable scholarly identifier for the archived release even if t
 - Confirm the Release points to tag `v1.0.0` and contains the expected PDF asset.
 - Confirm About description, topics, and website are visible publicly.
 - Confirm Zenodo integration/DOI status without claiming a DOI prematurely.
-- Confirm the final working tree is clean and all Phase 12 changes are forward commits on `main`.
+- Confirm the final working tree is clean and all release-operation changes are forward commits on `main`.

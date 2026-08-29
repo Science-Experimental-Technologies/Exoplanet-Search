@@ -9,12 +9,12 @@ import yaml
 from src.candidate_search.search import _apply_sanity_flags, _centroid_check
 
 
-def test_phase8_requires_conservative_catalog_label_and_v2_model() -> None:
+def test_candidate_search_requires_conservative_catalog_label_and_v2_model() -> None:
     config = yaml.safe_load(Path("configs/candidate_search.yaml").read_text(encoding="utf-8"))
     settings = config["candidate_search"]
     assert settings["required_label"] == "unvalidated_candidate_requires_independent_confirmation"
     assert settings["model_path"] == "models/rf_v2.joblib"
-    assert "phase8" in settings["artifacts"]["report"]
+    assert settings["artifacts"]["report"] == "reports/candidate_screening.md"
 
 
 def test_sanity_flags_treat_missing_centroid_as_unavailable_not_measured_pass() -> None:
@@ -55,4 +55,3 @@ def test_centroid_check_detects_synthetic_in_transit_shift() -> None:
     result = _centroid_check({"time": time, "row": row, "column": column}, candidate)
     assert result["centroid_available"] is True
     assert result["centroid_shift_significance"] > 3
-

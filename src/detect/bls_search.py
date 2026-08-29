@@ -1,4 +1,4 @@
-"""Phase 3 Box Least Squares search and catalog-recovery evaluation."""
+"""Box Least Squares transit search and catalog-recovery evaluation."""
 
 from __future__ import annotations
 
@@ -300,7 +300,7 @@ def run_bls(config_path: str | Path = "configs/base.yaml") -> tuple[pd.DataFrame
         artifact_path(
             config,
             "bls_report",
-            Path(config["paths"]["reports"]) / "phase3_bls_recall.md",
+            Path(config["paths"]["reports"]) / "baseline_transit_recovery.md",
         ),
         parameters,
     )
@@ -333,7 +333,7 @@ def _write_report(
     denominator = len(eligible)
     successful = [item for item in diagnostics if "trial_periods" in item]
     lines = [
-        "# Phase 3 — BLS Recall Baseline",
+        "# BLS Transit-Recovery Benchmark",
         "",
         "## Primary result",
         "",
@@ -349,7 +349,7 @@ def _write_report(
         "",
         "## Search method",
         "",
-        "- Input: Phase 2 detrended flux; interpolated samples excluded.",
+        "- Input: preprocessing detrended flux; interpolated samples excluded.",
         f"- Period range: {parameters['minimum_period_days']}–{parameters['maximum_period_days']} days.",
         f"- Trial durations: {parameters['durations_hours']} hours; values not shorter than the minimum period are rejected.",
         f"- Frequency oversampling: {parameters['frequency_oversampling']} relative to the Rayleigh resolution `1/baseline`.",

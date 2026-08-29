@@ -1,1 +1,1 @@
-"""SXS v2 Phase 7 scale-up modules."""
+"""Scaled dataset construction and production-model qualification."""

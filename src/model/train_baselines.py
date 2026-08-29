@@ -139,7 +139,7 @@ def run_training(config_path: str | Path = "configs/base.yaml") -> tuple[dict[st
         rows.append({"model": payload["model"], "scope": "out_of_fold_aggregate", **payload["aggregate_metrics"]})
         rows.extend({"model": payload["model"], "scope": f"fold_{fold['fold']}", **fold} for fold in payload["fold_metrics"])
     pd.DataFrame(rows).to_csv(reports / "cv_metrics.csv", index=False)
-    _write_report(feature, cnn, metadata, Path("reports/phase4_ml_baseline.md"))
+    _write_report(feature, cnn, metadata, Path("reports/model_benchmark.md"))
     return feature, cnn
 
 
@@ -248,7 +248,7 @@ def _experiment_payload(
 def _write_report(feature: dict[str, Any], cnn: dict[str, Any], metadata: pd.DataFrame, path: Path) -> None:
     baseline_precision = float(metadata.label.mean())
     lines = [
-        "# Phase 4 — Machine-learning baselines",
+        "# Machine-Learning Model Benchmark",
         "",
         "## Result",
         "",
@@ -273,13 +273,13 @@ def _write_report(feature: dict[str, Any], cnn: dict[str, Any], metadata: pd.Dat
         "",
         "The feature model uses BLS period, depth, duration, power and S/N plus duty cycle, robust scatter, odd/even depth mismatch, a phase-0.5 secondary-eclipse check, transit count, and in-transit point count. The CNN uses a robustly normalized 512-bin global folded view.",
         "",
-        "Positive labels are restricted to exact ±1% Phase-3 recoveries. Official `FALSE POSITIVE` rows come from the Kepler cumulative KOI table and are balanced across not-transit, stellar-eclipse, centroid-offset, and ephemeris-contamination flags. Unmatched peaks on known planet hosts are excluded instead of being assumed negative.",
+        "Positive labels are restricted to exact ±1% transit-recovery matches. Official `FALSE POSITIVE` rows come from the Kepler cumulative KOI table and are balanced across not-transit, stellar-eclipse, centroid-offset, and ephemeris-contamination flags. Unmatched peaks on known planet hosts are excluded instead of being assumed negative.",
         "",
         "## Interpretation and limitations",
         "",
         "This is a small candidate-level benchmark, not evidence that either model generalizes to an unconstrained survey. The negative systems use four cached Kepler quarters per target while most positive hosts use all available quarters; quarter coverage may therefore be a nuisance variable despite robust normalization. Hyperparameters and the 0.5 threshold were fixed before evaluation, but the same folds serve as validation for CNN early stopping, so reported results should be treated as preliminary.",
         "",
-        "The Phase-3 end-to-end detector recall remains 15/36 (41.67%) within 0.5–50 days. The ML metrics above measure vetting only among the candidate set and do not replace that detection recall.",
+        "The end-to-end detector recall remains 15/36 (41.67%) within 0.5–50 days. The ML metrics above measure vetting only among the candidate set and do not replace that detection recall.",
         "",
     ]
     path.write_text("\n".join(lines), encoding="utf-8")

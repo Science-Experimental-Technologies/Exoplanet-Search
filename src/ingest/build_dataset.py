@@ -1,4 +1,4 @@
-"""Build the Phase 1 light-curve/ground-truth dataset manifest."""
+"""Build the data acquisition light-curve/ground-truth dataset manifest."""
 
 from __future__ import annotations
 

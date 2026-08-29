@@ -1,4 +1,4 @@
-"""Build the labeled feature matrix and folded tensors for Phase 4."""
+"""Build the labeled feature matrix and folded tensors for the model benchmark."""
 
 from __future__ import annotations
 

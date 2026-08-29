@@ -8,7 +8,22 @@ version = "1.0.0"
 description = "Reproducible exoplanet transit recovery pipeline using public light curves"
 readme = "README.md"
 requires-python = ">=3.11,<3.13"
+authors = [
+  { name = "Rasya Andrean" },
+]
+license = { file = "LICENSE" }
 dynamic = ["dependencies"]
+
+[project.urls]
+Homepage = "https://www.rasyaandrean.my.id/"
+Repository = "https://github.com/Science-Experimental-Technologies/Exoplanet-Search"
+Documentation = "https://github.com/Science-Experimental-Technologies/Exoplanet-Search#readme"
+
+[project.scripts]
+sxs = "src.cli:main"
+
+[tool.setuptools]
+license-files = ["LICENSE", "NOTICE"]
 
 [tool.setuptools.dynamic]
 dependencies = { file = ["requirements-core.txt"] }

@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "If you use SXS in research or teaching, please cite this software release."
+message: "If SXS materially supports a project, publication, or output, cite this software and credit Rasya Andrean and Science Experimental Technologies."
 title: "SCIX Exoplanet Search (SXS): Reproducible Kepler Transit Recovery and Independent Vetting"
 type: software
 authors:
@@ -8,7 +8,7 @@ authors:
     affiliation: "Science Experimental Technologies"
 version: 1.0.0
 date-released: 2026-08-29
-license: MIT
+license: "LicenseRef-SXS-Source-Available-1.0"
 repository-code: "https://github.com/Science-Experimental-Technologies/Exoplanet-Search"
 abstract: >-
   A reproducible computational astronomy pipeline for Kepler light-curve

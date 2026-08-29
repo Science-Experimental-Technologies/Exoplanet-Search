@@ -1,4 +1,4 @@
-"""Grouped Phase 7 retraining, threshold selection, and v1 comparison."""
+"""Grouped scale-up qualification retraining, threshold selection, and v1 comparison."""
 
 from __future__ import annotations
 
@@ -33,14 +33,14 @@ LOGGER = logging.getLogger("sxs.scaleup.train")
 TARGET_REVIEW_RECALL = 0.90
 
 
-def train_phase7(config_path: str | Path = "configs/scaleup.yaml") -> dict[str, Any]:
+def train_scaleup(config_path: str | Path = "configs/scaleup.yaml") -> dict[str, Any]:
     config = yaml.safe_load(Path(config_path).read_text(encoding="utf-8"))
     metadata_path = artifact_path(config, "ml_metadata", "data/processed/ml_candidate_metadata.csv")
     views_path = artifact_path(config, "ml_views", "data/processed/ml_folded_views.npz")
     metadata = pd.read_csv(metadata_path, dtype={"target_id": str})
     archive = np.load(views_path)
     views = archive["views"]
-    experiments = artifact_path(config, "experiments", "reports/experiments/phase7")
+    experiments = artifact_path(config, "experiments", "reports/experiments/scaleup")
     experiments.mkdir(parents=True, exist_ok=True)
     feature = evaluate_random_forest(config, metadata)
     (experiments / "rf_v2_cv.json").write_text(json.dumps(feature, indent=2) + "\n", encoding="utf-8")
@@ -49,10 +49,10 @@ def train_phase7(config_path: str | Path = "configs/scaleup.yaml") -> dict[str, 
     (experiments / "cnn_v2_cv.json").write_text(json.dumps(cnn, indent=2) + "\n", encoding="utf-8")
     _write_pr_curve(metadata["label"].to_numpy(dtype=int), cnn, experiments / "cnn_v2_pr_curve.csv")
     selected = _select_production_model(feature, cnn, config)
-    selection_path = Path("models/phase7_model_selection.json")
+    selection_path = Path("models/production_model_selection.json")
     selection_path.write_text(json.dumps(selected, indent=2) + "\n", encoding="utf-8")
     result = {"feature": feature, "cnn": cnn, "selection": selected}
-    _write_phase7_report(config, metadata, result)
+    _write_scaleup_report(config, metadata, result)
     return result
 
 
@@ -281,7 +281,7 @@ def _assert_no_overlap(groups: np.ndarray, train: np.ndarray, test: np.ndarray) 
         raise RuntimeError(f"Target leakage: {sorted(overlap)}")
 
 
-def _write_phase7_report(
+def _write_scaleup_report(
     config: dict[str, Any], metadata: pd.DataFrame, result: dict[str, Any]
 ) -> None:
     selection_summary = json.loads(
@@ -306,16 +306,16 @@ def _write_phase7_report(
     cnn = result["cnn"]
     chosen = result["selection"]
     lines = [
-        "# Phase 7 — Scale-up and retraining",
+        "# Scaled Model Qualification",
         "",
         "## Acceptance result",
         "",
-        f"Phase 7 uses **{selection_summary['positive_targets_after_quality']} confirmed hosts / {selection_summary['positive_planets_after_quality']} planets** and "
+        f"The scaled benchmark uses **{selection_summary['positive_targets_after_quality']} confirmed hosts / {selection_summary['positive_planets_after_quality']} planets** and "
         f"**{selection_summary['negative_targets_selected']} balanced official false-positive hosts**, versus 20 + 20 systems in v1. "
         f"The candidate-level ML dataset contains {len(metadata)} rows ({int(metadata.label.sum())} positive, {int((metadata.label == 0).sum())} negative) across {metadata.target_id.nunique()} target groups.",
         "",
-        f"The production model selected for Phase 8 is **{chosen['selected_model']}** at threshold **{chosen['decision_threshold']:.6f}**. "
-        "Phase 8 is not executed by this report.",
+        f"The production model selected for candidate screening is **{chosen['selected_model']}** at threshold **{chosen['decision_threshold']:.6f}**. "
+        "Candidate screening is not executed by this report.",
         "",
         "## Selection and resource policy",
         "",
@@ -358,7 +358,7 @@ def _write_phase7_report(
         "",
         f"- RF: threshold {rf['review_threshold_selection']['threshold']:.6f}, precision {rf['review_threshold_selection']['precision']:.3f}, recall {rf['review_threshold_selection']['recall']:.3f}.",
         f"- CNN: threshold {cnn['review_threshold_selection']['threshold']:.6f}, precision {cnn['review_threshold_selection']['precision']:.3f}, recall {cnn['review_threshold_selection']['recall']:.3f}.",
-        "- Complete OOF precision–recall operating points are stored in `reports/experiments/phase7/rf_v2_pr_curve.csv` and `cnn_v2_pr_curve.csv`.",
+        "- Complete OOF precision–recall operating points are stored in `reports/experiments/scaleup/rf_v2_pr_curve.csv` and `cnn_v2_pr_curve.csv`.",
         "",
         "## CNN stability and production decision",
         "",
@@ -371,7 +371,7 @@ def _write_phase7_report(
         "The S/N and magnitude filters deliberately emphasize reliable training signals and therefore do not represent the hardest unknown targets. Four-product coverage is consistent across classes but shorter than full Kepler coverage. KOI flags overlap physically, although selection categories are target-unique. A future nested calibration set is required before treating the threshold as a calibrated posterior probability.",
         "",
     ]
-    report = artifact_path(config, "report", "reports/phase7_scaleup.md")
+    report = artifact_path(config, "report", "reports/model_qualification.md")
     report.write_text("\n".join(lines), encoding="utf-8")
 
 
@@ -380,7 +380,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     parser.add_argument("--config", default="configs/scaleup.yaml")
     args = parser.parse_args(argv)
     logging.basicConfig(level=logging.INFO, format="%(asctime)s | %(levelname)s | %(name)s | %(message)s")
-    result = train_phase7(args.config)
+    result = train_scaleup(args.config)
     print(json.dumps({"selection": result["selection"]}, indent=2))
     return 0
 

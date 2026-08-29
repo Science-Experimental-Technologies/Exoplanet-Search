@@ -80,7 +80,7 @@ machine_learning:
 # data, spanning single/multi-planet systems, shallow/deep transits, active and
 # blended stars, and periods from <1 day to hundreds of days. This is a fixed,
 # intentionally non-random benchmark sample; catalog values are refreshed from
-# NASA Exoplanet Archive and remain the Phase 1 source of truth.
+# NASA Exoplanet Archive and remain the data acquisition source of truth.
 targets:
   - {id: "11904151", id_type: KIC, name: Kepler-10, reason: "Bright benchmark; small transiting planets"}
   - {id: "10593626", id_type: KIC, name: Kepler-22, reason: "Longer-period benchmark"}

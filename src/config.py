@@ -9,7 +9,7 @@ import yaml
 
 
 def load_targets(config: dict[str, Any]) -> list[dict[str, Any]]:
-    """Load inline v1 targets or an external Phase 7 target list."""
+    """Load inline v1 targets or an external scale-up qualification target list."""
 
     inline = config.get("targets") or []
     if inline:
@@ -28,6 +28,6 @@ def load_targets(config: dict[str, Any]) -> list[dict[str, Any]]:
 
 
 def artifact_path(config: dict[str, Any], key: str, default: str | Path) -> Path:
-    """Resolve an optional Phase 7 artifact override without changing v1 paths."""
+    """Resolve an optional scale-up qualification artifact override without changing v1 paths."""
 
     return Path(config.get("scaleup", {}).get("artifacts", {}).get(key, default))

@@ -1,6 +1,6 @@
 {
   "generated_at_utc": "2026-08-28T11:57:21.289614+00:00",
-  "phase": 9,
+  "workflow": "independent_validation",
   "status": "accepted",
   "config_path": "configs/independent_validation.yaml",
   "frozen_shortlist_sha256": "68a736fed9172d1c104689d87b9b11d57731371b3a48080700d919e59f97033b",
@@ -24,5 +24,5 @@
     "no_confirmed_claim": true,
     "transparent_score_reconciles": true
   },
-  "phase10_unlocked": true
+  "publication_ready": true
 }

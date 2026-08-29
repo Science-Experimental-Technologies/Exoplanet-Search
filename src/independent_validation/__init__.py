@@ -1,2 +1,1 @@
-"""Independent Phase 9 validation, deliberately isolated from ML scoring."""
-
+"""Independent validation deliberately isolated from ML scoring."""

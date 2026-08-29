@@ -5,7 +5,7 @@ import pandas as pd
 
 from src.independent_validation.fap import _stable_seed
 from src.independent_validation.metrics import odd_even_test, secondary_eclipse_test
-from src.independent_validation.run_phase9 import ALLOWED_CATEGORIES, add_independent_ranking
+from src.independent_validation.run_validation import ALLOWED_CATEGORIES, add_independent_ranking
 
 
 def _candidate() -> pd.Series:

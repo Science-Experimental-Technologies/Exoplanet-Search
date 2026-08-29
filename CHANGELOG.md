@@ -7,9 +7,16 @@ All notable changes to this project are documented in this file. The format foll
 ### Added
 
 - GitHub Actions CI for the core deterministic test suite on Ubuntu with Python 3.11 and 3.12.
-- Phase 12 release, repository-metadata, and Zenodo DOI guidance.
+- Release, repository-metadata, and Zenodo DOI guidance.
 - Mermaid overview of the end-to-end SXS methodology.
 - Minimal SXS corporate wordmark banner for the repository landing page.
+- Unified product-oriented command interface for baseline, scale-up, search, and validation workflows.
+- Commercial-use guide and formal creator/funding notice.
+
+### Changed
+
+- Reframed public documentation and report names around scientific responsibilities instead of numbered development milestones.
+- Replaced the MIT license on the current branch with the SXS Source-Available Commercial License 1.0, including mandatory attribution and a 10% Covered Revenue royalty for commercial use. Previously granted MIT rights for copies of `v1.0.0` remain unaffected.
 
 ## [1.0.0] - 2026-08-29
 
@@ -17,10 +24,10 @@ All notable changes to this project are documented in this file. The format foll
 
 - Reproducible Kepler light-curve acquisition, preprocessing, Box Least Squares transit recovery, candidate-level feature construction, and catalog validation.
 - Target-grouped Random Forest and compact one-dimensional CNN benchmark evaluations.
-- Phase 7 scale-up to 371 confirmed hosts, 434 eligible planets, and 400 official false-positive targets.
+- Scaled benchmark of 371 confirmed hosts, 434 eligible planets, and 400 official false-positive targets.
 - Frozen RF v2 selection policy and exploratory manual-review threshold.
-- Deterministic Phase 8 search of 250 targets without cumulative-KOI or confirmed-Kepler-name history.
-- Phase 9 independent validation using empirical shuffle FAP, odd/even and secondary tests, limb-darkened transit fitting, Gaia DR3 scene checks, TESS photometry, and an ExoFOP-derived TOI lookup.
+- Deterministic search of 250 targets without cumulative-KOI or confirmed-Kepler-name history.
+- Independent validation using empirical shuffle FAP, odd/even and secondary tests, limb-darkened transit fitting, Gaia DR3 scene checks, TESS photometry, and an ExoFOP-derived TOI lookup.
 - Full research report, RNAAS-length manuscript draft, verified preprint PDF, citation metadata, contribution guidance, security policy, code of conduct, and scientific disclaimer.
 
 ### Scientific result
@@ -33,9 +40,9 @@ All notable changes to this project are documented in this file. The format foll
 
 ### Development history
 
-- **Internal SXS v1, Phases 0–6:** established the 20-system baseline pipeline, target-grouped ML evaluation, and catalog cross-checking.
-- **Internal SXS v2, Phases 7–10:** expanded the labeled data, retrained and froze model selection, conducted the bounded candidate search, completed independent validation, and prepared publication artifacts.
-- The local `v2.0.0` tag records that internal scale-up milestone. Public version numbering begins with this `1.0.0` release.
+- The baseline program established the 20-system recovery workflow, target-grouped ML evaluation, and catalog cross-checking.
+- The scale-up program expanded the labeled data, froze model selection, conducted the bounded candidate search, completed independent validation, and prepared publication artifacts.
+- Public version numbering begins with the `1.0.0` release.
 
 [Unreleased]: https://github.com/Science-Experimental-Technologies/Exoplanet-Search/compare/v1.0.0...HEAD
 [1.0.0]: https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/tag/v1.0.0

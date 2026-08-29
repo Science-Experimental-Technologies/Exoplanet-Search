@@ -1,6 +1,6 @@
-# SXS Phase 10 Release Audit
+# SXS Manuscript Release Audit
 
-Release: `v2.0.0`
+Research record: public release `v1.0.0`
 
 Audit date: 2026-08-28
 
@@ -9,10 +9,10 @@ Scope: publication preparation only; no journal submission, arXiv upload, reposi
 ## Publication artifacts
 
 - Self-contained preprint source: `reports/research_report.md`
-- Submission-style PDF: `output/pdf/sxs_preprint_v2.0.0.pdf`
+- Submission-style PDF: `output/pdf/sxs_preprint_v1.0.0.pdf`
 - Project summary: `reports/sxs_project_summary.md`
 - Citation metadata: `CITATION.cff`
-- License: `LICENSE` (MIT)
+- License: `LICENSE` (SXS Source-Available Commercial License 1.0 for the current revision; archived `v1.0.0` rights remain unchanged)
 - Version history: `CHANGELOG.md`
 - Reproducible PDF builder: `scripts/build_preprint_pdf.py`
 
@@ -20,11 +20,11 @@ The eight-page A4 PDF was rasterized page by page and visually inspected. The re
 
 ## Scientific-claim audit
 
-The release preserves the Phase 9 outcome exactly: 0 `strong_candidate`, 1 `weak_candidate`, and 19 `likely_false_positive`. KIC 8300900-r1 is described only as a weak, unconfirmed signal. Neither the preprint nor the release metadata claims a new or confirmed exoplanet.
+The release preserves the independent validation outcome exactly: 0 `strong_candidate`, 1 `weak_candidate`, and 19 `likely_false_positive`. KIC 8300900-r1 is described only as a weak, unconfirmed signal. Neither the preprint nor the release metadata claims a new or confirmed exoplanet.
 
 ## Reproducibility and repository hygiene
 
-- Phase 8 selection and Phase 9 validation inputs are frozen in versioned artifacts.
+- Candidate-screening and independent-validation inputs are frozen in versioned artifacts.
 - Raw light curves, caches, fitted model binaries, virtual environments, and temporary PDF rasters are excluded from version control.
 - Documentation dependencies are pinned in `requirements-docs.txt`.
 - The release tree was scanned for absolute workstation paths and common credential patterns.
@@ -32,4 +32,4 @@ The release preserves the Phase 9 outcome exactly: 0 `strong_candidate`, 1 `weak
 
 ## Acceptance result
 
-Phase 10 is accepted for the `v2.0.0` release commit and annotated tag. The release is a reproducible negative/ambiguous-result case study and is ready for human review before any external submission.
+The manuscript package is accepted as a reproducible negative/ambiguous-result case study and is ready for human review before any external submission.

@@ -3,8 +3,8 @@
 Checked against:
 
 - `reports/research_report.md`
-- `reports/phase9_independent_validation.md`
-- `reports/experiments/phase7/rf_v2_cv.json` only for the explicitly identified derived RF v2 FPR
+- `reports/independent_validation.md`
+- `reports/experiments/scaleup/rf_v2_cv.json` only for the explicitly identified derived RF v2 FPR
 
 ## Editorial checks
 
@@ -28,15 +28,15 @@ Checked against:
 | v2 RF review threshold | 0.221107 | `research_report.md`: 0.221107 | Match |
 | v2 RF review precision / recall | 0.412 / 0.903 | `research_report.md`: 0.412 / 0.903 | Match |
 | v2 RF review FPR | 0.146 | Derived from the frozen out-of-fold artifact: 292 FP / 2,000 negative peaks = 0.146; precision check 205/497 = 0.4124748491 and recall check 205/227 = 0.9030837004 | Derived, exact |
-| Phase 8 target count | 250 | `research_report.md`: 250 | Match |
-| Phase 8 BLS peaks / RF passes / sanity passes | 1,250 / 151 / 110 | `research_report.md`: same | Match |
-| Frozen shortlist / unique KICs | 20 / 14 | `research_report.md` and `phase9_independent_validation.md`: same | Match |
-| Phase 9 null draws | 1,000 per target | Both source reports: 1,000 | Match |
+| candidate screening target count | 250 | `research_report.md`: 250 | Match |
+| candidate screening BLS peaks / RF passes / sanity passes | 1,250 / 151 / 110 | `research_report.md`: same | Match |
+| Frozen shortlist / unique KICs | 20 / 14 | `research_report.md` and `independent_validation.md`: same | Match |
+| independent validation null draws | 1,000 per target | Both source reports: 1,000 | Match |
 | Strong FAP threshold | 0.01 | Both source reports: 0.01 | Match |
 | Final category counts | 0 strong / 1 weak / 19 likely FP | Both source reports: same | Match |
 | Weak signal | KIC 8300900-r1 | Both source reports: same | Match |
 | Weak-signal period | 5.090289 days | Both source reports: 5.090289 days | Match |
-| Weak-signal empirical FAP | 20/1,001 = 0.01998 | `research_report.md`: 20/1,001 = 0.01998; Phase 9 table rounds to 0.0200 | Match |
+| Weak-signal empirical FAP | 20/1,001 = 0.01998 | `research_report.md`: 20/1,001 = 0.01998; independent validation table rounds to 0.0200 | Match |
 | Public TOI matches | 0 among 14 targets | Both source reports: no matched record for 14 targets | Match |
 | Kepler products per search target | 4 | Both source reports: four | Match |
 

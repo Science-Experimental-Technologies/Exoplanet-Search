@@ -1,4 +1,4 @@
-"""Run the Phase 8 unknown-target search with the accepted Phase 7 RF model."""
+"""Run the candidate screening unknown-target search with the accepted scale-up qualification RF model."""
 
 from __future__ import annotations
 
@@ -26,7 +26,7 @@ from src.preprocess.detrend import detrend_light_curve
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
 
-LOGGER = logging.getLogger("sxs.phase8.search")
+LOGGER = logging.getLogger("sxs.candidate_search.search")
 
 
 def run_candidate_search(config_path: str | Path = "configs/candidate_search.yaml") -> dict[str, Any]:
@@ -37,7 +37,7 @@ def run_candidate_search(config_path: str | Path = "configs/candidate_search.yam
     targets = yaml.safe_load(Path(artifacts["selected_targets"]).read_text(encoding="utf-8"))["targets"]
     model_selection = json.loads(Path(settings["model_selection"]).read_text(encoding="utf-8"))
     if model_selection["selected_model"] != "rf_v2":
-        raise RuntimeError("Phase 8 config requires the accepted rf_v2 production model")
+        raise RuntimeError("candidate screening config requires the accepted rf_v2 production model")
     threshold = float(model_selection["decision_threshold"])
     model = joblib.load(settings["model_path"])
     client = MastLightCurveClient(config["paths"]["raw"])
@@ -115,7 +115,7 @@ def run_candidate_search(config_path: str | Path = "configs/candidate_search.yam
             found["model_pass"] = probabilities >= threshold
             found["catalog_status"] = settings["required_label"]
             found["score_provenance"] = (
-                "rf_v2_phase7_full_training_model_probability_not_independently_calibrated"
+                "rf_v2_scaleup_full_training_model_probability_not_independently_calibrated"
             )
             centroid_results = [
                 _centroid_check(centroids, row) for _, row in found.iterrows()
@@ -354,7 +354,7 @@ def _write_report(
     artifacts = settings["artifacts"]
     selection = json.loads(Path(artifacts["selection_summary"]).read_text(encoding="utf-8"))
     lines = [
-        "# Phase 8 — Candidate search on unclassified Kepler targets",
+        "# Candidate Screening on Unclassified Kepler Targets",
         "",
         "## Status and interpretation boundary",
         "",
@@ -374,9 +374,9 @@ def _write_report(
         f"- RF plus no failed preliminary sanity check: {summary['model_and_sanity_candidates']}",
         f"- Final manual-review shortlist: {summary['shortlist_size']}",
         "",
-        "The accepted Phase 7 RF threshold is used unchanged. Odd/even mismatch, phase-0.5 secondary depth, and moment-centroid shifts are preliminary filters. A centroid marked `unavailable` is retained with that caveat; it is not treated as a pass measurement.",
+        "The accepted scale-up qualification RF threshold is used unchanged. Odd/even mismatch, phase-0.5 secondary depth, and moment-centroid shifts are preliminary filters. A centroid marked `unavailable` is retained with that caveat; it is not treated as a pass measurement.",
         "",
-        "A post-ranking TAP recheck of the unique shortlist KIC targets is stored in `reports/phase8_catalog_recheck.json`. It verifies current catalog status only and is not independent astrophysical confirmation.",
+        "A post-ranking TAP recheck of the unique shortlist KIC targets is stored in `reports/candidate_catalog_recheck.json`. It verifies current catalog status only and is not independent astrophysical confirmation.",
         "",
         "## Ranked shortlist",
         "",
@@ -407,7 +407,7 @@ def _write_report(
         "",
         "## Reproducibility",
         "",
-        "Pool queries, exclusion counts, hashes, processing skips, all 1,250 candidate rows, scores, thresholds, sanity values, and figure paths are stored as versioned Phase 8 artifacts. Phase 7 models were read-only inputs and were not retrained.",
+        "Pool queries, exclusion counts, hashes, processing skips, all 1,250 candidate rows, scores, thresholds, sanity values, and figure paths are stored as versioned candidate-screening artifacts. Scale-up qualification models were read-only inputs and were not retrained.",
         "",
     ]
     Path(artifacts["report"]).write_text("\n".join(lines), encoding="utf-8")

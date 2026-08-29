@@ -1,4 +1,4 @@
-"""Resumable Phase 8 orchestrator and artifact acceptance audit."""
+"""Resumable candidate screening orchestrator and artifact acceptance audit."""
 
 from __future__ import annotations
 
@@ -16,10 +16,10 @@ from src.candidate_search.pool_builder import build_unknown_pool
 from src.candidate_search.prefetch import prefetch
 from src.candidate_search.search import run_candidate_search
 
-LOGGER = logging.getLogger("sxs.phase8.pipeline")
+LOGGER = logging.getLogger("sxs.candidate_search.pipeline")
 
 
-def run_phase8(
+def run_candidate_search_workflow(
     config_path: str | Path = "configs/candidate_search.yaml", *, resume: bool = False
 ) -> dict[str, Any]:
     config_file = Path(config_path)
@@ -38,7 +38,7 @@ def run_phase8(
             record["steps"].append(
                 {"name": "unknown_pool", "status": "completed", "summary": build_unknown_pool(config_file)}
             )
-        prefetch_path = Path("data/phase8/processed/prefetch_summary.json")
+        prefetch_path = Path("data/search/processed/prefetch_summary.json")
         prefetch_complete = False
         if prefetch_path.is_file():
             payload = json.loads(prefetch_path.read_text(encoding="utf-8"))
@@ -80,13 +80,13 @@ def evaluate_acceptance(config: dict[str, Any]) -> dict[str, Any]:
     settings = config["candidate_search"]
     artifacts = settings["artifacts"]
     reasons: list[str] = []
-    phase7 = Path("reports/phase7_run_latest.json")
-    phase7_passed = bool(
-        phase7.is_file()
-        and json.loads(phase7.read_text(encoding="utf-8"))["acceptance"]["passed"]
+    scaleup_record = Path("reports/scaleup_run_latest.json")
+    scaleup_passed = bool(
+        scaleup_record.is_file()
+        and json.loads(scaleup_record.read_text(encoding="utf-8"))["acceptance"]["passed"]
     )
-    if not phase7_passed:
-        reasons.append("Phase 7 acceptance is not passed")
+    if not scaleup_passed:
+        reasons.append("scale-up qualification acceptance is not passed")
     required = [
         "selection_summary",
         "processing_summary",
@@ -138,7 +138,7 @@ def evaluate_acceptance(config: dict[str, Any]) -> dict[str, Any]:
             )
         ):
             reasons.append("post-ranking official catalog recheck found a classified target")
-    return {"passed": not reasons, "reasons": reasons, "phase7_gate_verified": phase7_passed}
+    return {"passed": not reasons, "reasons": reasons, "scaleup_gate_verified": scaleup_passed}
 
 
 def main(argv: Sequence[str] | None = None) -> int:
@@ -147,7 +147,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     parser.add_argument("--resume", action="store_true")
     args = parser.parse_args(argv)
     logging.basicConfig(level=logging.INFO, format="%(asctime)s | %(levelname)s | %(name)s | %(message)s")
-    record = run_phase8(args.config, resume=args.resume)
+    record = run_candidate_search_workflow(args.config, resume=args.resume)
     print(json.dumps(record, indent=2))
     return 0 if record["status"] == "completed" else 3
 

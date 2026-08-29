@@ -1,4 +1,4 @@
-"""Build deterministic Phase 7 confirmed and false-positive populations."""
+"""Build deterministic scale-up qualification confirmed and false-positive populations."""
 
 from __future__ import annotations
 
@@ -174,7 +174,7 @@ def build_scaleup_catalogs(
                 "name": host,
                 "catalog_host": host,
                 "reason": (
-                    "Phase 7 full quality-filtered Kepler population: "
+                    "scale-up qualification full quality-filtered Kepler population: "
                     f"SNR>={criteria['positive_minimum_transit_snr']}, "
                     f"Kp<={criteria['maximum_kepler_magnitude']}, "
                     f"quarters>={criteria['minimum_available_quarters']}"

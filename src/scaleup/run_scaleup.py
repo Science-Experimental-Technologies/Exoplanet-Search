@@ -1,4 +1,4 @@
-"""Resumable Phase 7 orchestrator; intentionally does not implement Phase 8."""
+"""Resumable scale-up qualification orchestrator; intentionally does not implement candidate screening."""
 
 from __future__ import annotations
 
@@ -17,7 +17,7 @@ from src.config import artifact_path
 LOGGER = logging.getLogger("sxs.scaleup.pipeline")
 
 
-def run_phase7(
+def run_scaleup(
     config_path: str | Path = "configs/scaleup.yaml",
     *,
     resume: bool = False,
@@ -66,7 +66,7 @@ def run_phase7(
         raise
     finally:
         record["finished_at_utc"] = datetime.now(timezone.utc).isoformat()
-        Path("reports/phase7_run_latest.json").write_text(
+        Path("reports/scaleup_run_latest.json").write_text(
             json.dumps(record, indent=2) + "\n", encoding="utf-8"
         )
     return record
@@ -74,8 +74,8 @@ def run_phase7(
 
 def evaluate_acceptance(config: dict[str, Any]) -> dict[str, Any]:
     catalog_summary_path = Path(config["paths"]["catalog"]) / "selection_summary.json"
-    selection_path = Path("models/phase7_model_selection.json")
-    report_path = artifact_path(config, "report", "reports/phase7_scaleup.md")
+    selection_path = Path("models/production_model_selection.json")
+    report_path = artifact_path(config, "report", "reports/model_qualification.md")
     reasons = []
     if not catalog_summary_path.is_file():
         reasons.append("selection summary missing")
@@ -95,12 +95,12 @@ def evaluate_acceptance(config: dict[str, Any]) -> dict[str, Any]:
         if not Path(model["model_path"]).is_file():
             reasons.append("selected model artifact missing")
     if not report_path.is_file():
-        reasons.append("Phase 7 report missing")
+        reasons.append("scale-up qualification report missing")
     return {
         "passed": not reasons,
         "reasons": reasons,
         "selected_model": model,
-        "phase8_authorized_by_artifacts": not reasons,
+        "search_authorized_by_artifacts": not reasons,
     }
 
 
@@ -157,9 +157,9 @@ def _ml_dataset(config: Path) -> dict[str, Any]:
 
 
 def _train(config: Path) -> dict[str, Any]:
-    from src.scaleup.train_phase7 import train_phase7
+    from src.scaleup.train import train_scaleup
 
-    result = train_phase7(config)
+    result = train_scaleup(config)
     return {"selection": result["selection"]}
 
 
@@ -193,8 +193,8 @@ def _ml_complete(config: dict[str, Any]) -> bool:
 
 
 def _training_complete(config: dict[str, Any]) -> bool:
-    return artifact_path(config, "report", "reports/phase7_scaleup.md").is_file() and Path(
-        "models/phase7_model_selection.json"
+    return artifact_path(config, "report", "reports/model_qualification.md").is_file() and Path(
+        "models/production_model_selection.json"
     ).is_file()
 
 
@@ -205,9 +205,9 @@ def main(argv: Sequence[str] | None = None) -> int:
     args = parser.parse_args(argv)
     logging.basicConfig(level=logging.INFO, format="%(asctime)s | %(levelname)s | %(name)s | %(message)s")
     try:
-        record = run_phase7(args.config, resume=args.resume)
+        record = run_scaleup(args.config, resume=args.resume)
     except Exception as exc:
-        LOGGER.exception("Phase 7 failed: %s", exc)
+        LOGGER.exception("scale-up qualification failed: %s", exc)
         return 2
     print(json.dumps(record, indent=2))
     return 0 if record["status"] == "completed" else 3

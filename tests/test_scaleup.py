@@ -8,7 +8,7 @@ import yaml
 
 from src.config import load_targets
 from src.scaleup.catalog_builder import FLAGS, select_balanced_false_positive_targets
-from src.scaleup.train_phase7 import _select_production_model, select_review_threshold
+from src.scaleup.train import _select_production_model, select_review_threshold
 
 
 def test_external_target_file_preserves_v1_inline_behavior(tmp_path: Path) -> None:

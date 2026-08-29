@@ -1,6 +1,6 @@
 project:
   name: SCIX Exoplanet Search
-  version: sxs-v2-phase7
+  version: sxs-scaleup-v1
   random_seed: 42
 
 paths:
@@ -87,7 +87,7 @@ scaleup:
     negative_targets_per_category: 100
     availability_query_batch_size: 150
   artifacts:
-    bls_report: reports/phase7_bls_recall.md
+    bls_report: reports/scaled_transit_recovery.md
     negative_candidates: data/scaleup/processed/negative_bls_candidates.parquet
     negative_summary: data/scaleup/processed/negative_dataset_summary.json
     ml_metadata: data/scaleup/processed/ml_candidate_metadata.csv
@@ -95,8 +95,8 @@ scaleup:
     ml_views: data/scaleup/processed/ml_folded_views.npz
     feature_model: models/rf_v2.joblib
     cnn_model: models/cnn_v2.keras
-    experiments: reports/experiments/phase7
-    report: reports/phase7_scaleup.md
+    experiments: reports/experiments/scaleup
+    report: reports/model_qualification.md
 
-# Populated dynamically from scaleup.target_file by Phase 7 modules.
+# Populated dynamically from scaleup.target_file by scale-up qualification modules.
 targets: []

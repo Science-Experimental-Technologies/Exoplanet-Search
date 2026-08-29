@@ -24,7 +24,7 @@ BLS recovered **15 of 36 eligible confirmed planets (41.67%)** in the fixed 0.5â
 
 Every operational candidate is checked against the local provenance-bearing NASA Exoplanet Archive snapshot by configured host and Â±1% period. Matches are `recovered_known`; targets drawn from the official false-positive sample remain `official_false_positive_system`; other unmatched signals are `unvalidated_candidate_requires_independent_confirmation`.
 
-Operational probabilities in `catalog_checked_candidates.parquet` come from final models fitted on the complete Phase-4 dataset and are intended for pipeline execution only. They are not used for the benchmark table above.
+Operational probabilities in `catalog_checked_candidates.parquet` come from final models fitted on the complete model-benchmark dataset and are intended for pipeline execution only. They are not used for the benchmark table above.
 
 ## Interpretation
 

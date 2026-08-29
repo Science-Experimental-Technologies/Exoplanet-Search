@@ -1,12 +1,12 @@
 project:
   name: SCIX Exoplanet Search
-  version: sxs-v2-phase9
+  version: sxs-independent-validation-v1
   random_seed: 9042026
 
 inputs:
-  shortlist: data/phase8/processed/shortlist_top20.csv
-  target_pool: data/phase8/catalog/eligible_unknown_pool.parquet
-  processed_light_curves: data/phase8/processed
+  shortlist: data/search/processed/shortlist_top20.csv
+  target_pool: data/search/catalog/eligible_unknown_pool.parquet
+  processed_light_curves: data/search/processed
 
 bls:
   minimum_period_days: 0.5
@@ -38,12 +38,12 @@ vetting:
   exofop_match_radius_arcsec: 10.0
 
 artifacts:
-  directory: data/phase9
-  frozen_shortlist: data/phase9/frozen_phase8_shortlist.parquet
-  fap_results: data/phase9/fap_results.parquet
-  vetting_results: data/phase9/independent_vetting.parquet
-  gaia_sources: data/phase9/gaia_sources.parquet
-  crossmatch_results: data/phase9/crossmatch_results.parquet
-  final_ranking: data/phase9/final_ranking.csv
-  report: reports/phase9_independent_validation.md
-  run_record: reports/phase9_run_latest.json
+  directory: data/validation
+  frozen_shortlist: data/validation/frozen_search_shortlist.parquet
+  fap_results: data/validation/fap_results.parquet
+  vetting_results: data/validation/independent_vetting.parquet
+  gaia_sources: data/validation/gaia_sources.parquet
+  crossmatch_results: data/validation/crossmatch_results.parquet
+  final_ranking: data/validation/final_ranking.csv
+  report: reports/independent_validation.md
+  run_record: reports/validation_run_latest.json

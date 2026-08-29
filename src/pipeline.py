@@ -1,4 +1,4 @@
-"""Resumable end-to-end command-line orchestrator for SXS phases 0-5."""
+"""Resumable end-to-end command-line orchestrator for the SXS baseline workflow."""
 
 from __future__ import annotations
 
@@ -17,7 +17,7 @@ import yaml
 
 LOGGER = logging.getLogger("sxs.pipeline")
 
-PHASE_NAMES = {
+STAGE_NAMES = {
     0: "environment",
     1: "acquisition",
     2: "preprocessing",
@@ -34,92 +34,92 @@ class PipelineError(RuntimeError):
 def run_pipeline(
     config_path: str | Path = "configs/base.yaml",
     *,
-    from_phase: int = 0,
-    to_phase: int = 5,
+    from_stage: int = 0,
+    to_stage: int = 5,
     resume: bool = False,
     refresh_catalog: bool = False,
     dry_run: bool = False,
     stage_runners: Mapping[int, Callable[[Path, bool], dict[str, Any]]] | None = None,
     log_path: str | Path | None = None,
 ) -> dict[str, Any]:
-    """Execute a contiguous phase range and return its structured run record."""
+    """Execute a contiguous stage range and return its structured run record."""
 
-    if from_phase not in PHASE_NAMES or to_phase not in PHASE_NAMES or from_phase > to_phase:
-        raise ValueError("Require 0 <= from_phase <= to_phase <= 5")
+    if from_stage not in STAGE_NAMES or to_stage not in STAGE_NAMES or from_stage > to_stage:
+        raise ValueError("Require 0 <= from_stage <= to_stage <= 5")
     config_file = Path(config_path)
     if not config_file.is_file():
         raise FileNotFoundError(f"Configuration does not exist: {config_file}")
     config = yaml.safe_load(config_file.read_text(encoding="utf-8"))
     _validate_config(config)
     runners = dict(stage_runners or _default_stage_runners())
-    missing_runners = sorted(set(range(from_phase, to_phase + 1)) - set(runners))
+    missing_runners = sorted(set(range(from_stage, to_stage + 1)) - set(runners))
     if missing_runners:
-        raise PipelineError(f"No runner configured for phases: {missing_runners}")
+        raise PipelineError(f"No runner configured for stages: {missing_runners}")
 
-    if from_phase > 1 and not dry_run:
-        incomplete = [phase for phase in range(1, from_phase) if not phase_complete(phase, config)]
+    if from_stage > 1 and not dry_run:
+        incomplete = [stage for stage in range(1, from_stage) if not stage_complete(stage, config)]
         if incomplete:
-            names = ", ".join(f"{phase}:{PHASE_NAMES[phase]}" for phase in incomplete)
-            raise PipelineError(f"Cannot start at phase {from_phase}; prerequisites incomplete: {names}")
+            names = ", ".join(f"{stage}:{STAGE_NAMES[stage]}" for stage in incomplete)
+            raise PipelineError(f"Cannot start at stage {from_stage}; prerequisites incomplete: {names}")
 
     started = datetime.now(timezone.utc)
     record: dict[str, Any] = {
-        "schema_version": 1,
+        "schema_version": 2,
         "started_at_utc": started.isoformat(),
         "finished_at_utc": None,
         "status": "running",
         "config_path": _portable_path(config_file),
         "options": {
-            "from_phase": from_phase,
-            "to_phase": to_phase,
+            "from_stage": from_stage,
+            "to_stage": to_stage,
             "resume": resume,
             "refresh_catalog": refresh_catalog,
             "dry_run": dry_run,
         },
-        "phases": [],
+        "stages": [],
     }
-    for phase in range(from_phase, to_phase + 1):
-        name = PHASE_NAMES[phase]
-        phase_record: dict[str, Any] = {"phase": phase, "name": name}
+    for stage in range(from_stage, to_stage + 1):
+        name = STAGE_NAMES[stage]
+        stage_record: dict[str, Any] = {"stage": stage, "name": name}
         if dry_run:
-            phase_record["status"] = "would_skip" if resume and phase_complete(phase, config) else "would_run"
-            record["phases"].append(phase_record)
+            stage_record["status"] = "would_skip" if resume and stage_complete(stage, config) else "would_run"
+            record["stages"].append(stage_record)
             continue
-        if resume and phase > 0 and phase_complete(phase, config):
-            phase_record["status"] = "skipped_complete"
-            record["phases"].append(phase_record)
-            LOGGER.info("Phase %d (%s): skipped; required outputs exist", phase, name)
+        if resume and stage > 0 and stage_complete(stage, config):
+            stage_record["status"] = "skipped_complete"
+            record["stages"].append(stage_record)
+            LOGGER.info("Stage %d (%s): skipped; required outputs exist", stage, name)
             continue
-        LOGGER.info("Phase %d (%s): starting", phase, name)
-        phase_started = datetime.now(timezone.utc)
+        LOGGER.info("Stage %d (%s): starting", stage, name)
+        stage_started = datetime.now(timezone.utc)
         clock = time.perf_counter()
         try:
-            summary = runners[phase](config_file, refresh_catalog)
+            summary = runners[stage](config_file, refresh_catalog)
         except Exception as exc:
-            phase_record.update(
+            stage_record.update(
                 {
                     "status": "failed",
-                    "started_at_utc": phase_started.isoformat(),
+                    "started_at_utc": stage_started.isoformat(),
                     "duration_seconds": round(time.perf_counter() - clock, 3),
                     "error_type": type(exc).__name__,
                     "error": str(exc),
                 }
             )
-            record["phases"].append(phase_record)
+            record["stages"].append(stage_record)
             record["status"] = "failed"
             record["finished_at_utc"] = datetime.now(timezone.utc).isoformat()
             _write_run_record(record, config, log_path)
-            raise PipelineError(f"Phase {phase} ({name}) failed: {exc}") from exc
-        phase_record.update(
+            raise PipelineError(f"Stage {stage} ({name}) failed: {exc}") from exc
+        stage_record.update(
             {
                 "status": "completed",
-                "started_at_utc": phase_started.isoformat(),
+                "started_at_utc": stage_started.isoformat(),
                 "duration_seconds": round(time.perf_counter() - clock, 3),
                 "summary": summary,
             }
         )
-        record["phases"].append(phase_record)
-        LOGGER.info("Phase %d (%s): completed in %.1f s", phase, name, phase_record["duration_seconds"])
+        record["stages"].append(stage_record)
+        LOGGER.info("Stage %d (%s): completed in %.1f s", stage, name, stage_record["duration_seconds"])
 
     record["status"] = "dry_run" if dry_run else "completed"
     record["finished_at_utc"] = datetime.now(timezone.utc).isoformat()
@@ -129,17 +129,17 @@ def run_pipeline(
     return record
 
 
-def phase_complete(phase: int, config: dict[str, Any]) -> bool:
-    """Return whether the phase's minimum acceptance artifacts exist."""
+def stage_complete(stage: int, config: dict[str, Any]) -> bool:
+    """Return whether the stage's minimum acceptance artifacts exist."""
 
-    if phase == 0:
+    if stage == 0:
         return False
     processed = Path(config["paths"]["processed"])
     reports = Path(config["paths"]["reports"])
     outputs = {
         1: [Path(config["catalog"]["output"]), Path(config["dataset"]["manifest"])],
         2: [processed / "preprocessing_summary.json"],
-        3: [processed / "bls_candidates.parquet", processed / "bls_recovery.csv", reports / "phase3_bls_recall.md"],
+        3: [processed / "bls_candidates.parquet", processed / "bls_recovery.csv", reports / "baseline_transit_recovery.md"],
         4: [
             Path(config["machine_learning"]["negative_sample"]["catalog_output"]),
             processed / "negative_bls_candidates.parquet",
@@ -151,12 +151,12 @@ def phase_complete(phase: int, config: dict[str, Any]) -> bool:
         ],
         5: [processed / "catalog_checked_candidates.parquet", reports / "benchmark_report.md", reports / "benchmark_metrics.json"],
     }
-    required = outputs.get(phase)
+    required = outputs.get(stage)
     if required is None:
-        raise ValueError(f"Unknown phase: {phase}")
+        raise ValueError(f"Unknown stage: {stage}")
     if not all(path.is_file() and path.stat().st_size > 0 for path in required):
         return False
-    if phase == 2:
+    if stage == 2:
         target_files = [processed / f"{target['id']}_clean.parquet" for target in config["targets"]]
         return all(path.is_file() and path.stat().st_size > 0 for path in target_files)
     return True
@@ -266,9 +266,9 @@ def _run_machine_learning(config_path: Path, refresh_catalog: bool) -> dict[str,
 
 def _run_validation(config_path: Path, refresh_catalog: bool) -> dict[str, Any]:
     del refresh_catalog
-    from src.validate.catalog_check import run_phase5
+    from src.validate.catalog_check import run_catalog_validation
 
-    checked, benchmark = run_phase5(config_path)
+    checked, benchmark = run_catalog_validation(config_path)
     return {
         "catalog_checked_candidates": len(checked),
         "catalog_status": checked["catalog_status"].value_counts().to_dict(),
@@ -309,11 +309,11 @@ def _portable_path(path: str | Path) -> str:
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--config", default="configs/base.yaml")
-    parser.add_argument("--from-phase", type=int, choices=range(0, 6), default=0)
-    parser.add_argument("--to-phase", type=int, choices=range(0, 6), default=5)
-    parser.add_argument("--resume", action="store_true", help="Skip phases whose acceptance artifacts already exist")
+    parser.add_argument("--from-stage", type=int, choices=range(0, 6), default=0)
+    parser.add_argument("--to-stage", type=int, choices=range(0, 6), default=5)
+    parser.add_argument("--resume", action="store_true", help="Skip stages whose acceptance artifacts already exist")
     parser.add_argument("--refresh-catalog", action="store_true", help="Refresh official catalog snapshots before use")
-    parser.add_argument("--dry-run", action="store_true", help="Print the phase plan without changing files")
+    parser.add_argument("--dry-run", action="store_true", help="Print the execution plan without changing files")
     parser.add_argument("--log-path", help="Optional JSON run-record destination")
     parser.add_argument("--verbose", action="store_true")
     return parser
@@ -328,8 +328,8 @@ def main(argv: Sequence[str] | None = None) -> int:
     try:
         record = run_pipeline(
             args.config,
-            from_phase=args.from_phase,
-            to_phase=args.to_phase,
+            from_stage=args.from_stage,
+            to_stage=args.to_stage,
             resume=args.resume,
             refresh_catalog=args.refresh_catalog,
             dry_run=args.dry_run,

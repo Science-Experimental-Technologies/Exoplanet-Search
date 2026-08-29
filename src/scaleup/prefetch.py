@@ -1,4 +1,4 @@
-"""Concurrent cached MAST prefetch for the Phase 7 populations."""
+"""Concurrent cached MAST prefetch for the scale-up qualification populations."""
 
 from __future__ import annotations
 

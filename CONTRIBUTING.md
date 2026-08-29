@@ -50,10 +50,16 @@ The repository does not currently enforce a separate formatter or linter in CI. 
 4. Run the deterministic test suite and record the result in the PR.
 5. Explain scientific assumptions, data provenance, and expected metric changes.
 
-Changes to datasets, labels, thresholds, model selection, validation rules, or reported scientific results require methodological justification. Do not tune against the candidate shortlist merely to improve a headline metric. Such changes must document leakage controls, regenerate the relevant machine-readable artifacts, update the corresponding phase report, and preserve earlier results for comparison.
+Changes to datasets, labels, thresholds, model selection, validation rules, or reported scientific results require methodological justification. Do not tune against the candidate shortlist merely to improve a headline metric. Such changes must document leakage controls, regenerate the relevant machine-readable artifacts, update the corresponding scientific report, and preserve earlier results for comparison.
 
 Raw mission products, credentials, fitted model binaries, and local caches must not be committed. If a new reproducibility artifact is too large for ordinary Git, discuss a durable archive or Git LFS strategy before opening the PR.
 
 ## Review expectations
 
 Maintainers may request smaller scope, additional tests, a provenance record, or independent reproduction. A scientifically plausible idea is not automatically suitable for the current release; reproducibility and claim discipline take priority.
+
+## Contribution and licensing terms
+
+SXS is source-available, not open source. By intentionally submitting a patch, pull request, or other contribution to an official SXS repository, you confirm that you have the right to submit it and agree to the contribution grant in section 6 of [LICENSE](LICENSE). You retain copyright in your original contribution and receive credit through repository history and release records.
+
+Contributions do not remove or replace the required attribution to Rasya Andrean and Science Experimental Technologies. Commercial use of SXS, modified versions, or materially enabled outputs remains subject to the commercial terms and 10% royalty unless a separately signed agreement applies. Review [COMMERCIAL_USE.md](COMMERCIAL_USE.md) before building a commercial product or service.

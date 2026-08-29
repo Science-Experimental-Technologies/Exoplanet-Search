@@ -19,7 +19,7 @@
   "acceptance": {
     "passed": true,
     "reasons": [],
-    "phase7_gate_verified": true
+    "scaleup_gate_verified": true
   },
   "finished_at_utc": "2026-08-27T10:35:49.534092+00:00"
 }

@@ -1,4 +1,4 @@
-"""Phase 5 catalog cross-check and leakage-safe end-to-end benchmark."""
+"""Catalog cross-checking and leakage-safe end-to-end benchmarking."""
 
 from __future__ import annotations
 
@@ -49,7 +49,7 @@ def match_catalog_period(
 
 
 def catalog_check(config_path: str | Path = "configs/base.yaml") -> pd.DataFrame:
-    """Score all Phase-3 candidates and classify their official-catalog status."""
+    """Score all transit-search candidates and classify their official-catalog status."""
 
     os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2")
     import tensorflow as tf
@@ -133,7 +133,7 @@ def catalog_check(config_path: str | Path = "configs/base.yaml") -> pd.DataFrame
     result["cnn_probability"] = cnn_probability
     result["cnn_pass"] = cnn_probability >= 0.5
     result["consensus_pass"] = result["feature_pass"] & result["cnn_pass"]
-    result["score_provenance"] = "final_models_fit_on_full_phase4_dataset_operational_not_benchmark"
+    result["score_provenance"] = "final_models_fit_on_full_model_benchmark_dataset_operational_not_benchmark"
     output = Path("data/processed/catalog_checked_candidates.parquet")
     result.to_parquet(output, index=False)
     result.loc[
@@ -310,7 +310,7 @@ def _write_benchmark_report(result: dict[str, Any], destination: Path) -> None:
         "",
         "Every operational candidate is checked against the local provenance-bearing NASA Exoplanet Archive snapshot by configured host and ±1% period. Matches are `recovered_known`; targets drawn from the official false-positive sample remain `official_false_positive_system`; other unmatched signals are `unvalidated_candidate_requires_independent_confirmation`.",
         "",
-        "Operational probabilities in `catalog_checked_candidates.parquet` come from final models fitted on the complete Phase-4 dataset and are intended for pipeline execution only. They are not used for the benchmark table above.",
+        "Operational probabilities in `catalog_checked_candidates.parquet` come from final models fitted on the complete model-benchmark dataset and are intended for pipeline execution only. They are not used for the benchmark table above.",
         "",
         "## Interpretation",
         "",
@@ -332,7 +332,7 @@ def _write_benchmark_report(result: dict[str, Any], destination: Path) -> None:
     destination.write_text("\n".join(lines), encoding="utf-8")
 
 
-def run_phase5(config_path: str | Path = "configs/base.yaml") -> tuple[pd.DataFrame, dict[str, Any]]:
+def run_catalog_validation(config_path: str | Path = "configs/base.yaml") -> tuple[pd.DataFrame, dict[str, Any]]:
     checked = catalog_check(config_path)
     benchmark = build_benchmark(config_path)
     return checked, benchmark
@@ -343,7 +343,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     parser.add_argument("--config", default="configs/base.yaml")
     args = parser.parse_args(argv)
     logging.basicConfig(level=logging.INFO, format="%(asctime)s | %(levelname)s | %(name)s | %(message)s")
-    checked, benchmark = run_phase5(args.config)
+    checked, benchmark = run_catalog_validation(args.config)
     print(
         json.dumps(
             {

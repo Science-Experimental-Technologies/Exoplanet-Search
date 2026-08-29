@@ -1,21 +1,196 @@
-MIT License
+SXS SOURCE-AVAILABLE COMMERCIAL LICENSE
+Version 1.0 — 29 August 2026
 
-Copyright (c) 2026 SCIX
+Copyright © 2026 Rasya Andrean and Science Experimental Technologies.
+All rights reserved except as expressly granted below.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+This license is a source-available license. It is not an Open Source Initiative
+approved license and must not be represented as an open-source license.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+1. PARTIES AND ACCEPTANCE
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+"Licensor" means Rasya Andrean and Science Experimental Technologies,
+collectively. "You" means the individual or legal entity exercising rights
+under this license. By copying, modifying, distributing, publicly displaying,
+or using the Software, You accept this license. If You do not accept it, You
+must not exercise those rights.
+
+2. DEFINITIONS
+
+"Software" means the SXS — SCIX Exoplanet Search source code, project-authored
+documentation, configurations, models, and project-authored artifacts made
+available with this license, including modified or derivative versions.
+
+"Output" means a result, report, ranking, visualization, dataset, model,
+analysis, or other work produced through material use of the Software.
+
+"Project" means any product, service, research activity, publication,
+consulting engagement, hosted offering, internal business process, or other
+undertaking in which the Software or an Output is a material component.
+
+"Commercial Use" means use primarily intended for commercial advantage,
+monetary compensation, revenue generation, paid fundraising, or the operation
+of a for-profit product or service. Commercial Use includes selling access to
+the Software or an Output; providing paid analysis, consulting, hosting, or
+support based materially on the Software; and using the Software in a revenue-
+generating Project.
+
+"Covered Revenue" means gross amounts actually received from Commercial Use,
+less only refunds, chargebacks, and sales, value-added, or similar transaction
+taxes separately stated and remitted to a government. Covered Revenue excludes
+donations or grants that do not purchase access, services, deliverables, or
+preferential rights involving the Software or an Output.
+
+3. NON-COMMERCIAL GRANT
+
+Subject to this license, Licensor grants You a non-exclusive, worldwide,
+revocable-on-breach, non-transferable right to access, run, study, reproduce,
+and modify the Software solely for personal, educational, evaluation, or
+non-commercial research purposes. You may distribute unmodified or modified
+source copies for those purposes only when You:
+
+  a. include this license and the NOTICE file in full;
+  b. preserve all copyright, attribution, funding, and trademark notices;
+  c. identify material modifications and their dates; and
+  d. do not impose terms that conflict with this license.
+
+No sublicensing right is granted except the right to pass on an exact copy of
+this license with a permitted distribution.
+
+4. COMMERCIAL USE AND TEN-PERCENT ROYALTY
+
+Commercial Use is permitted only while You comply with all of this section.
+
+  a. You must notify Licensor at rasyaandrean@outlook.co.id before beginning
+     Commercial Use, identifying You, the Project, and a billing contact.
+
+  b. You owe Licensor a royalty equal to ten percent (10%) of Covered Revenue.
+     The royalty accrues when Covered Revenue is received.
+
+  c. Within thirty (30) days after each calendar quarter, You must provide a
+     statement showing Covered Revenue, permitted deductions, and the royalty
+     calculation, and pay the royalty using Licensor's written instructions.
+
+  d. If the Software is bundled with other material and no separate price is
+     stated, You must allocate Covered Revenue in good faith according to the
+     Software's relative fair-market contribution. The allocation must not be
+     structured principally to avoid the royalty.
+
+  e. You must retain complete supporting records for five (5) years. No more
+     than once per calendar year, Licensor may have an independent accountant
+     inspect relevant records on reasonable notice and under confidentiality.
+     Licensor bears the audit cost unless an underpayment greater than five
+     percent (5%) is found, in which case You bear the reasonable audit cost.
+
+  f. A separate signed commercial agreement may replace or modify this section.
+     No email, purchase order, or informal statement changes these terms unless
+     it expressly says so and is signed by Licensor.
+
+5. ATTRIBUTION, PUBLICATIONS, PROJECTS, AND AWARDS
+
+Every distributed copy, public deployment, public Project description, and
+publicly shared Output must provide clear and reasonably prominent attribution
+substantially in this form:
+
+  "Built with SXS — SCIX Exoplanet Search, created by Rasya Andrean under
+  Science Experimental Technologies."
+
+The attribution must link to
+https://github.com/Science-Experimental-Technologies/Exoplanet-Search when the
+medium supports links. Academic or technical publications must also cite the
+release using CITATION.cff and cite the relevant upstream mission data.
+
+If a Project, Output, or result materially enabled by the Software is submitted
+for or receives a prize, award, grant recognition, competition placement, or
+formal public distinction, You must acknowledge SXS, Rasya Andrean, and Science
+Experimental Technologies in the submission or public announcement to the
+extent the applicable rules permit. Attribution does not imply endorsement.
+
+You may not remove creator credit, obscure the Software's role, or claim that
+You created the unmodified Software or Licensor's original research results.
+
+6. CONTRIBUTIONS AND MODIFICATIONS
+
+If You intentionally submit a patch, pull request, or other contribution to an
+official SXS repository, You represent that You have the right to submit it and
+grant Licensor a perpetual, worldwide, irrevocable, royalty-free,
+transferable, sublicensable license to use, reproduce, modify, distribute,
+commercialize, and relicense that contribution. You retain copyright in Your
+original contribution and must be credited according to repository records.
+
+A modified or derivative distribution must state that it is modified, name
+its maintainers, preserve the creator attribution required by section 5, and
+must not imply official status or Licensor endorsement.
+
+7. PROHIBITED USES
+
+You may not:
+
+  a. use the Software without the attribution required by section 5;
+  b. conduct Commercial Use without the reporting and royalty obligations in
+     section 4 or a separate signed agreement;
+  c. remove or falsify provenance, scientific limitations, candidate status,
+     copyright notices, or authorship information;
+  d. represent an unvalidated candidate as a confirmed astronomical discovery;
+  e. use Licensor's names, logos, or marks to imply sponsorship, certification,
+     or endorsement; or
+  f. use the Software in violation of applicable law or third-party data terms.
+
+8. OWNERSHIP, TRADEMARKS, PATENTS, AND THIRD-PARTY MATERIAL
+
+Licensor retains all rights not expressly granted. No right is granted to the
+SXS name, SCIX name, logos, trade dress, or other marks except factual
+attribution required by this license. No patent license is granted.
+
+Kepler, TESS, Gaia, NASA Exoplanet Archive, ExoFOP, MAST, and other third-party
+data, software, names, and materials remain governed by their respective terms.
+This license applies only to rights Licensor can grant.
+
+9. TERMINATION
+
+Your rights terminate automatically if You breach this license. For a first
+non-willful breach, rights are reinstated if You fully cure it within thirty
+(30) days after discovering it or receiving notice. Royalty, recordkeeping,
+attribution, ownership, disclaimer, liability, and payment obligations survive
+termination. Licensor may seek injunctive relief and any other lawful remedy.
+
+10. DISCLAIMER OF WARRANTY
+
+THE SOFTWARE AND OUTPUTS ARE PROVIDED "AS IS" AND "AS AVAILABLE," WITHOUT
+WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE, ACCURACY, NON-INFRINGEMENT, OR SCIENTIFIC VALIDITY.
+THE SOFTWARE DOES NOT CONFIRM OR VALIDATE EXOPLANETS. YOU ARE RESPONSIBLE FOR
+INDEPENDENT REVIEW OF DATA, METHODS, RESULTS, AND REGULATORY OBLIGATIONS.
+
+11. LIMITATION OF LIABILITY
+
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, LICENSOR WILL NOT BE LIABLE FOR ANY
+INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, CONSEQUENTIAL, OR PUNITIVE DAMAGES,
+OR FOR LOST PROFITS, REVENUE, DATA, GOODWILL, OR BUSINESS INTERRUPTION, ARISING
+FROM THE SOFTWARE, OUTPUTS, OR THIS LICENSE. LICENSOR'S TOTAL LIABILITY WILL
+NOT EXCEED THE AMOUNT YOU PAID LICENSOR UNDER THIS LICENSE DURING THE TWELVE
+MONTHS BEFORE THE EVENT GIVING RISE TO THE CLAIM.
+
+12. GOVERNING LAW AND GENERAL TERMS
+
+This license is governed by the laws of the Republic of Indonesia, without
+regard to conflict-of-law rules. Courts of competent jurisdiction in Jakarta,
+Indonesia have exclusive jurisdiction, unless a signed commercial agreement
+states otherwise. If a provision is unenforceable, it will be limited to the
+minimum extent necessary and the remainder will continue in effect. A waiver
+must be written and signed by Licensor. This license and any signed commercial
+agreement are the complete terms concerning the rights granted here.
+
+13. LICENSE HISTORY
+
+This license governs the repository revision in which it appears and later
+revisions that expressly retain it. Copies already received under an earlier
+license remain governed by the license attached to those copies. In particular,
+rights validly granted for the tagged public release v1.0.0 under the MIT
+License are not retroactively withdrawn.
+
+Commercial licensing and royalty contact: rasyaandrean@outlook.co.id
+
+This document is a project license drafted for SXS. Licensor should obtain
+qualified legal review before relying on it for material commercial activity,
+cross-border enforcement, tax treatment, or royalty collection.

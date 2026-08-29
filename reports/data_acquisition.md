@@ -1,8 +1,8 @@
-# Phase 1 — Data Acquisition and Ground Truth
+# Data Acquisition and Ground Truth
 
 ## Result
 
-Phase 1 completed successfully on 2026-08-25 (UTC snapshot date). The fixed
+data acquisition completed successfully on 2026-08-25 (UTC snapshot date). The fixed
 validation sample contains 20 Kepler host systems and 47 confirmed transiting
 planets. MAST provided 341 unique long-cadence FITS products containing
 1,333,613 table rows in total. All downloaded products passed the non-empty FITS

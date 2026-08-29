@@ -1,4 +1,4 @@
-"""Run Phase 2 preprocessing for every target in the Phase 1 manifest."""
+"""Preprocess every target in the data-acquisition manifest."""
 
 from __future__ import annotations
 
@@ -229,7 +229,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     try:
         summary = build_processed_dataset(args.config)
     except Exception as exc:
-        LOGGER.error("Phase 2 preprocessing failed: %s", exc)
+        LOGGER.error("Preprocessing failed: %s", exc)
         return 2
     print(json.dumps({"targets": len(summary), "status": summary["status"].value_counts().to_dict()}, indent=2))
     return 0

@@ -15,7 +15,7 @@ import pandas as pd
 import requests
 import yaml
 
-LOGGER = logging.getLogger("sxs.phase8.pool")
+LOGGER = logging.getLogger("sxs.candidate_search.pool")
 TAP_URL = "https://exoplanetarchive.ipac.caltech.edu/TAP/sync"
 
 
@@ -87,7 +87,7 @@ def build_unknown_pool(config_path: str | Path = "configs/candidate_search.yaml"
             "id_type": "KIC",
             "name": f"KIC {row.target_id}",
             "reason": (
-                f"Phase 8 deterministic unknown-pool sample; object_status=0, "
+                f"candidate screening deterministic unknown-pool sample; object_status=0, "
                 f"no cumulative KOI or Kepler confirmed-name row, Kp={row.kepmag:.3f}, "
                 f"available_quarters={int(row.available_quarters)}"
             ),

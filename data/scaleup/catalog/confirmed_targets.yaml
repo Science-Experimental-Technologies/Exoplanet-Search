@@ -3,1854 +3,1854 @@ targets:
   id_type: KIC
   name: Kepler-163
   catalog_host: Kepler-163
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10019708'
   id_type: KIC
   name: Kepler-490
   catalog_host: Kepler-490
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10024051'
   id_type: KIC
   name: Kepler-1228
   catalog_host: Kepler-1228
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10123064'
   id_type: KIC
   name: Kepler-565
   catalog_host: Kepler-565
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10155434'
   id_type: KIC
   name: Kepler-1720
   catalog_host: Kepler-1720
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10187017'
   id_type: KIC
   name: Kepler-102
   catalog_host: Kepler-102
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10189546'
   id_type: KIC
   name: Kepler-549
   catalog_host: Kepler-549
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10190777'
   id_type: KIC
   name: Kepler-1019
   catalog_host: Kepler-1019
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10264660'
   id_type: KIC
   name: Kepler-14
   catalog_host: Kepler-14
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '1026957'
   id_type: KIC
   name: Kepler-1731
   catalog_host: Kepler-1731
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10285631'
   id_type: KIC
   name: Kepler-525
   catalog_host: Kepler-525
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10290666'
   id_type: KIC
   name: Kepler-526
   catalog_host: Kepler-526
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10318874'
   id_type: KIC
   name: Kepler-94
   catalog_host: Kepler-94
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10332883'
   id_type: KIC
   name: Kepler-994
   catalog_host: Kepler-994
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10337517'
   id_type: KIC
   name: Kepler-783
   catalog_host: Kepler-783
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10353968'
   id_type: KIC
   name: Kepler-623
   catalog_host: Kepler-623
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10386922'
   id_type: KIC
   name: Kepler-511
   catalog_host: Kepler-511
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10388286'
   id_type: KIC
   name: Kepler-617
   catalog_host: Kepler-617
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10418224'
   id_type: KIC
   name: Kepler-40
   catalog_host: Kepler-40
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10454313'
   id_type: KIC
   name: Kepler-588
   catalog_host: Kepler-588
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10460984'
   id_type: KIC
   name: Kepler-164
   catalog_host: Kepler-164
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10489206'
   id_type: KIC
   name: Kepler-125
   catalog_host: Kepler-125
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10586004'
   id_type: KIC
   name: Kepler-129
   catalog_host: Kepler-129
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10587105'
   id_type: KIC
   name: Kepler-529
   catalog_host: Kepler-529
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10616679'
   id_type: KIC
   name: Kepler-550
   catalog_host: Kepler-550
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10619192'
   id_type: KIC
   name: Kepler-17
   catalog_host: Kepler-17
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10656823'
   id_type: KIC
   name: Kepler-195
   catalog_host: Kepler-195
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10663396'
   id_type: KIC
   name: Kepler-1069
   catalog_host: Kepler-1069
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10676014'
   id_type: KIC
   name: Kepler-954
   catalog_host: Kepler-954
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10717241'
   id_type: KIC
   name: Kepler-551
   catalog_host: Kepler-551
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10723750'
   id_type: KIC
   name: Kepler-117
   catalog_host: Kepler-117
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10843590'
   id_type: KIC
   name: Kepler-153
   catalog_host: Kepler-153
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10854768'
   id_type: KIC
   name: Kepler-812
   catalog_host: Kepler-812
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10858832'
   id_type: KIC
   name: Kepler-552
   catalog_host: Kepler-552
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10873260'
   id_type: KIC
   name: Kepler-590
   catalog_host: Kepler-590
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10874614'
   id_type: KIC
   name: Kepler-6
   catalog_host: Kepler-6
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10875245'
   id_type: KIC
   name: Kepler-107
   catalog_host: Kepler-107
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10878263'
   id_type: KIC
   name: Kepler-414
   catalog_host: Kepler-414
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10905239'
   id_type: KIC
   name: Kepler-101
   catalog_host: Kepler-101
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10925104'
   id_type: KIC
   name: Kepler-114
   catalog_host: Kepler-114
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10933561'
   id_type: KIC
   name: Kepler-133
   catalog_host: Kepler-133
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10937029'
   id_type: KIC
   name: Kepler-553
   catalog_host: Kepler-553
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10975146'
   id_type: KIC
   name: Kepler-808
   catalog_host: Kepler-808
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10982872'
   id_type: KIC
   name: Kepler-142
   catalog_host: Kepler-142
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10984090'
   id_type: KIC
   name: Kepler-466
   catalog_host: Kepler-466
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '10990886'
   id_type: KIC
   name: Kepler-568
   catalog_host: Kepler-568
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11015108'
   id_type: KIC
   name: Kepler-530
   catalog_host: Kepler-530
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11015323'
   id_type: KIC
   name: Kepler-569
   catalog_host: Kepler-569
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11017901'
   id_type: KIC
   name: Kepler-447
   catalog_host: Kepler-447
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11037335'
   id_type: KIC
   name: Kepler-300
   catalog_host: Kepler-300
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11046458'
   id_type: KIC
   name: Kepler-424
   catalog_host: Kepler-424
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11073351'
   id_type: KIC
   name: Kepler-592
   catalog_host: Kepler-592
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11074541'
   id_type: KIC
   name: Kepler-531
   catalog_host: Kepler-531
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11075737'
   id_type: KIC
   name: Kepler-97
   catalog_host: Kepler-97
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11086270'
   id_type: KIC
   name: Kepler-110
   catalog_host: Kepler-110
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11090765'
   id_type: KIC
   name: Kepler-593
   catalog_host: Kepler-593
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11122894'
   id_type: KIC
   name: Kepler-297
   catalog_host: Kepler-297
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11133306'
   id_type: KIC
   name: Kepler-509
   catalog_host: Kepler-509
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11134879'
   id_type: KIC
   name: Kepler-570
   catalog_host: Kepler-570
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11192998'
   id_type: KIC
   name: Kepler-166
   catalog_host: Kepler-166
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11194032'
   id_type: KIC
   name: Kepler-533
   catalog_host: Kepler-533
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11250587'
   id_type: KIC
   name: Kepler-464
   catalog_host: Kepler-464
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11259686'
   id_type: KIC
   name: Kepler-512
   catalog_host: Kepler-512
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11288051'
   id_type: KIC
   name: Kepler-124
   catalog_host: Kepler-124
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11295426'
   id_type: KIC
   name: Kepler-68
   catalog_host: Kepler-68
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11298298'
   id_type: KIC
   name: Kepler-956
   catalog_host: Kepler-956
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11359879'
   id_type: KIC
   name: Kepler-15
   catalog_host: Kepler-15
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11361646'
   id_type: KIC
   name: Kepler-524
   catalog_host: Kepler-524
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11394027'
   id_type: KIC
   name: Kepler-1664
   catalog_host: Kepler-1664
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11401182'
   id_type: KIC
   name: Kepler-845
   catalog_host: Kepler-845
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11401755'
   id_type: KIC
   name: Kepler-36
   catalog_host: Kepler-36
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11402995'
   id_type: KIC
   name: Kepler-481
   catalog_host: Kepler-481
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11449844'
   id_type: KIC
   name: Kepler-468
   catalog_host: Kepler-468
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11497977'
   id_type: KIC
   name: Kepler-571
   catalog_host: Kepler-571
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11502867'
   id_type: KIC
   name: Kepler-426
   catalog_host: Kepler-426
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11512246'
   id_type: KIC
   name: Kepler-23
   catalog_host: Kepler-23
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11547505'
   id_type: KIC
   name: Kepler-922
   catalog_host: Kepler-922
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11547513'
   id_type: KIC
   name: Kepler-134
   catalog_host: Kepler-134
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11551692'
   id_type: KIC
   name: Kepler-411
   catalog_host: Kepler-411
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11568987'
   id_type: KIC
   name: Kepler-534
   catalog_host: Kepler-534
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11600889'
   id_type: KIC
   name: Kepler-407
   catalog_host: Kepler-407
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11621223'
   id_type: KIC
   name: Kepler-535
   catalog_host: Kepler-535
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11624249'
   id_type: KIC
   name: Kepler-536
   catalog_host: Kepler-536
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11656246'
   id_type: KIC
   name: Kepler-885
   catalog_host: Kepler-885
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11666881'
   id_type: KIC
   name: Kepler-480
   catalog_host: Kepler-480
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11673802'
   id_type: KIC
   name: Kepler-1004
   catalog_host: Kepler-1004
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11709124'
   id_type: KIC
   name: Kepler-154
   catalog_host: Kepler-154
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11773022'
   id_type: KIC
   name: Kepler-51
   catalog_host: Kepler-51
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11802615'
   id_type: KIC
   name: Kepler-513
   catalog_host: Kepler-513
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11804465'
   id_type: KIC
   name: Kepler-12
   catalog_host: Kepler-12
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11823054'
   id_type: KIC
   name: Kepler-181
   catalog_host: Kepler-181
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11853905'
   id_type: KIC
   name: Kepler-4
   catalog_host: Kepler-4
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '11904151'
   id_type: KIC
   name: Kepler-10
   catalog_host: Kepler-10
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '12019440'
   id_type: KIC
   name: Kepler-485
   catalog_host: Kepler-485
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '12024120'
   id_type: KIC
   name: Kepler-507
   catalog_host: Kepler-507
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '12058931'
   id_type: KIC
   name: Kepler-182
   catalog_host: Kepler-182
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '12061222'
   id_type: KIC
   name: Kepler-572
   catalog_host: Kepler-572
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '12116489'
   id_type: KIC
   name: Kepler-595
   catalog_host: Kepler-595
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '12252424'
   id_type: KIC
   name: Kepler-113
   catalog_host: Kepler-113
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '12302530'
   id_type: KIC
   name: Kepler-155
   catalog_host: Kepler-155
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '12314973'
   id_type: KIC
   name: Kepler-450
   catalog_host: Kepler-450
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '12404305'
   id_type: KIC
   name: Kepler-573
   catalog_host: Kepler-573
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '12404954'
   id_type: KIC
   name: Kepler-537
   catalog_host: Kepler-537
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '12470954'
   id_type: KIC
   name: Kepler-554
   catalog_host: Kepler-554
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '12600735'
   id_type: KIC
   name: Kepler-596
   catalog_host: Kepler-596
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '12784167'
   id_type: KIC
   name: Kepler-1522
   catalog_host: Kepler-1522
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '12834874'
   id_type: KIC
   name: Kepler-574
   catalog_host: Kepler-574
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '1871056'
   id_type: KIC
   name: Kepler-264
   catalog_host: Kepler-264
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '2438264'
   id_type: KIC
   name: Kepler-156
   catalog_host: Kepler-156
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '2441495'
   id_type: KIC
   name: Kepler-479
   catalog_host: Kepler-479
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '2444412'
   id_type: KIC
   name: Kepler-1710
   catalog_host: Kepler-1710
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '2571238'
   id_type: KIC
   name: Kepler-19
   catalog_host: Kepler-19
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '2581554'
   id_type: KIC
   name: Kepler-1521
   catalog_host: Kepler-1521
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '2692377'
   id_type: KIC
   name: Kepler-98
   catalog_host: Kepler-98
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '2715135'
   id_type: KIC
   name: Kepler-753
   catalog_host: Kepler-753
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '2987027'
   id_type: KIC
   name: Kepler-489
   catalog_host: Kepler-489
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '2989404'
   id_type: KIC
   name: Kepler-323
   catalog_host: Kepler-323
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '3102384'
   id_type: KIC
   name: Kepler-454
   catalog_host: Kepler-454
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '3217264'
   id_type: KIC
   name: Kepler-149
   catalog_host: Kepler-149
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '3239945'
   id_type: KIC
   name: Kepler-167
   catalog_host: Kepler-167
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '3247268'
   id_type: KIC
   name: Kepler-418
   catalog_host: Kepler-418
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '3323887'
   id_type: KIC
   name: Kepler-9
   catalog_host: Kepler-9
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '3326377'
   id_type: KIC
   name: Kepler-967
   catalog_host: Kepler-967
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '3338885'
   id_type: KIC
   name: Kepler-975
   catalog_host: Kepler-975
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '3353050'
   id_type: KIC
   name: Kepler-541
   catalog_host: Kepler-541
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '3531558'
   id_type: KIC
   name: Kepler-467
   catalog_host: Kepler-467
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '3541946'
   id_type: KIC
   name: Kepler-198
   catalog_host: Kepler-198
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '3544595'
   id_type: KIC
   name: Kepler-93
   catalog_host: Kepler-93
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '3559935'
   id_type: KIC
   name: Kepler-576
   catalog_host: Kepler-576
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '3632418'
   id_type: KIC
   name: Kepler-21
   catalog_host: Kepler-21
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '3642289'
   id_type: KIC
   name: Kepler-135
   catalog_host: Kepler-135
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '3656121'
   id_type: KIC
   name: Kepler-146
   catalog_host: Kepler-146
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '3662838'
   id_type: KIC
   name: Kepler-516
   catalog_host: Kepler-516
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '3733628'
   id_type: KIC
   name: Kepler-543
   catalog_host: Kepler-543
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '3745690'
   id_type: KIC
   name: Kepler-157
   catalog_host: Kepler-157
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '3762468'
   id_type: KIC
   name: Kepler-493
   catalog_host: Kepler-493
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '3831053'
   id_type: KIC
   name: Kepler-1719
   catalog_host: Kepler-1719
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '3833007'
   id_type: KIC
   name: Kepler-555
   catalog_host: Kepler-555
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '3835670'
   id_type: KIC
   name: Kepler-473
   catalog_host: Kepler-473
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '3847138'
   id_type: KIC
   name: Kepler-556
   catalog_host: Kepler-556
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '3847907'
   id_type: KIC
   name: Kepler-497
   catalog_host: Kepler-497
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '3937519'
   id_type: KIC
   name: Kepler-495
   catalog_host: Kepler-495
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '4141376'
   id_type: KIC
   name: Kepler-1655
   catalog_host: Kepler-1655
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '4143755'
   id_type: KIC
   name: Kepler-510
   catalog_host: Kepler-510
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '4149450'
   id_type: KIC
   name: Kepler-1772
   catalog_host: Kepler-1772
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '4157325'
   id_type: KIC
   name: Kepler-416
   catalog_host: Kepler-416
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '4165473'
   id_type: KIC
   name: Kepler-597
   catalog_host: Kepler-597
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '4180280'
   id_type: KIC
   name: Kepler-472
   catalog_host: Kepler-472
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '4249725'
   id_type: KIC
   name: Kepler-120
   catalog_host: Kepler-120
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '4349452'
   id_type: KIC
   name: Kepler-25
   catalog_host: Kepler-25
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '4478168'
   id_type: KIC
   name: Kepler-624
   catalog_host: Kepler-624
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '4545187'
   id_type: KIC
   name: Kepler-121
   catalog_host: Kepler-121
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '4563268'
   id_type: KIC
   name: Kepler-625
   catalog_host: Kepler-625
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '4570949'
   id_type: KIC
   name: Kepler-76
   catalog_host: Kepler-76
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '4644604'
   id_type: KIC
   name: Kepler-626
   catalog_host: Kepler-626
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '4757437'
   id_type: KIC
   name: Kepler-168
   catalog_host: Kepler-168
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '4815520'
   id_type: KIC
   name: Kepler-1656
   catalog_host: Kepler-1656
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '4832837'
   id_type: KIC
   name: Kepler-621
   catalog_host: Kepler-621
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '4833421'
   id_type: KIC
   name: Kepler-122
   catalog_host: Kepler-122
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '4852528'
   id_type: KIC
   name: Kepler-80
   catalog_host: Kepler-80
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '4914423'
   id_type: KIC
   name: Kepler-103
   catalog_host: Kepler-103
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '5031857'
   id_type: KIC
   name: Kepler-1755
   catalog_host: Kepler-1755
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '5084942'
   id_type: KIC
   name: Kepler-475
   catalog_host: Kepler-475
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '5088536'
   id_type: KIC
   name: Kepler-130
   catalog_host: Kepler-130
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '5094751'
   id_type: KIC
   name: Kepler-109
   catalog_host: Kepler-109
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '5113822'
   id_type: KIC
   name: Kepler-199
   catalog_host: Kepler-199
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '5121511'
   id_type: KIC
   name: Kepler-632
   catalog_host: Kepler-632
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '5299459'
   id_type: KIC
   name: Kepler-307
   catalog_host: Kepler-307
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '5340644'
   id_type: KIC
   name: Kepler-580
   catalog_host: Kepler-580
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '5351250'
   id_type: KIC
   name: Kepler-150
   catalog_host: Kepler-150
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '5357901'
   id_type: KIC
   name: Kepler-425
   catalog_host: Kepler-425
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '5371776'
   id_type: KIC
   name: Kepler-304
   catalog_host: Kepler-304
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '5383248'
   id_type: KIC
   name: Kepler-96
   catalog_host: Kepler-96
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '5444548'
   id_type: KIC
   name: Kepler-545
   catalog_host: Kepler-545
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '5446285'
   id_type: KIC
   name: KOI-142
   catalog_host: KOI-142
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '5511081'
   id_type: KIC
   name: Kepler-338
   catalog_host: Kepler-338
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '5531694'
   id_type: KIC
   name: Kepler-634
   catalog_host: Kepler-634
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '5613330'
   id_type: KIC
   name: Kepler-635
   catalog_host: Kepler-635
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '5617854'
   id_type: KIC
   name: Kepler-901
   catalog_host: Kepler-901
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '5621125'
   id_type: KIC
   name: Kepler-959
   catalog_host: Kepler-959
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '5683743'
   id_type: KIC
   name: Kepler-546
   catalog_host: Kepler-546
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '5695396'
   id_type: KIC
   name: Kepler-131
   catalog_host: Kepler-131
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '5728139'
   id_type: KIC
   name: Kepler-433
   catalog_host: Kepler-433
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '5735762'
   id_type: KIC
   name: Kepler-48
   catalog_host: Kepler-48
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '5774349'
   id_type: KIC
   name: Kepler-599
   catalog_host: Kepler-599
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '5780885'
   id_type: KIC
   name: Kepler-7
   catalog_host: Kepler-7
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '5786676'
   id_type: KIC
   name: Kepler-1665
   catalog_host: Kepler-1665
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '5791986'
   id_type: KIC
   name: Kepler-151
   catalog_host: Kepler-151
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '5794570'
   id_type: KIC
   name: Kepler-1312
   catalog_host: Kepler-1312
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '5796675'
   id_type: KIC
   name: Kepler-636
   catalog_host: Kepler-636
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '5809890'
   id_type: KIC
   name: Kepler-755
   catalog_host: Kepler-755
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '5812701'
   id_type: KIC
   name: KOI-12
   catalog_host: KOI-12
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '5812960'
   id_type: KIC
   name: Kepler-582
   catalog_host: Kepler-582
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '5866724'
   id_type: KIC
   name: Kepler-65
   catalog_host: Kepler-65
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '5959753'
   id_type: KIC
   name: Kepler-496
   catalog_host: Kepler-496
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '5966154'
   id_type: KIC
   name: Kepler-201
   catalog_host: Kepler-201
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '5972334'
   id_type: KIC
   name: Kepler-487
   catalog_host: Kepler-487
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '5978361'
   id_type: KIC
   name: Kepler-1722
   catalog_host: Kepler-1722
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '6020753'
   id_type: KIC
   name: Kepler-202
   catalog_host: Kepler-202
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '6021275'
   id_type: KIC
   name: Kepler-132
   catalog_host: Kepler-132
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '6029239'
   id_type: KIC
   name: Kepler-518
   catalog_host: Kepler-518
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '6037581'
   id_type: KIC
   name: Kepler-336
   catalog_host: Kepler-336
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '6046540'
   id_type: KIC
   name: Kepler-74
   catalog_host: Kepler-74
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '6062088'
   id_type: KIC
   name: Kepler-203
   catalog_host: Kepler-203
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '6063220'
   id_type: KIC
   name: Kepler-99
   catalog_host: Kepler-99
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '6152974'
   id_type: KIC
   name: Kepler-118
   catalog_host: Kepler-118
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '6196457'
   id_type: KIC
   name: Kepler-92
   catalog_host: Kepler-92
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '6266741'
   id_type: KIC
   name: Kepler-170
   catalog_host: Kepler-170
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '6267535'
   id_type: KIC
   name: Kepler-638
   catalog_host: Kepler-638
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '6291033'
   id_type: KIC
   name: Kepler-557
   catalog_host: Kepler-557
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '6291837'
   id_type: KIC
   name: Kepler-1715
   catalog_host: Kepler-1715
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '6362874'
   id_type: KIC
   name: Kepler-775
   catalog_host: Kepler-775
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '6365156'
   id_type: KIC
   name: Kepler-639
   catalog_host: Kepler-639
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '6381846'
   id_type: KIC
   name: Kepler-171
   catalog_host: Kepler-171
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '6383785'
   id_type: KIC
   name: Kepler-501
   catalog_host: Kepler-501
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '6422155'
   id_type: KIC
   name: Kepler-172
   catalog_host: Kepler-172
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '6425957'
   id_type: KIC
   name: Kepler-205
   catalog_host: Kepler-205
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '6442377'
   id_type: KIC
   name: Kepler-483
   catalog_host: Kepler-483
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '6448890'
   id_type: KIC
   name: Kepler-56
   catalog_host: Kepler-56
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '6451936'
   id_type: KIC
   name: Kepler-173
   catalog_host: Kepler-173
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '6462863'
   id_type: KIC
   name: KOI-94
   catalog_host: KOI-94
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '6508221'
   id_type: KIC
   name: Kepler-152
   catalog_host: Kepler-152
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '6521045'
   id_type: KIC
   name: Kepler-100
   catalog_host: Kepler-100
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '6528464'
   id_type: KIC
   name: Kepler-449
   catalog_host: Kepler-449
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '6541920'
   id_type: KIC
   name: Kepler-11
   catalog_host: Kepler-11
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '6616218'
   id_type: KIC
   name: Kepler-314
   catalog_host: Kepler-314
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '6665695'
   id_type: KIC
   name: Kepler-601
   catalog_host: Kepler-601
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '6677841'
   id_type: KIC
   name: Kepler-279
   catalog_host: Kepler-279
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '6678383'
   id_type: KIC
   name: Kepler-104
   catalog_host: Kepler-104
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '6685609'
   id_type: KIC
   name: Kepler-207
   catalog_host: Kepler-207
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '6707835'
   id_type: KIC
   name: Kepler-640
   catalog_host: Kepler-640
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '6776401'
   id_type: KIC
   name: Kepler-977
   catalog_host: Kepler-977
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '6803202'
   id_type: KIC
   name: Kepler-1711
   catalog_host: Kepler-1711
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '6849046'
   id_type: KIC
   name: Kepler-491
   catalog_host: Kepler-491
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '6850504'
   id_type: KIC
   name: Kepler-20
   catalog_host: Kepler-20
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '6851425'
   id_type: KIC
   name: Kepler-477
   catalog_host: Kepler-477
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '6922244'
   id_type: KIC
   name: Kepler-8
   catalog_host: Kepler-8
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '6937692'
   id_type: KIC
   name: Kepler-584
   catalog_host: Kepler-584
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '7050989'
   id_type: KIC
   name: Kepler-136
   catalog_host: Kepler-136
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '7115785'
   id_type: KIC
   name: Kepler-209
   catalog_host: Kepler-209
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '7132798'
   id_type: KIC
   name: Kepler-119
   catalog_host: Kepler-119
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '7219825'
   id_type: KIC
   name: Kepler-123
   catalog_host: Kepler-123
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '7269974'
   id_type: KIC
   name: Kepler-160
   catalog_host: Kepler-160
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '7277317'
   id_type: KIC
   name: Kepler-643
   catalog_host: Kepler-643
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '7368664'
   id_type: KIC
   name: Kepler-434
   catalog_host: Kepler-434
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '7375348'
   id_type: KIC
   name: Kepler-508
   catalog_host: Kepler-508
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '7419318'
   id_type: KIC
   name: Kepler-137
   catalog_host: Kepler-137
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '7440748'
   id_type: KIC
   name: Kepler-161
   catalog_host: Kepler-161
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '7445445'
   id_type: KIC
   name: Kepler-184
   catalog_host: Kepler-184
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '7447200'
   id_type: KIC
   name: Kepler-210
   catalog_host: Kepler-210
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '7456001'
   id_type: KIC
   name: Kepler-874
   catalog_host: Kepler-874
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '7515212'
   id_type: KIC
   name: Kepler-212
   catalog_host: Kepler-212
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '7515679'
   id_type: KIC
   name: Kepler-1517
   catalog_host: Kepler-1517
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '7529266'
   id_type: KIC
   name: Kepler-435
   catalog_host: Kepler-435
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '7603200'
   id_type: KIC
   name: Kepler-138
   catalog_host: Kepler-138
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '7626370'
   id_type: KIC
   name: Kepler-932
   catalog_host: Kepler-932
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '7626506'
   id_type: KIC
   name: Kepler-112
   catalog_host: Kepler-112
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '7670943'
   id_type: KIC
   name: Kepler-1713
   catalog_host: Kepler-1713
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '7679812'
   id_type: KIC
   name: Kepler-1931
   catalog_host: Kepler-1931
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '7700622'
   id_type: KIC
   name: Kepler-1716
   catalog_host: Kepler-1716
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '7764367'
   id_type: KIC
   name: Kepler-644
   catalog_host: Kepler-644
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '7778437'
   id_type: KIC
   name: Kepler-471
   catalog_host: Kepler-471
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '7831264'
   id_type: KIC
   name: Kepler-116
   catalog_host: Kepler-116
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '7841925'
   id_type: KIC
   name: Kepler-865
   catalog_host: Kepler-865
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '7877496'
   id_type: KIC
   name: Kepler-412
   catalog_host: Kepler-412
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '7950644'
   id_type: KIC
   name: Kepler-427
   catalog_host: Kepler-427
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '7977197'
   id_type: KIC
   name: Kepler-162
   catalog_host: Kepler-162
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8008067'
   id_type: KIC
   name: Kepler-139
   catalog_host: Kepler-139
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8015907'
   id_type: KIC
   name: Kepler-585
   catalog_host: Kepler-585
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8017703'
   id_type: KIC
   name: Kepler-174
   catalog_host: Kepler-174
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8026752'
   id_type: KIC
   name: Kepler-502
   catalog_host: Kepler-502
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8030148'
   id_type: KIC
   name: Kepler-474
   catalog_host: Kepler-474
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8037145'
   id_type: KIC
   name: Kepler-176
   catalog_host: Kepler-176
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8041216'
   id_type: KIC
   name: Kepler-500
   catalog_host: Kepler-500
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8043638'
   id_type: KIC
   name: Kepler-559
   catalog_host: Kepler-559
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8107225'
   id_type: KIC
   name: Kepler-499
   catalog_host: Kepler-499
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8107380'
   id_type: KIC
   name: Kepler-476
   catalog_host: Kepler-476
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8121310'
   id_type: KIC
   name: Kepler-521
   catalog_host: Kepler-521
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8158127'
   id_type: KIC
   name: Kepler-750
   catalog_host: Kepler-750
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8161561'
   id_type: KIC
   name: Kepler-645
   catalog_host: Kepler-645
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8162789'
   id_type: KIC
   name: Kepler-1989
   catalog_host: Kepler-1989
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8191672'
   id_type: KIC
   name: Kepler-5
   catalog_host: Kepler-5
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8193178'
   id_type: KIC
   name: Kepler-187
   catalog_host: Kepler-187
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8219268'
   id_type: KIC
   name: Kepler-91
   catalog_host: Kepler-91
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8235924'
   id_type: KIC
   name: Kepler-1203
   catalog_host: Kepler-1203
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8240797'
   id_type: KIC
   name: Kepler-321
   catalog_host: Kepler-321
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8242434'
   id_type: KIC
   name: Kepler-942
   catalog_host: Kepler-942
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8344004'
   id_type: KIC
   name: Kepler-188
   catalog_host: Kepler-188
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8349582'
   id_type: KIC
   name: Kepler-95
   catalog_host: Kepler-95
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8352537'
   id_type: KIC
   name: Kepler-547
   catalog_host: Kepler-547
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8355239'
   id_type: KIC
   name: Kepler-189
   catalog_host: Kepler-189
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8359498'
   id_type: KIC
   name: Kepler-77
   catalog_host: Kepler-77
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8394721'
   id_type: KIC
   name: Kepler-79
   catalog_host: Kepler-79
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8395660'
   id_type: KIC
   name: Kepler-106
   catalog_host: Kepler-106
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8456679'
   id_type: KIC
   name: Kepler-1990
   catalog_host: Kepler-1990
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8478994'
   id_type: KIC
   name: Kepler-37
   catalog_host: Kepler-37
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8480285'
   id_type: KIC
   name: Kepler-647
   catalog_host: Kepler-647
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8491277'
   id_type: KIC
   name: Kepler-498
   catalog_host: Kepler-498
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8494142'
   id_type: KIC
   name: Kepler-145
   catalog_host: Kepler-145
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8564587'
   id_type: KIC
   name: Kepler-57
   catalog_host: Kepler-57
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8565266'
   id_type: KIC
   name: Kepler-608
   catalog_host: Kepler-608
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8616637'
   id_type: KIC
   name: Kepler-190
   catalog_host: Kepler-190
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8625925'
   id_type: KIC
   name: Kepler-609
   catalog_host: Kepler-609
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8628758'
   id_type: KIC
   name: Kepler-804
   catalog_host: Kepler-804
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8644288'
   id_type: KIC
   name: Kepler-18
   catalog_host: Kepler-18
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8684730'
   id_type: KIC
   name: KOI-319
   catalog_host: KOI-319
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8692861'
   id_type: KIC
   name: Kepler-69
   catalog_host: Kepler-69
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8711794'
   id_type: KIC
   name: Kepler-463
   catalog_host: Kepler-463
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8738735'
   id_type: KIC
   name: Kepler-214
   catalog_host: Kepler-214
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8753657'
   id_type: KIC
   name: Kepler-406
   catalog_host: Kepler-406
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8802165'
   id_type: KIC
   name: Kepler-648
   catalog_host: Kepler-648
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8805348'
   id_type: KIC
   name: Kepler-649
   catalog_host: Kepler-649
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8806072'
   id_type: KIC
   name: Kepler-802
   catalog_host: Kepler-802
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8806123'
   id_type: KIC
   name: Kepler-177
   catalog_host: Kepler-177
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8822216'
   id_type: KIC
   name: Kepler-610
   catalog_host: Kepler-610
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8822366'
   id_type: KIC
   name: Kepler-805
   catalog_host: Kepler-805
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8845205'
   id_type: KIC
   name: Kepler-560
   catalog_host: Kepler-560
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8866102'
   id_type: KIC
   name: Kepler-410 A
   catalog_host: Kepler-410 A
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8878187'
   id_type: KIC
   name: Kepler-650
   catalog_host: Kepler-650
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8890783'
   id_type: KIC
   name: Kepler-561
   catalog_host: Kepler-561
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8934495'
   id_type: KIC
   name: Kepler-1721
   catalog_host: Kepler-1721
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8950853'
   id_type: KIC
   name: Kepler-839
   catalog_host: Kepler-839
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8962094'
   id_type: KIC
   name: Kepler-215
   catalog_host: Kepler-215
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '8972058'
   id_type: KIC
   name: Kepler-115
   catalog_host: Kepler-115
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9002278'
   id_type: KIC
   name: Kepler-62
   catalog_host: Kepler-62
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9020160'
   id_type: KIC
   name: Kepler-191
   catalog_host: Kepler-191
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9044228'
   id_type: KIC
   name: Kepler-1039
   catalog_host: Kepler-1039
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9115800'
   id_type: KIC
   name: Kepler-548
   catalog_host: Kepler-548
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9146018'
   id_type: KIC
   name: Kepler-192
   catalog_host: Kepler-192
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9157634'
   id_type: KIC
   name: Kepler-586
   catalog_host: Kepler-586
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9266431'
   id_type: KIC
   name: Kepler-1726
   catalog_host: Kepler-1726
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9271752'
   id_type: KIC
   name: Kepler-836
   catalog_host: Kepler-836
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9279669'
   id_type: KIC
   name: Kepler-612
   catalog_host: Kepler-612
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9305831'
   id_type: KIC
   name: Kepler-44
   catalog_host: Kepler-44
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9390653'
   id_type: KIC
   name: Kepler-504
   catalog_host: Kepler-504
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9410930'
   id_type: KIC
   name: Kepler-41
   catalog_host: Kepler-41
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9450647'
   id_type: KIC
   name: Kepler-465
   catalog_host: Kepler-465
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9451706'
   id_type: KIC
   name: Kepler-127
   catalog_host: Kepler-127
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9455325'
   id_type: KIC
   name: Kepler-958
   catalog_host: Kepler-958
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9458613'
   id_type: KIC
   name: Kepler-33
   catalog_host: Kepler-33
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9467404'
   id_type: KIC
   name: Kepler-1323
   catalog_host: Kepler-1323
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9471268'
   id_type: KIC
   name: Kepler-326
   catalog_host: Kepler-326
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9471974'
   id_type: KIC
   name: Kepler-108
   catalog_host: Kepler-108
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9475552'
   id_type: KIC
   name: Kepler-1315
   catalog_host: Kepler-1315
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9478990'
   id_type: KIC
   name: Kepler-39
   catalog_host: Kepler-39
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9527915'
   id_type: KIC
   name: Kepler-478
   catalog_host: Kepler-478
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9530945'
   id_type: KIC
   name: Kepler-216
   catalog_host: Kepler-216
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9573539'
   id_type: KIC
   name: Kepler-484
   catalog_host: Kepler-484
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9578686'
   id_type: KIC
   name: Kepler-651
   catalog_host: Kepler-651
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9579641'
   id_type: KIC
   name: Kepler-105
   catalog_host: Kepler-105
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9583881'
   id_type: KIC
   name: Kepler-562
   catalog_host: Kepler-562
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9589524'
   id_type: KIC
   name: Kepler-563
   catalog_host: Kepler-563
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9592705'
   id_type: KIC
   name: Kepler-1714
   catalog_host: Kepler-1714
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9597345'
   id_type: KIC
   name: Kepler-218
   catalog_host: Kepler-218
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9607164'
   id_type: KIC
   name: Kepler-614
   catalog_host: Kepler-614
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9631995'
   id_type: KIC
   name: Kepler-422
   catalog_host: Kepler-422
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9651668'
   id_type: KIC
   name: Kepler-423
   catalog_host: Kepler-423
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9662811'
   id_type: KIC
   name: Kepler-984
   catalog_host: Kepler-984
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9663113'
   id_type: KIC
   name: KIC 9663113
   catalog_host: KIC 9663113
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9702072'
   id_type: KIC
   name: Kepler-652
   catalog_host: Kepler-652
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9729691'
   id_type: KIC
   name: Kepler-949
   catalog_host: Kepler-949
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9818381'
   id_type: KIC
   name: Kepler-43
   catalog_host: Kepler-43
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9844088'
   id_type: KIC
   name: Kepler-564
   catalog_host: Kepler-564
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9872283'
   id_type: KIC
   name: Kepler-960
   catalog_host: Kepler-960
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9881662'
   id_type: KIC
   name: Kepler-140
   catalog_host: Kepler-140
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9884104'
   id_type: KIC
   name: Kepler-219
   catalog_host: Kepler-219
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9941662'
   id_type: KIC
   name: KOI-13
   catalog_host: KOI-13
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9941859'
   id_type: KIC
   name: Kepler-178
   catalog_host: Kepler-178
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9950612'
   id_type: KIC
   name: Kepler-220
   catalog_host: Kepler-220
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9964801'
   id_type: KIC
   name: Kepler-654
   catalog_host: Kepler-654
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
 - id: '9965439'
   id_type: KIC
   name: Kepler-655
   catalog_host: Kepler-655
-  reason: 'Phase 7 full quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'
+  reason: 'Scaled quality-filtered Kepler population: SNR>=50.0, Kp<=15.0, quarters>=8'

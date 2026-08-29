@@ -27,29 +27,29 @@ def _temporary_config(tmp_path: Path) -> Path:
     return destination
 
 
-def test_pipeline_runs_selected_phases_in_order(tmp_path: Path) -> None:
+def test_pipeline_runs_selected_stages_in_order(tmp_path: Path) -> None:
     config = _temporary_config(tmp_path)
     called: list[int] = []
 
-    def runner(phase: int):
+    def runner(stage: int):
         def execute(config_path: Path, refresh: bool) -> dict[str, int]:
             assert config_path == config
             assert not refresh
-            called.append(phase)
-            return {"phase": phase}
+            called.append(stage)
+            return {"stage": stage}
 
         return execute
 
     record = run_pipeline(
         config,
-        from_phase=0,
-        to_phase=2,
-        stage_runners={phase: runner(phase) for phase in range(3)},
+        from_stage=0,
+        to_stage=2,
+        stage_runners={stage: runner(stage) for stage in range(3)},
         log_path=tmp_path / "run.json",
     )
     assert called == [0, 1, 2]
     assert record["status"] == "completed"
-    assert [row["status"] for row in record["phases"]] == ["completed"] * 3
+    assert [row["status"] for row in record["stages"]] == ["completed"] * 3
     assert (tmp_path / "run.json").is_file()
 
 
@@ -64,8 +64,8 @@ def test_pipeline_dry_run_has_no_side_effects(tmp_path: Path) -> None:
 
     record = run_pipeline(
         config,
-        from_phase=0,
-        to_phase=0,
+        from_stage=0,
+        to_stage=0,
         dry_run=True,
         stage_runners={0: runner},
     )
@@ -82,7 +82,7 @@ def test_pipeline_records_failure_before_raising(tmp_path: Path) -> None:
         raise RuntimeError("synthetic failure")
 
     with pytest.raises(PipelineError, match="synthetic failure"):
-        run_pipeline(config, from_phase=0, to_phase=0, stage_runners={0: fail}, log_path=log)
+        run_pipeline(config, from_stage=0, to_stage=0, stage_runners={0: fail}, log_path=log)
     payload = json.loads(log.read_text(encoding="utf-8"))
     assert payload["status"] == "failed"
-    assert payload["phases"][0]["error_type"] == "RuntimeError"
+    assert payload["stages"][0]["error_type"] == "RuntimeError"

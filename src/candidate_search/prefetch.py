@@ -1,4 +1,4 @@
-"""Validated concurrent prefetch for the frozen Phase 8 target sample."""
+"""Validated concurrent prefetch for the frozen candidate screening target sample."""
 
 from __future__ import annotations
 
@@ -14,7 +14,7 @@ import yaml
 
 from src.ingest.mast_client import MastLightCurveClient
 
-LOGGER = logging.getLogger("sxs.phase8.prefetch")
+LOGGER = logging.getLogger("sxs.candidate_search.prefetch")
 
 
 def prefetch(config_path: str | Path = "configs/candidate_search.yaml") -> dict[str, Any]:
@@ -27,7 +27,7 @@ def prefetch(config_path: str | Path = "configs/candidate_search.yaml") -> dict[
         if not pending:
             break
         LOGGER.info("Attempt %d: %d targets with %d worker(s)", attempt, len(pending), workers)
-        with ThreadPoolExecutor(max_workers=workers, thread_name_prefix="sxs-phase8-mast") as executor:
+        with ThreadPoolExecutor(max_workers=workers, thread_name_prefix="sxs-search-mast") as executor:
             futures = {executor.submit(_fetch, task["target_id"], config): task for task in pending}
             for completed, future in enumerate(as_completed(futures), start=1):
                 task = futures[future]
@@ -51,7 +51,7 @@ def prefetch(config_path: str | Path = "configs/candidate_search.yaml") -> dict[
         "failed_targets": sum(row["status"] != "available" for row in ordered),
         "targets": ordered,
     }
-    output = Path("data/phase8/processed/prefetch_summary.json")
+    output = Path("data/search/processed/prefetch_summary.json")
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
     return summary

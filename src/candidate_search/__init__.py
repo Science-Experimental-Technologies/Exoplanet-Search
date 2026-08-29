@@ -1,2 +1,1 @@
-"""Phase 8 search over explicitly unclassified Kepler targets."""
-
+"""Candidate screening over explicitly unclassified Kepler targets."""

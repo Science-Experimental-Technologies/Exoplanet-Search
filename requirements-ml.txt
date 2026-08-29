@@ -1,2 +1,2 @@
-# Backward-compatible alias for the complete Phase 4+ stack.
+# Backward-compatible alias for the complete machine-learning stack.
 -r requirements.txt

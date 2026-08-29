@@ -1,8 +1,8 @@
-# Phase 2 — Preprocessing and Cleaning
+# Preprocessing and Signal Preservation
 
 ## Result
 
-Phase 2 completed successfully for all 20 validation systems. The pipeline read
+preprocessing completed successfully for all 20 validation systems. The pipeline read
 1,333,613 raw FITS table rows and produced 1,263,184 finite, normalized samples
 across 20 target-level Parquet files. No target was skipped.
 
@@ -62,6 +62,5 @@ including the active Kepler-17 host. Diagnostic figures are stored in
   identifiable in downstream model features.
 - The window was selected as a fixed reproducible baseline, not optimized per
   star. A later sensitivity analysis should compare several windows.
-- Phase-folded depth recovery is a preservation diagnostic using known periods;
+- Period-folded depth recovery is a preservation diagnostic using known periods;
   it is not an independent transit detection result.
-

@@ -8,7 +8,7 @@ SCIX Exoplanet Search (SXS) is a reproducible pipeline combining Box Least Squar
 
 ## Data and Methods
 
-Confirmed-planet parameters came from the NASA Exoplanet Archive `pscomppars` table, and official false-positive labels came from the cumulative KOI table [1]. Kepler long-cadence light curves were obtained from MAST with Lightkurve [2]. After quality filtering, segment normalization, and Savitzky-Golay detrending, BLS searched periods of 0.5–50 days and retained five distinct peaks per target. A 13-feature RF ranked peaks using BLS and folded-light-curve diagnostics. Five-fold `StratifiedGroupKFold` evaluation grouped all signals by target to prevent train-test leakage. The Phase 7 RF threshold of 0.221107 was selected to maximize precision subject to out-of-fold recall of at least 0.90. Phase 9 excluded RF scores from its evidence rules and instead used 1,000 segment-wise circular-shuffle BLS searches per target, odd/even and secondary-eclipse tests following DR25-style diagnostics [3], limb-darkened `batman` fits [4], Gaia DR3 scene checks [5], TESS photometry, and an ExoFOP-derived TOI lookup [6,7].
+Confirmed-planet parameters came from the NASA Exoplanet Archive `pscomppars` table, and official false-positive labels came from the cumulative KOI table [1]. Kepler long-cadence light curves were obtained from MAST with Lightkurve [2]. After quality filtering, segment normalization, and Savitzky-Golay detrending, BLS searched periods of 0.5–50 days and retained five distinct peaks per target. A 13-feature RF ranked peaks using BLS and folded-light-curve diagnostics. Five-fold `StratifiedGroupKFold` evaluation grouped all signals by target to prevent train-test leakage. The scale-up qualification RF threshold of 0.221107 was selected to maximize precision subject to out-of-fold recall of at least 0.90. independent validation excluded RF scores from its evidence rules and instead used 1,000 segment-wise circular-shuffle BLS searches per target, odd/even and secondary-eclipse tests following DR25-style diagnostics [3], limb-darkened `batman` fits [4], Gaia DR3 scene checks [5], TESS photometry, and an ExoFOP-derived TOI lookup [6,7].
 
 ## Results
 
@@ -20,9 +20,9 @@ The original benchmark contained 36 planets inside the fixed search range. BLS r
 | v1 RF, threshold 0.5 | 0.632 | 0.800 | 0.070 | 12/36 end to end (33.33%) |
 | v2 BLS proposal set | — | — | — | 227/434 (52.30%) |
 | v2 RF, review threshold 0.221107 | 0.412 | 0.903 | 0.146 | 205 TP; 292 FP |
-| Phase 9 independent vetting | — | — | — | 0 strong; 1 weak; 19 likely FP |
+| Independent vetting | — | — | — | 0 strong; 1 weak; 19 likely FP |
 
-All 250 Phase 8 targets completed acquisition, preprocessing, and blind BLS search, producing 1,250 peaks. RF v2 flagged 151 peaks; 110 also passed the available preliminary odd/even, phase-0.5 secondary, and moment-centroid checks. The 20 highest-ranked signals, spanning 14 KIC targets, were frozen before independent validation.
+All 250 candidate screening targets completed acquisition, preprocessing, and blind BLS search, producing 1,250 peaks. RF v2 flagged 151 peaks; 110 also passed the available preliminary odd/even, phase-0.5 secondary, and moment-centroid checks. The 20 highest-ranked signals, spanning 14 KIC targets, were frozen before independent validation.
 
 No shortlisted signal met the strong empirical-FAP threshold of 0.01. The sole weak signal, KIC 8300900-r1, has period 5.090289 days and empirical BLS FAP 20/1,001 = 0.01998. It passed the configured odd/even, secondary, morphology, physical-size, and Gaia checks, but lacked TESS period support and is not a confirmed exoplanet. Nineteen signals were classified as likely false positives under prespecified key-failure rules. No position-matched public TOI record was found for the 14 targets, but catalog absence was assigned no positive evidential weight.
 
@@ -40,7 +40,7 @@ This work was independently funded by Rasya Andrean and Urus Foundation. It made
 
 Repository: https://github.com/Science-Experimental-Technologies/Exoplanet-Search
 
-Public release: `v1.0.0`; license: MIT. The internal Phase 7–10 development milestone remains identified as `v2.0.0` in the archived full report. Versioned configuration, catalog snapshots, metrics, shortlisted-candidate products, independent-vetting tables, and manuscript sources are included in the public release. Raw mission products remain available from their source archives.
+Repository: `https://github.com/Science-Experimental-Technologies/Exoplanet-Search`; archived public research release: `v1.0.0`. Current revisions use the SXS Source-Available Commercial License 1.0; the archived `v1.0.0` copy retains its original license. Versioned configuration, catalog snapshots, metrics, shortlisted-candidate products, independent-vetting tables, and manuscript sources are included. Raw mission products remain available from their source archives.
 
 ## References
 
