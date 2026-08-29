@@ -10,7 +10,7 @@ Scope: infrastructure, release packaging, discoverability metadata, and archival
 
 | Task | Status | Evidence or remaining action |
 |---|:---:|---|
-| GitHub Actions CI | In progress | `.github/workflows/ci.yml` adds an Ubuntu matrix for Python 3.11 and 3.12, core dependency installation, `pip check`, and non-network tests. A fresh local core-only environment passed 35 tests after `batman-package` was added to the core dependency set. The README badge must wait for the first successful hosted run. |
+| GitHub Actions CI | Done | `.github/workflows/ci.yml` runs an Ubuntu matrix for Python 3.11 and 3.12, core dependency installation, `pip check`, and non-network tests. A fresh local core-only environment passed 35 tests, and corrected hosted run [33229091278](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/actions/runs/33229091278) succeeded for both matrix jobs before the real README badge was added. |
 | GitHub Release `v1.0.0` | Pending execution | The tag is present on the remote. Release creation and PDF upload remain to be completed and verified. |
 | Repository About metadata | Pending execution | Final description, topics, and website are specified below. |
 | Zenodo DOI | Documented - pending RA account action | GitHub-Zenodo linking requires the repository owner's Zenodo session. No DOI is claimed until Zenodo returns one. |
@@ -22,7 +22,9 @@ The workflow triggers on pushes to `main` and on pull requests. It uses `ubuntu-
 
 Local preflight used a new Python 3.11.9 virtual environment containing only `requirements-core.txt`. The first collection exposed that independent-validation tests import `batman`; `batman-package==2.5.3` was therefore moved into the pinned core set rather than skipping scientific tests. The corrected environment reported no broken requirements and passed 35 tests with one network test deselected.
 
-The first hosted matrix run passed on Python 3.11 and exposed a Python 3.12 compatibility requirement: `batman-package==2.5.3` imports `distutils`, which Python 3.12 removed from the standard library. `setuptools==75.8.2` was consequently added to both core and full pinned requirements to provide the compatibility implementation. The CI badge remains withheld until the corrected matrix succeeds.
+The first hosted matrix run passed on Python 3.11 and exposed a Python 3.12 compatibility requirement: `batman-package==2.5.3` imports `distutils`, which Python 3.12 removed from the standard library. `setuptools==75.8.2` was consequently added to both core and full pinned requirements to provide the compatibility implementation. The CI badge was withheld until the corrected matrix succeeded.
+
+Corrected hosted run 33229091278 completed successfully for both Python 3.11 and 3.12. Only after that result was recorded was the workflow badge added to the README.
 
 Hosted CI is not a full-stack ML validation. Changes involving the Random Forest/CNN training paths, TensorFlow, or MLflow must be checked locally using `requirements.txt`. Windows remains manually validated; the workflow makes no Windows CI claim.
 

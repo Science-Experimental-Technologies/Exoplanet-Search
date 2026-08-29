@@ -4,11 +4,10 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.11–3.12](https://img.shields.io/badge/python-3.11--3.12-blue.svg)](pyproject.toml)
+[![CI](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/actions/workflows/ci.yml/badge.svg)](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/actions/workflows/ci.yml)
 [![Confirmed discoveries: 0](https://img.shields.io/badge/confirmed%20discoveries-0-lightgrey.svg)](DISCLAIMER.md)
 
 SCIX Exoplanet Search (SXS) is a reproducible computational pipeline combining Box Least Squares (BLS) transit detection, machine-learning ranking, catalog cross-checks, and independent candidate vetting in public Kepler photometry. The initial benchmark measured end-to-end recovery on confirmed systems; the scaled workflow then searched a deterministic sample of 250 targets without cumulative-KOI or confirmed-Kepler-name history. Independent validation of the resulting shortlist found 0 strong candidates, 1 weak candidate, and 19 likely false positives. The project is a methodology and negative-result case study, not a planet-discovery catalog.
-
-No CI badge is shown because a hosted GitHub Actions workflow has not yet been configured. Local verification is documented below.
 
 ## Key Results
 
