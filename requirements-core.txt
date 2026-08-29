@@ -1,4 +1,5 @@
 # Phase 0 runtime and shared scientific stack. All direct dependencies are pinned.
+setuptools==75.8.2
 numpy==1.26.4
 scipy==1.14.1
 pandas==2.2.3

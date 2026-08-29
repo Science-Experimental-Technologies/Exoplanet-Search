@@ -22,6 +22,8 @@ The workflow triggers on pushes to `main` and on pull requests. It uses `ubuntu-
 
 Local preflight used a new Python 3.11.9 virtual environment containing only `requirements-core.txt`. The first collection exposed that independent-validation tests import `batman`; `batman-package==2.5.3` was therefore moved into the pinned core set rather than skipping scientific tests. The corrected environment reported no broken requirements and passed 35 tests with one network test deselected.
 
+The first hosted matrix run passed on Python 3.11 and exposed a Python 3.12 compatibility requirement: `batman-package==2.5.3` imports `distutils`, which Python 3.12 removed from the standard library. `setuptools==75.8.2` was consequently added to both core and full pinned requirements to provide the compatibility implementation. The CI badge remains withheld until the corrected matrix succeeds.
+
 Hosted CI is not a full-stack ML validation. Changes involving the Random Forest/CNN training paths, TensorFlow, or MLflow must be checked locally using `requirements.txt`. Windows remains manually validated; the workflow makes no Windows CI claim.
 
 ## GitHub Release `v1.0.0`
