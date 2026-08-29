@@ -9,7 +9,7 @@ All notable changes to this project are documented in this file. The format foll
 - GitHub Actions CI for the core deterministic test suite on Ubuntu with Python 3.11 and 3.12.
 - Phase 12 release, repository-metadata, and Zenodo DOI guidance.
 - Mermaid overview of the end-to-end SXS methodology.
-- Wide SXS project banner for the repository landing page.
+- Minimal SXS corporate wordmark banner for the repository landing page.
 
 ## [1.0.0] - 2026-08-29
 
