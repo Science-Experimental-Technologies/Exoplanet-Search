@@ -1,5 +1,7 @@
 **SXS does not claim the discovery or confirmation of any new exoplanet. Every reported signal is unvalidated and requires independent confirmation.**
 
+![SXS — SCIX Exoplanet Search](assets/sxs-banner.png)
+
 # SXS — Reproducible Kepler Transit Detection and Candidate Vetting
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
