@@ -1,0 +1,16 @@
+{
+  "source_table": "cumulative",
+  "source_url": "https://exoplanetarchive.ipac.caltech.edu/TAP/sync",
+  "retrieved_at_utc": "2026-08-25T01:57:29.112983+00:00",
+  "where": "koi_disposition = 'FALSE POSITIVE' and koi_period between 0.5 and 50.0 and koi_duration is not null and koi_depth is not null and koi_time0bk is not null",
+  "selection_seed": 42,
+  "per_category": 5,
+  "row_count": 20,
+  "target_count": 20,
+  "category_counts": {
+    "centroid_offset": 5,
+    "ephemeris_contamination": 5,
+    "not_transit": 5,
+    "stellar_eclipse": 5
+  }
+}

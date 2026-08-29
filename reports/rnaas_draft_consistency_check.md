@@ -1,0 +1,47 @@
+# RNAAS Draft Consistency Check
+
+Checked against:
+
+- `reports/research_report.md`
+- `reports/phase9_independent_validation.md`
+- `reports/experiments/phase7/rf_v2_cv.json` only for the explicitly identified derived RF v2 FPR
+
+## Editorial checks
+
+- The full research report was not overwritten.
+- The draft has no formal abstract section.
+- It contains one table and no figure.
+- The table was selected instead of the KIC 8300900-r1 folded light curve because the manuscript's contribution is pipeline performance and independent-vetting outcome, not a candidate claim.
+- Author Rasya Andrean, affiliation Science Experimental Technologies, funding acknowledgment, and repository URL are filled from RA-provided public sources.
+- The language states that KIC 8300900-r1 is weak and unconfirmed and makes no discovery claim.
+
+## Numerical cross-check
+
+| Quantity in RNAAS draft | Value in draft | Source and matching value | Result |
+|---|---:|---|---|
+| v1 eligible planets | 36 | `research_report.md`: 36 | Match |
+| v1 BLS recovery | 15/36 (41.67%) | `research_report.md`: 15/36 (41.67%) | Match |
+| v1 RF end-to-end recovery | 12/36 (33.33%) | `research_report.md`: 12/36 (33.33%) | Match |
+| v1 BLS precision / recall / FPR | 0.130 / 1.000 / 1.000 | `research_report.md`, Results table: same | Match |
+| v1 RF precision / recall / FPR | 0.632 / 0.800 / 0.070 | `research_report.md`, Results table: same | Match |
+| v2 eligible planets and BLS recovery | 227/434 (52.30%) | `research_report.md`: 227/434 (52.30%) | Match |
+| v2 RF review threshold | 0.221107 | `research_report.md`: 0.221107 | Match |
+| v2 RF review precision / recall | 0.412 / 0.903 | `research_report.md`: 0.412 / 0.903 | Match |
+| v2 RF review FPR | 0.146 | Derived from the frozen out-of-fold artifact: 292 FP / 2,000 negative peaks = 0.146; precision check 205/497 = 0.4124748491 and recall check 205/227 = 0.9030837004 | Derived, exact |
+| Phase 8 target count | 250 | `research_report.md`: 250 | Match |
+| Phase 8 BLS peaks / RF passes / sanity passes | 1,250 / 151 / 110 | `research_report.md`: same | Match |
+| Frozen shortlist / unique KICs | 20 / 14 | `research_report.md` and `phase9_independent_validation.md`: same | Match |
+| Phase 9 null draws | 1,000 per target | Both source reports: 1,000 | Match |
+| Strong FAP threshold | 0.01 | Both source reports: 0.01 | Match |
+| Final category counts | 0 strong / 1 weak / 19 likely FP | Both source reports: same | Match |
+| Weak signal | KIC 8300900-r1 | Both source reports: same | Match |
+| Weak-signal period | 5.090289 days | Both source reports: 5.090289 days | Match |
+| Weak-signal empirical FAP | 20/1,001 = 0.01998 | `research_report.md`: 20/1,001 = 0.01998; Phase 9 table rounds to 0.0200 | Match |
+| Public TOI matches | 0 among 14 targets | Both source reports: no matched record for 14 targets | Match |
+| Kepler products per search target | 4 | Both source reports: four | Match |
+
+## Word-count rule
+
+The reported body count includes section headings, prose, table headers and cells, and the Data and Software Availability text. It excludes the title, author and affiliation lines, and the References heading and entries. This conservative count is generated after the final edit and recorded below.
+
+**Final body word count:** 741 words

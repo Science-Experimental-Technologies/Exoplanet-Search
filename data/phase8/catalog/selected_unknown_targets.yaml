@@ -1,0 +1,1751 @@
+targets:
+- id: '6203503'
+  id_type: KIC
+  name: KIC 6203503
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=10.970, available_quarters=18
+  kepmag: 10.97
+  available_quarters: 18
+- id: '10034926'
+  id_type: KIC
+  name: KIC 10034926
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.553, available_quarters=15
+  kepmag: 13.553
+  available_quarters: 15
+- id: '8832530'
+  id_type: KIC
+  name: KIC 8832530
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.037, available_quarters=18
+  kepmag: 13.037
+  available_quarters: 18
+- id: '8245391'
+  id_type: KIC
+  name: KIC 8245391
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.865, available_quarters=17
+  kepmag: 13.865
+  available_quarters: 17
+- id: '4283320'
+  id_type: KIC
+  name: KIC 4283320
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=12.347, available_quarters=15
+  kepmag: 12.347
+  available_quarters: 15
+- id: '5529999'
+  id_type: KIC
+  name: KIC 5529999
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.867, available_quarters=17
+  kepmag: 14.867
+  available_quarters: 17
+- id: '2014347'
+  id_type: KIC
+  name: KIC 2014347
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.052, available_quarters=17
+  kepmag: 14.052
+  available_quarters: 17
+- id: '7950103'
+  id_type: KIC
+  name: KIC 7950103
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.032, available_quarters=17
+  kepmag: 13.032
+  available_quarters: 17
+- id: '4279165'
+  id_type: KIC
+  name: KIC 4279165
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=12.377, available_quarters=15
+  kepmag: 12.377
+  available_quarters: 15
+- id: '5340268'
+  id_type: KIC
+  name: KIC 5340268
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=11.176, available_quarters=14
+  kepmag: 11.176
+  available_quarters: 14
+- id: '4909023'
+  id_type: KIC
+  name: KIC 4909023
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.915, available_quarters=17
+  kepmag: 14.915
+  available_quarters: 17
+- id: '11093064'
+  id_type: KIC
+  name: KIC 11093064
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.924, available_quarters=17
+  kepmag: 13.924
+  available_quarters: 17
+- id: '7662207'
+  id_type: KIC
+  name: KIC 7662207
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=11.772, available_quarters=18
+  kepmag: 11.772
+  available_quarters: 18
+- id: '9716401'
+  id_type: KIC
+  name: KIC 9716401
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.634, available_quarters=16
+  kepmag: 14.634
+  available_quarters: 16
+- id: '8686902'
+  id_type: KIC
+  name: KIC 8686902
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.090, available_quarters=18
+  kepmag: 13.09
+  available_quarters: 18
+- id: '12507373'
+  id_type: KIC
+  name: KIC 12507373
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=11.907, available_quarters=18
+  kepmag: 11.907
+  available_quarters: 18
+- id: '7502070'
+  id_type: KIC
+  name: KIC 7502070
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=12.370, available_quarters=15
+  kepmag: 12.37
+  available_quarters: 15
+- id: '6529892'
+  id_type: KIC
+  name: KIC 6529892
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.391, available_quarters=17
+  kepmag: 14.391
+  available_quarters: 17
+- id: '11013594'
+  id_type: KIC
+  name: KIC 11013594
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.825, available_quarters=17
+  kepmag: 13.825
+  available_quarters: 17
+- id: '6268872'
+  id_type: KIC
+  name: KIC 6268872
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.610, available_quarters=13
+  kepmag: 13.61
+  available_quarters: 13
+- id: '3438478'
+  id_type: KIC
+  name: KIC 3438478
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.602, available_quarters=17
+  kepmag: 14.602
+  available_quarters: 17
+- id: '8643675'
+  id_type: KIC
+  name: KIC 8643675
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.406, available_quarters=18
+  kepmag: 13.406
+  available_quarters: 18
+- id: '8461439'
+  id_type: KIC
+  name: KIC 8461439
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.478, available_quarters=18
+  kepmag: 13.478
+  available_quarters: 18
+- id: '2450149'
+  id_type: KIC
+  name: KIC 2450149
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=12.329, available_quarters=18
+  kepmag: 12.329
+  available_quarters: 18
+- id: '9825593'
+  id_type: KIC
+  name: KIC 9825593
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.870, available_quarters=17
+  kepmag: 14.87
+  available_quarters: 17
+- id: '9826728'
+  id_type: KIC
+  name: KIC 9826728
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.733, available_quarters=17
+  kepmag: 14.733
+  available_quarters: 17
+- id: '7668207'
+  id_type: KIC
+  name: KIC 7668207
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.175, available_quarters=17
+  kepmag: 14.175
+  available_quarters: 17
+- id: '5535635'
+  id_type: KIC
+  name: KIC 5535635
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.771, available_quarters=17
+  kepmag: 13.771
+  available_quarters: 17
+- id: '7293390'
+  id_type: KIC
+  name: KIC 7293390
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.696, available_quarters=17
+  kepmag: 14.696
+  available_quarters: 17
+- id: '6955441'
+  id_type: KIC
+  name: KIC 6955441
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.988, available_quarters=17
+  kepmag: 14.988
+  available_quarters: 17
+- id: '11561198'
+  id_type: KIC
+  name: KIC 11561198
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.098, available_quarters=17
+  kepmag: 14.098
+  available_quarters: 17
+- id: '3966950'
+  id_type: KIC
+  name: KIC 3966950
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.490, available_quarters=15
+  kepmag: 13.49
+  available_quarters: 15
+- id: '11974942'
+  id_type: KIC
+  name: KIC 11974942
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.206, available_quarters=18
+  kepmag: 13.206
+  available_quarters: 18
+- id: '8983642'
+  id_type: KIC
+  name: KIC 8983642
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.360, available_quarters=17
+  kepmag: 13.36
+  available_quarters: 17
+- id: '11289217'
+  id_type: KIC
+  name: KIC 11289217
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=12.869, available_quarters=15
+  kepmag: 12.869
+  available_quarters: 15
+- id: '6059650'
+  id_type: KIC
+  name: KIC 6059650
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=12.116, available_quarters=18
+  kepmag: 12.116
+  available_quarters: 18
+- id: '6499691'
+  id_type: KIC
+  name: KIC 6499691
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=12.903, available_quarters=13
+  kepmag: 12.903
+  available_quarters: 13
+- id: '1995522'
+  id_type: KIC
+  name: KIC 1995522
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.882, available_quarters=16
+  kepmag: 13.882
+  available_quarters: 16
+- id: '8104824'
+  id_type: KIC
+  name: KIC 8104824
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.444, available_quarters=17
+  kepmag: 14.444
+  available_quarters: 17
+- id: '7204603'
+  id_type: KIC
+  name: KIC 7204603
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=15.000, available_quarters=17
+  kepmag: 15.0
+  available_quarters: 17
+- id: '7506635'
+  id_type: KIC
+  name: KIC 7506635
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.612, available_quarters=17
+  kepmag: 14.612
+  available_quarters: 17
+- id: '3834843'
+  id_type: KIC
+  name: KIC 3834843
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.207, available_quarters=17
+  kepmag: 14.207
+  available_quarters: 17
+- id: '8611686'
+  id_type: KIC
+  name: KIC 8611686
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.808, available_quarters=17
+  kepmag: 13.808
+  available_quarters: 17
+- id: '9159739'
+  id_type: KIC
+  name: KIC 9159739
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.588, available_quarters=18
+  kepmag: 13.588
+  available_quarters: 18
+- id: '9282598'
+  id_type: KIC
+  name: KIC 9282598
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.328, available_quarters=18
+  kepmag: 13.328
+  available_quarters: 18
+- id: '4732344'
+  id_type: KIC
+  name: KIC 4732344
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.337, available_quarters=18
+  kepmag: 13.337
+  available_quarters: 18
+- id: '4150268'
+  id_type: KIC
+  name: KIC 4150268
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.617, available_quarters=17
+  kepmag: 14.617
+  available_quarters: 17
+- id: '10318320'
+  id_type: KIC
+  name: KIC 10318320
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=11.294, available_quarters=18
+  kepmag: 11.294
+  available_quarters: 18
+- id: '9094247'
+  id_type: KIC
+  name: KIC 9094247
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.763, available_quarters=17
+  kepmag: 13.763
+  available_quarters: 17
+- id: '9110204'
+  id_type: KIC
+  name: KIC 9110204
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.616, available_quarters=17
+  kepmag: 13.616
+  available_quarters: 17
+- id: '8328124'
+  id_type: KIC
+  name: KIC 8328124
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=12.273, available_quarters=18
+  kepmag: 12.273
+  available_quarters: 18
+- id: '8751484'
+  id_type: KIC
+  name: KIC 8751484
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.719, available_quarters=17
+  kepmag: 13.719
+  available_quarters: 17
+- id: '6705003'
+  id_type: KIC
+  name: KIC 6705003
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.367, available_quarters=17
+  kepmag: 14.367
+  available_quarters: 17
+- id: '7976673'
+  id_type: KIC
+  name: KIC 7976673
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.228, available_quarters=18
+  kepmag: 13.228
+  available_quarters: 18
+- id: '9028111'
+  id_type: KIC
+  name: KIC 9028111
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.924, available_quarters=17
+  kepmag: 14.924
+  available_quarters: 17
+- id: '8053478'
+  id_type: KIC
+  name: KIC 8053478
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.881, available_quarters=17
+  kepmag: 13.881
+  available_quarters: 17
+- id: '9205407'
+  id_type: KIC
+  name: KIC 9205407
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.961, available_quarters=17
+  kepmag: 13.961
+  available_quarters: 17
+- id: '8933532'
+  id_type: KIC
+  name: KIC 8933532
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.726, available_quarters=17
+  kepmag: 13.726
+  available_quarters: 17
+- id: '3647918'
+  id_type: KIC
+  name: KIC 3647918
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=12.396, available_quarters=15
+  kepmag: 12.396
+  available_quarters: 15
+- id: '10936708'
+  id_type: KIC
+  name: KIC 10936708
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=12.600, available_quarters=15
+  kepmag: 12.6
+  available_quarters: 15
+- id: '8527105'
+  id_type: KIC
+  name: KIC 8527105
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.728, available_quarters=17
+  kepmag: 13.728
+  available_quarters: 17
+- id: '9767793'
+  id_type: KIC
+  name: KIC 9767793
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.648, available_quarters=17
+  kepmag: 13.648
+  available_quarters: 17
+- id: '6207249'
+  id_type: KIC
+  name: KIC 6207249
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.768, available_quarters=17
+  kepmag: 14.768
+  available_quarters: 17
+- id: '4385594'
+  id_type: KIC
+  name: KIC 4385594
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=11.328, available_quarters=15
+  kepmag: 11.328
+  available_quarters: 15
+- id: '3442285'
+  id_type: KIC
+  name: KIC 3442285
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.120, available_quarters=17
+  kepmag: 14.12
+  available_quarters: 17
+- id: '8737042'
+  id_type: KIC
+  name: KIC 8737042
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.291, available_quarters=18
+  kepmag: 13.291
+  available_quarters: 18
+- id: '9027583'
+  id_type: KIC
+  name: KIC 9027583
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.608, available_quarters=17
+  kepmag: 14.608
+  available_quarters: 17
+- id: '10227577'
+  id_type: KIC
+  name: KIC 10227577
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.859, available_quarters=14
+  kepmag: 14.859
+  available_quarters: 14
+- id: '10802444'
+  id_type: KIC
+  name: KIC 10802444
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=11.265, available_quarters=18
+  kepmag: 11.265
+  available_quarters: 18
+- id: '8395160'
+  id_type: KIC
+  name: KIC 8395160
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.934, available_quarters=17
+  kepmag: 14.934
+  available_quarters: 17
+- id: '12118515'
+  id_type: KIC
+  name: KIC 12118515
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.736, available_quarters=17
+  kepmag: 14.736
+  available_quarters: 17
+- id: '6497068'
+  id_type: KIC
+  name: KIC 6497068
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.631, available_quarters=17
+  kepmag: 14.631
+  available_quarters: 17
+- id: '7091610'
+  id_type: KIC
+  name: KIC 7091610
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=10.434, available_quarters=18
+  kepmag: 10.434
+  available_quarters: 18
+- id: '9959022'
+  id_type: KIC
+  name: KIC 9959022
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.724, available_quarters=17
+  kepmag: 14.724
+  available_quarters: 17
+- id: '7542911'
+  id_type: KIC
+  name: KIC 7542911
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.659, available_quarters=16
+  kepmag: 13.659
+  available_quarters: 16
+- id: '6358402'
+  id_type: KIC
+  name: KIC 6358402
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.505, available_quarters=17
+  kepmag: 14.505
+  available_quarters: 17
+- id: '8058135'
+  id_type: KIC
+  name: KIC 8058135
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.920, available_quarters=17
+  kepmag: 13.92
+  available_quarters: 17
+- id: '8571156'
+  id_type: KIC
+  name: KIC 8571156
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=10.073, available_quarters=18
+  kepmag: 10.073
+  available_quarters: 18
+- id: '7877924'
+  id_type: KIC
+  name: KIC 7877924
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.557, available_quarters=17
+  kepmag: 14.557
+  available_quarters: 17
+- id: '8496766'
+  id_type: KIC
+  name: KIC 8496766
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.490, available_quarters=17
+  kepmag: 14.49
+  available_quarters: 17
+- id: '1849386'
+  id_type: KIC
+  name: KIC 1849386
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.670, available_quarters=17
+  kepmag: 14.67
+  available_quarters: 17
+- id: '7432276'
+  id_type: KIC
+  name: KIC 7432276
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.213, available_quarters=17
+  kepmag: 14.213
+  available_quarters: 17
+- id: '3630086'
+  id_type: KIC
+  name: KIC 3630086
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.818, available_quarters=17
+  kepmag: 14.818
+  available_quarters: 17
+- id: '3324150'
+  id_type: KIC
+  name: KIC 3324150
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.266, available_quarters=18
+  kepmag: 13.266
+  available_quarters: 18
+- id: '3525551'
+  id_type: KIC
+  name: KIC 3525551
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.983, available_quarters=17
+  kepmag: 14.983
+  available_quarters: 17
+- id: '5709079'
+  id_type: KIC
+  name: KIC 5709079
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.026, available_quarters=17
+  kepmag: 14.026
+  available_quarters: 17
+- id: '5183591'
+  id_type: KIC
+  name: KIC 5183591
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.837, available_quarters=17
+  kepmag: 13.837
+  available_quarters: 17
+- id: '5784291'
+  id_type: KIC
+  name: KIC 5784291
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.148, available_quarters=17
+  kepmag: 13.148
+  available_quarters: 17
+- id: '2011905'
+  id_type: KIC
+  name: KIC 2011905
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=12.887, available_quarters=18
+  kepmag: 12.887
+  available_quarters: 18
+- id: '6058776'
+  id_type: KIC
+  name: KIC 6058776
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.064, available_quarters=17
+  kepmag: 14.064
+  available_quarters: 17
+- id: '6672563'
+  id_type: KIC
+  name: KIC 6672563
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.103, available_quarters=14
+  kepmag: 13.103
+  available_quarters: 14
+- id: '8410437'
+  id_type: KIC
+  name: KIC 8410437
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=12.989, available_quarters=18
+  kepmag: 12.989
+  available_quarters: 18
+- id: '3543004'
+  id_type: KIC
+  name: KIC 3543004
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.286, available_quarters=17
+  kepmag: 14.286
+  available_quarters: 17
+- id: '3439466'
+  id_type: KIC
+  name: KIC 3439466
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=12.780, available_quarters=9
+  kepmag: 12.78
+  available_quarters: 9
+- id: '8332254'
+  id_type: KIC
+  name: KIC 8332254
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=12.760, available_quarters=18
+  kepmag: 12.76
+  available_quarters: 18
+- id: '10008154'
+  id_type: KIC
+  name: KIC 10008154
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.807, available_quarters=17
+  kepmag: 14.807
+  available_quarters: 17
+- id: '11250010'
+  id_type: KIC
+  name: KIC 11250010
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=12.299, available_quarters=15
+  kepmag: 12.299
+  available_quarters: 15
+- id: '3733529'
+  id_type: KIC
+  name: KIC 3733529
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.595, available_quarters=18
+  kepmag: 13.595
+  available_quarters: 18
+- id: '4472809'
+  id_type: KIC
+  name: KIC 4472809
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.989, available_quarters=14
+  kepmag: 13.989
+  available_quarters: 14
+- id: '9481531'
+  id_type: KIC
+  name: KIC 9481531
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=11.983, available_quarters=15
+  kepmag: 11.983
+  available_quarters: 15
+- id: '11443867'
+  id_type: KIC
+  name: KIC 11443867
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.904, available_quarters=14
+  kepmag: 14.904
+  available_quarters: 14
+- id: '8636046'
+  id_type: KIC
+  name: KIC 8636046
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=12.598, available_quarters=18
+  kepmag: 12.598
+  available_quarters: 18
+- id: '9021318'
+  id_type: KIC
+  name: KIC 9021318
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=12.774, available_quarters=18
+  kepmag: 12.774
+  available_quarters: 18
+- id: '10411677'
+  id_type: KIC
+  name: KIC 10411677
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=10.842, available_quarters=18
+  kepmag: 10.842
+  available_quarters: 18
+- id: '11653956'
+  id_type: KIC
+  name: KIC 11653956
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.789, available_quarters=14
+  kepmag: 14.789
+  available_quarters: 14
+- id: '2972300'
+  id_type: KIC
+  name: KIC 2972300
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.835, available_quarters=17
+  kepmag: 14.835
+  available_quarters: 17
+- id: '9451265'
+  id_type: KIC
+  name: KIC 9451265
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.432, available_quarters=18
+  kepmag: 13.432
+  available_quarters: 18
+- id: '5943205'
+  id_type: KIC
+  name: KIC 5943205
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.797, available_quarters=13
+  kepmag: 14.797
+  available_quarters: 13
+- id: '3849014'
+  id_type: KIC
+  name: KIC 3849014
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.810, available_quarters=17
+  kepmag: 14.81
+  available_quarters: 17
+- id: '5617102'
+  id_type: KIC
+  name: KIC 5617102
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.573, available_quarters=18
+  kepmag: 13.573
+  available_quarters: 18
+- id: '9456816'
+  id_type: KIC
+  name: KIC 9456816
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.713, available_quarters=17
+  kepmag: 14.713
+  available_quarters: 17
+- id: '8911885'
+  id_type: KIC
+  name: KIC 8911885
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=11.849, available_quarters=18
+  kepmag: 11.849
+  available_quarters: 18
+- id: '11468902'
+  id_type: KIC
+  name: KIC 11468902
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.438, available_quarters=18
+  kepmag: 13.438
+  available_quarters: 18
+- id: '11869048'
+  id_type: KIC
+  name: KIC 11869048
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.268, available_quarters=18
+  kepmag: 13.268
+  available_quarters: 18
+- id: '6924244'
+  id_type: KIC
+  name: KIC 6924244
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.683, available_quarters=17
+  kepmag: 14.683
+  available_quarters: 17
+- id: '7821234'
+  id_type: KIC
+  name: KIC 7821234
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=11.761, available_quarters=18
+  kepmag: 11.761
+  available_quarters: 18
+- id: '12164840'
+  id_type: KIC
+  name: KIC 12164840
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.876, available_quarters=17
+  kepmag: 14.876
+  available_quarters: 17
+- id: '8308199'
+  id_type: KIC
+  name: KIC 8308199
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.889, available_quarters=17
+  kepmag: 14.889
+  available_quarters: 17
+- id: '7048889'
+  id_type: KIC
+  name: KIC 7048889
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=11.948, available_quarters=18
+  kepmag: 11.948
+  available_quarters: 18
+- id: '8329294'
+  id_type: KIC
+  name: KIC 8329294
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.672, available_quarters=17
+  kepmag: 13.672
+  available_quarters: 17
+- id: '1574524'
+  id_type: KIC
+  name: KIC 1574524
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.667, available_quarters=17
+  kepmag: 13.667
+  available_quarters: 17
+- id: '5477570'
+  id_type: KIC
+  name: KIC 5477570
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.805, available_quarters=14
+  kepmag: 14.805
+  available_quarters: 14
+- id: '10118610'
+  id_type: KIC
+  name: KIC 10118610
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=12.413, available_quarters=18
+  kepmag: 12.413
+  available_quarters: 18
+- id: '7369114'
+  id_type: KIC
+  name: KIC 7369114
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.907, available_quarters=17
+  kepmag: 14.907
+  available_quarters: 17
+- id: '2994022'
+  id_type: KIC
+  name: KIC 2994022
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.973, available_quarters=17
+  kepmag: 14.973
+  available_quarters: 17
+- id: '5126954'
+  id_type: KIC
+  name: KIC 5126954
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=12.915, available_quarters=18
+  kepmag: 12.915
+  available_quarters: 18
+- id: '7201286'
+  id_type: KIC
+  name: KIC 7201286
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.815, available_quarters=17
+  kepmag: 14.815
+  available_quarters: 17
+- id: '10965485'
+  id_type: KIC
+  name: KIC 10965485
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.787, available_quarters=14
+  kepmag: 14.787
+  available_quarters: 14
+- id: '10453652'
+  id_type: KIC
+  name: KIC 10453652
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=11.508, available_quarters=18
+  kepmag: 11.508
+  available_quarters: 18
+- id: '7969912'
+  id_type: KIC
+  name: KIC 7969912
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.573, available_quarters=17
+  kepmag: 14.573
+  available_quarters: 17
+- id: '7514850'
+  id_type: KIC
+  name: KIC 7514850
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=12.714, available_quarters=18
+  kepmag: 12.714
+  available_quarters: 18
+- id: '7907690'
+  id_type: KIC
+  name: KIC 7907690
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.817, available_quarters=17
+  kepmag: 13.817
+  available_quarters: 17
+- id: '7510723'
+  id_type: KIC
+  name: KIC 7510723
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.590, available_quarters=17
+  kepmag: 14.59
+  available_quarters: 17
+- id: '4754378'
+  id_type: KIC
+  name: KIC 4754378
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.740, available_quarters=14
+  kepmag: 14.74
+  available_quarters: 14
+- id: '10124049'
+  id_type: KIC
+  name: KIC 10124049
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.506, available_quarters=18
+  kepmag: 13.506
+  available_quarters: 18
+- id: '8748654'
+  id_type: KIC
+  name: KIC 8748654
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.474, available_quarters=17
+  kepmag: 13.474
+  available_quarters: 17
+- id: '6679278'
+  id_type: KIC
+  name: KIC 6679278
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=12.175, available_quarters=16
+  kepmag: 12.175
+  available_quarters: 16
+- id: '2581691'
+  id_type: KIC
+  name: KIC 2581691
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.257, available_quarters=17
+  kepmag: 14.257
+  available_quarters: 17
+- id: '9650424'
+  id_type: KIC
+  name: KIC 9650424
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.331, available_quarters=18
+  kepmag: 13.331
+  available_quarters: 18
+- id: '11401173'
+  id_type: KIC
+  name: KIC 11401173
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=10.984, available_quarters=18
+  kepmag: 10.984
+  available_quarters: 18
+- id: '8914514'
+  id_type: KIC
+  name: KIC 8914514
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.078, available_quarters=18
+  kepmag: 13.078
+  available_quarters: 18
+- id: '10659556'
+  id_type: KIC
+  name: KIC 10659556
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.817, available_quarters=17
+  kepmag: 14.817
+  available_quarters: 17
+- id: '5610065'
+  id_type: KIC
+  name: KIC 5610065
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.316, available_quarters=17
+  kepmag: 14.316
+  available_quarters: 17
+- id: '9468741'
+  id_type: KIC
+  name: KIC 9468741
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.333, available_quarters=17
+  kepmag: 14.333
+  available_quarters: 17
+- id: '12052475'
+  id_type: KIC
+  name: KIC 12052475
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.724, available_quarters=14
+  kepmag: 13.724
+  available_quarters: 14
+- id: '12168991'
+  id_type: KIC
+  name: KIC 12168991
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.659, available_quarters=17
+  kepmag: 13.659
+  available_quarters: 17
+- id: '3128706'
+  id_type: KIC
+  name: KIC 3128706
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=11.563, available_quarters=15
+  kepmag: 11.563
+  available_quarters: 15
+- id: '11459571'
+  id_type: KIC
+  name: KIC 11459571
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.873, available_quarters=8
+  kepmag: 14.873
+  available_quarters: 8
+- id: '11391056'
+  id_type: KIC
+  name: KIC 11391056
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.777, available_quarters=14
+  kepmag: 14.777
+  available_quarters: 14
+- id: '7364380'
+  id_type: KIC
+  name: KIC 7364380
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=12.204, available_quarters=18
+  kepmag: 12.204
+  available_quarters: 18
+- id: '6707495'
+  id_type: KIC
+  name: KIC 6707495
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.723, available_quarters=17
+  kepmag: 13.723
+  available_quarters: 17
+- id: '4678743'
+  id_type: KIC
+  name: KIC 4678743
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=12.635, available_quarters=17
+  kepmag: 12.635
+  available_quarters: 17
+- id: '5869290'
+  id_type: KIC
+  name: KIC 5869290
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.764, available_quarters=17
+  kepmag: 13.764
+  available_quarters: 17
+- id: '3848540'
+  id_type: KIC
+  name: KIC 3848540
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.794, available_quarters=17
+  kepmag: 14.794
+  available_quarters: 17
+- id: '5308493'
+  id_type: KIC
+  name: KIC 5308493
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=12.326, available_quarters=8
+  kepmag: 12.326
+  available_quarters: 8
+- id: '3099957'
+  id_type: KIC
+  name: KIC 3099957
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.381, available_quarters=18
+  kepmag: 13.381
+  available_quarters: 18
+- id: '11031749'
+  id_type: KIC
+  name: KIC 11031749
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=12.469, available_quarters=18
+  kepmag: 12.469
+  available_quarters: 18
+- id: '3744514'
+  id_type: KIC
+  name: KIC 3744514
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.507, available_quarters=17
+  kepmag: 13.507
+  available_quarters: 17
+- id: '8018650'
+  id_type: KIC
+  name: KIC 8018650
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.021, available_quarters=18
+  kepmag: 13.021
+  available_quarters: 18
+- id: '8300900'
+  id_type: KIC
+  name: KIC 8300900
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.411, available_quarters=18
+  kepmag: 13.411
+  available_quarters: 18
+- id: '7504260'
+  id_type: KIC
+  name: KIC 7504260
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.969, available_quarters=17
+  kepmag: 14.969
+  available_quarters: 17
+- id: '7741550'
+  id_type: KIC
+  name: KIC 7741550
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.629, available_quarters=17
+  kepmag: 14.629
+  available_quarters: 17
+- id: '7130318'
+  id_type: KIC
+  name: KIC 7130318
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.971, available_quarters=17
+  kepmag: 13.971
+  available_quarters: 17
+- id: '3655287'
+  id_type: KIC
+  name: KIC 3655287
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.089, available_quarters=14
+  kepmag: 13.089
+  available_quarters: 14
+- id: '2969526'
+  id_type: KIC
+  name: KIC 2969526
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.969, available_quarters=17
+  kepmag: 14.969
+  available_quarters: 17
+- id: '8330463'
+  id_type: KIC
+  name: KIC 8330463
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.931, available_quarters=17
+  kepmag: 14.931
+  available_quarters: 17
+- id: '8077474'
+  id_type: KIC
+  name: KIC 8077474
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.238, available_quarters=17
+  kepmag: 14.238
+  available_quarters: 17
+- id: '4270042'
+  id_type: KIC
+  name: KIC 4270042
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=11.999, available_quarters=15
+  kepmag: 11.999
+  available_quarters: 15
+- id: '12202477'
+  id_type: KIC
+  name: KIC 12202477
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.997, available_quarters=17
+  kepmag: 13.997
+  available_quarters: 17
+- id: '8163439'
+  id_type: KIC
+  name: KIC 8163439
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=12.273, available_quarters=18
+  kepmag: 12.273
+  available_quarters: 18
+- id: '5269729'
+  id_type: KIC
+  name: KIC 5269729
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=11.571, available_quarters=18
+  kepmag: 11.571
+  available_quarters: 18
+- id: '6612910'
+  id_type: KIC
+  name: KIC 6612910
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.483, available_quarters=17
+  kepmag: 14.483
+  available_quarters: 17
+- id: '9667162'
+  id_type: KIC
+  name: KIC 9667162
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.461, available_quarters=15
+  kepmag: 13.461
+  available_quarters: 15
+- id: '11567254'
+  id_type: KIC
+  name: KIC 11567254
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=12.612, available_quarters=18
+  kepmag: 12.612
+  available_quarters: 18
+- id: '4069078'
+  id_type: KIC
+  name: KIC 4069078
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.814, available_quarters=14
+  kepmag: 14.814
+  available_quarters: 14
+- id: '9725092'
+  id_type: KIC
+  name: KIC 9725092
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.484, available_quarters=15
+  kepmag: 13.484
+  available_quarters: 15
+- id: '8428568'
+  id_type: KIC
+  name: KIC 8428568
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.309, available_quarters=17
+  kepmag: 14.309
+  available_quarters: 17
+- id: '7122640'
+  id_type: KIC
+  name: KIC 7122640
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=11.863, available_quarters=18
+  kepmag: 11.863
+  available_quarters: 18
+- id: '2997477'
+  id_type: KIC
+  name: KIC 2997477
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.861, available_quarters=17
+  kepmag: 14.861
+  available_quarters: 17
+- id: '10119724'
+  id_type: KIC
+  name: KIC 10119724
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.808, available_quarters=17
+  kepmag: 14.808
+  available_quarters: 17
+- id: '11453448'
+  id_type: KIC
+  name: KIC 11453448
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=12.893, available_quarters=9
+  kepmag: 12.893
+  available_quarters: 9
+- id: '6764826'
+  id_type: KIC
+  name: KIC 6764826
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.324, available_quarters=17
+  kepmag: 14.324
+  available_quarters: 17
+- id: '7708859'
+  id_type: KIC
+  name: KIC 7708859
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.768, available_quarters=17
+  kepmag: 13.768
+  available_quarters: 17
+- id: '12066279'
+  id_type: KIC
+  name: KIC 12066279
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.555, available_quarters=17
+  kepmag: 13.555
+  available_quarters: 17
+- id: '10297832'
+  id_type: KIC
+  name: KIC 10297832
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.174, available_quarters=14
+  kepmag: 13.174
+  available_quarters: 14
+- id: '10615163'
+  id_type: KIC
+  name: KIC 10615163
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.185, available_quarters=14
+  kepmag: 14.185
+  available_quarters: 14
+- id: '12645202'
+  id_type: KIC
+  name: KIC 12645202
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=11.310, available_quarters=17
+  kepmag: 11.31
+  available_quarters: 17
+- id: '10461847'
+  id_type: KIC
+  name: KIC 10461847
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.151, available_quarters=17
+  kepmag: 14.151
+  available_quarters: 17
+- id: '6862333'
+  id_type: KIC
+  name: KIC 6862333
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.513, available_quarters=18
+  kepmag: 13.513
+  available_quarters: 18
+- id: '7918454'
+  id_type: KIC
+  name: KIC 7918454
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.592, available_quarters=17
+  kepmag: 14.592
+  available_quarters: 17
+- id: '9569836'
+  id_type: KIC
+  name: KIC 9569836
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.638, available_quarters=17
+  kepmag: 14.638
+  available_quarters: 17
+- id: '11341446'
+  id_type: KIC
+  name: KIC 11341446
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.417, available_quarters=15
+  kepmag: 13.417
+  available_quarters: 15
+- id: '11966726'
+  id_type: KIC
+  name: KIC 11966726
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.343, available_quarters=17
+  kepmag: 14.343
+  available_quarters: 17
+- id: '8573128'
+  id_type: KIC
+  name: KIC 8573128
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.163, available_quarters=10
+  kepmag: 13.163
+  available_quarters: 10
+- id: '9471538'
+  id_type: KIC
+  name: KIC 9471538
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.095, available_quarters=18
+  kepmag: 13.095
+  available_quarters: 18
+- id: '6211958'
+  id_type: KIC
+  name: KIC 6211958
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.936, available_quarters=17
+  kepmag: 14.936
+  available_quarters: 17
+- id: '2016171'
+  id_type: KIC
+  name: KIC 2016171
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.863, available_quarters=17
+  kepmag: 14.863
+  available_quarters: 17
+- id: '6068136'
+  id_type: KIC
+  name: KIC 6068136
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.838, available_quarters=17
+  kepmag: 13.838
+  available_quarters: 17
+- id: '11043244'
+  id_type: KIC
+  name: KIC 11043244
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.184, available_quarters=15
+  kepmag: 13.184
+  available_quarters: 15
+- id: '10816741'
+  id_type: KIC
+  name: KIC 10816741
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.830, available_quarters=14
+  kepmag: 14.83
+  available_quarters: 14
+- id: '8978329'
+  id_type: KIC
+  name: KIC 8978329
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.939, available_quarters=17
+  kepmag: 13.939
+  available_quarters: 17
+- id: '4450061'
+  id_type: KIC
+  name: KIC 4450061
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.537, available_quarters=17
+  kepmag: 14.537
+  available_quarters: 17
+- id: '12453876'
+  id_type: KIC
+  name: KIC 12453876
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.795, available_quarters=17
+  kepmag: 14.795
+  available_quarters: 17
+- id: '6206694'
+  id_type: KIC
+  name: KIC 6206694
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.151, available_quarters=18
+  kepmag: 13.151
+  available_quarters: 18
+- id: '9246161'
+  id_type: KIC
+  name: KIC 9246161
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.273, available_quarters=18
+  kepmag: 13.273
+  available_quarters: 18
+- id: '5645728'
+  id_type: KIC
+  name: KIC 5645728
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.671, available_quarters=17
+  kepmag: 14.671
+  available_quarters: 17
+- id: '6289991'
+  id_type: KIC
+  name: KIC 6289991
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.930, available_quarters=17
+  kepmag: 14.93
+  available_quarters: 17
+- id: '7540285'
+  id_type: KIC
+  name: KIC 7540285
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.962, available_quarters=17
+  kepmag: 13.962
+  available_quarters: 17
+- id: '11561399'
+  id_type: KIC
+  name: KIC 11561399
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=12.769, available_quarters=18
+  kepmag: 12.769
+  available_quarters: 18
+- id: '7021193'
+  id_type: KIC
+  name: KIC 7021193
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.999, available_quarters=17
+  kepmag: 14.999
+  available_quarters: 17
+- id: '5552398'
+  id_type: KIC
+  name: KIC 5552398
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.662, available_quarters=17
+  kepmag: 13.662
+  available_quarters: 17
+- id: '4848756'
+  id_type: KIC
+  name: KIC 4848756
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=11.015, available_quarters=15
+  kepmag: 11.015
+  available_quarters: 15
+- id: '2019352'
+  id_type: KIC
+  name: KIC 2019352
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.304, available_quarters=18
+  kepmag: 13.304
+  available_quarters: 18
+- id: '10083254'
+  id_type: KIC
+  name: KIC 10083254
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.891, available_quarters=17
+  kepmag: 14.891
+  available_quarters: 17
+- id: '7202844'
+  id_type: KIC
+  name: KIC 7202844
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.593, available_quarters=17
+  kepmag: 14.593
+  available_quarters: 17
+- id: '8159207'
+  id_type: KIC
+  name: KIC 8159207
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=12.422, available_quarters=18
+  kepmag: 12.422
+  available_quarters: 18
+- id: '6350764'
+  id_type: KIC
+  name: KIC 6350764
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.936, available_quarters=17
+  kepmag: 14.936
+  available_quarters: 17
+- id: '8297488'
+  id_type: KIC
+  name: KIC 8297488
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.517, available_quarters=18
+  kepmag: 13.517
+  available_quarters: 18
+- id: '3232237'
+  id_type: KIC
+  name: KIC 3232237
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.716, available_quarters=17
+  kepmag: 14.716
+  available_quarters: 17
+- id: '4373579'
+  id_type: KIC
+  name: KIC 4373579
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.874, available_quarters=14
+  kepmag: 14.874
+  available_quarters: 14
+- id: '7831523'
+  id_type: KIC
+  name: KIC 7831523
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.687, available_quarters=17
+  kepmag: 14.687
+  available_quarters: 17
+- id: '9409212'
+  id_type: KIC
+  name: KIC 9409212
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.204, available_quarters=18
+  kepmag: 13.204
+  available_quarters: 18
+- id: '7351580'
+  id_type: KIC
+  name: KIC 7351580
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.316, available_quarters=17
+  kepmag: 14.316
+  available_quarters: 17
+- id: '6222079'
+  id_type: KIC
+  name: KIC 6222079
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=12.979, available_quarters=18
+  kepmag: 12.979
+  available_quarters: 18
+- id: '10919535'
+  id_type: KIC
+  name: KIC 10919535
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.640, available_quarters=8
+  kepmag: 14.64
+  available_quarters: 8
+- id: '7177105'
+  id_type: KIC
+  name: KIC 7177105
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.762, available_quarters=17
+  kepmag: 13.762
+  available_quarters: 17
+- id: '11852750'
+  id_type: KIC
+  name: KIC 11852750
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.599, available_quarters=15
+  kepmag: 13.599
+  available_quarters: 15
+- id: '8105575'
+  id_type: KIC
+  name: KIC 8105575
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=11.641, available_quarters=18
+  kepmag: 11.641
+  available_quarters: 18
+- id: '10918016'
+  id_type: KIC
+  name: KIC 10918016
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.708, available_quarters=17
+  kepmag: 14.708
+  available_quarters: 17
+- id: '7128946'
+  id_type: KIC
+  name: KIC 7128946
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.852, available_quarters=17
+  kepmag: 14.852
+  available_quarters: 17
+- id: '9003426'
+  id_type: KIC
+  name: KIC 9003426
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.672, available_quarters=17
+  kepmag: 14.672
+  available_quarters: 17
+- id: '7597815'
+  id_type: KIC
+  name: KIC 7597815
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.878, available_quarters=17
+  kepmag: 13.878
+  available_quarters: 17
+- id: '5818866'
+  id_type: KIC
+  name: KIC 5818866
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.602, available_quarters=18
+  kepmag: 13.602
+  available_quarters: 18
+- id: '3545033'
+  id_type: KIC
+  name: KIC 3545033
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=12.408, available_quarters=18
+  kepmag: 12.408
+  available_quarters: 18
+- id: '6128428'
+  id_type: KIC
+  name: KIC 6128428
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=10.983, available_quarters=18
+  kepmag: 10.983
+  available_quarters: 18
+- id: '9274563'
+  id_type: KIC
+  name: KIC 9274563
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=11.398, available_quarters=18
+  kepmag: 11.398
+  available_quarters: 18
+- id: '9872677'
+  id_type: KIC
+  name: KIC 9872677
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.027, available_quarters=18
+  kepmag: 13.027
+  available_quarters: 18
+- id: '10669325'
+  id_type: KIC
+  name: KIC 10669325
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.228, available_quarters=18
+  kepmag: 13.228
+  available_quarters: 18
+- id: '7880972'
+  id_type: KIC
+  name: KIC 7880972
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.738, available_quarters=17
+  kepmag: 14.738
+  available_quarters: 17
+- id: '4056376'
+  id_type: KIC
+  name: KIC 4056376
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.773, available_quarters=17
+  kepmag: 13.773
+  available_quarters: 17
+- id: '8765712'
+  id_type: KIC
+  name: KIC 8765712
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.256, available_quarters=17
+  kepmag: 13.256
+  available_quarters: 17
+- id: '10907932'
+  id_type: KIC
+  name: KIC 10907932
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.275, available_quarters=15
+  kepmag: 13.275
+  available_quarters: 15
+- id: '8613329'
+  id_type: KIC
+  name: KIC 8613329
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.952, available_quarters=17
+  kepmag: 13.952
+  available_quarters: 17
+- id: '7751692'
+  id_type: KIC
+  name: KIC 7751692
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.888, available_quarters=17
+  kepmag: 13.888
+  available_quarters: 17
+- id: '8883214'
+  id_type: KIC
+  name: KIC 8883214
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.954, available_quarters=17
+  kepmag: 14.954
+  available_quarters: 17
+- id: '4079482'
+  id_type: KIC
+  name: KIC 4079482
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.355, available_quarters=15
+  kepmag: 13.355
+  available_quarters: 15
+- id: '4634412'
+  id_type: KIC
+  name: KIC 4634412
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.378, available_quarters=13
+  kepmag: 14.378
+  available_quarters: 13
+- id: '6129251'
+  id_type: KIC
+  name: KIC 6129251
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.946, available_quarters=17
+  kepmag: 14.946
+  available_quarters: 17
+- id: '1027740'
+  id_type: KIC
+  name: KIC 1027740
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=13.658, available_quarters=17
+  kepmag: 13.658
+  available_quarters: 17
+- id: '10096016'
+  id_type: KIC
+  name: KIC 10096016
+  reason: Phase 8 deterministic unknown-pool sample; object_status=0, no cumulative
+    KOI or Kepler confirmed-name row, Kp=14.812, available_quarters=14
+  kepmag: 14.812
+  available_quarters: 14

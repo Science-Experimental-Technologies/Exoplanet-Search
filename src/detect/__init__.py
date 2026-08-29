@@ -1,0 +1,2 @@
+"""Classical transit-search algorithms."""
+

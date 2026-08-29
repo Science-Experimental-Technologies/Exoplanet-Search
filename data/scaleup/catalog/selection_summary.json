@@ -1,0 +1,35 @@
+{
+  "generated_at_utc": "2026-08-25T02:49:07.230977+00:00",
+  "selection": {
+    "minimum_period_days": 0.5,
+    "maximum_period_days": 50.0,
+    "positive_minimum_transit_snr": 50.0,
+    "negative_minimum_transit_snr": 10.0,
+    "maximum_kepler_magnitude": 15.0,
+    "minimum_available_quarters": 8,
+    "negative_targets_per_category": 100,
+    "availability_query_batch_size": 150
+  },
+  "raw_pscomppars_planets": 2382,
+  "raw_confirmed_koi": 2386,
+  "raw_false_positive_koi": 3737,
+  "raw_false_positive_flag_counts": {
+    "not_transit": 762,
+    "stellar_eclipse": 1962,
+    "centroid_offset": 1751,
+    "ephemeris_contamination": 1096
+  },
+  "positive_planets_after_quality": 434,
+  "positive_targets_after_quality": 371,
+  "negative_koi_after_quality": 2001,
+  "negative_targets_selected": 400,
+  "negative_category_counts": {
+    "centroid_offset": 100,
+    "ephemeris_contamination": 100,
+    "not_transit": 100,
+    "stellar_eclipse": 100
+  },
+  "unmapped_pscomppars_planets": [
+    "TOI-4588 b"
+  ]
+}

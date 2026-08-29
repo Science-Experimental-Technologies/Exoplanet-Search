@@ -1,0 +1,14 @@
+# Phase 0 runtime and shared scientific stack. All direct dependencies are pinned.
+numpy==1.26.4
+scipy==1.14.1
+pandas==2.2.3
+pyarrow==19.0.1
+astropy==7.0.1
+astroquery==0.4.10
+lightkurve==2.5.1
+scikit-learn==1.6.1
+matplotlib==3.10.1
+plotly==6.0.0
+PyYAML==6.0.2
+pytest==8.3.5
+

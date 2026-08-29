@@ -1,0 +1,64 @@
+candidate_id,target_id,host_name,rank,period_days,catalog_status,matched_planet,feature_probability,feature_pass,cnn_probability,cnn_pass,consensus_pass
+11904151-r1,11904151,Kepler-10,1,0.8374842152251899,recovered_known,Kepler-10 b,0.7553924332846569,True,0.51788634,True,True
+11904151-r4,11904151,Kepler-10,4,2.5127123857612568,unvalidated_candidate_requires_independent_confirmation,,0.37889086746684014,False,0.5087367,True,False
+5780885-r1,5780885,Kepler-7,1,4.8851067665565004,recovered_known,Kepler-7 b,0.9743250758341759,True,0.9980007,True,True
+5780885-r2,5780885,Kepler-7,2,2.442590897799178,unvalidated_candidate_requires_independent_confirmation,,0.6493553571867424,True,0.9430985,True,True
+5780885-r3,5780885,Kepler-7,3,1.6284022685970445,unvalidated_candidate_requires_independent_confirmation,,0.7229489233558288,True,0.44911885,False,False
+5780885-r5,5780885,Kepler-7,5,0.9770453628259474,unvalidated_candidate_requires_independent_confirmation,,0.6223787518028326,True,0.4462515,False,False
+6922244-r1,6922244,Kepler-8,1,3.522831344537475,recovered_known,Kepler-8 b,0.9627648095137898,True,0.9967021,True,True
+6922244-r2,6922244,Kepler-8,2,1.7614351843949327,unvalidated_candidate_requires_independent_confirmation,,0.5083012356076542,True,0.45869973,False,False
+6922244-r3,6922244,Kepler-8,3,1.1741069333452308,unvalidated_candidate_requires_independent_confirmation,,0.6822830928095633,True,0.45435855,False,False
+6922244-r5,6922244,Kepler-8,5,0.7045112427961977,unvalidated_candidate_requires_independent_confirmation,,0.5781616792805209,True,0.44442934,False,False
+3323887-r1,3323887,Kepler-9,1,19.257068091177715,recovered_known,Kepler-9 b,0.7594377193372541,True,0.45711082,False,False
+3323887-r2,3323887,Kepler-9,2,6.407174785804095,unvalidated_candidate_requires_independent_confirmation,,0.6743580966709346,True,0.4358222,False,False
+3323887-r3,3323887,Kepler-9,3,9.615198992133033,unvalidated_candidate_requires_independent_confirmation,,0.5412719962593004,True,0.43459362,False,False
+3323887-r4,3323887,Kepler-9,4,38.82674980564125,recovered_known,Kepler-9 c,0.5955894838224789,True,0.45545185,False,False
+11804465-r1,11804465,Kepler-12,1,4.436999035143815,recovered_known,Kepler-12 b,0.8803924837198934,True,0.99911815,True,True
+11804465-r2,11804465,Kepler-12,2,2.2192001146714078,unvalidated_candidate_requires_independent_confirmation,,0.6934953815402426,True,0.6977596,True,True
+11804465-r3,11804465,Kepler-12,3,1.479324788926766,unvalidated_candidate_requires_independent_confirmation,,0.6953981244088635,True,0.45320058,False,False
+11804465-r5,11804465,Kepler-12,5,2.9586220441921194,unvalidated_candidate_requires_independent_confirmation,,0.7263187036071851,True,0.46321678,False,False
+9941662-r1,9941662,Kepler-13,1,1.7635477752861204,recovered_known,KOI-13 b,0.922646680626429,True,0.8563032,True,True
+9941662-r3,9941662,Kepler-13,3,0.5878536055543166,unvalidated_candidate_requires_independent_confirmation,,0.539881500624654,True,0.46173567,False,False
+9941662-r4,9941662,Kepler-13,4,3.5279026311387574,unvalidated_candidate_requires_independent_confirmation,,0.6393205657024247,True,0.4875957,False,False
+9941662-r5,9941662,Kepler-13,5,2.6456242835183494,unvalidated_candidate_requires_independent_confirmation,,0.6434080646764865,True,0.56793714,True,True
+10264660-r1,10264660,Kepler-14,1,6.788548778457483,recovered_known,Kepler-14 b,0.9963753007217322,True,0.85084265,True,True
+10264660-r2,10264660,Kepler-14,2,3.394346857339939,unvalidated_candidate_requires_independent_confirmation,,0.6176161894845682,True,0.45373213,False,False
+10264660-r3,10264660,Kepler-14,3,2.263610709435016,unvalidated_candidate_requires_independent_confirmation,,0.6365474229978968,True,0.4541966,False,False
+10264660-r5,10264660,Kepler-14,5,1.3580069198698315,unvalidated_candidate_requires_independent_confirmation,,0.5705495135122426,True,0.43472797,False,False
+11359879-r1,11359879,Kepler-15,1,2.471240219515375,unvalidated_candidate_requires_independent_confirmation,,0.6264627231945128,True,0.9895308,True,True
+11359879-r2,11359879,Kepler-15,2,1.6476699712439287,unvalidated_candidate_requires_independent_confirmation,,0.8370300775527062,True,0.44467187,False,False
+11359879-r3,11359879,Kepler-15,3,4.9442402994106756,recovered_known,Kepler-15 b,0.9348420429447941,True,0.4628129,False,False
+11359879-r4,11359879,Kepler-15,4,0.9885527820153183,unvalidated_candidate_requires_independent_confirmation,,0.7092629148767304,True,0.44479892,False,False
+11359879-r5,11359879,Kepler-15,5,1.235609423599179,unvalidated_candidate_requires_independent_confirmation,,0.531214407871313,True,0.44603026,False,False
+12644769-r2,12644769,Kepler-16,2,20.534533335538676,unvalidated_candidate_requires_independent_confirmation,,0.5823416407394992,True,0.4708774,False,False
+12644769-r3,12644769,Kepler-16,3,13.690278430568416,unvalidated_candidate_requires_independent_confirmation,,0.6790116302218172,True,0.45062628,False,False
+12644769-r4,12644769,Kepler-16,4,10.267929914786013,unvalidated_candidate_requires_independent_confirmation,,0.5834713627256913,True,0.44625092,False,False
+12644769-r5,12644769,Kepler-16,5,8.214450059577741,unvalidated_candidate_requires_independent_confirmation,,0.7024146402552621,True,0.4448102,False,False
+10619192-r1,10619192,Kepler-17,1,1.4856518128204048,recovered_known,Kepler-17 b,0.7449441144008807,True,0.60656756,True,True
+10619192-r2,10619192,Kepler-17,2,2.9713345272134846,unvalidated_candidate_requires_independent_confirmation,,0.34169492094574716,False,0.7747928,True,False
+10619192-r4,10619192,Kepler-17,4,5.942792664574267,unvalidated_candidate_requires_independent_confirmation,,0.14567230834470501,False,0.8443221,True,False
+10619192-r5,10619192,Kepler-17,5,11.886079800592757,unvalidated_candidate_requires_independent_confirmation,,0.09011514579568126,False,0.95324564,True,False
+8644288-r1,8644288,Kepler-18,1,7.642368427767817,recovered_known,Kepler-18 c,0.9346258183200759,True,0.83185333,True,True
+8644288-r2,8644288,Kepler-18,2,15.284002312943414,unvalidated_candidate_requires_independent_confirmation,,0.5130543886843182,True,0.90242696,True,True
+8644288-r3,8644288,Kepler-18,3,3.821276038327182,unvalidated_candidate_requires_independent_confirmation,,0.6641641202814962,True,0.4460132,False,False
+8644288-r4,8644288,Kepler-18,4,2.971776222641494,unvalidated_candidate_requires_independent_confirmation,,0.6840022482699237,True,0.4442808,False,False
+8644288-r5,8644288,Kepler-18,5,3.7150783263511444,unvalidated_candidate_requires_independent_confirmation,,0.6246771666835678,True,0.43610927,False,False
+2571238-r1,2571238,Kepler-19,1,3.095649697387977,unvalidated_candidate_requires_independent_confirmation,,0.5595477635339996,True,0.45240363,False,False
+6850504-r1,6850504,Kepler-20,1,3.6180615132110425,unvalidated_candidate_requires_independent_confirmation,,0.7072607800333489,True,0.44285133,False,False
+3632418-r1,3632418,Kepler-21,1,2.785972910617305,recovered_known,Kepler-21 b,0.8472003630099689,True,0.45277226,False,False
+3632418-r2,3632418,Kepler-21,2,4.201209766008567,unvalidated_candidate_requires_independent_confirmation,,0.6418575729395595,True,0.4612209,False,False
+3632418-r5,3632418,Kepler-21,5,12.610168745760125,unvalidated_candidate_requires_independent_confirmation,,0.6232233027145704,True,0.4636085,False,False
+4349452-r1,4349452,Kepler-25,1,12.71924466369112,recovered_known,Kepler-25 c,0.8599787098231669,True,0.93224144,True,True
+4349452-r2,4349452,Kepler-25,2,6.359876640678559,unvalidated_candidate_requires_independent_confirmation,,0.6830757958875195,True,0.6041784,True,True
+4349452-r3,4349452,Kepler-25,3,4.2399742765395425,unvalidated_candidate_requires_independent_confirmation,,0.7191333987758141,True,0.45021543,False,False
+4349452-r4,4349452,Kepler-25,4,3.180001901361097,unvalidated_candidate_requires_independent_confirmation,,0.6210796513474185,True,0.43833062,False,False
+4349452-r5,4349452,Kepler-25,5,2.544011694296453,unvalidated_candidate_requires_independent_confirmation,,0.7581356800282656,True,0.43517968,False,False
+11401755-r1,11401755,Kepler-36,1,16.228613398205983,recovered_known,Kepler-36 c,0.8285985617326067,True,0.5735729,True,True
+9002278-r1,9002278,Kepler-62,1,5.714751718736895,recovered_known,Kepler-62 b,0.5784581198435405,True,0.5137551,True,True
+10556578-r4,10556578,K07343.01,4,1.8798855459930983,official_false_positive_system,,0.013049124788255224,False,0.5009266,True,False
+5467113-r1,5467113,K03825.01,1,2.8475223925905984,official_false_positive_system,,0.01384732052578362,False,0.51305014,True,False
+5467113-r3,5467113,K03825.01,3,5.683502972899982,official_false_positive_system,,0.026591525346450214,False,0.5177202,True,False
+6466939-r1,6466939,K06717.01,1,1.143026466687787,official_false_positive_system,,0.0806456141859252,False,0.91479266,True,False
+6466939-r3,6466939,K06717.01,3,3.4287310566621896,official_false_positive_system,,0.03402437485576149,False,0.9993312,True,False
+6466939-r4,6466939,K06717.01,4,2.2842561477495726,official_false_positive_system,,0.046799377824272355,False,0.55115664,True,False
+9278021-r3,9278021,K07152.01,3,3.3581652406635234,official_false_positive_system,,0.20692480844142033,False,0.5925847,True,False

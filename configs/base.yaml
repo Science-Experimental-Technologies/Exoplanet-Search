@@ -1,0 +1,104 @@
+project:
+  name: SCIX Exoplanet Search
+  version: sxs-v1
+  random_seed: 42
+
+paths:
+  raw: data/raw
+  processed: data/processed
+  catalog: data/catalog
+  reports: reports
+
+ingest:
+  cache: true
+  mission: Kepler
+  cadence: long
+  author: Kepler
+  # null means all matching quarters. Use a small integer for smoke tests.
+  max_products: null
+
+catalog:
+  table: pscomppars
+  transit_only: true
+  output: data/catalog/confirmed_exoplanets.parquet
+
+dataset:
+  manifest: data/processed/manifest.csv
+  verify_fits: true
+
+preprocess:
+  quality_bitmask: 1130799
+  sigma_lower: 10.0
+  sigma_upper: 5.0
+  sigma_maxiters: 5
+  max_gap_cadences: 3
+  # 401 long-cadence samples ~= 8.2 days, safely above the configured
+  # maximum transit duration (12 hours) while removing stellar variability.
+  flatten_window_length: 401
+  flatten_polyorder: 2
+  flatten_break_tolerance: 5
+  flatten_niters: 3
+  flatten_sigma: 3.0
+  visualization_targets: [Kepler-7, Kepler-8, Kepler-12, Kepler-14, Kepler-17]
+
+bls:
+  minimum_period_days: 0.5
+  maximum_period_days: 50.0
+  durations_hours: [1.0, 2.0, 4.0, 8.0, 12.0]
+  top_k: 5
+  frequency_oversampling: 5.0
+  duration_oversampling: 10
+  minimum_peak_separation_fraction: 0.01
+  match_tolerance_fraction: 0.01
+  include_interpolated: false
+  objective: snr
+  method: fast
+
+machine_learning:
+  folds: 5
+  folded_bins: 512
+  negative_sample:
+    catalog_output: data/catalog/kepler_false_positives.parquet
+    per_category: 5
+    # Four chronological quarters provide a >50-day BLS baseline while keeping
+    # this balanced augmentation compact; the selected products are cached.
+    max_products: 4
+    raw_subdirectory: data/raw/kepler_false_positives
+    processed_subdirectory: data/processed/false_positives
+  random_forest:
+    n_estimators: 400
+    max_depth: 8
+    min_samples_leaf: 2
+    class_weight: balanced
+  cnn:
+    epochs: 20
+    batch_size: 16
+    learning_rate: 0.001
+    patience: 4
+
+# Selection criteria: confirmed transiting Kepler hosts with public long-cadence
+# data, spanning single/multi-planet systems, shallow/deep transits, active and
+# blended stars, and periods from <1 day to hundreds of days. This is a fixed,
+# intentionally non-random benchmark sample; catalog values are refreshed from
+# NASA Exoplanet Archive and remain the Phase 1 source of truth.
+targets:
+  - {id: "11904151", id_type: KIC, name: Kepler-10, reason: "Bright benchmark; small transiting planets"}
+  - {id: "10593626", id_type: KIC, name: Kepler-22, reason: "Longer-period benchmark"}
+  - {id: "5780885", id_type: KIC, name: Kepler-7, reason: "Deep hot-Jupiter transit"}
+  - {id: "6922244", id_type: KIC, name: Kepler-8, reason: "Hot-Jupiter benchmark"}
+  - {id: "3323887", id_type: KIC, name: Kepler-9, reason: "Multi-planet system with TTVs"}
+  - {id: "6541920", id_type: KIC, name: Kepler-11, reason: "Compact multi-planet system"}
+  - {id: "11804465", id_type: KIC, name: Kepler-12, reason: "Inflated hot Jupiter"}
+  - {id: "9941662", id_type: KIC, name: Kepler-13, catalog_host: KOI-13, reason: "Bright, blended hot-Jupiter system; archive alias KOI-13"}
+  - {id: "10264660", id_type: KIC, name: Kepler-14, reason: "Known dilution challenge"}
+  - {id: "11359879", id_type: KIC, name: Kepler-15, reason: "Canonical hot Jupiter"}
+  - {id: "12644769", id_type: KIC, name: Kepler-16, reason: "Circumbinary transit benchmark"}
+  - {id: "10619192", id_type: KIC, name: Kepler-17, reason: "Active star with deep transits"}
+  - {id: "8644288", id_type: KIC, name: Kepler-18, reason: "Multi-planet validation case"}
+  - {id: "2571238", id_type: KIC, name: Kepler-19, reason: "Shallow transit and TTV case"}
+  - {id: "6850504", id_type: KIC, name: Kepler-20, reason: "Mixed-radius multi-planet system"}
+  - {id: "3632418", id_type: KIC, name: Kepler-21, reason: "Bright star with shallow transit"}
+  - {id: "4349452", id_type: KIC, name: Kepler-25, reason: "Multi-planet system"}
+  - {id: "11401755", id_type: KIC, name: Kepler-36, reason: "Closely spaced planet periods"}
+  - {id: "9002278", id_type: KIC, name: Kepler-62, reason: "Multiple small, longer-period planets"}
+  - {id: "11442793", id_type: KIC, name: Kepler-90, catalog_host: KOI-351, reason: "High-multiplicity system; archive alias KOI-351"}

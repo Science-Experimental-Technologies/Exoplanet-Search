@@ -1,0 +1,2 @@
+"""SCIX Exoplanet Search package."""
+

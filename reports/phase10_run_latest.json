@@ -1,0 +1,38 @@
+{
+  "phase": 10,
+  "release": "v2.0.0",
+  "audit_date": "2026-08-28",
+  "status": "complete",
+  "submission_performed": false,
+  "push_performed": false,
+  "discovery_claim": false,
+  "phase9_outcome": {
+    "strong_candidate": 0,
+    "weak_candidate": 1,
+    "likely_false_positive": 19
+  },
+  "artifacts": {
+    "preprint_source": "reports/research_report.md",
+    "preprint_pdf": "output/pdf/sxs_preprint_v2.0.0.pdf",
+    "project_summary": "reports/sxs_project_summary.md",
+    "citation": "CITATION.cff",
+    "changelog": "CHANGELOG.md",
+    "release_audit": "reports/phase10_release_audit.md"
+  },
+  "pdf": {
+    "pages": 8,
+    "page_size": "A4",
+    "visual_qa": "passed"
+  },
+  "tests": {
+    "passed": 35,
+    "skipped": 1,
+    "failed": 0,
+    "network_test_opt_in": true
+  },
+  "repository_audit": {
+    "absolute_local_paths": 0,
+    "credential_pattern_findings": 0
+  },
+  "tag": "v2.0.0"
+}

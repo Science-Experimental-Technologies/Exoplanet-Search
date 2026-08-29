@@ -1,0 +1,5764 @@
+{
+  "generated_at_utc": "2026-08-27T10:16:42.938028+00:00",
+  "configured_targets": 250,
+  "available_targets": 250,
+  "skipped_targets": 0,
+  "candidate_rows": 1250,
+  "model_pass_candidates": 151,
+  "sanity_no_fail_candidates": 754,
+  "model_and_sanity_candidates": 110,
+  "shortlist_size": 20,
+  "required_label": "unvalidated_candidate_requires_independent_confirmation",
+  "targets": [
+    {
+      "target_id": "6203503",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 0,
+      "observed_points": 10297,
+      "excluded_interpolated_points": 114,
+      "baseline_days": 228.9563476195326,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735289590326156,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "10034926",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 4,
+      "observed_points": 10293,
+      "excluded_interpolated_points": 118,
+      "baseline_days": 228.95786373119336,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735231747043588,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8832530",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 6,
+      "observed_points": 10291,
+      "excluded_interpolated_points": 120,
+      "baseline_days": 228.9573884801066,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735249878925719,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8245391",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 6,
+      "observed_points": 13930,
+      "excluded_interpolated_points": 164,
+      "baseline_days": 310.6905687763792,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.000643727296865425,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "4283320",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 0,
+      "observed_points": 10297,
+      "excluded_interpolated_points": 114,
+      "baseline_days": 228.95671262138058,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.000873527566456348,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "5529999",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14093,
+      "outliers_removed": 20,
+      "observed_points": 13916,
+      "excluded_interpolated_points": 177,
+      "baseline_days": 310.6902429911279,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437279718684672,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "2014347",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 13,
+      "observed_points": 13923,
+      "excluded_interpolated_points": 171,
+      "baseline_days": 310.68998839466076,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437284993745779,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "7950103",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 10,
+      "observed_points": 13926,
+      "excluded_interpolated_points": 168,
+      "baseline_days": 310.6905588590744,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437273174133292,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "4279165",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 1,
+      "observed_points": 10296,
+      "excluded_interpolated_points": 115,
+      "baseline_days": 228.95661504147574,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735279387484384,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "5340268",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 5,
+      "observed_points": 10292,
+      "excluded_interpolated_points": 119,
+      "baseline_days": 228.9554427890107,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735324112137662,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "4909023",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 21,
+      "observed_points": 13915,
+      "excluded_interpolated_points": 179,
+      "baseline_days": 310.6902195466537,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437280204437453,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "11093064",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 19,
+      "observed_points": 13917,
+      "excluded_interpolated_points": 177,
+      "baseline_days": 310.69097055539896,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.000643726464410842,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "7662207",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 12,
+      "observed_points": 10285,
+      "excluded_interpolated_points": 126,
+      "baseline_days": 228.95571616932284,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735313681886465,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "9716401",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 16992,
+      "outliers_removed": 7,
+      "observed_points": 16791,
+      "excluded_interpolated_points": 201,
+      "baseline_days": 368.39729037800134,
+      "trial_periods": 3648,
+      "frequency_step_per_day": 0.0005428921580687687,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8686902",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 12,
+      "observed_points": 10285,
+      "excluded_interpolated_points": 126,
+      "baseline_days": 228.9567228202941,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735275275449241,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "12507373",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 11,
+      "observed_points": 10286,
+      "excluded_interpolated_points": 125,
+      "baseline_days": 228.95737782181823,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735250285563902,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "7502070",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 1,
+      "observed_points": 10296,
+      "excluded_interpolated_points": 115,
+      "baseline_days": 228.95560338674113,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735317984865796,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "6529892",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 0,
+      "observed_points": 13936,
+      "excluded_interpolated_points": 158,
+      "baseline_days": 310.69035527347296,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437277392275595,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "11013594",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 1,
+      "observed_points": 13935,
+      "excluded_interpolated_points": 159,
+      "baseline_days": 310.6910103669652,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437263819245199,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "6268872",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 0,
+      "observed_points": 13936,
+      "excluded_interpolated_points": 158,
+      "baseline_days": 310.6903722308198,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437277040931764,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "3438478",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 12,
+      "observed_points": 13924,
+      "excluded_interpolated_points": 170,
+      "baseline_days": 310.69008126358676,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437283069565447,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8643675",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10410,
+      "outliers_removed": 10,
+      "observed_points": 10287,
+      "excluded_interpolated_points": 123,
+      "baseline_days": 228.95747559709707,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735246555213844,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8461439",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 4,
+      "observed_points": 10293,
+      "excluded_interpolated_points": 118,
+      "baseline_days": 228.95779480037163,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735234376902523,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "2450149",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 12,
+      "observed_points": 10285,
+      "excluded_interpolated_points": 126,
+      "baseline_days": 228.9561440832913,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735297355778432,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "9825593",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 4,
+      "observed_points": 13932,
+      "excluded_interpolated_points": 162,
+      "baseline_days": 310.6907905307453,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437268374075235,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "9826728",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 14,
+      "observed_points": 13922,
+      "excluded_interpolated_points": 172,
+      "baseline_days": 310.69079312517715,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437268320320651,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "7668207",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 0,
+      "observed_points": 13936,
+      "excluded_interpolated_points": 158,
+      "baseline_days": 310.69053468648053,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437273674971176,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "5535635",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 15,
+      "observed_points": 13921,
+      "excluded_interpolated_points": 173,
+      "baseline_days": 310.6902533222892,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437279504630402,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "7293390",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14093,
+      "outliers_removed": 14,
+      "observed_points": 13922,
+      "excluded_interpolated_points": 171,
+      "baseline_days": 310.69045718298,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437275280785683,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "6955441",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 14,
+      "observed_points": 13922,
+      "excluded_interpolated_points": 172,
+      "baseline_days": 310.6904035277403,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437276392482551,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "11561198",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 17,
+      "observed_points": 13919,
+      "excluded_interpolated_points": 175,
+      "baseline_days": 310.69106932710565,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437262597639506,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "3966950",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 0,
+      "observed_points": 10297,
+      "excluded_interpolated_points": 114,
+      "baseline_days": 228.9564856995712,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735284322211038,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "11974942",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 11,
+      "observed_points": 10286,
+      "excluded_interpolated_points": 125,
+      "baseline_days": 228.95798843921511,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735226989168669,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8983642",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 8,
+      "observed_points": 13928,
+      "excluded_interpolated_points": 166,
+      "baseline_days": 310.69071349581645,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437269970178657,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "11289217",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 12,
+      "observed_points": 10285,
+      "excluded_interpolated_points": 126,
+      "baseline_days": 228.95689471415244,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.00087352687172708,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "6059650",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 4,
+      "observed_points": 10293,
+      "excluded_interpolated_points": 118,
+      "baseline_days": 228.95693963288795,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735267003510887,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "6499691",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 9,
+      "observed_points": 13927,
+      "excluded_interpolated_points": 167,
+      "baseline_days": 310.6904225527105,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437275998299201,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "1995522",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 16992,
+      "outliers_removed": 6,
+      "observed_points": 16791,
+      "excluded_interpolated_points": 201,
+      "baseline_days": 368.3973133723557,
+      "trial_periods": 3648,
+      "frequency_step_per_day": 0.0005428921241829226,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8104824",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 5,
+      "observed_points": 13931,
+      "excluded_interpolated_points": 163,
+      "baseline_days": 310.6905480684218,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437273397707453,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "7204603",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 14,
+      "observed_points": 13922,
+      "excluded_interpolated_points": 172,
+      "baseline_days": 310.6904272517859,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437275900937833,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "7506635",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14093,
+      "outliers_removed": 10,
+      "observed_points": 13926,
+      "excluded_interpolated_points": 167,
+      "baseline_days": 310.6904926822608,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437274545267062,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "3834843",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 6,
+      "observed_points": 13930,
+      "excluded_interpolated_points": 164,
+      "baseline_days": 310.69012936558283,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437282072925594,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8611686",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 21,
+      "observed_points": 13915,
+      "excluded_interpolated_points": 179,
+      "baseline_days": 310.69062422895513,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437271819719135,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "9159739",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 7,
+      "observed_points": 10290,
+      "excluded_interpolated_points": 121,
+      "baseline_days": 228.95709751249524,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735260980022036,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "9282598",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 3,
+      "observed_points": 10294,
+      "excluded_interpolated_points": 117,
+      "baseline_days": 228.95698284829268,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735265354737853,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "4732344",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 13,
+      "observed_points": 10284,
+      "excluded_interpolated_points": 127,
+      "baseline_days": 228.95570170425344,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.000873531423377016,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "4150268",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 0,
+      "observed_points": 13936,
+      "excluded_interpolated_points": 158,
+      "baseline_days": 310.69011446523655,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437282381650357,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "10318320",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 6,
+      "observed_points": 10291,
+      "excluded_interpolated_points": 120,
+      "baseline_days": 228.95612149790395,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735298217472249,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "9094247",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14093,
+      "outliers_removed": 15,
+      "observed_points": 13921,
+      "excluded_interpolated_points": 172,
+      "baseline_days": 310.6906505662919,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437271274029732,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "9110204",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 15,
+      "observed_points": 13921,
+      "excluded_interpolated_points": 173,
+      "baseline_days": 310.6907131154294,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437269978059982,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8328124",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 9,
+      "observed_points": 10288,
+      "excluded_interpolated_points": 123,
+      "baseline_days": 228.95768628062797,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735238517167088,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8751484",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 0,
+      "observed_points": 13936,
+      "excluded_interpolated_points": 158,
+      "baseline_days": 310.69063110392017,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437271677275127,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "6705003",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 2,
+      "observed_points": 13934,
+      "excluded_interpolated_points": 160,
+      "baseline_days": 310.69039389483805,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437276592069198,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "7976673",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 3,
+      "observed_points": 10294,
+      "excluded_interpolated_points": 117,
+      "baseline_days": 228.957294630236,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735253459515157,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "9028111",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 19,
+      "observed_points": 13917,
+      "excluded_interpolated_points": 177,
+      "baseline_days": 310.69064148706093,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437271462144418,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8053478",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 10,
+      "observed_points": 13926,
+      "excluded_interpolated_points": 168,
+      "baseline_days": 310.69057927325775,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437272751166894,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "9205407",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 7,
+      "observed_points": 13929,
+      "excluded_interpolated_points": 165,
+      "baseline_days": 310.6907110633183,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437270020578128,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8933532",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 7,
+      "observed_points": 13929,
+      "excluded_interpolated_points": 165,
+      "baseline_days": 310.69069699734973,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437270312014075,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "3647918",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 2,
+      "observed_points": 10295,
+      "excluded_interpolated_points": 116,
+      "baseline_days": 228.95615435705986,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735296963806337,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "10936708",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 0,
+      "observed_points": 10297,
+      "excluded_interpolated_points": 114,
+      "baseline_days": 228.9578663126449,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735231648555697,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8527105",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 14,
+      "observed_points": 13922,
+      "excluded_interpolated_points": 172,
+      "baseline_days": 310.69065741954546,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437271132035593,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "9767793",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 4,
+      "observed_points": 13932,
+      "excluded_interpolated_points": 162,
+      "baseline_days": 310.69078398849524,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437268509625504,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "6207249",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 13,
+      "observed_points": 13923,
+      "excluded_interpolated_points": 171,
+      "baseline_days": 310.6903212612233,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.000643727809698466,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "4385594",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 0,
+      "observed_points": 10297,
+      "excluded_interpolated_points": 114,
+      "baseline_days": 228.95671940565808,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735275405726202,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "3442285",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 4,
+      "observed_points": 13932,
+      "excluded_interpolated_points": 162,
+      "baseline_days": 310.6900803109602,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.000643728308930321,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8737042",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 5,
+      "observed_points": 10292,
+      "excluded_interpolated_points": 119,
+      "baseline_days": 228.95600975456182,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735302480786492,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "9027583",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 22,
+      "observed_points": 13914,
+      "excluded_interpolated_points": 180,
+      "baseline_days": 310.69064418289054,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.00064372714062889,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "10227577",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 9,
+      "observed_points": 13927,
+      "excluded_interpolated_points": 167,
+      "baseline_days": 310.6908468912443,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437267206330316,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "10802444",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 2,
+      "observed_points": 10295,
+      "excluded_interpolated_points": 116,
+      "baseline_days": 228.95742374751717,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735248533393267,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8395160",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 1,
+      "observed_points": 13935,
+      "excluded_interpolated_points": 159,
+      "baseline_days": 310.69063254648063,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437271647386381,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "12118515",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 14,
+      "observed_points": 13922,
+      "excluded_interpolated_points": 172,
+      "baseline_days": 310.6911499387206,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437260927433792,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "6497068",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 7,
+      "observed_points": 13929,
+      "excluded_interpolated_points": 165,
+      "baseline_days": 310.69041086429206,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437276240474604,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "7091610",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 0,
+      "observed_points": 10297,
+      "excluded_interpolated_points": 114,
+      "baseline_days": 228.95549220149405,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735322226906374,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "9959022",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14093,
+      "outliers_removed": 11,
+      "observed_points": 13925,
+      "excluded_interpolated_points": 168,
+      "baseline_days": 310.69078328715113,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437268524156801,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "7542911",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 16992,
+      "outliers_removed": 14,
+      "observed_points": 16784,
+      "excluded_interpolated_points": 208,
+      "baseline_days": 368.39726934361533,
+      "trial_periods": 3648,
+      "frequency_step_per_day": 0.0005428921890662928,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "6358402",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 10,
+      "observed_points": 13926,
+      "excluded_interpolated_points": 168,
+      "baseline_days": 310.69033123021654,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437277890434357,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8058135",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 2,
+      "observed_points": 13934,
+      "excluded_interpolated_points": 160,
+      "baseline_days": 310.69058826098626,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437272564947993,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8571156",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 0,
+      "observed_points": 10297,
+      "excluded_interpolated_points": 114,
+      "baseline_days": 228.95724897121545,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735255201513364,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "7877924",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 15,
+      "observed_points": 13921,
+      "excluded_interpolated_points": 173,
+      "baseline_days": 310.6905526387127,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.000643727330301448,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8496766",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 21,
+      "observed_points": 13915,
+      "excluded_interpolated_points": 179,
+      "baseline_days": 310.69059243232186,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437272478521096,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "1849386",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 0,
+      "observed_points": 13936,
+      "excluded_interpolated_points": 158,
+      "baseline_days": 310.68999505734246,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437284855699554,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "7432276",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 15,
+      "observed_points": 13921,
+      "excluded_interpolated_points": 173,
+      "baseline_days": 310.69049714475113,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437274452807603,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "3630086",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 17,
+      "observed_points": 13919,
+      "excluded_interpolated_points": 175,
+      "baseline_days": 310.69011054081784,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437282462961575,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "3324150",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 5,
+      "observed_points": 10292,
+      "excluded_interpolated_points": 119,
+      "baseline_days": 228.95539633836597,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735325884366852,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "3525551",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 10,
+      "observed_points": 13926,
+      "excluded_interpolated_points": 168,
+      "baseline_days": 310.69011523124937,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437282365779106,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "5709079",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 13,
+      "observed_points": 13923,
+      "excluded_interpolated_points": 171,
+      "baseline_days": 310.69027139832906,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437279130107826,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "5183591",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 17,
+      "observed_points": 13919,
+      "excluded_interpolated_points": 175,
+      "baseline_days": 310.6902079395222,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437280444928964,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "5784291",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 5,
+      "observed_points": 13931,
+      "excluded_interpolated_points": 163,
+      "baseline_days": 310.690273219705,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437279092370226,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "2011905",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 2,
+      "observed_points": 10295,
+      "excluded_interpolated_points": 116,
+      "baseline_days": 228.95586600759998,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.000873530796513251,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "6058776",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14093,
+      "outliers_removed": 28,
+      "observed_points": 13908,
+      "excluded_interpolated_points": 185,
+      "baseline_days": 310.6903189697041,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437278144463275,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "6672563",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 16,
+      "observed_points": 10281,
+      "excluded_interpolated_points": 130,
+      "baseline_days": 228.95583081664518,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.000873530930776627,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8410437",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 2,
+      "observed_points": 10295,
+      "excluded_interpolated_points": 116,
+      "baseline_days": 228.9557920685038,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735310786117165,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "3543004",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 16,
+      "observed_points": 13920,
+      "excluded_interpolated_points": 174,
+      "baseline_days": 310.69009313760034,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437282823544128,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "3439466",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 2,
+      "observed_points": 10295,
+      "excluded_interpolated_points": 116,
+      "baseline_days": 228.9559337256942,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735305381498193,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8332254",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 4,
+      "observed_points": 10293,
+      "excluded_interpolated_points": 118,
+      "baseline_days": 228.95782114990288,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735233371611112,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "10008154",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 15,
+      "observed_points": 13921,
+      "excluded_interpolated_points": 173,
+      "baseline_days": 310.69081747990276,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437267815709974,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "11250010",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 0,
+      "observed_points": 10297,
+      "excluded_interpolated_points": 114,
+      "baseline_days": 228.95757665947895,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735242699456651,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "3733529",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 8,
+      "observed_points": 10289,
+      "excluded_interpolated_points": 122,
+      "baseline_days": 228.95559975411743,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735318123460891,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "4472809",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 0,
+      "observed_points": 13936,
+      "excluded_interpolated_points": 158,
+      "baseline_days": 310.6901826532994,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437280968841585,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "9481531",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 4,
+      "observed_points": 10293,
+      "excluded_interpolated_points": 118,
+      "baseline_days": 228.9575402828632,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735244087305974,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "11443867",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10955,
+      "outliers_removed": 12,
+      "observed_points": 10824,
+      "excluded_interpolated_points": 131,
+      "baseline_days": 241.70655975233967,
+      "trial_periods": 2393,
+      "frequency_step_per_day": 0.0008274496157858787,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8636046",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 1,
+      "observed_points": 10296,
+      "excluded_interpolated_points": 115,
+      "baseline_days": 228.95725860539824,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735254833946745,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "9021318",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 3,
+      "observed_points": 10294,
+      "excluded_interpolated_points": 117,
+      "baseline_days": 228.95685122872237,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735270376347237,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "10411677",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 0,
+      "observed_points": 10297,
+      "excluded_interpolated_points": 114,
+      "baseline_days": 228.9573952325154,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735249621305832,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "11653956",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10955,
+      "outliers_removed": 17,
+      "observed_points": 10819,
+      "excluded_interpolated_points": 136,
+      "baseline_days": 241.7067424588531,
+      "trial_periods": 2393,
+      "frequency_step_per_day": 0.00082744899031539,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "2972300",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 12,
+      "observed_points": 13924,
+      "excluded_interpolated_points": 170,
+      "baseline_days": 310.69006437830103,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.000643728341941688,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "9451265",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 9,
+      "observed_points": 10288,
+      "excluded_interpolated_points": 123,
+      "baseline_days": 228.95625145325903,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735293259325116,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "5943205",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14093,
+      "outliers_removed": 14,
+      "observed_points": 13922,
+      "excluded_interpolated_points": 171,
+      "baseline_days": 310.69033696134284,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437277771689587,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "3849014",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 0,
+      "observed_points": 13936,
+      "excluded_interpolated_points": 158,
+      "baseline_days": 310.69011529865384,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437282364382533,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "5617102",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 0,
+      "observed_points": 10297,
+      "excluded_interpolated_points": 114,
+      "baseline_days": 228.95622612710577,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735294225585697,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "9456816",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 10,
+      "observed_points": 13926,
+      "excluded_interpolated_points": 168,
+      "baseline_days": 310.6907452931482,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437269311362738,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8911885",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 12,
+      "observed_points": 10285,
+      "excluded_interpolated_points": 126,
+      "baseline_days": 228.9577401218703,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735236463005942,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "11468902",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 16,
+      "observed_points": 10281,
+      "excluded_interpolated_points": 130,
+      "baseline_days": 228.95794390882656,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735228688096626,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "11869048",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 0,
+      "observed_points": 10297,
+      "excluded_interpolated_points": 114,
+      "baseline_days": 228.95769097100128,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735238338219049,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "6924244",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14093,
+      "outliers_removed": 13,
+      "observed_points": 13923,
+      "excluded_interpolated_points": 170,
+      "baseline_days": 310.69044370586926,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.000643727556002141,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "7821234",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 2,
+      "observed_points": 10295,
+      "excluded_interpolated_points": 116,
+      "baseline_days": 228.95660995866638,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735279581406542,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "12164840",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 27,
+      "observed_points": 13909,
+      "excluded_interpolated_points": 185,
+      "baseline_days": 310.6911534836836,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437260853985123,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8308199",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 8,
+      "observed_points": 13928,
+      "excluded_interpolated_points": 166,
+      "baseline_days": 310.69057345837064,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.000643727287164694,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "7048889",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 1,
+      "observed_points": 10296,
+      "excluded_interpolated_points": 115,
+      "baseline_days": 228.95703769521788,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735263262194858,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8329294",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 14,
+      "observed_points": 13922,
+      "excluded_interpolated_points": 172,
+      "baseline_days": 310.6906220663659,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437271864526328,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "1574524",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 18,
+      "observed_points": 13918,
+      "excluded_interpolated_points": 176,
+      "baseline_days": 310.6899657929753,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437285462037346,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "5477570",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 17273,
+      "outliers_removed": 18,
+      "observed_points": 17074,
+      "excluded_interpolated_points": 199,
+      "baseline_days": 367.15111122366943,
+      "trial_periods": 3635,
+      "frequency_step_per_day": 0.0005447348350204488,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "10118610",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 0,
+      "observed_points": 10297,
+      "excluded_interpolated_points": 114,
+      "baseline_days": 228.95607470703544,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.00087353000026714,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "7369114",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 20,
+      "observed_points": 13916,
+      "excluded_interpolated_points": 178,
+      "baseline_days": 310.69044401198335,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437275553678953,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "2994022",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14093,
+      "outliers_removed": 7,
+      "observed_points": 13929,
+      "excluded_interpolated_points": 164,
+      "baseline_days": 310.69004913994286,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437283735145146,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "5126954",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 0,
+      "observed_points": 10297,
+      "excluded_interpolated_points": 114,
+      "baseline_days": 228.9570493749925,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735262816583306,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "7201286",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 0,
+      "observed_points": 13936,
+      "excluded_interpolated_points": 158,
+      "baseline_days": 310.69042356572754,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437275977310236,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "10965485",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10955,
+      "outliers_removed": 12,
+      "observed_points": 10824,
+      "excluded_interpolated_points": 131,
+      "baseline_days": 241.70649024924933,
+      "trial_periods": 2393,
+      "frequency_step_per_day": 0.0008274498537203477,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "10453652",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 0,
+      "observed_points": 10297,
+      "excluded_interpolated_points": 114,
+      "baseline_days": 228.95641301973956,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735287095136179,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "7969912",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 0,
+      "observed_points": 13936,
+      "excluded_interpolated_points": 158,
+      "baseline_days": 310.6905323276733,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437273723843884,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "7514850",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 12,
+      "observed_points": 10285,
+      "excluded_interpolated_points": 126,
+      "baseline_days": 228.95617108489387,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735296325594242,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "7907690",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 9,
+      "observed_points": 13927,
+      "excluded_interpolated_points": 167,
+      "baseline_days": 310.69053336318757,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437273702388809,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "7510723",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 3,
+      "observed_points": 13933,
+      "excluded_interpolated_points": 161,
+      "baseline_days": 310.69051649332687,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437274051919627,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "4754378",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 1,
+      "observed_points": 13935,
+      "excluded_interpolated_points": 159,
+      "baseline_days": 310.6902107742353,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437280386195723,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "10124049",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 3,
+      "observed_points": 10294,
+      "excluded_interpolated_points": 117,
+      "baseline_days": 228.956356299459,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735289259164044,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8748654",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14093,
+      "outliers_removed": 23,
+      "observed_points": 13913,
+      "excluded_interpolated_points": 180,
+      "baseline_days": 310.69062798998493,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437271741793479,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "6679278",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 0,
+      "observed_points": 10297,
+      "excluded_interpolated_points": 114,
+      "baseline_days": 228.95610654039774,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735298788141795,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "2581691",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 5,
+      "observed_points": 13931,
+      "excluded_interpolated_points": 163,
+      "baseline_days": 310.69002236767847,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437284289848063,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "9650424",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 4,
+      "observed_points": 10293,
+      "excluded_interpolated_points": 118,
+      "baseline_days": 228.95703170110937,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735263490884562,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "11401173",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 0,
+      "observed_points": 10297,
+      "excluded_interpolated_points": 114,
+      "baseline_days": 228.95726553056738,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735254569735356,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8914514",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 3,
+      "observed_points": 10294,
+      "excluded_interpolated_points": 117,
+      "baseline_days": 228.95783152001968,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735232975968867,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "10659556",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 16,
+      "observed_points": 13920,
+      "excluded_interpolated_points": 174,
+      "baseline_days": 310.6909132432047,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437265831570769,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "5610065",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 18,
+      "observed_points": 13918,
+      "excluded_interpolated_points": 176,
+      "baseline_days": 310.6902603314811,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.000643727935940497,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "9468741",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 19,
+      "observed_points": 13917,
+      "excluded_interpolated_points": 177,
+      "baseline_days": 310.6907046119886,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437270154244666,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "12052475",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10955,
+      "outliers_removed": 19,
+      "observed_points": 10817,
+      "excluded_interpolated_points": 138,
+      "baseline_days": 241.7067789398643,
+      "trial_periods": 2393,
+      "frequency_step_per_day": 0.000827448865427805,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "12168991",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 2,
+      "observed_points": 13934,
+      "excluded_interpolated_points": 160,
+      "baseline_days": 310.6911589412921,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437260740908042,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "3128706",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 6,
+      "observed_points": 10291,
+      "excluded_interpolated_points": 120,
+      "baseline_days": 228.95634155417792,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735289821735469,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "11459571",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 16873,
+      "outliers_removed": 7,
+      "observed_points": 16695,
+      "excluded_interpolated_points": 178,
+      "baseline_days": 549.7839791760853,
+      "trial_periods": 5443,
+      "frequency_step_per_day": 0.00036377924343980174,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "11391056",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10955,
+      "outliers_removed": 25,
+      "observed_points": 10811,
+      "excluded_interpolated_points": 144,
+      "baseline_days": 241.70654142705462,
+      "trial_periods": 2393,
+      "frequency_step_per_day": 0.0008274496785200108,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "7364380",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 7,
+      "observed_points": 10290,
+      "excluded_interpolated_points": 121,
+      "baseline_days": 228.95661572454264,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735279361423637,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "6707495",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 10,
+      "observed_points": 13926,
+      "excluded_interpolated_points": 168,
+      "baseline_days": 310.69039867240645,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437276493081494,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "4678743",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 12,
+      "observed_points": 13924,
+      "excluded_interpolated_points": 170,
+      "baseline_days": 310.6901870000147,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437280878780717,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "5869290",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 6,
+      "observed_points": 13930,
+      "excluded_interpolated_points": 164,
+      "baseline_days": 310.6902818177332,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437278914225268,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "3848540",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 15,
+      "observed_points": 13921,
+      "excluded_interpolated_points": 173,
+      "baseline_days": 310.6901128434547,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437282415252545,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "5308493",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 0,
+      "observed_points": 10297,
+      "excluded_interpolated_points": 114,
+      "baseline_days": 228.95719730562996,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735257172676882,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "3099957",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 10,
+      "observed_points": 10287,
+      "excluded_interpolated_points": 124,
+      "baseline_days": 228.95546652656049,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735323206480356,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "11031749",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 5,
+      "observed_points": 10292,
+      "excluded_interpolated_points": 119,
+      "baseline_days": 228.95736324161408,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735250841832243,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "3744514",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 6,
+      "observed_points": 13930,
+      "excluded_interpolated_points": 164,
+      "baseline_days": 310.6901117563684,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437282437776214,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8018650",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 9,
+      "observed_points": 10288,
+      "excluded_interpolated_points": 123,
+      "baseline_days": 228.9563042871887,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735291243569879,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8300900",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 9,
+      "observed_points": 10288,
+      "excluded_interpolated_points": 123,
+      "baseline_days": 228.95679043838754,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735272695649538,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "7504260",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 11,
+      "observed_points": 13925,
+      "excluded_interpolated_points": 169,
+      "baseline_days": 310.6904982483684,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.000643727442994148,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "7741550",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 13,
+      "observed_points": 13923,
+      "excluded_interpolated_points": 171,
+      "baseline_days": 310.6905365590792,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437273636172343,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "7130318",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14093,
+      "outliers_removed": 6,
+      "observed_points": 13930,
+      "excluded_interpolated_points": 163,
+      "baseline_days": 310.690440686114,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.00064372756225885,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "3655287",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 4,
+      "observed_points": 13932,
+      "excluded_interpolated_points": 162,
+      "baseline_days": 310.6901166096068,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437282337220503,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "2969526",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 13,
+      "observed_points": 13923,
+      "excluded_interpolated_points": 171,
+      "baseline_days": 310.6900680327526,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437283343699169,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8330463",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 2,
+      "observed_points": 13934,
+      "excluded_interpolated_points": 160,
+      "baseline_days": 310.69062781448883,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437271745429623,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8077474",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 20,
+      "observed_points": 13916,
+      "excluded_interpolated_points": 178,
+      "baseline_days": 310.690574114662,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.000643727285804908,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "4270042",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 21,
+      "observed_points": 10276,
+      "excluded_interpolated_points": 135,
+      "baseline_days": 228.9563796443399,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735288368495316,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "12202477",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 1,
+      "observed_points": 13935,
+      "excluded_interpolated_points": 159,
+      "baseline_days": 310.691166570512,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437260582836995,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8163439",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 0,
+      "observed_points": 10297,
+      "excluded_interpolated_points": 114,
+      "baseline_days": 228.95662342873402,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.000873527906748908,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "5269729",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 3,
+      "observed_points": 10294,
+      "excluded_interpolated_points": 117,
+      "baseline_days": 228.95609941496514,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735299059996456,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "6612910",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 12,
+      "observed_points": 13924,
+      "excluded_interpolated_points": 170,
+      "baseline_days": 310.6903649133601,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437277192544175,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "9667162",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 12,
+      "observed_points": 10285,
+      "excluded_interpolated_points": 126,
+      "baseline_days": 228.95763702801196,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735240396262951,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "11567254",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 6,
+      "observed_points": 10291,
+      "excluded_interpolated_points": 120,
+      "baseline_days": 228.9577512310061,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735236039168235,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "4069078",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 1,
+      "observed_points": 13935,
+      "excluded_interpolated_points": 159,
+      "baseline_days": 310.69015300220053,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437281583191452,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "9725092",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 1,
+      "observed_points": 10296,
+      "excluded_interpolated_points": 115,
+      "baseline_days": 228.95755270629888,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735243613324042,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8428568",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 20,
+      "observed_points": 13916,
+      "excluded_interpolated_points": 178,
+      "baseline_days": 310.6905855691148,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437272620721523,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "7122640",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 0,
+      "observed_points": 10297,
+      "excluded_interpolated_points": 114,
+      "baseline_days": 228.9566853045253,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735276706770484,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "2997477",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 11,
+      "observed_points": 13925,
+      "excluded_interpolated_points": 169,
+      "baseline_days": 310.6900466853258,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.000643728378600312,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "10119724",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 11,
+      "observed_points": 13925,
+      "excluded_interpolated_points": 169,
+      "baseline_days": 310.6908867775928,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437266379917008,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "11453448",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14603,
+      "outliers_removed": 0,
+      "observed_points": 14452,
+      "excluded_interpolated_points": 151,
+      "baseline_days": 497.7841827310913,
+      "trial_periods": 4929,
+      "frequency_step_per_day": 0.0004017805445377968,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "6764826",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 17,
+      "observed_points": 13919,
+      "excluded_interpolated_points": 175,
+      "baseline_days": 310.6904284093034,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437275876954925,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "7708859",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 20,
+      "observed_points": 13916,
+      "excluded_interpolated_points": 178,
+      "baseline_days": 310.6905358413205,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437273651043762,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "12066279",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 17,
+      "observed_points": 13919,
+      "excluded_interpolated_points": 175,
+      "baseline_days": 310.6911398401571,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437261136667593,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "10297832",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 14,
+      "observed_points": 13922,
+      "excluded_interpolated_points": 172,
+      "baseline_days": 310.6908617288427,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437266898907094,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "10615163",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 18,
+      "observed_points": 13918,
+      "excluded_interpolated_points": 176,
+      "baseline_days": 310.6908932901424,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437266244982199,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "12645202",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 0,
+      "observed_points": 10297,
+      "excluded_interpolated_points": 114,
+      "baseline_days": 228.95739349527867,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735249687585398,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "10461847",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 12,
+      "observed_points": 13924,
+      "excluded_interpolated_points": 170,
+      "baseline_days": 310.6908906149183,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437266300410697,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "6862333",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 1,
+      "observed_points": 10296,
+      "excluded_interpolated_points": 115,
+      "baseline_days": 228.95646846300224,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735284979830941,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "7918454",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14093,
+      "outliers_removed": 26,
+      "observed_points": 13910,
+      "excluded_interpolated_points": 183,
+      "baseline_days": 310.69056130682293,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437273123417795,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "9569836",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 14,
+      "observed_points": 13922,
+      "excluded_interpolated_points": 172,
+      "baseline_days": 310.6908025182929,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437268125702702,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "11341446",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 14,
+      "observed_points": 10283,
+      "excluded_interpolated_points": 128,
+      "baseline_days": 228.95685698400484,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735270156768976,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "11966726",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 24,
+      "observed_points": 13912,
+      "excluded_interpolated_points": 182,
+      "baseline_days": 310.6911170285166,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437261609305783,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8573128",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 2,
+      "observed_points": 10295,
+      "excluded_interpolated_points": 116,
+      "baseline_days": 228.9573153576348,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735252668716742,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "9471538",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 9,
+      "observed_points": 10288,
+      "excluded_interpolated_points": 123,
+      "baseline_days": 228.95721360330936,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735256550882011,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "6211958",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 0,
+      "observed_points": 13936,
+      "excluded_interpolated_points": 158,
+      "baseline_days": 310.69032039788726,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437278114872356,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "2016171",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14093,
+      "outliers_removed": 19,
+      "observed_points": 13917,
+      "excluded_interpolated_points": 176,
+      "baseline_days": 310.68999028419785,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437284954595858,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "6068136",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 9,
+      "observed_points": 13927,
+      "excluded_interpolated_points": 167,
+      "baseline_days": 310.690337097898,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437277768860263,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "11043244",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 1,
+      "observed_points": 10296,
+      "excluded_interpolated_points": 115,
+      "baseline_days": 228.9577818257967,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735234871910607,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "10816741",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 13,
+      "observed_points": 13923,
+      "excluded_interpolated_points": 171,
+      "baseline_days": 310.69092857492797,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437265513909811,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8978329",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 10,
+      "observed_points": 13926,
+      "excluded_interpolated_points": 168,
+      "baseline_days": 310.6906986350514,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437270278082167,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "4450061",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 23,
+      "observed_points": 13913,
+      "excluded_interpolated_points": 181,
+      "baseline_days": 310.6901747275115,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437281133058312,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "12453876",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 1,
+      "observed_points": 13935,
+      "excluded_interpolated_points": 159,
+      "baseline_days": 310.6912097143504,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437259688932946,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "6206694",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 3,
+      "observed_points": 10294,
+      "excluded_interpolated_points": 117,
+      "baseline_days": 228.95646359561943,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735285165534264,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "9246161",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 5,
+      "observed_points": 10292,
+      "excluded_interpolated_points": 119,
+      "baseline_days": 228.95789248126675,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735230650166992,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "5645728",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 17,
+      "observed_points": 13919,
+      "excluded_interpolated_points": 175,
+      "baseline_days": 310.6902939099091,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.00064372786636841,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "6289991",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 25,
+      "observed_points": 13911,
+      "excluded_interpolated_points": 183,
+      "baseline_days": 310.69033124942507,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.000643727789003637,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "7540285",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 8,
+      "observed_points": 13928,
+      "excluded_interpolated_points": 166,
+      "baseline_days": 310.69048163951084,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437274774064587,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "11561399",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 2,
+      "observed_points": 10295,
+      "excluded_interpolated_points": 116,
+      "baseline_days": 228.9575042053475,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735245463744395,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "7021193",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 12,
+      "observed_points": 13924,
+      "excluded_interpolated_points": 170,
+      "baseline_days": 310.69044776020746,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.000643727547601853,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "5552398",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 18,
+      "observed_points": 13918,
+      "excluded_interpolated_points": 176,
+      "baseline_days": 310.69027356586594,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.000643727908519802,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "4848756",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 6,
+      "observed_points": 10291,
+      "excluded_interpolated_points": 120,
+      "baseline_days": 228.95665375329554,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735277910529877,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "2019352",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 0,
+      "observed_points": 10297,
+      "excluded_interpolated_points": 114,
+      "baseline_days": 228.9560662022559,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735300327151997,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "10083254",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 21,
+      "observed_points": 13915,
+      "excluded_interpolated_points": 179,
+      "baseline_days": 310.6907970728789,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437268238527384,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "7202844",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 14,
+      "observed_points": 13922,
+      "excluded_interpolated_points": 172,
+      "baseline_days": 310.69042803491175,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437275884712044,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8159207",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 0,
+      "observed_points": 10297,
+      "excluded_interpolated_points": 114,
+      "baseline_days": 228.95648144208826,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735284484645068,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "6350764",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 12,
+      "observed_points": 13924,
+      "excluded_interpolated_points": 170,
+      "baseline_days": 310.69038471275417,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437276782315233,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8297488",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 17,
+      "observed_points": 10280,
+      "excluded_interpolated_points": 131,
+      "baseline_days": 228.95665826182812,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.000873527773851791,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "3232237",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 11,
+      "observed_points": 13925,
+      "excluded_interpolated_points": 169,
+      "baseline_days": 310.6900638499501,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437283430363945,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "4373579",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 19,
+      "observed_points": 13917,
+      "excluded_interpolated_points": 177,
+      "baseline_days": 310.6901719497255,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437281190612078,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "7831523",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 8,
+      "observed_points": 13928,
+      "excluded_interpolated_points": 166,
+      "baseline_days": 310.69051299295097,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437274124444786,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "9409212",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 0,
+      "observed_points": 10297,
+      "excluded_interpolated_points": 114,
+      "baseline_days": 228.95714759978,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735259069072721,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "7351580",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 12,
+      "observed_points": 13924,
+      "excluded_interpolated_points": 170,
+      "baseline_days": 310.69048786400526,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437274645097713,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "6222079",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 2,
+      "observed_points": 10295,
+      "excluded_interpolated_points": 116,
+      "baseline_days": 228.95695550739765,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735266397859573,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "10919535",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 15751,
+      "outliers_removed": 19,
+      "observed_points": 15555,
+      "excluded_interpolated_points": 196,
+      "baseline_days": 542.0998930813585,
+      "trial_periods": 5367,
+      "frequency_step_per_day": 0.00036893569349954466,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "7177105",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 10,
+      "observed_points": 13926,
+      "excluded_interpolated_points": 168,
+      "baseline_days": 310.69046323186194,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.000643727515545735,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "11852750",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 0,
+      "observed_points": 10297,
+      "excluded_interpolated_points": 114,
+      "baseline_days": 228.9568006314803,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.000873527230675764,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8105575",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 2,
+      "observed_points": 10295,
+      "excluded_interpolated_points": 116,
+      "baseline_days": 228.9570274928119,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735263651441273,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "10918016",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 1,
+      "observed_points": 13935,
+      "excluded_interpolated_points": 159,
+      "baseline_days": 310.69095360323263,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437264995343561,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "7128946",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 15,
+      "observed_points": 13921,
+      "excluded_interpolated_points": 173,
+      "baseline_days": 310.69043693078856,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437275700396061,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "9003426",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 12,
+      "observed_points": 13924,
+      "excluded_interpolated_points": 170,
+      "baseline_days": 310.69070199383714,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437270208490732,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "7597815",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 23,
+      "observed_points": 13913,
+      "excluded_interpolated_points": 181,
+      "baseline_days": 310.6905100768636,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437274184863928,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "5818866",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 13,
+      "observed_points": 10284,
+      "excluded_interpolated_points": 127,
+      "baseline_days": 228.95715849770932,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.000873525865329085,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "3545033",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 0,
+      "observed_points": 10297,
+      "excluded_interpolated_points": 114,
+      "baseline_days": 228.95608434604947,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735299634916687,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "6128428",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 0,
+      "observed_points": 10297,
+      "excluded_interpolated_points": 114,
+      "baseline_days": 228.95655070187058,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735281842205268,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "9274563",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 0,
+      "observed_points": 10297,
+      "excluded_interpolated_points": 114,
+      "baseline_days": 228.95667482266435,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735277106680013,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "9872677",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 18,
+      "observed_points": 10279,
+      "excluded_interpolated_points": 132,
+      "baseline_days": 228.95609647163656,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735299172292463,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "10669325",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 7,
+      "observed_points": 10290,
+      "excluded_interpolated_points": 121,
+      "baseline_days": 228.95734668901423,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735251473352104,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "7880972",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 14,
+      "observed_points": 13922,
+      "excluded_interpolated_points": 172,
+      "baseline_days": 310.69054674087965,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437273425213122,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "4056376",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 13,
+      "observed_points": 13923,
+      "excluded_interpolated_points": 171,
+      "baseline_days": 310.69013292917225,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437281999090515,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8765712",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 7,
+      "observed_points": 13929,
+      "excluded_interpolated_points": 165,
+      "baseline_days": 310.69063910823024,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437271511431963,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "10907932",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 0,
+      "observed_points": 10297,
+      "excluded_interpolated_points": 114,
+      "baseline_days": 228.9565926330979,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735280242421291,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8613329",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 1,
+      "observed_points": 13935,
+      "excluded_interpolated_points": 159,
+      "baseline_days": 310.69062083422614,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437271890055321,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "7751692",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 0,
+      "observed_points": 13936,
+      "excluded_interpolated_points": 158,
+      "baseline_days": 310.6904982432461,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.000643727443004761,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8883214",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 12,
+      "observed_points": 13924,
+      "excluded_interpolated_points": 170,
+      "baseline_days": 310.69064769467514,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437271333527422,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "4079482",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 10411,
+      "outliers_removed": 0,
+      "observed_points": 10297,
+      "excluded_interpolated_points": 114,
+      "baseline_days": 228.95673985546455,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735274625514658,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "4634412",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 0,
+      "observed_points": 13936,
+      "excluded_interpolated_points": 158,
+      "baseline_days": 310.6902256421017,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437280078144111,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "6129251",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 12,
+      "observed_points": 13924,
+      "excluded_interpolated_points": 170,
+      "baseline_days": 310.6903160309157,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437278205352841,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "1027740",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 1,
+      "observed_points": 13935,
+      "excluded_interpolated_points": 159,
+      "baseline_days": 310.68993016732566,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437286200176738,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "10096016",
+      "status": "available",
+      "product_count": 4,
+      "from_cache": true,
+      "output_points": 14094,
+      "outliers_removed": 20,
+      "observed_points": 13916,
+      "excluded_interpolated_points": 178,
+      "baseline_days": 310.6908276075701,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.000643726760587273,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    }
+  ]
+}

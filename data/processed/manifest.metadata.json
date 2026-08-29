@@ -1,0 +1,13 @@
+{
+  "generated_at_utc": "2026-08-25T01:28:06.866381+00:00",
+  "config_path": "configs/base.yaml",
+  "catalog_path": "data/catalog/confirmed_exoplanets.parquet",
+  "target_count": 20,
+  "planet_count": 47,
+  "row_count": 781,
+  "available_rows": 781,
+  "skipped_rows": 0,
+  "status_counts": {
+    "available": 781
+  }
+}

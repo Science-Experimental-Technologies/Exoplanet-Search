@@ -1,0 +1,489 @@
+{
+  "generated_at_utc": "2026-08-25T02:07:55.046185+00:00",
+  "configured_targets": 20,
+  "available_targets": 20,
+  "skipped_targets": 0,
+  "candidate_rows": 100,
+  "targets": [
+    {
+      "target_id": "10407210",
+      "koi_name": "K04662.01",
+      "negative_category": "centroid_offset",
+      "status": "available",
+      "product_count": 18,
+      "output_points": 66031,
+      "outliers_removed": 22,
+      "observed_points": 65240,
+      "excluded_interpolated_points": 791,
+      "baseline_days": 1470.4624368601872,
+      "trial_periods": 14558,
+      "frequency_step_per_day": 0.00013601163483444777,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "3324986",
+      "koi_name": "K03084.01",
+      "negative_category": "centroid_offset",
+      "status": "available",
+      "product_count": 4,
+      "output_points": 14094,
+      "outliers_removed": 19,
+      "observed_points": 13917,
+      "excluded_interpolated_points": 177,
+      "baseline_days": 310.6900880999019,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437282927921741,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "3438976",
+      "koi_name": "K04527.01",
+      "negative_category": "centroid_offset",
+      "status": "available",
+      "product_count": 4,
+      "output_points": 14094,
+      "outliers_removed": 17,
+      "observed_points": 13919,
+      "excluded_interpolated_points": 175,
+      "baseline_days": 310.69008361424494,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.000643728302086144,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "7132015",
+      "koi_name": "K06834.01",
+      "negative_category": "centroid_offset",
+      "status": "available",
+      "product_count": 4,
+      "output_points": 13607,
+      "outliers_removed": 2,
+      "observed_points": 13451,
+      "excluded_interpolated_points": 156,
+      "baseline_days": 316.80009410492494,
+      "trial_periods": 3137,
+      "frequency_step_per_day": 0.0006313129437826478,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "9602775",
+      "koi_name": "K04684.01",
+      "negative_category": "centroid_offset",
+      "status": "available",
+      "product_count": 4,
+      "output_points": 14094,
+      "outliers_removed": 19,
+      "observed_points": 13917,
+      "excluded_interpolated_points": 177,
+      "baseline_days": 310.69074750835716,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437269265465341,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "4035667",
+      "koi_name": "K02684.01",
+      "negative_category": "ephemeris_contamination",
+      "status": "available",
+      "product_count": 4,
+      "output_points": 10411,
+      "outliers_removed": 0,
+      "observed_points": 10297,
+      "excluded_interpolated_points": 114,
+      "baseline_days": 228.95537512155715,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735326693850968,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "7285673",
+      "koi_name": "K04559.01",
+      "negative_category": "ephemeris_contamination",
+      "status": "available",
+      "product_count": 4,
+      "output_points": 14094,
+      "outliers_removed": 0,
+      "observed_points": 13936,
+      "excluded_interpolated_points": 158,
+      "baseline_days": 310.69043384205725,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437275764392286,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8302473",
+      "koi_name": "K07015.01",
+      "negative_category": "ephemeris_contamination",
+      "status": "available",
+      "product_count": 4,
+      "output_points": 14622,
+      "outliers_removed": 19,
+      "observed_points": 14451,
+      "excluded_interpolated_points": 171,
+      "baseline_days": 588.0360982973434,
+      "trial_periods": 5822,
+      "frequency_step_per_day": 0.00034011517418590343,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8560927",
+      "koi_name": "K07897.01",
+      "negative_category": "ephemeris_contamination",
+      "status": "available",
+      "product_count": 4,
+      "output_points": 10411,
+      "outliers_removed": 12,
+      "observed_points": 10285,
+      "excluded_interpolated_points": 126,
+      "baseline_days": 228.95682444254635,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735271398306248,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8766285",
+      "koi_name": "K05571.01",
+      "negative_category": "ephemeris_contamination",
+      "status": "available",
+      "product_count": 4,
+      "output_points": 10411,
+      "outliers_removed": 16,
+      "observed_points": 10281,
+      "excluded_interpolated_points": 130,
+      "baseline_days": 228.95734729303513,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735251450307312,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "4544572",
+      "koi_name": "K03950.01",
+      "negative_category": "not_transit",
+      "status": "available",
+      "product_count": 4,
+      "output_points": 16992,
+      "outliers_removed": 12,
+      "observed_points": 16785,
+      "excluded_interpolated_points": 207,
+      "baseline_days": 368.3973150273159,
+      "trial_periods": 3648,
+      "frequency_step_per_day": 0.0005428921217440751,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "6033602",
+      "koi_name": "K05225.01",
+      "negative_category": "not_transit",
+      "status": "available",
+      "product_count": 4,
+      "output_points": 14094,
+      "outliers_removed": 5,
+      "observed_points": 13931,
+      "excluded_interpolated_points": 163,
+      "baseline_days": 310.6902990470262,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437278557246744,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "7282154",
+      "koi_name": "K07830.01",
+      "negative_category": "not_transit",
+      "status": "available",
+      "product_count": 4,
+      "output_points": 17273,
+      "outliers_removed": 15,
+      "observed_points": 17077,
+      "excluded_interpolated_points": 196,
+      "baseline_days": 367.15104791579506,
+      "trial_periods": 3635,
+      "frequency_step_per_day": 0.0005447349289491048,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "9402670",
+      "koi_name": "K05667.01",
+      "negative_category": "not_transit",
+      "status": "available",
+      "product_count": 4,
+      "output_points": 14094,
+      "outliers_removed": 12,
+      "observed_points": 13924,
+      "excluded_interpolated_points": 170,
+      "baseline_days": 310.69071846098814,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437269867304163,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "9489348",
+      "koi_name": "K05686.01",
+      "negative_category": "not_transit",
+      "status": "available",
+      "product_count": 4,
+      "output_points": 10411,
+      "outliers_removed": 6,
+      "observed_points": 10291,
+      "excluded_interpolated_points": 120,
+      "baseline_days": 228.95782426011283,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735233252949913,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "10556578",
+      "koi_name": "K07343.01",
+      "negative_category": "stellar_eclipse",
+      "status": "available",
+      "product_count": 4,
+      "output_points": 16992,
+      "outliers_removed": 0,
+      "observed_points": 16798,
+      "excluded_interpolated_points": 194,
+      "baseline_days": 368.39730952133687,
+      "trial_periods": 3648,
+      "frequency_step_per_day": 0.0005428921298580124,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "11774387",
+      "koi_name": "K01497.01",
+      "negative_category": "stellar_eclipse",
+      "status": "available",
+      "product_count": 4,
+      "output_points": 16992,
+      "outliers_removed": 16,
+      "observed_points": 16782,
+      "excluded_interpolated_points": 210,
+      "baseline_days": 368.3972947694201,
+      "trial_periods": 3648,
+      "frequency_step_per_day": 0.0005428921515973129,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "5467113",
+      "koi_name": "K03825.01",
+      "negative_category": "stellar_eclipse",
+      "status": "available",
+      "product_count": 4,
+      "output_points": 16833,
+      "outliers_removed": 0,
+      "observed_points": 16630,
+      "excluded_interpolated_points": 203,
+      "baseline_days": 362.9418950570762,
+      "trial_periods": 3594,
+      "frequency_step_per_day": 0.000551052393575418,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "6466939",
+      "koi_name": "K06717.01",
+      "negative_category": "stellar_eclipse",
+      "status": "available",
+      "product_count": 4,
+      "output_points": 14094,
+      "outliers_removed": 0,
+      "observed_points": 13936,
+      "excluded_interpolated_points": 158,
+      "baseline_days": 310.69037600669253,
+      "trial_periods": 3076,
+      "frequency_step_per_day": 0.0006437276962698447,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "9278021",
+      "koi_name": "K07152.01",
+      "negative_category": "stellar_eclipse",
+      "status": "available",
+      "product_count": 4,
+      "output_points": 10411,
+      "outliers_removed": 2,
+      "observed_points": 10295,
+      "excluded_interpolated_points": 116,
+      "baseline_days": 228.95680498873116,
+      "trial_periods": 2267,
+      "frequency_step_per_day": 0.0008735272140517668,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    }
+  ]
+}

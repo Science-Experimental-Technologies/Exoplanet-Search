@@ -1,0 +1,86 @@
+{
+  "started_at_utc": "2026-08-26T09:33:19.031477+00:00",
+  "status": "completed",
+  "config": "configs\\scaleup.yaml",
+  "resume": true,
+  "steps": [
+    {
+      "name": "catalog_selection",
+      "status": "skipped_complete"
+    },
+    {
+      "name": "prefetch",
+      "status": "skipped_complete"
+    },
+    {
+      "name": "confirmed_pipeline",
+      "status": "completed",
+      "duration_seconds": 557.175,
+      "summary": {
+        "manifest_targets": 371,
+        "processed_targets": 371,
+        "skipped_targets": 0,
+        "candidate_rows": 1855,
+        "eligible_planets": 434,
+        "exact_recoveries": 227
+      }
+    },
+    {
+      "name": "false_positive_pipeline",
+      "status": "completed",
+      "duration_seconds": 514.807,
+      "summary": {
+        "candidate_rows": 2000,
+        "targets": 400
+      }
+    },
+    {
+      "name": "ml_dataset",
+      "status": "completed",
+      "duration_seconds": 140.969,
+      "summary": {
+        "samples": 2227,
+        "positives": 227,
+        "negatives": 2000,
+        "target_groups": 619,
+        "view_shape": [
+          2227,
+          512
+        ]
+      }
+    },
+    {
+      "name": "retraining",
+      "status": "completed",
+      "duration_seconds": 179.103,
+      "summary": {
+        "selection": {
+          "selected_model": "rf_v2",
+          "model_path": "models\\rf_v2.joblib",
+          "decision_threshold": 0.22110738840296026,
+          "selection_policy": "among models satisfying the explicit >=0.90 review-recall constraint, CNN replaces RF only with >=0.02 absolute precision gain and grouped-fold F1 SD <=0.10; otherwise RF is preferred",
+          "cnn_precision_gain_over_rf": -0.21476711270488258,
+          "cnn_stability_limit_fold_f1_sd": 0.1,
+          "cnn_stability_passed": false,
+          "cnn_role": "secondary_diagnostic"
+        }
+      }
+    }
+  ],
+  "acceptance": {
+    "passed": true,
+    "reasons": [],
+    "selected_model": {
+      "selected_model": "rf_v2",
+      "model_path": "models\\rf_v2.joblib",
+      "decision_threshold": 0.22110738840296026,
+      "selection_policy": "among models satisfying the explicit >=0.90 review-recall constraint, CNN replaces RF only with >=0.02 absolute precision gain and grouped-fold F1 SD <=0.10; otherwise RF is preferred",
+      "cnn_precision_gain_over_rf": -0.21476711270488258,
+      "cnn_stability_limit_fold_f1_sd": 0.1,
+      "cnn_stability_passed": false,
+      "cnn_role": "secondary_diagnostic"
+    },
+    "phase8_authorized_by_artifacts": true
+  },
+  "finished_at_utc": "2026-08-26T09:56:31.115053+00:00"
+}

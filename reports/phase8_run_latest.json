@@ -1,0 +1,25 @@
+{
+  "started_at_utc": "2026-08-27T10:35:49.012907+00:00",
+  "status": "completed",
+  "config": "configs\\candidate_search.yaml",
+  "steps": [
+    {
+      "name": "unknown_pool",
+      "status": "skipped_complete"
+    },
+    {
+      "name": "prefetch",
+      "status": "skipped_complete"
+    },
+    {
+      "name": "candidate_search",
+      "status": "skipped_complete"
+    }
+  ],
+  "acceptance": {
+    "passed": true,
+    "reasons": [],
+    "phase7_gate_verified": true
+  },
+  "finished_at_utc": "2026-08-27T10:35:49.534092+00:00"
+}

@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools==75.8.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scix-exoplanet-search"
+version = "1.0.0"
+description = "Reproducible exoplanet transit recovery pipeline using public light curves"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+dynamic = ["dependencies"]
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements-core.txt"] }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+markers = [
+  "network: integration tests that access public astronomy services",
+]

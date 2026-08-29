@@ -1,0 +1,21 @@
+{
+  "source_table": "pscomppars",
+  "source_url": "https://exoplanetarchive.ipac.caltech.edu/TAP/sync",
+  "retrieved_at_utc": "2026-08-25T01:04:02.309843+00:00",
+  "where": "tran_flag = 1",
+  "row_count": 4731,
+  "columns": [
+    "pl_name",
+    "host_star_id",
+    "period_days",
+    "transit_depth_percent",
+    "transit_duration_hours",
+    "planet_radius_earth",
+    "disc_facility",
+    "discoverymethod",
+    "tran_flag",
+    "catalog_source_table",
+    "catalog_source_url",
+    "catalog_retrieved_at_utc"
+  ]
+}

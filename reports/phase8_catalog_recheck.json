@@ -1,0 +1,10 @@
+{
+  "checked_at_utc": "2026-08-27T10:36:00+00:00",
+  "source": "https://exoplanetarchive.ipac.caltech.edu/TAP/sync",
+  "shortlist_rows": 20,
+  "unique_kic_targets": 14,
+  "cumulative_koi_matches": 0,
+  "kepler_confirmed_name_matches": 0,
+  "targets_with_nonzero_object_status": 0,
+  "interpretation": "Catalog-status recheck only; not independent astrophysical confirmation."
+}

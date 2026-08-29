@@ -1,0 +1,64 @@
+project:
+  name: SCIX Exoplanet Search
+  version: sxs-v2-phase8
+  random_seed: 42
+
+paths:
+  raw: data/raw/phase8_unknown
+  processed: data/phase8/processed
+  catalog: data/phase8/catalog
+  reports: reports
+
+ingest:
+  mission: Kepler
+  cadence: long
+  author: Kepler
+  max_products: 4
+
+preprocess:
+  quality_bitmask: 1130799
+  sigma_lower: 10.0
+  sigma_upper: 5.0
+  sigma_maxiters: 5
+  max_gap_cadences: 3
+  flatten_window_length: 401
+  flatten_polyorder: 2
+  flatten_break_tolerance: 5
+  flatten_niters: 3
+  flatten_sigma: 3.0
+
+bls:
+  minimum_period_days: 0.5
+  maximum_period_days: 50.0
+  durations_hours: [1.0, 2.0, 4.0, 8.0, 12.0]
+  top_k: 5
+  frequency_oversampling: 5.0
+  duration_oversampling: 10
+  minimum_peak_separation_fraction: 0.01
+  include_interpolated: false
+  objective: snr
+  method: fast
+
+candidate_search:
+  sample_size: 250
+  minimum_available_quarters: 8
+  minimum_kepler_magnitude: 10.0
+  maximum_kepler_magnitude: 15.0
+  model_path: models/rf_v2.joblib
+  model_selection: models/phase7_model_selection.json
+  shortlist_size: 20
+  required_label: unvalidated_candidate_requires_independent_confirmation
+  odd_even_mismatch_max: 0.5
+  secondary_to_primary_ratio_max: 0.2
+  centroid_significance_max: 3.0
+  artifacts:
+    eligible_pool: data/phase8/catalog/eligible_unknown_pool.parquet
+    selected_targets: data/phase8/catalog/selected_unknown_targets.yaml
+    selection_summary: data/phase8/catalog/selection_summary.json
+    processing_summary: data/phase8/processed/processing_summary.json
+    candidates: data/phase8/processed/scored_candidates.parquet
+    shortlist: data/phase8/processed/shortlist_top20.csv
+    figures: reports/phase8_candidates
+    report: reports/phase8_candidate_search.md
+    catalog_recheck: reports/phase8_catalog_recheck.json
+    run_record: reports/phase8_run_latest.json

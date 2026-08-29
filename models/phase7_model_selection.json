@@ -1,0 +1,10 @@
+{
+  "selected_model": "rf_v2",
+  "model_path": "models\\rf_v2.joblib",
+  "decision_threshold": 0.22110738840296026,
+  "selection_policy": "among models satisfying the explicit >=0.90 review-recall constraint, CNN replaces RF only with >=0.02 absolute precision gain and grouped-fold F1 SD <=0.10; otherwise RF is preferred",
+  "cnn_precision_gain_over_rf": -0.21476711270488258,
+  "cnn_stability_limit_fold_f1_sd": 0.1,
+  "cnn_stability_passed": false,
+  "cnn_role": "secondary_diagnostic"
+}

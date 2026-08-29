@@ -1,0 +1,102 @@
+project:
+  name: SCIX Exoplanet Search
+  version: sxs-v2-phase7
+  random_seed: 42
+
+paths:
+  raw: data/raw
+  processed: data/scaleup/processed/confirmed
+  catalog: data/scaleup/catalog
+  reports: reports
+
+ingest:
+  cache: true
+  mission: Kepler
+  cadence: long
+  author: Kepler
+  # A matched four-product subset per class bounds local storage and processing.
+  max_products: 4
+
+catalog:
+  table: pscomppars
+  transit_only: true
+  output: data/scaleup/catalog/confirmed_exoplanets.parquet
+
+dataset:
+  manifest: data/scaleup/processed/confirmed/manifest.csv
+  verify_fits: true
+
+preprocess:
+  quality_bitmask: 1130799
+  sigma_lower: 10.0
+  sigma_upper: 5.0
+  sigma_maxiters: 5
+  max_gap_cadences: 3
+  flatten_window_length: 401
+  flatten_polyorder: 2
+  flatten_break_tolerance: 5
+  flatten_niters: 3
+  flatten_sigma: 3.0
+  visualization_targets: []
+
+bls:
+  minimum_period_days: 0.5
+  maximum_period_days: 50.0
+  durations_hours: [1.0, 2.0, 4.0, 8.0, 12.0]
+  top_k: 5
+  frequency_oversampling: 5.0
+  duration_oversampling: 10
+  minimum_peak_separation_fraction: 0.01
+  match_tolerance_fraction: 0.01
+  include_interpolated: false
+  objective: snr
+  method: fast
+
+machine_learning:
+  folds: 5
+  folded_bins: 512
+  negative_sample:
+    catalog_output: data/scaleup/catalog/kepler_false_positives.parquet
+    per_category: 100
+    max_products: 4
+    raw_subdirectory: data/raw/kepler_false_positives
+    processed_subdirectory: data/scaleup/processed/false_positives
+  random_forest:
+    n_estimators: 600
+    max_depth: 10
+    min_samples_leaf: 2
+    class_weight: balanced
+  cnn:
+    epochs: 30
+    batch_size: 32
+    learning_rate: 0.001
+    patience: 5
+
+scaleup:
+  # MAST intermittently returned 64 KiB partial responses under concurrency.
+  # Serial acquisition is slower per request but avoids repeated corrupt files.
+  workers: 1
+  target_file: data/scaleup/catalog/confirmed_targets.yaml
+  selection:
+    minimum_period_days: 0.5
+    maximum_period_days: 50.0
+    positive_minimum_transit_snr: 50.0
+    negative_minimum_transit_snr: 10.0
+    maximum_kepler_magnitude: 15.0
+    minimum_available_quarters: 8
+    negative_targets_per_category: 100
+    availability_query_batch_size: 150
+  artifacts:
+    bls_report: reports/phase7_bls_recall.md
+    negative_candidates: data/scaleup/processed/negative_bls_candidates.parquet
+    negative_summary: data/scaleup/processed/negative_dataset_summary.json
+    ml_metadata: data/scaleup/processed/ml_candidate_metadata.csv
+    ml_features: data/scaleup/processed/ml_features.parquet
+    ml_views: data/scaleup/processed/ml_folded_views.npz
+    feature_model: models/rf_v2.joblib
+    cnn_model: models/cnn_v2.keras
+    experiments: reports/experiments/phase7
+    report: reports/phase7_scaleup.md
+
+# Populated dynamically from scaleup.target_file by Phase 7 modules.
+targets: []

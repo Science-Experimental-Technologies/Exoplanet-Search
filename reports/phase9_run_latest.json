@@ -1,0 +1,28 @@
+{
+  "generated_at_utc": "2026-08-28T11:57:21.289614+00:00",
+  "phase": 9,
+  "status": "accepted",
+  "config_path": "configs/independent_validation.yaml",
+  "frozen_shortlist_sha256": "68a736fed9172d1c104689d87b9b11d57731371b3a48080700d919e59f97033b",
+  "candidate_count": 20,
+  "unique_target_count": 14,
+  "category_counts": {
+    "likely_false_positive": 19,
+    "weak_candidate": 1
+  },
+  "strong_candidates": [],
+  "acceptance_checks": {
+    "exactly_20_candidates": true,
+    "all_fap_null_draws_saved": true,
+    "formal_odd_even_complete": true,
+    "secondary_upper_limits_complete": true,
+    "transit_models_attempted": true,
+    "gaia_queries_recorded": true,
+    "tess_queries_recorded": true,
+    "exofop_queries_recorded": true,
+    "categories_exact": true,
+    "no_confirmed_claim": true,
+    "transparent_score_reconciles": true
+  },
+  "phase10_unlocked": true
+}

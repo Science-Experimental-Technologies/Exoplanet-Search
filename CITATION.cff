@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use SXS in research or teaching, please cite this software release."
+title: "SCIX Exoplanet Search (SXS): Reproducible Kepler Transit Recovery and Independent Vetting"
+type: software
+authors:
+  - family-names: "Andrean"
+    given-names: "Rasya"
+    affiliation: "Science Experimental Technologies"
+version: 1.0.0
+date-released: 2026-08-29
+license: MIT
+repository-code: "https://github.com/Science-Experimental-Technologies/Exoplanet-Search"
+abstract: >-
+  A reproducible computational astronomy pipeline for Kepler light-curve
+  acquisition, preprocessing, Box Least Squares transit recovery,
+  target-grouped machine-learning vetting, bounded candidate search, and
+  independent statistical validation. Public release 1.0.0 reports no strong
+  candidates, one weak candidate, and nineteen likely false positives; it
+  makes no confirmed-exoplanet or discovery claim.
+keywords:
+  - exoplanets
+  - transit photometry
+  - Kepler
+  - TESS
+  - reproducible research
+  - machine learning
+preferred-citation:
+  type: report
+  title: "SXS: A Reproducible Kepler Transit-Recovery and Independent Vetting Pipeline"
+  authors:
+    - family-names: "Andrean"
+      given-names: "Rasya"
+      affiliation: "Science Experimental Technologies"
+  year: 2026
+  month: 8
+  version: 1.0.0

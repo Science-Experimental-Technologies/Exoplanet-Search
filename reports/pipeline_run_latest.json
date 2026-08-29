@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "started_at_utc": "2026-08-25T02:31:05.848982+00:00",
+  "finished_at_utc": "2026-08-25T02:31:05.875320+00:00",
+  "status": "completed",
+  "config_path": "configs/base.yaml",
+  "options": {
+    "from_phase": 0,
+    "to_phase": 5,
+    "resume": true,
+    "refresh_catalog": false,
+    "dry_run": false
+  },
+  "phases": [
+    {
+      "phase": 0,
+      "name": "environment",
+      "status": "completed",
+      "started_at_utc": "2026-08-25T02:31:05.849999+00:00",
+      "duration_seconds": 0.021,
+      "summary": {
+        "python": "3.11.9",
+        "packages_checked": [
+          "numpy",
+          "pandas",
+          "pyarrow",
+          "astropy",
+          "astroquery",
+          "lightkurve",
+          "sklearn",
+          "matplotlib",
+          "yaml",
+          "tensorflow"
+        ],
+        "config_valid": true
+      }
+    },
+    {
+      "phase": 1,
+      "name": "acquisition",
+      "status": "skipped_complete"
+    },
+    {
+      "phase": 2,
+      "name": "preprocessing",
+      "status": "skipped_complete"
+    },
+    {
+      "phase": 3,
+      "name": "bls_detection",
+      "status": "skipped_complete"
+    },
+    {
+      "phase": 4,
+      "name": "machine_learning",
+      "status": "skipped_complete"
+    },
+    {
+      "phase": 5,
+      "name": "catalog_validation",
+      "status": "skipped_complete"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "generated_at_utc": "2026-08-26T10:09:14.266359+00:00",
+  "source": "https://exoplanetarchive.ipac.caltech.edu/TAP/sync",
+  "queries": {
+    "not_categorized_pool": "select star_id,max(kepmag) as kepmag,count(quarter) as available_quarters,min(ra) as ra,min(dec) as dec,min(eff_temp) as effective_temperature_k,min(radius) as stellar_radius_solar from keplertimeseries where object_status=0 and targettype='long cadence     ' and kepmag between 10.0 and 15.0 group by star_id",
+    "all_koi_ids": "select kepid,kepoi_name,koi_disposition from cumulative where kepid is not null",
+    "confirmed_kepler_ids": "select kepid,kepler_name from keplernames where kepid is not null"
+  },
+  "raw_not_categorized_magnitude_limited_targets": 118773,
+  "targets_after_quarter_filter": 100745,
+  "excluded_unique_official_ids": 8223,
+  "eligible_unknown_targets": 100347,
+  "selected_targets": 250,
+  "selection_method": "ascending SHA-256 of '<seed>:<KIC>'; independent of light-curve signal",
+  "criteria": {
+    "object_status": 0,
+    "targettype": "long cadence",
+    "minimum_available_quarters": 8,
+    "kepler_magnitude_range": [
+      10.0,
+      15.0
+    ],
+    "exclude_every_cumulative_koi_disposition": true,
+    "exclude_every_kepler_confirmed_name": true
+  },
+  "required_output_label": "unvalidated_candidate_requires_independent_confirmation"
+}

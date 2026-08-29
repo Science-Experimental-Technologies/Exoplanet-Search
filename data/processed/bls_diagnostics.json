@@ -1,0 +1,405 @@
+{
+  "generated_at_utc": "2026-08-25T01:51:43.524207+00:00",
+  "config_path": "configs/base.yaml",
+  "parameters": {
+    "minimum_period_days": 0.5,
+    "maximum_period_days": 50.0,
+    "durations_hours": [
+      1.0,
+      2.0,
+      4.0,
+      8.0,
+      12.0
+    ],
+    "top_k": 5,
+    "frequency_oversampling": 5.0,
+    "duration_oversampling": 10,
+    "minimum_peak_separation_fraction": 0.01,
+    "match_tolerance_fraction": 0.01,
+    "include_interpolated": false,
+    "objective": "snr",
+    "method": "fast"
+  },
+  "targets": [
+    {
+      "target_id": "11904151",
+      "host_name": "Kepler-10",
+      "observed_points": 51959,
+      "excluded_interpolated_points": 609,
+      "baseline_days": 1470.462532363439,
+      "trial_periods": 14558,
+      "frequency_step_per_day": 0.00013601162600079638,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "10593626",
+      "host_name": "Kepler-22",
+      "observed_points": 65252,
+      "excluded_interpolated_points": 780,
+      "baseline_days": 1470.4624590964377,
+      "trial_periods": 14558,
+      "frequency_step_per_day": 0.0001360116327776875,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "5780885",
+      "host_name": "Kepler-7",
+      "observed_points": 65261,
+      "excluded_interpolated_points": 771,
+      "baseline_days": 1470.4623049104266,
+      "trial_periods": 14558,
+      "frequency_step_per_day": 0.00013601164703925072,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "6922244",
+      "host_name": "Kepler-8",
+      "observed_points": 65260,
+      "excluded_interpolated_points": 772,
+      "baseline_days": 1470.4623810167104,
+      "trial_periods": 14558,
+      "frequency_step_per_day": 0.00013601163999973638,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "3323887",
+      "host_name": "Kepler-9",
+      "observed_points": 64786,
+      "excluded_interpolated_points": 770,
+      "baseline_days": 1459.4889253086512,
+      "trial_periods": 14449,
+      "frequency_step_per_day": 0.00013703427037495622,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "6541920",
+      "host_name": "Kepler-11",
+      "observed_points": 64758,
+      "excluded_interpolated_points": 794,
+      "baseline_days": 1459.4889380502646,
+      "trial_periods": 14449,
+      "frequency_step_per_day": 0.00013703426917862122,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "11804465",
+      "host_name": "Kepler-12",
+      "observed_points": 51972,
+      "excluded_interpolated_points": 601,
+      "baseline_days": 1470.4625246776413,
+      "trial_periods": 14558,
+      "frequency_step_per_day": 0.00013601162671170048,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "9941662",
+      "host_name": "Kepler-13",
+      "observed_points": 65260,
+      "excluded_interpolated_points": 772,
+      "baseline_days": 1470.4624459438637,
+      "trial_periods": 14558,
+      "frequency_step_per_day": 0.00013601163399424565,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "10264660",
+      "host_name": "Kepler-14",
+      "observed_points": 65256,
+      "excluded_interpolated_points": 776,
+      "baseline_days": 1470.4624531259615,
+      "trial_periods": 14558,
+      "frequency_step_per_day": 0.00013601163332993159,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "11359879",
+      "host_name": "Kepler-15",
+      "observed_points": 64792,
+      "excluded_interpolated_points": 764,
+      "baseline_days": 1459.4892288832416,
+      "trial_periods": 14449,
+      "frequency_step_per_day": 0.00013703424187175,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "12644769",
+      "host_name": "Kepler-16",
+      "observed_points": 64945,
+      "excluded_interpolated_points": 768,
+      "baseline_days": 1470.4625530416233,
+      "trial_periods": 14558,
+      "frequency_step_per_day": 0.00013601162408815096,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "10619192",
+      "host_name": "Kepler-17",
+      "observed_points": 51733,
+      "excluded_interpolated_points": 602,
+      "baseline_days": 1459.4891623779768,
+      "trial_periods": 14449,
+      "frequency_step_per_day": 0.0001370342481160571,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "8644288",
+      "host_name": "Kepler-18",
+      "observed_points": 65224,
+      "excluded_interpolated_points": 788,
+      "baseline_days": 1470.4623552923003,
+      "trial_periods": 14558,
+      "frequency_step_per_day": 0.00013601164237913712,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "2571238",
+      "host_name": "Kepler-19",
+      "observed_points": 65232,
+      "excluded_interpolated_points": 796,
+      "baseline_days": 1470.4622239264572,
+      "trial_periods": 14558,
+      "frequency_step_per_day": 0.00013601165452993146,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "6850504",
+      "host_name": "Kepler-20",
+      "observed_points": 64784,
+      "excluded_interpolated_points": 772,
+      "baseline_days": 1459.4890407924759,
+      "trial_periods": 14449,
+      "frequency_step_per_day": 0.00013703425953195486,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "3632418",
+      "host_name": "Kepler-21",
+      "observed_points": 65249,
+      "excluded_interpolated_points": 779,
+      "baseline_days": 1470.4622590475046,
+      "trial_periods": 14558,
+      "frequency_step_per_day": 0.00013601165128138037,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "4349452",
+      "host_name": "Kepler-25",
+      "observed_points": 65214,
+      "excluded_interpolated_points": 793,
+      "baseline_days": 1470.4622802295635,
+      "trial_periods": 14558,
+      "frequency_step_per_day": 0.00013601164932212792,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "11401755",
+      "host_name": "Kepler-36",
+      "observed_points": 65241,
+      "excluded_interpolated_points": 787,
+      "baseline_days": 1470.4624830498506,
+      "trial_periods": 14558,
+      "frequency_step_per_day": 0.00013601163056209693,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "9002278",
+      "host_name": "Kepler-62",
+      "observed_points": 64759,
+      "excluded_interpolated_points": 797,
+      "baseline_days": 1459.4892079731435,
+      "trial_periods": 14449,
+      "frequency_step_per_day": 0.0001370342438350392,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    },
+    {
+      "target_id": "11442793",
+      "host_name": "Kepler-90",
+      "observed_points": 51337,
+      "excluded_interpolated_points": 619,
+      "baseline_days": 1459.4893419147338,
+      "trial_periods": 14449,
+      "frequency_step_per_day": 0.0001370342312590073,
+      "durations_hours_used": [
+        1.0,
+        2.0,
+        4.0,
+        8.0
+      ],
+      "durations_hours_excluded": [
+        12.0
+      ],
+      "weighted": true
+    }
+  ]
+}
