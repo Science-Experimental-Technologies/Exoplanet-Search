@@ -4,6 +4,8 @@ All notable changes to this project are documented in this file. The format foll
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-08-29
+
 ### Added
 
 - GitHub Actions CI for the core deterministic test suite on Ubuntu with Python 3.11 and 3.12.
@@ -12,6 +14,9 @@ All notable changes to this project are documented in this file. The format foll
 - Minimal SXS corporate wordmark banner for the repository landing page.
 - Unified product-oriented command interface for baseline, scale-up, search, and validation workflows.
 - Commercial-use guide and formal creator/funding notice.
+- Platform-labelled release bundles for Windows, macOS, and Linux, including
+  SHA-256 checksums and platform-specific installation instructions.
+- Automated GitHub Release publication for version tags.
 
 ### Changed
 
@@ -44,5 +49,6 @@ All notable changes to this project are documented in this file. The format foll
 - The scale-up program expanded the labeled data, froze model selection, conducted the bounded candidate search, completed independent validation, and prepared publication artifacts.
 - Public version numbering begins with the `1.0.0` release.
 
-[Unreleased]: https://github.com/Science-Experimental-Technologies/Exoplanet-Search/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/Science-Experimental-Technologies/Exoplanet-Search/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/Science-Experimental-Technologies/Exoplanet-Search/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/tag/v1.0.0

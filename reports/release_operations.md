@@ -11,8 +11,8 @@ Scope: infrastructure, release packaging, discoverability metadata, and archival
 | Task | Status | Evidence or remaining action |
 |---|:---:|---|
 | GitHub Actions CI | Done | `.github/workflows/ci.yml` runs an Ubuntu matrix for Python 3.11 and 3.12, core dependency installation, `pip check`, and non-network tests. A fresh local core-only environment passed 35 tests, and corrected hosted run [33229091278](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/actions/runs/33229091278) succeeded for both matrix jobs before the real README badge was added. |
-| GitHub Release `v1.0.0` | Pending execution | The tag is present on the remote. Release creation and PDF upload remain to be completed and verified. |
-| Repository About metadata | Pending execution | Final description, topics, and website are specified below. |
+| GitHub Release `v1.1.0` | Automated on tag | `.github/workflows/release.yml` verifies the tagged revision and publishes Windows, macOS, and Linux source bundles, checksums, and the verified preprint. |
+| Repository About metadata | Ready for publication | The description, topics, and website below are applied through the GitHub repository metadata API. |
 | Zenodo DOI | Documented - pending RA account action | GitHub-Zenodo linking requires the repository owner's Zenodo session. No DOI is claimed until Zenodo returns one. |
 | README methodology diagram | Done locally | A native Mermaid flowchart presents the workflow by scientific responsibility. |
 
@@ -28,11 +28,11 @@ Corrected hosted run 33229091278 completed successfully for both Python 3.11 and
 
 Hosted CI is not a full-stack ML validation. Changes involving the Random Forest/CNN training paths, TensorFlow, or MLflow must be checked locally using `requirements.txt`. Windows remains manually validated; the workflow makes no Windows CI claim.
 
-## GitHub Release `v1.0.0`
+## GitHub Release `v1.1.0`
 
 Title:
 
-> SCIX Exoplanet Search (SXS) v1.0.0
+> SCIX Exoplanet Search (SXS) v1.1.0
 
 Release notes below are reformatted directly from the `[1.0.0]` entry in `CHANGELOG.md`.
 
@@ -60,10 +60,15 @@ Release notes below are reformatted directly from the `[1.0.0]` entry in `CHANGE
 - **Scale-up research program:** expanded the labeled data, retrained and froze model selection, conducted the bounded candidate search, completed independent validation, and prepared publication artifacts.
 - Public version numbering begins with this `1.0.0` release.
 
-Release asset:
+Release assets:
 
-- Attach the verified preprint PDF as `sxs_preprint_v1.0.0.pdf`. Its metadata and page header identify public release 1.0.0; all eight rendered pages passed visual inspection.
-- For later releases, publish revised PDFs as release assets rather than repeatedly committing generated PDF builds under `output/pdf/`.
+- `sxs-v1.1.0-windows-python.zip`
+- `sxs-v1.1.0-macos-python.tar.gz`
+- `sxs-v1.1.0-linux-python.tar.gz`
+- `SHA256SUMS.txt`
+- `sxs_preprint_v1.0.0.pdf`, whose scientific metadata remains version 1.0.0 because the research results did not change in this packaging release.
+
+The three platform bundles contain the same tracked Python source and research record. Their `PLATFORM_INSTALL.md` file provides the platform-specific environment commands.
 
 ## Repository About metadata
 
@@ -73,7 +78,7 @@ Description:
 
 Topics, prioritized for discoverability:
 
-`astronomy`, `astrophysics`, `exoplanet`, `exoplanet-detection`, `kepler`, `transit-photometry`, `machine-learning`, `computational-astronomy`, `python`, `open-science`, `reproducible-research`, `nasa-exoplanet-archive`
+`astronomy`, `astrophysics`, `exoplanet`, `exoplanet-detection`, `kepler`, `transit-photometry`, `machine-learning`, `computational-astronomy`, `python`, `scientific-software`, `reproducible-research`, `nasa-exoplanet-archive`
 
 Website:
 

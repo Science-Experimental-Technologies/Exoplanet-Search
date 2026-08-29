@@ -12,6 +12,7 @@
 
 <p align="center">
   <a href="https://github.com/Science-Experimental-Technologies/Exoplanet-Search/actions/workflows/ci.yml"><img src="https://github.com/Science-Experimental-Technologies/Exoplanet-Search/actions/workflows/ci.yml/badge.svg" alt="Continuous integration"></a>
+  <a href="https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/latest"><img src="https://img.shields.io/github/v/release/Science-Experimental-Technologies/Exoplanet-Search?display_name=tag&label=release&color=16A3B6" alt="Latest release"></a>
   <a href="pyproject.toml"><img src="https://img.shields.io/badge/Python-3.11%20%7C%203.12-3776AB?logo=python&logoColor=white" alt="Python 3.11 and 3.12"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-SXS%20Source--Available-16A3B6" alt="SXS Source-Available Commercial License 1.0"></a>
   <a href="DISCLAIMER.md"><img src="https://img.shields.io/badge/discovery%20status-none%20confirmed-667085" alt="No confirmed discovery"></a>
@@ -85,6 +86,18 @@ flowchart LR
 ## Installation
 
 SXS supports Python 3.11 and 3.12. Windows received the complete workstation validation; CI verifies the deterministic core on Ubuntu.
+
+### Platform downloads
+
+| Platform | Release bundle | Installation entry point |
+|---|---|---|
+| Windows | [Download `.zip`](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/download/v1.1.0/sxs-v1.1.0-windows-python.zip) | `PLATFORM_INSTALL.md` using PowerShell |
+| macOS | [Download `.tar.gz`](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/download/v1.1.0/sxs-v1.1.0-macos-python.tar.gz) | `PLATFORM_INSTALL.md` using Terminal |
+| Linux | [Download `.tar.gz`](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/download/v1.1.0/sxs-v1.1.0-linux-python.tar.gz) | `PLATFORM_INSTALL.md` using a POSIX shell |
+
+All three bundles contain the same Python source and scientific record. Verify downloads against [`SHA256SUMS.txt`](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/download/v1.1.0/SHA256SUMS.txt).
+
+### Install from Git
 
 ```powershell
 git clone https://github.com/Science-Experimental-Technologies/Exoplanet-Search.git
@@ -192,7 +205,7 @@ If SXS materially supports your research or technical work, cite the release met
 
 ```text
 Andrean, R. (2026). SCIX Exoplanet Search (SXS): Reproducible Kepler
-Transit Recovery and Independent Vetting (Version 1.0.0).
+Transit Recovery and Independent Vetting (Version 1.1.0).
 Science Experimental Technologies.
 https://github.com/Science-Experimental-Technologies/Exoplanet-Search
 ```

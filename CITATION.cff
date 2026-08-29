@@ -6,7 +6,7 @@ authors:
   - family-names: "Andrean"
     given-names: "Rasya"
     affiliation: "Science Experimental Technologies"
-version: 1.0.0
+version: 1.1.0
 date-released: 2026-08-29
 license: "LicenseRef-SXS-Source-Available-1.0"
 repository-code: "https://github.com/Science-Experimental-Technologies/Exoplanet-Search"
@@ -14,7 +14,7 @@ abstract: >-
   A reproducible computational astronomy pipeline for Kepler light-curve
   acquisition, preprocessing, Box Least Squares transit recovery,
   target-grouped machine-learning vetting, bounded candidate search, and
-  independent statistical validation. Public release 1.0.0 reports no strong
+  independent statistical validation. Public release 1.1.0 reports no strong
   candidates, one weak candidate, and nineteen likely false positives; it
   makes no confirmed-exoplanet or discovery claim.
 keywords:
@@ -33,4 +33,4 @@ preferred-citation:
       affiliation: "Science Experimental Technologies"
   year: 2026
   month: 8
-  version: 1.0.0
+  version: 1.1.0
