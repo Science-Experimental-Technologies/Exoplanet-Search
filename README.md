@@ -1,60 +1,90 @@
-![SXS — SCIX Exoplanet Search](assets/sxs-banner.png)
+<a id="readme-top"></a>
 
-# SXS | Kepler Transit Intelligence Pipeline
+<p align="center">
+  <img src="assets/sxs-banner.png" alt="SXS — SCIX Exoplanet Search" width="100%">
+</p>
 
-[![License: SXS Source-Available](https://img.shields.io/badge/license-SXS%20Source--Available-20c9d7.svg)](LICENSE)
-[![Python 3.11–3.12](https://img.shields.io/badge/python-3.11--3.12-3776ab.svg)](pyproject.toml)
-[![CI](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/actions/workflows/ci.yml/badge.svg)](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/actions/workflows/ci.yml)
-[![Research status: no confirmed discovery](https://img.shields.io/badge/research%20status-no%20confirmed%20discovery-6b7280.svg)](DISCLAIMER.md)
+<h1 align="center">SXS — SCIX Exoplanet Search</h1>
 
-SXS — SCIX Exoplanet Search is a computational astronomy system for recovering, ranking, and independently auditing transit-like signals in public Kepler photometry. It combines Box Least Squares detection, target-grouped machine learning, catalog screening, empirical false-alarm analysis, physical transit fitting, and external evidence from Gaia and TESS.
+<p align="center">
+  <strong>A reproducible Kepler transit-recovery, signal-ranking, and independent-vetting pipeline.</strong>
+</p>
 
-The software was created by [Rasya Andrean](https://www.rasyaandrean.my.id/) under [Science Experimental Technologies](https://github.com/Science-Experimental-Technologies). Development was independently funded by [Rasya Andrean](https://github.com/RasyaAndrean) and [Urus Foundation](https://github.com/Urus-Foundation).
+<p align="center">
+  <a href="https://github.com/Science-Experimental-Technologies/Exoplanet-Search/actions/workflows/ci.yml"><img src="https://github.com/Science-Experimental-Technologies/Exoplanet-Search/actions/workflows/ci.yml/badge.svg" alt="Continuous integration"></a>
+  <a href="pyproject.toml"><img src="https://img.shields.io/badge/Python-3.11%20%7C%203.12-3776AB?logo=python&logoColor=white" alt="Python 3.11 and 3.12"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-SXS%20Source--Available-16A3B6" alt="SXS Source-Available Commercial License 1.0"></a>
+  <a href="DISCLAIMER.md"><img src="https://img.shields.io/badge/discovery%20status-none%20confirmed-667085" alt="No confirmed discovery"></a>
+</p>
 
-> SXS does not claim the discovery, validation, or confirmation of a new exoplanet. Its candidate outputs require independent scientific confirmation.
+<p align="center">
+  <a href="#abstract">Abstract</a> ·
+  <a href="#key-results">Results</a> ·
+  <a href="#methodology">Methodology</a> ·
+  <a href="#installation">Installation</a> ·
+  <a href="#reproduction">Reproduction</a> ·
+  <a href="#datasets-and-research-record">Data</a> ·
+  <a href="#citation">Citation</a> ·
+  <a href="#license-and-commercial-use">License</a>
+</p>
 
-## Research record
+> [!IMPORTANT]
+> SXS does **not** claim the discovery, validation, or confirmation of a new exoplanet. Model scores prioritize review; they are not planetary probabilities. Every candidate output requires independent scientific confirmation.
 
-| Evaluation | Result | Meaning |
+## Abstract
+
+SXS is a computational astronomy system for detecting and reviewing transit-like signals in public Kepler photometry. It combines segment-aware light-curve preprocessing, Box Least Squares (BLS) period searches, target-grouped machine learning, catalog screening, empirical false-alarm analysis, physical transit fitting, and external evidence from Gaia and TESS. The research evaluates both end-to-end recovery on confirmed systems and a deterministic candidate search among targets without cataloged KOI or confirmed-name history. Its final independent review produced **0 strong candidates, 1 weak candidate, and 19 likely false positives**—a reproducible methodology and negative-result record, not a planet-discovery claim.
+
+## Key results
+
+| Evaluation | Result | Interpretation |
 |---|---:|---|
-| Baseline BLS top-five recovery | 15/36 (41.67%) | Confirmed planets recovered inside the fixed search domain |
-| Baseline RF end-to-end recovery | 12/36 (33.33%) | Confirmed planets retained after detection and ranking |
-| Scaled BLS top-five recovery | 227/434 (52.30%) | Recovery across the quality-filtered confirmed-planet benchmark |
-| RF v2 precision / recall | 0.412 / 0.903 | Target-grouped out-of-fold performance at threshold 0.221107 |
-| RF v2 false-positive rate | 0.146 | 292 false passes among 2,000 negative peaks |
-| Bounded search | 250 targets; 1,250 peaks | Deterministically selected workstation-scale sample |
-| Independent review | 0 strong; 1 weak; 19 likely false positives | Final classification of the frozen 20-signal queue |
+| Baseline BLS top-five recovery | **15/36 (41.67%)** | Confirmed planets recovered within the fixed search domain |
+| Baseline RF end-to-end recovery | **12/36 (33.33%)** | Confirmed planets retained after detection and ranking |
+| Scaled BLS top-five recovery | **227/434 (52.30%)** | Recovery on the quality-filtered confirmed-planet benchmark |
+| RF v2 precision / recall | **0.412 / 0.903** | Target-grouped out-of-fold metrics at threshold 0.221107 |
+| RF v2 false-positive rate | **0.146** | 292 false passes among 2,000 negative peaks |
+| Bounded candidate search | **250 targets; 1,250 peaks** | Deterministically selected workstation-scale sample |
+| Frozen review queue | **20 signals** | Highest-ranked signals passing preliminary checks |
+| Independent review | **0 strong; 1 weak; 19 likely FP** | Final classification using independent evidence rules |
 
-The only weak signal is `KIC 8300900-r1`, with a period of 5.090289 days and empirical BLS false-alarm probability `20/1,001 = 0.01998`. It has no supporting TESS period match and is not a confirmed exoplanet.
+The sole weak signal, `KIC 8300900-r1`, has a period of **5.090289 days** and empirical BLS false-alarm probability **20/1,001 = 0.01998**. It has no supporting TESS period match and is not a confirmed exoplanet.
 
-## System design
+## Methodology
+
+1. **Acquire** public Kepler light curves and catalog ground truth through MAST and the NASA Exoplanet Archive.
+2. **Prepare** each observing segment with quality filtering, normalization, and Savitzky–Golay detrending.
+3. **Search** the 0.5–50 day domain with BLS and retain distinct top-ranked periods.
+4. **Qualify** Random Forest and compact 1D CNN rankers with `StratifiedGroupKFold`, keeping every target in only one fold.
+5. **Screen** a deterministic 250-target sample after excluding cataloged KOI and confirmed-name history.
+6. **Audit independently** with segment-shuffle FAP, odd/even and secondary-eclipse tests, limb-darkened transit fits, stellar-radius plausibility, Gaia scene analysis, TESS photometry, and TOI lookup.
+7. **Record evidence** as versioned configurations, machine-readable tables, figures, and reports.
+
+Ranking and scientific validation are deliberately separated. The independent audit does not reuse model probabilities in its decision rules.
+
+## Architecture
 
 ```mermaid
 flowchart LR
-    A[Mission archives<br/>Kepler · TESS · Gaia] --> B[Quality control<br/>normalize · detrend]
-    B --> C[Transit search<br/>Box Least Squares]
-    C --> D[Signal ranking<br/>RF · CNN benchmark]
-    D --> E[Candidate screening<br/>catalog · morphology]
-    E --> F[Independent audit<br/>FAP · transit fit · sky scene]
-    F --> G[Evidence record<br/>reports · tables · reproducible artifacts]
+    A[(Kepler<br/>photometry)] --> B[Quality control<br/>and detrending]
+    B --> C[BLS<br/>period search]
+    C --> D[RF / CNN<br/>signal ranking]
+    D --> E[Catalog and<br/>morphology screen]
+    E --> F[Independent audit<br/>FAP · fit · Gaia · TESS]
+    F --> G[(Evidence record<br/>tables · figures · reports)]
 ```
 
-The workflow separates **ranking** from **scientific validation**. Machine-learning scores prioritize signals for review; they are never interpreted as planetary probabilities. Independent review does not reuse model probabilities in its decision rules.
+| Layer | Main implementation | Responsibility |
+|---|---|---|
+| Acquisition | `src/acquisition/` | Mission products and catalog snapshots |
+| Signal processing | `src/preprocessing/`, `src/detection/` | Cleaning, detrending, and BLS searches |
+| Ranking | `src/features/`, `src/models/` | Feature extraction and grouped ML evaluation |
+| Scientific review | `src/validation/` | Independent tests and evidence classification |
+| Orchestration | `src/cli.py`, `configs/` | Reproducible commands and decision rules |
 
-Core capabilities include:
+## Installation
 
-- reproducible Kepler and TESS acquisition through public archive services;
-- segment-aware normalization and Savitzky–Golay detrending;
-- blind 0.5–50 day BLS searches with distinct-peak selection;
-- Random Forest and compact 1D CNN evaluation with `StratifiedGroupKFold`;
-- deterministic unknown-target sampling with catalog-history exclusion;
-- empirical segment-shuffle false-alarm testing over the full BLS grid;
-- odd/even, secondary-eclipse, transit-shape, physical-size, Gaia, TESS, and TOI checks; and
-- machine-readable provenance, fixed configurations, and deterministic tests.
-
-## Quick start
-
-SXS supports Python 3.11 and 3.12. Windows received the complete workstation validation; hosted CI verifies the deterministic core on Ubuntu.
+SXS supports Python 3.11 and 3.12. Windows received the complete workstation validation; CI verifies the deterministic core on Ubuntu.
 
 ```powershell
 git clone https://github.com/Science-Experimental-Technologies/Exoplanet-Search.git
@@ -65,24 +95,24 @@ python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
 
-On Linux or macOS, activate the environment with `source .venv/bin/activate`.
+On Linux or macOS, create the environment with `python3.11 -m venv .venv` and activate it with `source .venv/bin/activate`.
 
-Choose the dependency set that matches the work:
+Choose the dependency profile appropriate to the task:
 
-- `requirements-core.txt` — acquisition, preprocessing, BLS, validation, and deterministic CI;
+- `requirements-core.txt` — acquisition, preprocessing, BLS, validation, and CI;
 - `requirements.txt` — complete scientific and machine-learning environment;
 - `requirements-ml.txt` — compatibility alias for the complete environment; and
 - `requirements-docs.txt` — manuscript and PDF build support.
 
-## Command interface
+## Reproduction
 
-The unified command interface presents the system by responsibility rather than by development milestone:
+The unified interface names workflows by scientific responsibility:
 
 ```powershell
 # Inspect the baseline workflow without writing artifacts
 python -m src.cli baseline --config configs/base.yaml --dry-run
 
-# Reproduce the scaled training and model qualification
+# Reproduce scaled training and model qualification
 python -m src.cli scaleup --config configs/scaleup.yaml --resume
 
 # Run the bounded candidate screen
@@ -92,86 +122,106 @@ python -m src.cli search --config configs/candidate_search.yaml --resume
 python -m src.cli validate --config configs/independent_validation.yaml --stage all
 ```
 
-These operations can download public mission products and execute expensive period searches. Review the selected configuration and available storage before a full run.
+Full searches can download public mission products, consume substantial storage, and run expensive period grids. Review the chosen configuration before execution.
 
-## Evidence and reports
-
-- [Research report](reports/research_report.md) — complete methodology, results, and limitations.
-- [Baseline benchmark](reports/benchmark_report.md) — end-to-end recovery and false-positive evaluation.
-- [Scaled model qualification](reports/model_qualification.md) — grouped model evaluation and threshold selection.
-- [Candidate screening](reports/candidate_screening.md) — deterministic 250-target search and frozen review queue.
-- [Independent validation](reports/independent_validation.md) — empirical FAP and external-evidence audit.
-- [RNAAS-length draft](reports/rnaas_draft.md) — concise manuscript prepared from the same evidence.
-- [Verified preprint PDF](output/pdf/sxs_preprint_v1.0.0.pdf) — rendered public research record.
-
-Historical machine-readable artifacts retain several numbered identifiers to preserve schema compatibility, hashes, and reproducibility. Those identifiers describe the original execution order; the public product interface and documentation use descriptive workflow names.
-
-## Repository map
-
-```text
-configs/       versioned workflow and decision-rule configuration
-data/          catalog snapshots, compact evidence tables, and local cache roots
-models/        model-selection metadata; large fitted binaries remain untracked
-reports/       scientific reports, metrics, candidate figures, and release audits
-scripts/       publication and artifact utilities
-src/           acquisition, preprocessing, detection, ranking, and validation code
-tests/         deterministic unit and integration tests
-```
-
-## Verification
-
-Run the deterministic suite and inspect the baseline execution plan:
+Verify the deterministic core with:
 
 ```powershell
 python -m pytest
 python -m src.cli baseline --config configs/base.yaml --dry-run
 ```
 
-The live MAST smoke test is intentionally opt-in:
+The live MAST integration test is opt-in:
 
 ```powershell
 $env:SXS_RUN_NETWORK_TESTS = "1"
 python -m pytest -m network tests/test_mast_client_network.py
 ```
 
-CI uses `requirements-core.txt` on Ubuntu with Python 3.11 and 3.12. Changes involving TensorFlow, MLflow, RF/CNN training, or full mission-data acquisition require the complete local environment and the relevant evidence regeneration.
+## Datasets and research record
 
-## Scientific boundaries
+SXS uses public upstream data but does not relicense or take ownership of it.
+
+| Source | Role in SXS |
+|---|---|
+| [MAST](https://archive.stsci.edu/) / Kepler | Time-series photometry and product inventory |
+| [NASA Exoplanet Archive](https://exoplanetarchive.ipac.caltech.edu/) | Confirmed-planet and KOI false-positive ground truth |
+| [Gaia Archive](https://gea.esac.esa.int/archive/) | Nearby-source and stellar-context evidence |
+| [TESS](https://archive.stsci.edu/missions-and-data/tess) | Independent photometric comparison where available |
+| [ExoFOP](https://exofop.ipac.caltech.edu/) | Public TOI cross-check |
+
+Project-authored evidence is tracked in these records:
+
+- [Complete research report](reports/research_report.md)
+- [Baseline benchmark](reports/benchmark_report.md)
+- [Scaled model qualification](reports/model_qualification.md)
+- [Candidate screening](reports/candidate_screening.md)
+- [Independent validation](reports/independent_validation.md)
+- [RNAAS-length manuscript draft](reports/rnaas_draft.md)
+- [Verified public preprint](output/pdf/sxs_preprint_v1.0.0.pdf)
+
+<details>
+<summary><strong>Repository structure</strong></summary>
+
+```text
+configs/       Versioned workflow and decision-rule configuration
+data/          Catalog snapshots, compact evidence tables, and cache roots
+models/        Model-selection metadata; large fitted binaries are untracked
+reports/       Scientific reports, metrics, figures, and release audits
+scripts/       Publication and artifact utilities
+src/           Acquisition, preprocessing, detection, ranking, and validation
+tests/         Deterministic unit and integration tests
+```
+
+</details>
+
+## Scientific limitations
 
 - The selected benchmarks do not support exoplanet occurrence-rate inference.
-- RF and CNN scores are review-prioritization values, not posterior probabilities.
+- RF and CNN outputs are review-prioritization scores, not calibrated posterior probabilities.
 - The empirical shuffle FAP is conditional on the preprocessing, null construction, and search grid; it is not a VESPA-style Bayesian probability.
-- The bounded search uses four Kepler products per target even where more data exist.
+- The bounded search uses four Kepler products per target even where additional data exist.
 - No new spectroscopy, high-resolution imaging, or pixel-level physical follow-up was performed.
-- Absence from a catalog is not evidence of astrophysical novelty.
+- Catalog absence does not establish astrophysical novelty.
 
 Read [DISCLAIMER.md](DISCLAIMER.md) before interpreting or redistributing candidate results.
 
-## Ownership, attribution, and commercial use
-
-Current revisions are distributed under the [SXS Source-Available Commercial License 1.0](LICENSE), not MIT and not an OSI-approved open-source license.
-
-- Every public project, deployment, or output materially using SXS must credit **Rasya Andrean** and **Science Experimental Technologies**.
-- Academic and technical publications must also use [CITATION.cff](CITATION.cff).
-- Commercial use requires registration, quarterly reporting, and a **10% royalty on Covered Revenue** unless a separate signed agreement applies.
-- Award or competition submissions materially enabled by SXS must acknowledge the creator and organization where the applicable rules permit.
-
-See [COMMERCIAL_USE.md](COMMERCIAL_USE.md) for the practical process and [NOTICE](NOTICE) for the required attribution. The full [LICENSE](LICENSE) controls if summaries differ.
-
-The tagged `v1.0.0` release was previously distributed under MIT. Rights already granted with copies of that release are not retroactively withdrawn; the current license governs revisions that carry it. Obtain qualified legal review before relying on the custom terms for material commercial activity.
-
 ## Citation
 
-> Andrean, R. 2026. *SCIX Exoplanet Search (SXS): Reproducible Kepler Transit Recovery and Independent Vetting*, version 1.0.0. Science Experimental Technologies. https://github.com/Science-Experimental-Technologies/Exoplanet-Search
+If SXS materially supports your research or technical work, cite the release metadata in [CITATION.cff](CITATION.cff):
 
-When using mission or catalog data, also cite the relevant providers and original publications.
+```text
+Andrean, R. (2026). SCIX Exoplanet Search (SXS): Reproducible Kepler
+Transit Recovery and Independent Vetting (Version 1.0.0).
+Science Experimental Technologies.
+https://github.com/Science-Experimental-Technologies/Exoplanet-Search
+```
 
-## Data and software acknowledgments
+Also cite the relevant mission archives, catalogs, and scientific software—including [Lightkurve](https://lightkurve.github.io/lightkurve/), [Astroquery](https://astroquery.readthedocs.io/), and [`batman`](https://lkreidberg.github.io/batman/)—when their data or methods are used.
 
-SXS relies on the [NASA Exoplanet Archive](https://exoplanetarchive.ipac.caltech.edu/), [MAST](https://archive.stsci.edu/), [ESA Gaia Archive](https://gea.esac.esa.int/archive/), [ExoFOP](https://exofop.ipac.caltech.edu/), [Lightkurve](https://lightkurve.github.io/lightkurve/), [Astroquery](https://astroquery.readthedocs.io/), and [`batman`](https://lkreidberg.github.io/batman/). Upstream data and software remain governed by their providers' licenses and citation requirements.
+## Creator, affiliation, and funding
 
-## Contributing and contact
+SXS was created and developed by **[Rasya Andrean](https://www.rasyaandrean.my.id/)** under **[Science Experimental Technologies](https://github.com/Science-Experimental-Technologies)**.
 
-Focused bug reports, reproducibility improvements, and scientifically justified pull requests are welcome under [CONTRIBUTING.md](CONTRIBUTING.md) and the [Code of Conduct](CODE_OF_CONDUCT.md). Contributions do not remove the original creator attribution or change the project license.
+The project was independently funded by **[Rasya Andrean](https://github.com/RasyaAndrean)** and **[Urus Foundation](https://github.com/Urus-Foundation)**.
 
-Research collaboration, commercial licensing, and royalty administration: `rasyaandrean@outlook.co.id`
+For research collaboration, commercial licensing, or royalty administration, contact `rasyaandrean@outlook.co.id`.
+
+## Contributing
+
+Focused bug reports, reproducibility improvements, and scientifically justified pull requests are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) and the [Code of Conduct](CODE_OF_CONDUCT.md) before contributing. Contributions retain their repository-recorded credit but do not remove the original creator attribution or alter the project license.
+
+## License and commercial use
+
+Current revisions are distributed under the [SXS Source-Available Commercial License 1.0](LICENSE). This is a source-available license, **not** an OSI-approved open-source license.
+
+- Public projects, deployments, and outputs materially using SXS must credit **Rasya Andrean** and **Science Experimental Technologies**.
+- Academic and technical publications must use the release citation in [CITATION.cff](CITATION.cff).
+- Commercial use requires registration, quarterly reporting, and a **10% royalty on Covered Revenue**, unless a separate signed agreement applies.
+- Award or competition submissions materially enabled by SXS must provide the required acknowledgment where applicable rules permit.
+
+See [COMMERCIAL_USE.md](COMMERCIAL_USE.md) for the practical process and [NOTICE](NOTICE) for the required attribution. The full [LICENSE](LICENSE) controls if any summary differs.
+
+The tagged `v1.0.0` release was previously distributed under MIT. Rights already granted with copies of that release are not retroactively withdrawn; the current license governs revisions carrying it. Obtain qualified legal review before relying on custom license terms for material commercial activity.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
