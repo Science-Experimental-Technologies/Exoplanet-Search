@@ -3,6 +3,9 @@
 This path verifies the installation without downloading mission products or
 overwriting research artifacts.
 
+Want to see the tool first? Open the [CLI preview gallery](cli-preview.md) for
+recorded help output and a baseline dry-run preview with copyable transcripts.
+
 ## 1. Inspect the command surface
 
 ```bash

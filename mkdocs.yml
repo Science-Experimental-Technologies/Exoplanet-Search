@@ -98,6 +98,7 @@ nav:
       - Installation: getting-started/installation.md
       - Container Package: getting-started/container.md
       - Quickstart: getting-started/quickstart.md
+      - CLI Preview: getting-started/cli-preview.md
       - Configuration Basics: getting-started/configuration.md
   - Research:
       - Scientific Background: research/background.md

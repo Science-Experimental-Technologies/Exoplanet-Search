@@ -1,0 +1,44 @@
+{
+  "schema_version": 2,
+  "status": "dry_run",
+  "config_path": "configs/base.yaml",
+  "options": {
+    "from_stage": 0,
+    "to_stage": 5,
+    "resume": false,
+    "refresh_catalog": false,
+    "dry_run": true
+  },
+  "stages": [
+    {
+      "stage": 0,
+      "name": "environment",
+      "status": "would_run"
+    },
+    {
+      "stage": 1,
+      "name": "acquisition",
+      "status": "would_run"
+    },
+    {
+      "stage": 2,
+      "name": "preprocessing",
+      "status": "would_run"
+    },
+    {
+      "stage": 3,
+      "name": "bls_detection",
+      "status": "would_run"
+    },
+    {
+      "stage": 4,
+      "name": "machine_learning",
+      "status": "would_run"
+    },
+    {
+      "stage": 5,
+      "name": "catalog_validation",
+      "status": "would_run"
+    }
+  ]
+}

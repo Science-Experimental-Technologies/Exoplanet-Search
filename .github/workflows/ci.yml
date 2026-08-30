@@ -50,3 +50,6 @@ jobs:
 
       - name: Run deterministic tests
         run: python -m pytest -m "not network"
+
+      - name: Check recorded CLI previews
+        run: python scripts/build_cli_previews.py --check

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="484" viewBox="0 0 1120 484" role="img" aria-labelledby="title desc">
+<title id="title">Command overview</title>
+<desc id="desc">python -m src.cli --help. Recorded CLI stdout. Styled terminal rendering; not an application window screenshot.</desc>
+<rect x="1" y="1" width="1118" height="482" rx="16" fill="#0b121b" stroke="#334254"/>
+<path d="M1 64H1119" stroke="#334254"/>
+<rect x="30" y="23" width="18" height="18" rx="3" fill="#68dacb"/>
+<text x="62" y="40" font-family="Arial, sans-serif" font-size="18" fill="#f3f7fa">SXS / Command overview</text>
+<text x="1090" y="40" text-anchor="end" font-family="Arial, sans-serif" font-size="13" letter-spacing="1.4" fill="#99aabd">CLI PREVIEW</text>
+<g font-family="Consolas, DejaVu Sans Mono, monospace" font-size="18">
+<text x="36" y="108" fill="#68dacb">$ python -m src.cli --help</text>
+<text x="36" y="150" fill="#dce5ed" xml:space="preserve">SXS | SCIX Exoplanet Search</text>
+<text x="36" y="178" fill="#dce5ed" xml:space="preserve"></text>
+<text x="36" y="206" fill="#dce5ed" xml:space="preserve">Usage: python -m src.cli &lt;command&gt; [options]</text>
+<text x="36" y="234" fill="#dce5ed" xml:space="preserve"></text>
+<text x="36" y="262" fill="#68dacb" xml:space="preserve">Commands:</text>
+<text x="36" y="290" fill="#dce5ed" xml:space="preserve">  baseline  Run or inspect the baseline recovery workflow</text>
+<text x="36" y="318" fill="#dce5ed" xml:space="preserve">  scaleup   Build the scaled benchmark and qualify the production model</text>
+<text x="36" y="346" fill="#dce5ed" xml:space="preserve">  search    Screen the deterministic unknown-target sample</text>
+<text x="36" y="374" fill="#dce5ed" xml:space="preserve">  validate  Run independent statistical and astrophysical validation</text>
+<text x="36" y="402" fill="#dce5ed" xml:space="preserve"></text>
+<text x="36" y="430" fill="#dce5ed" xml:space="preserve">Pass --help after a command to see workflow-specific options.</text>
+</g>
+<text x="36" y="460" font-family="Arial, sans-serif" font-size="13" fill="#99aabd">Recorded CLI stdout. Styled terminal rendering; not an application window screenshot.</text>
+</svg>

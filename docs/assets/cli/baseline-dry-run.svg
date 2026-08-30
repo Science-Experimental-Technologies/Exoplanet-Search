@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="512" viewBox="0 0 1120 512" role="img" aria-labelledby="title desc">
+<title id="title">Baseline dry run</title>
+<desc id="desc">python -m src.cli baseline --config configs/base.yaml --dry-run. JSON excerpt: exact status, config and stage values. No research stages were executed.</desc>
+<rect x="1" y="1" width="1118" height="510" rx="16" fill="#0b121b" stroke="#334254"/>
+<path d="M1 64H1119" stroke="#334254"/>
+<rect x="30" y="23" width="18" height="18" rx="3" fill="#68dacb"/>
+<text x="62" y="40" font-family="Arial, sans-serif" font-size="18" fill="#f3f7fa">SXS / Baseline dry run</text>
+<text x="1090" y="40" text-anchor="end" font-family="Arial, sans-serif" font-size="13" letter-spacing="1.4" fill="#99aabd">CLI PREVIEW</text>
+<g font-family="Consolas, DejaVu Sans Mono, monospace" font-size="18">
+<text x="36" y="108" fill="#68dacb">$ python -m src.cli baseline --config configs/base.yaml --dry-run</text>
+<text x="36" y="150" fill="#dce5ed" xml:space="preserve">{</text>
+<text x="36" y="178" fill="#68dacb" xml:space="preserve">  &quot;status&quot;: &quot;dry_run&quot;,</text>
+<text x="36" y="206" fill="#dce5ed" xml:space="preserve">  &quot;config_path&quot;: &quot;configs/base.yaml&quot;,</text>
+<text x="36" y="234" fill="#dce5ed" xml:space="preserve">  &quot;stages&quot;: [</text>
+<text x="36" y="262" fill="#68dacb" xml:space="preserve">    {&quot;stage&quot;: 0, &quot;name&quot;: &quot;environment&quot;, &quot;status&quot;: &quot;would_run&quot;},</text>
+<text x="36" y="290" fill="#68dacb" xml:space="preserve">    {&quot;stage&quot;: 1, &quot;name&quot;: &quot;acquisition&quot;, &quot;status&quot;: &quot;would_run&quot;},</text>
+<text x="36" y="318" fill="#68dacb" xml:space="preserve">    {&quot;stage&quot;: 2, &quot;name&quot;: &quot;preprocessing&quot;, &quot;status&quot;: &quot;would_run&quot;},</text>
+<text x="36" y="346" fill="#68dacb" xml:space="preserve">    {&quot;stage&quot;: 3, &quot;name&quot;: &quot;bls_detection&quot;, &quot;status&quot;: &quot;would_run&quot;},</text>
+<text x="36" y="374" fill="#68dacb" xml:space="preserve">    {&quot;stage&quot;: 4, &quot;name&quot;: &quot;machine_learning&quot;, &quot;status&quot;: &quot;would_run&quot;},</text>
+<text x="36" y="402" fill="#68dacb" xml:space="preserve">    {&quot;stage&quot;: 5, &quot;name&quot;: &quot;catalog_validation&quot;, &quot;status&quot;: &quot;would_run&quot;}</text>
+<text x="36" y="430" fill="#dce5ed" xml:space="preserve">  ]</text>
+<text x="36" y="458" fill="#dce5ed" xml:space="preserve">}</text>
+</g>
+<text x="36" y="488" font-family="Arial, sans-serif" font-size="13" fill="#99aabd">JSON excerpt: exact status, config and stage values. No research stages were executed.</text>
+</svg>

@@ -1,0 +1,11 @@
+SXS | SCIX Exoplanet Search
+
+Usage: python -m src.cli <command> [options]
+
+Commands:
+  baseline  Run or inspect the baseline recovery workflow
+  scaleup   Build the scaled benchmark and qualify the production model
+  search    Screen the deterministic unknown-target sample
+  validate  Run independent statistical and astrophysical validation
+
+Pass --help after a command to see workflow-specific options.

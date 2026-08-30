@@ -20,6 +20,7 @@
 
 <p align="center">
   <a href="#abstract">Abstract</a> ·
+  <a href="#cli-preview">CLI Preview</a> ·
   <a href="#key-results">Results</a> ·
   <a href="#methodology">Methodology</a> ·
   <a href="#installation">Installation</a> ·
@@ -36,6 +37,14 @@
 ## Abstract
 
 SXS is a computational astronomy system for detecting and reviewing transit-like signals in public Kepler photometry. It combines segment-aware light-curve preprocessing, Box Least Squares (BLS) period searches, target-grouped machine learning, catalog screening, empirical false-alarm analysis, physical transit fitting, and external evidence from Gaia and TESS. The research evaluates both end-to-end recovery on confirmed systems and a deterministic candidate search among targets without cataloged KOI or confirmed-name history. Its final independent review produced **0 strong candidates, 1 weak candidate, and 19 likely false positives**—a reproducible methodology and negative-result record, not a planet-discovery claim.
+
+## CLI preview
+
+![SXS command-line help: baseline, scaleup, search, and validate](docs/assets/cli/help.svg)
+
+Recorded CLI output, rendered as a terminal preview—not a graphical application.
+See the [preview gallery](https://science-experimental-technologies.github.io/Exoplanet-Search/getting-started/cli-preview/)
+for the baseline dry-run view, copyable output, and commands to try locally.
 
 ## Key results
 

@@ -22,6 +22,13 @@ which is ignored by Git. Stop the preview server with Ctrl+C.
 as local site assets during the build. The site does not depend on loading
 those images from GitHub's raw-content server.
 
+## CLI preview assets
+
+The [CLI preview gallery](../getting-started/cli-preview.md) uses local SVGs
+generated from actual command output. After changing CLI help or the baseline
+plan, run `python scripts/build_cli_previews.py`, then commit the updated assets
+with the code. CI runs the generator with `--check` to detect stale previews.
+
 ## Page organization
 
 | Section | Responsibility |
