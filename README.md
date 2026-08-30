@@ -4,7 +4,7 @@
   <img src="assets/sxs-banner.png" alt="SXS — SCIX Exoplanet Search" width="100%">
 </p>
 
-<h1 align="center">SXS — SCIX Exoplanet Search</h1>
+<h1 align="center">Exoplanet Search</h1>
 
 <p align="center">
   <strong>A reproducible Kepler transit-recovery, signal-ranking, and independent-vetting pipeline.</strong>
