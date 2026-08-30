@@ -1,0 +1,42 @@
+[data-md-color-scheme="default"],
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #071216;
+  --md-accent-fg-color: #16a3b6;
+  --md-typeset-a-color: #159db0;
+}
+
+.sxs-hero {
+  margin: -0.5rem 0 2rem;
+  text-align: center;
+}
+
+.sxs-hero img {
+  width: 100%;
+  max-height: 360px;
+  border: 1px solid color-mix(in srgb, var(--md-default-fg-color) 18%, transparent);
+  border-radius: 0.65rem;
+  object-fit: cover;
+}
+
+.sxs-hero h1 {
+  margin-bottom: 0.35rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.sxs-hero > p {
+  font-size: 1.05rem;
+}
+
+.md-typeset .md-button {
+  margin: 0.2rem;
+}
+
+.md-typeset table:not([class]) th {
+  background: color-mix(in srgb, var(--md-primary-fg-color) 88%, var(--md-accent-fg-color));
+  color: #fff;
+}
+
+.md-typeset code {
+  word-break: normal;
+}

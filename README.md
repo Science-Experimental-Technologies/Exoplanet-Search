@@ -26,6 +26,7 @@
   <a href="#reproduction">Reproduction</a> ·
   <a href="#datasets-and-research-record">Data</a> ·
   <a href="#citation">Citation</a> ·
+  <a href="https://science-experimental-technologies.github.io/Exoplanet-Search/">Documentation</a> ·
   <a href="#license-and-commercial-use">License</a>
 </p>
 
@@ -77,10 +78,10 @@ flowchart LR
 
 | Layer | Main implementation | Responsibility |
 |---|---|---|
-| Acquisition | `src/acquisition/` | Mission products and catalog snapshots |
-| Signal processing | `src/preprocessing/`, `src/detection/` | Cleaning, detrending, and BLS searches |
-| Ranking | `src/features/`, `src/models/` | Feature extraction and grouped ML evaluation |
-| Scientific review | `src/validation/` | Independent tests and evidence classification |
+| Acquisition | `src/ingest/` | Mission products and catalog snapshots |
+| Signal processing | `src/preprocess/`, `src/detect/` | Cleaning, detrending, and BLS searches |
+| Ranking | `src/model/`, `src/scaleup/` | Feature extraction and grouped ML evaluation |
+| Scientific review | `src/independent_validation/`, `src/validate/` | Independent tests, catalog checks, and evidence classification |
 | Orchestration | `src/cli.py`, `configs/` | Reproducible commands and decision rules |
 
 ## Installation

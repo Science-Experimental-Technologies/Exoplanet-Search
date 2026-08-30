@@ -17,7 +17,7 @@ dynamic = ["dependencies"]
 [project.urls]
 Homepage = "https://www.rasyaandrean.my.id/"
 Repository = "https://github.com/Science-Experimental-Technologies/Exoplanet-Search"
-Documentation = "https://github.com/Science-Experimental-Technologies/Exoplanet-Search#readme"
+Documentation = "https://science-experimental-technologies.github.io/Exoplanet-Search/"
 
 [project.scripts]
 sxs = "src.cli:main"

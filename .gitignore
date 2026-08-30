@@ -15,6 +15,7 @@ tmp/**
 Thumbs.db
 build/
 dist/
+site/
 *.egg-info/
 
 # Local credentials and private keys

@@ -4,6 +4,19 @@ All notable changes to this project are documented in this file. The format foll
 
 ## [Unreleased]
 
+### Added
+
+- Material for MkDocs documentation covering installation, scientific methods,
+  research results, workflows, configuration, artifacts, and project governance.
+- Strict documentation builds on pull requests and GitHub Pages deployment from
+  the default branch.
+
+### Corrected
+
+- README module paths now match the implementation. Documentation distinguishes
+  configured BLS durations from effective search durations and records fixed
+  artifact paths and null-cache reuse limitations.
+
 ## [1.1.0] - 2026-08-29
 
 ### Added

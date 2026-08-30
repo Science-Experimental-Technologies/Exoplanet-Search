@@ -1,0 +1,124 @@
+# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
+site_name: SXS Documentation
+site_description: Scientific and technical documentation for SCIX Exoplanet Search
+site_author: Rasya Andrean and Science Experimental Technologies
+site_url: https://science-experimental-technologies.github.io/Exoplanet-Search/
+repo_url: https://github.com/Science-Experimental-Technologies/Exoplanet-Search
+repo_name: Science-Experimental-Technologies/Exoplanet-Search
+edit_uri: edit/main/docs/
+copyright: Copyright &copy; 2026 Rasya Andrean and Science Experimental Technologies
+strict: true
+
+hooks:
+  - scripts/docs_hooks.py
+
+theme:
+  name: material
+  language: en
+  icon:
+    logo: material/telescope
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: cyan
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: cyan
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.path
+    - navigation.tracking
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.tabs.link
+    - toc.follow
+
+plugins:
+  - search
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Science-Experimental-Technologies
+      name: Science Experimental Technologies on GitHub
+    - icon: material/web
+      link: https://www.rasyaandrean.my.id/
+      name: Rasya Andrean
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Installation: getting-started/installation.md
+      - Quickstart: getting-started/quickstart.md
+      - Configuration Basics: getting-started/configuration.md
+  - Research:
+      - Scientific Background: research/background.md
+      - Methodology: research/methodology.md
+      - Experiments: research/experiments.md
+      - Results: research/results.md
+      - Limitations: research/limitations.md
+  - Concepts:
+      - Architecture: concepts/architecture.md
+      - Algorithms: concepts/algorithms.md
+      - Data Pipeline: concepts/data-pipeline.md
+  - Guides:
+      - Basic Usage: guides/basic-usage.md
+      - Advanced Usage: guides/advanced-usage.md
+      - Interpreting Results: guides/interpreting-results.md
+      - Troubleshooting: guides/troubleshooting.md
+  - Reference:
+      - CLI: reference/cli.md
+      - Configuration: reference/configuration.md
+      - Artifacts: reference/artifacts.md
+      - Python API: reference/api.md
+  - Project:
+      - Reproducibility: project/reproducibility.md
+      - Citation: project/citation.md
+      - Contributing: project/contributing.md
+      - Documentation Maintenance: project/documentation.md
+      - License and Security: project/license-security.md
+  - FAQ: faq.md
