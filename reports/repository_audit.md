@@ -60,10 +60,10 @@ Do not delete or move an already published public tag.
 
 ## Identity and funding record
 
-- Author: Rasya Andrean — https://www.rasyaandrean.my.id/
+- Author: Rasya Andrean — https://science-experimental-technologies.github.io/Exoplanet-Search/
 - Affiliation: Science Experimental Technologies — https://github.com/Science-Experimental-Technologies
 - Independent funding: Rasya Andrean and Urus Foundation.
-- Public contact: `rasyaandrean@outlook.co.id`.
+- Public contact: `scix.official@gmail.com`.
 
 No identity or contact field remains unresolved in the public candidate tree.
 

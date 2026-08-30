@@ -11,11 +11,14 @@ requires-python = ">=3.11,<3.13"
 authors = [
   { name = "Rasya Andrean" },
 ]
+maintainers = [
+  { name = "Science Experimental Technologies", email = "scix.official@gmail.com" },
+]
 license = { file = "LICENSE" }
 dynamic = ["dependencies"]
 
 [project.urls]
-Homepage = "https://www.rasyaandrean.my.id/"
+Homepage = "https://science-experimental-technologies.github.io/Exoplanet-Search/"
 Repository = "https://github.com/Science-Experimental-Technologies/Exoplanet-Search"
 Documentation = "https://science-experimental-technologies.github.io/Exoplanet-Search/"
 

@@ -86,13 +86,17 @@ extra:
       link: https://github.com/Science-Experimental-Technologies
       name: Science Experimental Technologies on GitHub
     - icon: material/web
-      link: https://www.rasyaandrean.my.id/
-      name: Rasya Andrean
+      link: https://science-experimental-technologies.github.io/Exoplanet-Search/
+      name: SXS project website
+    - icon: material/email
+      link: mailto:scix.official@gmail.com
+      name: Contact SCIX
 
 nav:
   - Home: index.md
   - Getting Started:
       - Installation: getting-started/installation.md
+      - Container Package: getting-started/container.md
       - Quickstart: getting-started/quickstart.md
       - Configuration Basics: getting-started/configuration.md
   - Research:

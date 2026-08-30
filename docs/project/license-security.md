@@ -54,4 +54,4 @@ without modifying accepted artifacts in place.
 ## Contact
 
 Research collaboration, commercial licensing, and royalty administration:
-`rasyaandrean@outlook.co.id`.
+`scix.official@gmail.com`.

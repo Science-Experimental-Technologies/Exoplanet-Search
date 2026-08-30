@@ -3,6 +3,9 @@
 SXS is Python scientific software. It has no standalone graphical interface and
 does not need to be installed system-wide.
 
+To use a prebuilt scientific environment instead of installing Python packages,
+see the [GHCR container guide](container.md).
+
 ## Requirements
 
 - Python 3.11 or 3.12

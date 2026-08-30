@@ -24,4 +24,4 @@ The software, derived artifacts, rankings, and documentation are provided "as is
 
 ## Scientific contact
 
-Questions or collaboration proposals: [Rasya Andrean](https://www.rasyaandrean.my.id/) at `rasyaandrean@outlook.co.id`.
+Questions or collaboration proposals: contact Rasya Andrean / SCIX at `scix.official@gmail.com`. Project website: [SXS](https://science-experimental-technologies.github.io/Exoplanet-Search/).

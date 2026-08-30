@@ -26,7 +26,7 @@ Academic publications must also cite the software using [CITATION.cff](CITATION.
 
 ## Registration and alternative agreements
 
-Before commercial deployment, email `rasyaandrean@outlook.co.id` with:
+Before commercial deployment, email `scix.official@gmail.com` with:
 
 - the legal name and contact details of the user or organization;
 - a short description of the product, service, or project;

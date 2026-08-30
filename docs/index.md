@@ -73,7 +73,7 @@ unconfirmed.
 
 ## Project identity
 
-SXS was created by [Rasya Andrean](https://www.rasyaandrean.my.id/) under
+SXS was created by Rasya Andrean under
 [Science Experimental Technologies](https://github.com/Science-Experimental-Technologies).
 It was independently funded by Rasya Andrean and
 [Urus Foundation](https://github.com/Urus-Foundation).

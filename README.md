@@ -98,6 +98,22 @@ SXS supports Python 3.11 and 3.12. Windows received the complete workstation val
 
 All three bundles contain the same Python source and scientific record. Verify downloads against [`SHA256SUMS.txt`](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/download/v1.1.0/SHA256SUMS.txt).
 
+### Container package (GHCR)
+
+The Python application is packaged as a Linux/amd64 container, including the
+complete scientific dependencies. Windows and macOS require a Linux-container
+runtime; this is not a native executable for those platforms.
+
+```bash
+docker pull ghcr.io/science-experimental-technologies/exoplanet-search:main
+docker run --rm ghcr.io/science-experimental-technologies/exoplanet-search:main --help
+```
+
+`main` follows tested default-branch builds, not the historical `v1.1.0` release.
+See the [container guide](docs/getting-started/container.md) for persistent data,
+digest pinning, local builds, and initial package visibility setup. There are no
+npm, NuGet, Maven, or RubyGems packages: SXS currently has no SDK in those languages.
+
 ### Install from Git
 
 ```powershell
@@ -215,11 +231,11 @@ Also cite the relevant mission archives, catalogs, and scientific software—inc
 
 ## Creator, affiliation, and funding
 
-SXS was created and developed by **[Rasya Andrean](https://www.rasyaandrean.my.id/)** under **[Science Experimental Technologies](https://github.com/Science-Experimental-Technologies)**.
+SXS was created and developed by **Rasya Andrean** under **[Science Experimental Technologies](https://github.com/Science-Experimental-Technologies)**. Visit the [project website](https://science-experimental-technologies.github.io/Exoplanet-Search/) for documentation.
 
 The project was independently funded by **[Rasya Andrean](https://github.com/RasyaAndrean)** and **[Urus Foundation](https://github.com/Urus-Foundation)**.
 
-For research collaboration, commercial licensing, or royalty administration, contact `rasyaandrean@outlook.co.id`.
+For research collaboration, commercial licensing, or royalty administration, contact `scix.official@gmail.com`.
 
 ## Contributing
 

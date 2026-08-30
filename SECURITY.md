@@ -11,7 +11,7 @@ Do not disclose credentials, exploitable archive-query behavior, dependency vuln
 Preferred reporting channel:
 
 1. Use GitHub's private vulnerability reporting feature for this repository, if enabled.
-2. Otherwise contact `rasyaandrean@outlook.co.id` with the subject `SXS security report`.
+2. Otherwise contact `scix.official@gmail.com` with the subject `SXS security report`.
 
 Include the affected version or commit, operating system and Python version, reproduction steps, impact, and any safe mitigation. Please allow the maintainers reasonable time to investigate before public disclosure.
 

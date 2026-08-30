@@ -82,7 +82,7 @@ Topics, prioritized for discoverability:
 
 Website:
 
-https://www.rasyaandrean.my.id/
+https://science-experimental-technologies.github.io/Exoplanet-Search/
 
 ## Zenodo DOI procedure
 
