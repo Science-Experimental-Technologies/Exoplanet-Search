@@ -18,6 +18,12 @@ training before candidate screening, or supply compatible, independently
 verified model artifacts. Installing an image does not reproduce the reported
 research results automatically.
 
+For a fresh image and empty volumes, run the complete `baseline` workflow before
+`scaleup`: scaled training reads `reports/benchmark_metrics.json` for its baseline
+comparison. Then run `search`, followed by `validate`, keeping the same data,
+model, and report volumes throughout. The environment-only check below does
+not create this benchmark or trained models.
+
 Only `linux/amd64` is built and smoke-tested. Linux can run it directly with
 Docker Engine. Windows and macOS need a Linux-container runtime such as Docker
 Desktop. Apple Silicon requires amd64 emulation (`--platform linux/amd64`),
