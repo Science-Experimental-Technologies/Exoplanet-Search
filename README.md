@@ -113,6 +113,10 @@ The Python application is packaged as a Linux/amd64 container, including the
 complete scientific dependencies. Windows and macOS require a Linux-container
 runtime; this is not a native executable for those platforms.
 
+At the 2026-08-30 audit checkpoint, anonymous registry access was still denied.
+Until a package owner enables public visibility, use an authorized registry
+login or the [local container build](docs/getting-started/container.md#build-locally).
+
 ```bash
 docker pull ghcr.io/science-experimental-technologies/exoplanet-search:main
 docker run --rm ghcr.io/science-experimental-technologies/exoplanet-search:main --help
@@ -141,7 +145,7 @@ Choose the dependency profile appropriate to the task:
 - `requirements-core.txt` — acquisition, preprocessing, BLS, validation, and CI;
 - `requirements.txt` — complete scientific and machine-learning environment;
 - `requirements-ml.txt` — compatibility alias for the complete environment; and
-- `requirements-docs.txt` — manuscript and PDF build support.
+- `requirements-docs.txt` — documentation website, manuscript, and PDF build support.
 
 ## Reproduction
 
@@ -151,11 +155,14 @@ The unified interface names workflows by scientific responsibility:
 # Inspect the baseline workflow without writing artifacts
 python -m src.cli baseline --config configs/base.yaml --dry-run
 
+# Execute the baseline (required before scale-up in an empty workspace)
+python -m src.cli baseline --config configs/base.yaml
+
 # Reproduce scaled training and model qualification
-python -m src.cli scaleup --config configs/scaleup.yaml --resume
+python -m src.cli scaleup --config configs/scaleup.yaml
 
 # Run the bounded candidate screen
-python -m src.cli search --config configs/candidate_search.yaml --resume
+python -m src.cli search --config configs/candidate_search.yaml
 
 # Run the independent evidence audit
 python -m src.cli validate --config configs/independent_validation.yaml --stage all
@@ -163,10 +170,15 @@ python -m src.cli validate --config configs/independent_validation.yaml --stage 
 
 Full searches can download public mission products, consume substantial storage, and run expensive period grids. Review the chosen configuration before execution.
 
+Use a separate checkout for a new run: tracked reports are frozen evidence, not
+proof that the untracked light curves and model binaries exist. Add `--resume`
+only after verifying that those artifacts belong to the same run. See the
+[reproducibility guide](docs/project/reproducibility.md).
+
 Verify the deterministic core with:
 
 ```powershell
-python -m pytest
+python -m pytest -m "not network"
 python -m src.cli baseline --config configs/base.yaml --dry-run
 ```
 
@@ -197,7 +209,8 @@ Project-authored evidence is tracked in these records:
 - [Candidate screening](reports/candidate_screening.md)
 - [Independent validation](reports/independent_validation.md)
 - [RNAAS-length manuscript draft](reports/rnaas_draft.md)
-- [Verified public preprint](output/pdf/sxs_preprint_v1.0.0.pdf)
+- [Documentation and consistency audit](reports/documentation_audit.md)
+- [Archived research preprint v1.0.0](output/pdf/sxs_preprint_v1.0.0.pdf) — see [publication status and corrections](docs/project/publication.md) before reuse
 
 <details>
 <summary><strong>Repository structure</strong></summary>

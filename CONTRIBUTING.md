@@ -13,17 +13,18 @@ python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
 
-On Linux or macOS, activate with `source .venv/bin/activate`. Use `requirements-core.txt` when working only on acquisition, preprocessing, or BLS components; use the full requirements for ML and complete test coverage.
+On Linux or macOS, create the environment with `python3.11 -m venv .venv` and activate with `source .venv/bin/activate`. The non-network test suite runs with `requirements-core.txt`; full training and TensorFlow/MLflow checks require `requirements.txt`. Install `requirements-docs.txt` as well for documentation builds.
 
-GitHub Actions installs only `requirements-core.txt` and runs the deterministic non-network suite on Ubuntu with Python 3.11 and 3.12. Contributors changing Random Forest, CNN, TensorFlow, MLflow, or full-pipeline behavior must additionally install `requirements.txt` and run the relevant full-stack checks locally before opening a pull request. Windows validation remains manual/local rather than a hosted CI claim.
+The CI workflow installs `requirements-core.txt` and runs the non-network suite on Ubuntu with Python 3.11 and 3.12. A separate container workflow checks the full environment, imports TensorFlow/MLflow, and runs the non-network tests; it does not rerun the full research experiment. Contributors changing training or full-pipeline behavior must also run the relevant full-stack checks. Windows validation remains manual/local rather than a hosted CI claim.
 
 ## Tests and style
 
 Run the deterministic suite before opening a pull request:
 
 ```powershell
-python -m pytest
-python -m src.pipeline --config configs/base.yaml --dry-run
+python -m pytest -m "not network"
+python -m src.cli baseline --config configs/base.yaml --dry-run
+python scripts/check_repository_docs.py
 ```
 
 The live MAST test is opt-in and should be run when changing network acquisition:

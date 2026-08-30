@@ -4,6 +4,8 @@ Research record: public release `v1.0.0`
 
 Audit date: 2026-08-28
 
+> Historical visual/layout audit of the archived PDF, not a current submission-readiness certification. Later working-source corrections and remaining publication gates are listed in the [publication status](../docs/project/publication.md).
+
 Scope: publication preparation only; no journal submission, arXiv upload, repository push, or discovery claim
 
 ## Publication artifacts

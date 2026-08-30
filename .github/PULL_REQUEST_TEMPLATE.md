@@ -4,8 +4,9 @@ Describe the focused change and why it is needed.
 
 ## Verification
 
-- [ ] `python -m pytest` passes, or skipped tests are explained.
-- [ ] `python -m src.pipeline --config configs/base.yaml --dry-run` succeeds when relevant.
+- [ ] `python -m pytest -m "not network"` passes, or skipped tests are explained.
+- [ ] `python -m src.cli baseline --config configs/base.yaml --dry-run` succeeds when relevant.
+- [ ] `python scripts/check_repository_docs.py` passes for documentation changes.
 - [ ] New behavior has tests or a documented reason tests are not applicable.
 - [ ] Documentation and internal links were updated.
 - [ ] No credentials, local absolute paths, raw FITS products, caches, or large fitted models were added.

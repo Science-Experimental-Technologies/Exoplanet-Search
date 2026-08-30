@@ -1,106 +1,84 @@
-# SXS Release Operations: CI, Metadata, and DOI
+# Release Operations: CI, Metadata, and DOI
 
-Date: 2026-08-29
+Status reviewed: 2026-08-30. This is an operational snapshot, not a claim that
+publication, DOI registration, or a new release has been completed.
 
-Repository: https://github.com/Science-Experimental-Technologies/Exoplanet-Search
+## Published release and version meaning
 
-Scope: infrastructure, release packaging, discoverability metadata, and archival guidance only. This work does not change any scientific algorithm, metric, candidate classification, or interpretation.
+The current published release is [v1.1.0](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/tag/v1.1.0).
+Public releases started with v1.0.0. Internal research labels “v1” and “v2”
+describe benchmark generations, not public software version numbers.
 
-## Status
-
-| Task | Status | Evidence or remaining action |
-|---|:---:|---|
-| GitHub Actions CI | Done | `.github/workflows/ci.yml` runs an Ubuntu matrix for Python 3.11 and 3.12, core dependency installation, `pip check`, and non-network tests. A fresh local core-only environment passed 35 tests, and corrected hosted run [33229091278](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/actions/runs/33229091278) succeeded for both matrix jobs before the real README badge was added. |
-| GitHub Release `v1.1.0` | Automated on tag | `.github/workflows/release.yml` verifies the tagged revision and publishes Windows, macOS, and Linux source bundles, checksums, and the verified preprint. |
-| Repository About metadata | Ready for publication | The description, topics, and website below are applied through the GitHub repository metadata API. |
-| Zenodo DOI | Documented - pending RA account action | GitHub-Zenodo linking requires the repository owner's Zenodo session. No DOI is claimed until Zenodo returns one. |
-| README methodology diagram | Done locally | A native Mermaid flowchart presents the workflow by scientific responsibility. |
-
-## Continuous integration design
-
-The workflow triggers on pushes to `main` and on pull requests. It uses `ubuntu-latest`, Python 3.11 and 3.12, and `requirements-core.txt`; it deliberately excludes tests marked `network`. The live MAST test remains opt-in through `SXS_RUN_NETWORK_TESTS=1`. `pip check` and any deterministic test failure fail the job.
-
-Local preflight used a new Python 3.11.9 virtual environment containing only `requirements-core.txt`. The first collection exposed that independent-validation tests import `batman`; `batman-package==2.5.3` was therefore moved into the pinned core set rather than skipping scientific tests. The corrected environment reported no broken requirements and passed 35 tests with one network test deselected.
-
-The first hosted matrix run passed on Python 3.11 and exposed a Python 3.12 compatibility requirement: `batman-package==2.5.3` imports `distutils`, which Python 3.12 removed from the standard library. `setuptools==75.8.2` was consequently added to both core and full pinned requirements to provide the compatibility implementation. The CI badge was withheld until the corrected matrix succeeded.
-
-Corrected hosted run 33229091278 completed successfully for both Python 3.11 and 3.12. Only after that result was recorded was the workflow badge added to the README.
-
-Hosted CI is not a full-stack ML validation. Changes involving the Random Forest/CNN training paths, TensorFlow, or MLflow must be checked locally using `requirements.txt`. Windows remains manually validated; the workflow makes no Windows CI claim.
-
-## GitHub Release `v1.1.0`
-
-Title:
-
-> SCIX Exoplanet Search (SXS) v1.1.0
-
-Release notes below are reformatted directly from the `[1.0.0]` entry in `CHANGELOG.md`.
-
-### Added
-
-- Reproducible Kepler light-curve acquisition, preprocessing, Box Least Squares transit recovery, candidate-level feature construction, and catalog validation.
-- Target-grouped Random Forest and compact one-dimensional CNN benchmark evaluations.
-- Scaled benchmark of 371 confirmed hosts, 434 eligible planets, and 400 official false-positive targets.
-- Frozen RF v2 selection policy and exploratory manual-review threshold.
-- Deterministic screening of 250 targets without cumulative-KOI or confirmed-Kepler-name history.
-- Independent validation using empirical shuffle FAP, odd/even and secondary tests, limb-darkened transit fitting, Gaia DR3 scene checks, TESS photometry, and an ExoFOP-derived TOI lookup.
-- Full research report, RNAAS-length manuscript draft, verified preprint PDF, citation metadata, contribution guidance, security policy, code of conduct, and scientific disclaimer.
-
-### Scientific result
-
-- The initial benchmark records BLS top-five recovery of 15/36 (41.67%) and RF end-to-end recovery of 12/36 (33.33%).
-- The scaled benchmark records BLS top-five recovery of 227/434 (52.30%).
-- Independent validation assigns 0 strong candidates, 1 weak candidate, and 19 likely false positives.
-- KIC 8300900-r1 is the sole weak signal, with period 5.090289 days and empirical FAP 0.01998. It is not a confirmed exoplanet.
-- No discovery claim is made.
-
-### Development history
-
-- **Baseline research program:** established the 20-system recovery pipeline, target-grouped ML evaluation, and catalog cross-checking.
-- **Scale-up research program:** expanded the labeled data, retrained and froze model selection, conducted the bounded candidate search, completed independent validation, and prepared publication artifacts.
-- Public version numbering begins with this `1.0.0` release.
-
-Release assets:
+The v1.1.0 release contains:
 
 - `sxs-v1.1.0-windows-python.zip`
 - `sxs-v1.1.0-macos-python.tar.gz`
 - `sxs-v1.1.0-linux-python.tar.gz`
 - `SHA256SUMS.txt`
-- `sxs_preprint_v1.0.0.pdf`, whose scientific metadata remains version 1.0.0 because the research results did not change in this packaging release.
+- `sxs_preprint_v1.0.0.pdf`
 
-The three platform bundles contain the same tracked Python source and research record. Their `PLATFORM_INSTALL.md` file provides the platform-specific environment commands.
+The platform bundles contain Python source, not standalone native executables.
+Their `PLATFORM_INSTALL.md` files provide platform-specific setup instructions.
+They do not include all downloaded light curves or fitted model binaries.
+The PDF is a historical research artifact; its filename version is independent
+of the software packaging release. See [publication status and corrections](../docs/project/publication.md)
+before reusing it as a manuscript. It is not evidence of journal acceptance.
 
-## Repository About metadata
+Current-branch corrections do not modify published tags or release assets.
+See [CHANGELOG](../CHANGELOG.md) for the distinction between released and
+unreleased changes.
 
-Description:
+## Continuous integration
 
-> Reproducible pipeline for Kepler transit detection, ML vetting, and independent validation; zero confirmed discoveries.
+The [core CI workflow](../.github/workflows/ci.yml) runs on Ubuntu with Python
+3.11 and 3.12. It installs `requirements-core.txt`, checks dependencies, runs
+non-network tests, checks recorded CLI previews and repository documentation,
+and builds a wheel for an isolated CLI smoke check.
 
-Topics, prioritized for discoverability:
+The [documentation workflow](../.github/workflows/docs.yml) builds MkDocs in
+strict mode, checks generated local links and anchors, and deploys GitHub Pages.
+The [container workflow](../.github/workflows/container.yml) separately builds
+the full-dependency Linux image and runs smoke tests and deterministic tests.
 
-`astronomy`, `astrophysics`, `exoplanet`, `exoplanet-detection`, `kepler`, `transit-photometry`, `machine-learning`, `computational-astronomy`, `python`, `scientific-software`, `reproducible-research`, `nasa-exoplanet-archive`
+These checks are not a new full scientific reproduction. They do not rerun the
+complete acquisition, training, search, or empirical null simulations.
+A workflow definition alone is not proof of a successful hosted run; inspect
+the [Actions history](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/actions)
+for the revision being used.
 
-Website:
+Historical infrastructure evidence: [run 33229091278](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/actions/runs/33229091278)
+passed the original Python matrix. Its 35-test count describes that revision,
+not the current test suite. The original Python 3.12 compatibility fix added
+pinned setuptools support for batman's use of `distutils`.
 
-https://science-experimental-technologies.github.io/Exoplanet-Search/
+## Repository metadata and container access
 
-## Zenodo DOI procedure
+The repository About description, topics, and
+[documentation website](https://science-experimental-technologies.github.io/Exoplanet-Search/)
+are configured. Project contact: **scix.official@gmail.com**.
 
-Status: **pending RA account action**.
+The workflow has published `ghcr.io/science-experimental-technologies/exoplanet-search:main`.
+Anonymous access remained unauthorized at the audit checkpoint. Publication
+of an image does not guarantee public pull access: an authorized package owner
+must inspect package visibility and grant public access if desired.
+See the [container guide](../docs/getting-started/container.md).
 
-1. Sign in to Zenodo and open https://zenodo.org/account/settings/github/.
-2. Connect the GitHub account that administers `Science-Experimental-Technologies/Exoplanet-Search` and enable the repository toggle.
-3. If integration is enabled before the GitHub `v1.0.0` release is published, that release can trigger the first archive. If the release already exists first, create a later patch release such as `v1.0.1` after enabling integration; do not delete or retag a published release merely to trigger Zenodo.
-4. Wait for Zenodo to finish the deposit, inspect the archived files and metadata, and publish the deposit if Zenodo requires confirmation.
-5. Copy the assigned DOI exactly. Add a top-level `doi:` field to `CITATION.cff` and add the Zenodo DOI badge to the README only after the DOI resolves publicly.
-6. Commit those two metadata changes in a normal forward commit; do not rewrite release history.
+## Zenodo DOI: owner action pending
 
-A DOI provides a durable scholarly identifier for the archived release even if the GitHub repository is renamed, transferred, or reorganized. It should be used in the RNAAS/arXiv citation once issued. Until then, the GitHub release and `CITATION.cff` remain the citation sources, and no placeholder DOI or badge should be published.
+No DOI is recorded in the current citation metadata. Do not display a DOI badge
+or claim archival completion until a public record is verified.
 
-## Final verification checklist
+1. Follow Zenodo's [repository integration instructions](https://help.zenodo.org/docs/github/).
+   Sign in with an account authorized to connect this GitHub repository.
+2. Enable the repository before publishing the next intentionally versioned
+   release. Do not delete, overwrite, or retag v1.0.0 or v1.1.0 to trigger archiving.
+   Alternatively, use Zenodo's documented manual software-upload workflow.
+3. Follow the [GitHub release archiving guide](https://help.zenodo.org/docs/github/archive-software/github-upload/),
+   wait for processing, and inspect the archived files, authors, version, and license.
+4. Add the assigned release DOI to `CITATION.cff` and the appropriate DOI badge
+   only after verifying the public record. Keep software-release and manuscript
+   identifiers separate.
+5. Commit metadata corrections forward without rewriting published history.
 
-- Confirm both Python matrix jobs succeed before adding the CI badge.
-- Confirm the Release points to tag `v1.0.0` and contains the expected PDF asset.
-- Confirm About description, topics, and website are visible publicly.
-- Confirm Zenodo integration/DOI status without claiming a DOI prematurely.
-- Confirm the final working tree is clean and all release-operation changes are forward commits on `main`.
+Before any future release, verify the version, changelog, citation metadata,
+platform bundle contents, license, checksums, and applicable CI results.

@@ -123,6 +123,7 @@ nav:
   - Project:
       - Reproducibility: project/reproducibility.md
       - Citation: project/citation.md
+      - Publication Status: project/publication.md
       - Contributing: project/contributing.md
       - Documentation Maintenance: project/documentation.md
       - License and Security: project/license-security.md

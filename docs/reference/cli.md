@@ -37,7 +37,7 @@ python -m src.cli baseline
 | `--resume` | off | Skip completed stages with accepted minimum artifacts |
 | `--refresh-catalog` | off | Refresh official catalog snapshots before use |
 | `--dry-run` | off | Emit the execution plan without running stages |
-| `--log-path` | generated path | Override JSON run-record destination |
+| `--log-path` | generated path | Override detailed run-record destination; the latest run record is still updated |
 | `--verbose` | off | Enable debug logging |
 
 Exit code `0` indicates success. Configuration, prerequisite, and pipeline
@@ -62,6 +62,9 @@ python -m src.cli search [--config PATH] [--resume]
 `--config` defaults to `configs/candidate_search.yaml`. The search expects the
 frozen model selection and model binary. Completed status returns `0`; a
 non-completed record returns `3`.
+
+Uncaught search exceptions print a traceback and exit nonzero (normally `1`).
+There is no shared error-code contract across all four workflows.
 
 ## `validate`
 

@@ -2,6 +2,8 @@
 
 Audit date: 2026-08-29
 
+> Historical pre-publication snapshot, not a current repository status report. File counts, test counts, license/version metadata, and an empty remote describe the tree at that audit. See [release operations](release_operations.md) for the subsequent release record.
+
 Target repository: https://github.com/Science-Experimental-Technologies/Exoplanet-Search
 
 Scope: packaging, documentation, repository hygiene, and reproducibility verification only. No scientific algorithm, metric, candidate category, or source-data result was changed during public-release preparation.
@@ -24,12 +26,12 @@ Scope: packaging, documentation, repository hygiene, and reproducibility verific
 | README scientific consistency | PASS | README values match `reports/research_report.md` and `reports/independent_validation.md`: v1 BLS 15/36 (41.67%), v1 RF end-to-end 12/36 (33.33%), v2 BLS 227/434 (52.30%), RF v2 precision/recall 0.412/0.903, 250 searched targets, and independent validation outcome 0 strong/1 weak/19 likely FP. RF v2 FPR 0.146 is explicitly identified as derived from 292/2,000 out-of-fold negative peaks. |
 | Fresh-clone full installation | PASS | A separate clone was created in the operating-system temporary directory. Because the release audit forbids committing, the final candidate files were overlaid into that fresh clone before testing. A new Python 3.11.9 virtual environment installed `requirements.txt`; an interrupted first pip extraction was retried from cache and completed successfully. `pip check` reported no broken requirements. |
 | Fresh-clone package imports | PASS | NumPy, pandas, Astropy, Astroquery, Lightkurve, `batman`, scikit-learn, TensorFlow, and MLflow imported successfully in the new environment. |
-| Fresh-clone CLI dry-run | PASS | `python -m src.pipeline --config configs/base.yaml --dry-run` returned status `dry_run` and the expected environment specification–5 plan. |
+| Fresh-clone CLI dry-run | PASS | `python -m src.pipeline --config configs/base.yaml --dry-run` returned status `dry_run` and the expected six-stage baseline plan (stages 0–5). |
 | Fresh-clone test suite | PASS | 35 tests passed, 1 opt-in MAST network test was skipped, and 0 tests failed in 19.18 seconds. The 15 warnings were upstream Matplotlib pyparsing deprecations and Lightkurve's optional `oktopus` notice. |
 | Discovery-claim review | PASS | README and disclaimer state prominently that SXS reports no confirmed discovery and that KIC 8300900-r1 remains weak and unconfirmed. |
 | Public version metadata | PASS | `pyproject.toml` and `CITATION.cff` use public version `1.0.0`, matching the archived research release. |
 | Git remote destination | PASS | Local `origin` is configured as `https://github.com/Science-Experimental-Technologies/Exoplanet-Search.git`. A read-only `git ls-remote origin` check succeeded and returned no refs, consistent with an accessible empty destination repository. No network push was performed. |
-| Identity and funding metadata | PASS | Author Rasya Andrean, affiliation Science Experimental Technologies, and independent funding by Rasya Andrean and Urus Foundation were supplied by RA and checked against the provided public profiles. The public portfolio contact is used for repository policies. |
+| Identity and funding metadata | PASS | Author Rasya Andrean, affiliation Science Experimental Technologies, and independent funding by Rasya Andrean and Urus Foundation were supplied by RA and checked against the provided public profiles. Repository policies use the project contact supplied by RA. |
 
 ## Large-file decision
 
@@ -60,7 +62,8 @@ Do not delete or move an already published public tag.
 
 ## Identity and funding record
 
-- Author: Rasya Andrean — https://science-experimental-technologies.github.io/Exoplanet-Search/
+- Author: Rasya Andrean.
+- Project website: https://science-experimental-technologies.github.io/Exoplanet-Search/
 - Affiliation: Science Experimental Technologies — https://github.com/Science-Experimental-Technologies
 - Independent funding: Rasya Andrean and Urus Foundation.
 - Public contact: `scix.official@gmail.com`.

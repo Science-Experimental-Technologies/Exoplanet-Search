@@ -2,7 +2,7 @@
 
 ## Candidate status
 
-SXS does not claim the discovery, validation, or confirmation of a new exoplanet. Every signal in this repository is an unvalidated photometric candidate requiring independent confirmation. Independent review produced 0 strong candidates, 1 weak candidate, and 19 likely false positives. KIC 8300900-r1 is weak and unconfirmed, not a planet designation.
+SXS does not claim the discovery, validation, or confirmation of a new exoplanet. Signals in the bounded candidate-search shortlist are unconfirmed photometric signals; the separate recovery benchmarks contain catalog-confirmed planets and catalog-labeled false positives. Independent review of the shortlist produced 0 strong candidates, 1 weak candidate, and 19 likely false positives. KIC 8300900-r1 is weak and unconfirmed, not a planet designation.
 
 This repository is a reproducible methodology and negative-result case study. It is not an authoritative exoplanet catalog and must not be used as the sole basis for scientific, observational, educational-assessment, or resource-allocation decisions about a target.
 

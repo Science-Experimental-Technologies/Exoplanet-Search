@@ -36,6 +36,10 @@ metadata if comparison with the published record matters.
 
 ## Write a separate run log
 
+`--log-path` changes the detailed run-log destination only. It does not isolate
+research outputs or prevent updates to `reports/pipeline_run_latest.json`.
+Use a separate checkout for an independent experiment.
+
 ```bash
 python -m src.cli baseline \
   --config configs/base.yaml \

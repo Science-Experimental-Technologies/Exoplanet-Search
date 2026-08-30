@@ -41,8 +41,9 @@ describe changed results as the published SXS benchmark.
 ## Why are model binaries missing from Git?
 
 Large generated binaries are intentionally untracked. The repository tracks
-model-selection metadata and evidence. Reproduce training or use an authorized
-matching release artifact.
+model-selection metadata and evidence. Reproduce training: the current source
+bundles and container do not distribute fitted model binaries. A future model
+download must be explicitly versioned and verified against its selection metadata.
 
 ## Which platform should I use?
 

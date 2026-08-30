@@ -16,6 +16,9 @@ scientifically justified changes.
 
 ## Local checks
 
+Install the selected scientific requirements and `requirements-docs.txt` before
+running all checks below; the scientific profile alone does not install MkDocs.
+
 ```bash
 python -m pip check
 python -m pytest -m "not network"

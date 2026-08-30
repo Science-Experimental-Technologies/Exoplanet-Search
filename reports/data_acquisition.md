@@ -2,7 +2,7 @@
 
 ## Result
 
-data acquisition completed successfully on 2026-08-25 (UTC snapshot date). The fixed
+Data acquisition completed successfully on 2026-08-25 (UTC snapshot date). The fixed
 validation sample contains 20 Kepler host systems and 47 confirmed transiting
 planets. MAST provided 341 unique long-cadence FITS products containing
 1,333,613 table rows in total. All downloaded products passed the non-empty FITS
@@ -17,7 +17,7 @@ contains 4,731 confirmed transiting planets across 3,617 host identifiers.
 Retrieval time, source URL, query constraint, and schema are embedded in Parquet
 metadata and repeated in a JSON sidecar.
 
-The archive currently identifies two sample hosts by historical aliases:
+The archived catalog snapshot identifies two sample hosts by historical aliases:
 
 - Kepler-13 is matched to `KOI-13`.
 - Kepler-90 is matched to `KOI-351`.
@@ -38,4 +38,3 @@ manifest row names the unavailable fields in `ground_truth_missing_fields`.
 - A repeated dataset build used cache hits for all 20 systems.
 - Download/product counts vary by target according to public MAST coverage and
   are not forced to a uniform number.
-

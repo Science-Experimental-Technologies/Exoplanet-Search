@@ -36,6 +36,9 @@ dependency stacks.
 
 ## Validation commands
 
+Install `requirements-docs.txt` in addition to the selected scientific profile
+before running the MkDocs command below.
+
 ```bash
 python -m pip check
 python -m pytest -m "not network"
@@ -46,6 +49,14 @@ python -m mkdocs build --strict
 The live MAST test is separate because it depends on external state.
 
 ## Protect the accepted record
+
+A fresh Git clone includes archived reports and compact tables, but not fitted
+models, raw light curves, or folded training tensors. Existence-based resume
+checks can skip archived stages even when those untracked inputs are missing.
+For a new computation, use a separate checkout and run `baseline`, `scaleup`,
+and `search` without `--resume` initially. Full baseline execution creates the
+benchmark required by scaled training in an empty container workspace. Reserve
+`--resume` for an interrupted, artifact-compatible run in that same workspace.
 
 - never edit machine-readable results merely to make a report agree;
 - regenerate related artifacts together after an authorized method change;

@@ -9,6 +9,11 @@ python -m src.cli <workflow> --config <configuration> [options]
 Run commands from the repository root with the intended virtual environment
 active.
 
+The execution examples below are first-run commands and write artifacts. Use a
+separate checkout to preserve the accepted record. Add `--resume` only when
+continuing an interrupted run with compatible artifacts; see
+[Reproducibility](../project/reproducibility.md).
+
 ## Baseline workflow
 
 Preview it first:
@@ -17,10 +22,10 @@ Preview it first:
 python -m src.cli baseline --config configs/base.yaml --dry-run
 ```
 
-Then execute or resume:
+Then execute:
 
 ```bash
-python -m src.cli baseline --config configs/base.yaml --resume
+python -m src.cli baseline --config configs/base.yaml
 ```
 
 The full baseline needs `requirements.txt`, not only the core CI profile,
@@ -29,7 +34,7 @@ because it trains both RF and CNN baselines.
 ## Scale-up qualification
 
 ```bash
-python -m src.cli scaleup --config configs/scaleup.yaml --resume
+python -m src.cli scaleup --config configs/scaleup.yaml
 ```
 
 This selects benchmark targets, uses matched four-product coverage, builds the
@@ -39,7 +44,7 @@ selection. It is expensive and depends on remote mission/catalog services.
 ## Candidate screening
 
 ```bash
-python -m src.cli search --config configs/candidate_search.yaml --resume
+python -m src.cli search --config configs/candidate_search.yaml
 ```
 
 Before running, verify that `models/production_model_selection.json` identifies

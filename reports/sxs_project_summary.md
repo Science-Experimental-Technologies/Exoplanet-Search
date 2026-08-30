@@ -4,21 +4,21 @@
 
 SCIX Exoplanet Search (SXS) is a reproducible computational astronomy project built from public Kepler, TESS, Gaia, and NASA Exoplanet Archive data. Its objective is to demonstrate an auditable end-to-end transit-search workflow on a local workstation. It is not an observatory program and does not claim a new or confirmed exoplanet.
 
-## environment specification - Reproducible foundation
+## Reproducible foundation
 
 The project fixed Python 3.11, pinned dependencies, deterministic seeds, YAML configuration, repository-relative paths, structured logs, machine-readable run records, and a deterministic default test suite. Live network testing is opt-in.
 
-## data acquisition - Official data acquisition
+## Official data acquisition
 
 Confirmed-planet parameters and Kepler false-positive labels were retrieved from official NASA Exoplanet Archive tables. Kepler long-cadence products were acquired from MAST through Lightkurve. Catalog queries, timestamps, source URLs, and artifact metadata were stored for provenance.
 
-## preprocessing - Preprocessing
+## Preprocessing
 
 The pipeline removes invalid and quality-flagged cadences, clips extreme outliers, interpolates only short marked gaps, normalizes each source-file segment, and applies iterative Savitzky-Golay detrending. Interpolated points are excluded from transit detection.
 
 ## BLS transit-recovery benchmark
 
-BLS searches periods from 0.5 to 50 days and durations from 1 to 12 hours. On the original benchmark, 36 confirmed planets are inside this domain and 15 are recovered in the top five peaks, giving 41.67% end-to-end BLS recall.
+BLS searches periods from 0.5 to 50 days with effective durations of 1, 2, 4, and 8 hours. The configured 12-hour entry is excluded because it is not shorter than the minimum period. On the original benchmark, 36 confirmed planets are inside this domain and 15 are recovered in the top five peaks, giving 41.67% end-to-end BLS recall.
 
 ## Machine-learning vetting
 
@@ -66,4 +66,4 @@ The defensible claim is methodological: SXS can acquire public data, measure rec
 - `data/validation/final_ranking.csv` - final transparent candidate ranking
 - `data/validation/fap_results.parquet` - 20,000 saved candidate-level null draws
 - `CITATION.cff` - citation metadata
-- `CHANGELOG.md` - v1 to v2 release history
+- `CHANGELOG.md` - public software release history (distinct from research v1/v2)

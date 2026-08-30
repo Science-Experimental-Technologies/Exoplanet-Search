@@ -2,7 +2,7 @@
 
 ## Result
 
-preprocessing completed successfully for all 20 validation systems. The pipeline read
+Preprocessing completed successfully for all 20 validation systems. The pipeline read
 1,333,613 raw FITS table rows and produced 1,263,184 finite, normalized samples
 across 20 target-level Parquet files. No target was skipped.
 

@@ -180,8 +180,27 @@ def _freeze_inputs(config: dict[str, Any]) -> pd.DataFrame:
     if destination.exists():
         frozen = pd.read_parquet(destination)
         frozen["target_id"] = frozen["target_id"].astype(str)
-        if not frozen["candidate_id"].equals(shortlist["candidate_id"]):
-            raise RuntimeError("Frozen independent validation input differs from the current candidate screening shortlist")
+        def comparison_copy(frame: pd.DataFrame) -> pd.DataFrame:
+            # Accept only the documented editorial renames, not changed science.
+            frame = frame.reset_index(drop=True).copy()
+            if "score_provenance" in frame:
+                frame["score_provenance"] = frame["score_provenance"].replace({
+                    "rf_v2_phase7_full_training_model_probability_not_independently_calibrated":
+                    "rf_v2_scaleup_full_training_model_probability_not_independently_calibrated",
+                })
+            if "figure_path" in frame:
+                frame["figure_path"] = frame["figure_path"].str.replace(
+                    r"^reports/phase8_candidates/", "reports/candidate_figures/", regex=True,
+                )
+            return frame
+
+        try:
+            pd.testing.assert_frame_equal(
+                comparison_copy(frozen), comparison_copy(shortlist),
+                check_dtype=False, check_exact=False, rtol=1e-12, atol=1e-12,
+            )
+        except AssertionError as exc:
+            raise RuntimeError("Frozen independent validation input differs from the current candidate screening shortlist") from exc
         return frozen
     shortlist.to_parquet(destination, index=False)
     return shortlist
@@ -205,7 +224,9 @@ def _write_report(result: pd.DataFrame, config: dict[str, Any]) -> None:
         "",
         "## Methods",
         "",
-        f"### Empirical BLS FAP\n\nFor every candidate, {config['fap']['permutations_per_target']:,} null realizations were evaluated over the same 0.5–50 day period grid and duration grid as candidate screening. Each Kepler source-file segment was circularly shifted by an independent random offset, preserving cadence sampling and within-segment correlated structure while breaking a common ephemeris. The test statistic is the maximum BLS power over the full grid, so it includes the period-search look-elsewhere effect. We use the add-one estimator `(exceedances + 1)/(N + 1)`; resolution is {1/(config['fap']['permutations_per_target']+1):.6f}.",
+        f"### Empirical BLS FAP\n\nFor each of {result.target_id.astype(str).nunique()} unique targets, {config['fap']['permutations_per_target']:,} null realizations were evaluated over the configured {config['bls']['minimum_period_days']:g}–{config['bls']['maximum_period_days']:g} day period grid and effective duration grid. Each Kepler source-file segment was circularly shifted by an independent random offset, preserving cadence sampling and within-segment correlated structure while breaking a common ephemeris. The test statistic is the maximum BLS power over the full grid, so it includes the period-search look-elsewhere effect. We use the add-one estimator `(exceedances + 1)/(N + 1)`; resolution is {1/(config['fap']['permutations_per_target']+1):.6f}.",
+        "",
+        "The same target-level null distribution is reused for its shortlisted signals. Candidate-level rows sharing a target are not independent null realizations.",
         "",
         "### Formal light-curve tests\n\nOdd and even event depths are measured separately with local baselines and compared with a two-sided Welch t-test (fail at p < 0.01). The phase-0.5 secondary depth is compared with a robust out-of-eclipse scatter estimate; a 3-sigma upper limit is always reported. A secondary is a red flag when it is at least 3 sigma and at least 10% of the primary depth.",
         "",
@@ -219,7 +240,7 @@ def _write_report(result: pd.DataFrame, config: dict[str, Any]) -> None:
         "",
         "## Candidate results",
         "",
-        "| P9 rank | Candidate | P (d) | FAP | Odd/even p | Secondary sig. | Shape | Rp (R_earth) | Gaia risk | TESS | ExoFOP | Score | Category |",
+        "| Validation rank | Candidate | P (d) | FAP | Odd/even p | Secondary sig. | Shape | Rp (R_earth) | Gaia risk | TESS | ExoFOP | Score | Category |",
         "|---:|---|---:|---:|---:|---:|---|---:|:---:|:---:|---|---:|---|",
     ]
     for _, row in result.iterrows():
@@ -232,7 +253,7 @@ def _write_report(result: pd.DataFrame, config: dict[str, Any]) -> None:
             f"| {int(row.phase9_rank)} | {row.candidate_id} | {row.period_days:.6f} | {row.fap:.4f} | "
             f"{row.odd_even_p_value:.3g} | {row.secondary_significance:.2f} | {row.transit_shape} | "
             f"{radius_text} | {'yes' if row.gaia_high_risk_contaminant else 'no'} | "
-            f"{'confirmed' if row.tess_period_confirmed else row.tess_status} | {row.exofop_status} | "
+            f"{'period_support' if row.tess_period_confirmed else row.tess_status} | {row.exofop_status} | "
             f"{int(row.independent_evidence_score)} | `{row.final_category}` |"
         )
     lines += [

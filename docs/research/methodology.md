@@ -39,7 +39,8 @@ For each product, SXS:
    a configuration explicitly states otherwise.
 
 The default window is 401 long-cadence samples, about 8.2 days, above the
-maximum searched transit duration of 12 hours.
+maximum effective searched transit duration of 8 hours (12 hours is configured
+but excluded at the 0.5-day minimum period).
 
 ## BLS detection
 

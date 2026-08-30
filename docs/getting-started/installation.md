@@ -118,3 +118,11 @@ The MAST smoke test performs a real external query and is deliberately opt-in.
     ```
 
 Continue with the [quickstart](quickstart.md) after these checks pass.
+
+## Optional installed command
+
+From a source checkout, `python -m pip install .` installs the `sxs` command
+with the core dependency profile. Full model training still needs
+`requirements.txt`. Run scientific workflows from the checkout root: the
+wheel supplies Python modules, not configurations, catalogs, or trained models.
+The module interface `python -m src.cli` remains available from the checkout.

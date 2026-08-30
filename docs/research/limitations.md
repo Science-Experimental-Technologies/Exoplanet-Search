@@ -30,6 +30,10 @@
   read as `P(planet | data)`.
 - The CNN result is a compact research baseline, not an exhaustive architecture
   or hyperparameter search.
+- CNN early stopping uses each held-out fold as validation, and the RF review
+  threshold is selected on the same out-of-fold predictions used to report its
+  operating-point metrics. Target grouping prevents cross-target leakage but
+  does not provide an independent nested model/threshold evaluation.
 
 ## Independent validation
 

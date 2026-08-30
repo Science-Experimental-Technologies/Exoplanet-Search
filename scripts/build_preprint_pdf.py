@@ -28,7 +28,7 @@ from reportlab.platypus import (
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SOURCE = ROOT / "reports" / "research_report.md"
-DEFAULT_OUTPUT = ROOT / "output" / "pdf" / "sxs_preprint_v1.0.0.pdf"
+DEFAULT_OUTPUT = ROOT / "build" / "sxs_preprint_draft.pdf"
 
 
 def styles() -> dict[str, ParagraphStyle]:
@@ -242,7 +242,7 @@ class PreprintDocTemplate(BaseDocTemplate):
             bottomMargin=margin_bottom,
             title="SXS: A Reproducible Kepler Transit-Recovery and Independent Vetting Pipeline",
             author="Rasya Andrean",
-            subject="SXS public release v1.0.0 preprint",
+            subject="SXS working research draft; not submitted",
         )
         frame = Frame(
             self.leftMargin, self.bottomMargin, self.width, self.height,
@@ -258,10 +258,10 @@ class PreprintDocTemplate(BaseDocTemplate):
         canvas.line(self.leftMargin, height - 12 * mm, width - self.rightMargin, height - 12 * mm)
         canvas.setFont("Helvetica", 7.2)
         canvas.setFillColor(colors.HexColor("#627D98"))
-        canvas.drawString(self.leftMargin, height - 9.5 * mm, "SCIX Exoplanet Search - public release v1.0.0")
+        canvas.drawString(self.leftMargin, height - 9.5 * mm, "SCIX Exoplanet Search - working research draft")
         canvas.drawRightString(width - self.rightMargin, height - 9.5 * mm, "Not a planet-discovery claim")
         canvas.line(self.leftMargin, 12 * mm, width - self.rightMargin, 12 * mm)
-        canvas.drawString(self.leftMargin, 8.5 * mm, "28 August 2026")
+        canvas.drawString(self.leftMargin, 8.5 * mm, "Author review required before submission")
         canvas.drawRightString(width - self.rightMargin, 8.5 * mm, f"Page {doc.page}")
         canvas.restoreState()
 

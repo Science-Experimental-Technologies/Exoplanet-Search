@@ -28,6 +28,10 @@ sxs = "src.cli:main"
 [tool.setuptools]
 license-files = ["LICENSE", "NOTICE"]
 
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src", "src.*"]
+
 [tool.setuptools.dynamic]
 dependencies = { file = ["requirements-core.txt"] }
 

@@ -8,8 +8,8 @@ Checked against:
 
 ## Editorial checks
 
-- The full research report was not overwritten.
-- The draft has no formal abstract section.
+- The full research report remains a separate working document; no scientific metrics were changed by condensation or the later editorial audit.
+- The draft has a formal abstract, correcting the older no-abstract instruction to match the [official RNAAS guidelines](https://journals.aas.org/research-note-preparation-guidelines/) checked on 2026-08-30.
 - It contains one table and no figure.
 - The table was selected instead of the KIC 8300900-r1 folded light curve because the manuscript's contribution is pipeline performance and independent-vetting outcome, not a candidate claim.
 - Author Rasya Andrean, affiliation Science Experimental Technologies, funding acknowledgment, and repository URL are filled from RA-provided public sources.
@@ -42,6 +42,6 @@ Checked against:
 
 ## Word-count rule
 
-The reported body count includes section headings, prose, table headers and cells, and the Data and Software Availability text. It excludes the title, author and affiliation lines, and the References heading and entries. This conservative count is generated after the final edit and recorded below.
+`python scripts/check_repository_docs.py` counts whitespace-separated tokens conservatively, including Markdown table separators. Abstract count excludes its heading. Body count starts at Data and Methods and includes headings, table cells, acknowledgments, and availability text, but excludes abstract and references. Total count includes the entire file, including title, author/affiliation, abstract, references, and formatting tokens.
 
-**Final body word count:** 741 words
+Counts after the 2026-08-30 editorial audit: **116 abstract words; 650 body words; 857 total tokens**. These satisfy the official abstract limit of 150 and total limit of 1,500; the final submission-system count must still be checked. The earlier 741-word count used an older draft and counting convention.

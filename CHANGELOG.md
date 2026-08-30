@@ -13,6 +13,14 @@ All notable changes to this project are documented in this file. The format foll
 
 ### Corrected
 
+- Fixed wheel package discovery so the installed CLI can import `src.cli`.
+- Generated baseline benchmark prose now uses the supplied metrics rather than
+  hard-coded historical percentages. Frozen validation inputs reject changed
+  values even when candidate identifiers are unchanged.
+- Translated the project walkthrough into English, clarified archived publication
+  status, corrected effective BLS durations, and aligned RNAAS draft structure
+  with the current journal instructions.
+- Corrected citation metadata and added documentation and wheel regression checks.
 - README module paths now match the implementation. Documentation distinguishes
   configured BLS durations from effective search durations and records fixed
   artifact paths and null-cache reuse limitations.

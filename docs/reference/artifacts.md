@@ -63,7 +63,7 @@ are intentionally not tracked in Git.
 - `reports/research_report.md`: complete paper-length record;
 - `reports/rnaas_draft.md`: condensed RNAAS-format draft;
 - `reports/rnaas_draft_consistency_check.md`: draft/source metric check;
-- `output/pdf/sxs_preprint_v1.0.0.pdf`: visually verified preprint;
+- `output/pdf/sxs_preprint_v1.0.0.pdf`: archived preprint with historical wording; see [publication status](../project/publication.md);
 - `CITATION.cff`: software citation metadata; and
 - `CHANGELOG.md`: public version history.
 

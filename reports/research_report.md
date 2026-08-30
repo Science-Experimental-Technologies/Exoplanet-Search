@@ -8,11 +8,11 @@
 
 **Suggested venue:** arXiv astro-ph.EP or Research Notes of the AAS
 
-**Status:** submission-ready preprint draft; not submitted
+**Status:** research draft for author review; not submitted. This working source includes editorial corrections after the archived v1.0.0 PDF; see the [publication status and correction record](../docs/project/publication.md).
 
 ## Abstract
 
-We present SCIX Exoplanet Search (SXS), a reproducible computational pipeline for transit recovery, candidate vetting, and explicitly bounded candidate search in public Kepler photometry. SXS combines quality filtering, quarter-wise normalization, Savitzky-Golay detrending, Box Least Squares (BLS), a feature-based Random Forest, a compact one-dimensional convolutional neural network, official catalog cross-checks, and a final validation stage that is methodologically independent of the machine-learning ranker. In the original 20-system benchmark, 36 confirmed planets fall inside the 0.5-50 day search domain. BLS recovers 15/36 (41.67%) in its top five peaks. On the resulting candidate-level vetting set, the Random Forest obtains precision 0.632, recall 0.800, false-positive rate 0.070, and F1 0.706 under five-fold target-grouped out-of-fold evaluation; end-to-end recovery is 12/36 (33.33%). A scale-up to 371 confirmed hosts, 434 eligible planets, and 400 official false-positive targets increases BLS top-five recovery to 227/434 (52.30%). The selected scale-up qualification Random Forest uses an exploratory review threshold of 0.221107, at which grouped out-of-fold precision is 0.412 and recall is 0.903. We then apply the frozen model to a deterministic workstation-bounded sample of 250 targets without KOI or confirmed-name history, producing a 20-signal review queue. Independent validation uses 1,000 segment-wise circular-shuffle BLS searches per target, formal odd/even and secondary-eclipse tests, limb-darkened transit fits, stellar-radius plausibility checks, Gaia DR3 scene analysis, TESS photometry, and an ExoFOP-derived TOI lookup. The final outcome is 0 strong candidates, 1 weak candidate, and 19 likely false positives. The sole weak signal, KIC 8300900-r1 at 5.090289 days, has empirical BLS false-alarm probability 0.01998 and is not a confirmed exoplanet. SXS is therefore a reproducible methodology demonstration and negative-result case study, not a planet-discovery claim.
+I present SCIX Exoplanet Search (SXS), a reproducible computational pipeline for transit recovery, candidate vetting, and explicitly bounded candidate search in public Kepler photometry. SXS combines quality filtering, quarter-wise normalization, Savitzky-Golay detrending, Box Least Squares (BLS), a feature-based Random Forest, a compact one-dimensional convolutional neural network, official catalog cross-checks, and a final validation stage that is methodologically independent of the machine-learning ranker. In the original 20-system benchmark, 36 confirmed planets fall inside the 0.5-50 day search domain. BLS recovers 15/36 (41.67%) in its top five peaks. On the resulting candidate-level vetting set, the Random Forest obtains precision 0.632, recall 0.800, false-positive rate 0.070, and F1 0.706 under five-fold target-grouped out-of-fold evaluation; end-to-end recovery is 12/36 (33.33%). A scale-up to 371 confirmed hosts, 434 eligible planets, and 400 official false-positive targets increases BLS top-five recovery to 227/434 (52.30%). The selected scale-up qualification Random Forest uses an exploratory review threshold of 0.221107, at which grouped out-of-fold precision is 0.412 and recall is 0.903. I then apply the frozen model to a deterministic workstation-bounded sample of 250 targets without KOI or confirmed-name history, producing a 20-signal review queue. Independent validation uses 1,000 segment-wise circular-shuffle BLS searches per target, formal odd/even and secondary-eclipse tests, limb-darkened transit fits, stellar-radius plausibility checks, Gaia DR3 scene analysis, TESS photometry, and an ExoFOP-derived TOI lookup. The final outcome is 0 strong candidates, 1 weak candidate, and 19 likely false positives. The sole weak signal, KIC 8300900-r1 at 5.090289 days, has empirical BLS false-alarm probability 0.01998 and is not a confirmed exoplanet. SXS is therefore a reproducible methodology demonstration and negative-result case study, not a planet-discovery claim.
 
 **Keywords:** exoplanets; transit photometry; Kepler; TESS; time-series analysis; machine learning; reproducible research
 
@@ -24,7 +24,7 @@ BLS remains a standard classical detector because it searches directly for perio
 
 SXS was designed around a narrower question: can a complete transit-recovery workflow be made auditable on a local workstation while keeping detection performance, classifier performance, catalog association, and independent astrophysical evidence conceptually separate? The project therefore developed in stages. The first version benchmarked recovery on known systems. The second version scaled the labeled sample, froze a model-selection policy, searched an explicitly unclassified target sample, and subjected the resulting shortlist to non-circular validation.
 
-The distinction between ranking and validation is central. A Random Forest score from SXS is not a calibrated posterior probability that a signal is planetary. Reapplying the same features or a closely related classifier would reproduce model preferences rather than provide independent evidence. independent validation consequently excludes all RF and CNN outputs from its evidence score and category rules. This paper reports the full environment specification-9 workflow, including the result that no signal satisfies the strong-candidate definition.
+The distinction between ranking and validation is central. A Random Forest score from SXS is not a calibrated posterior probability that a signal is planetary. Reapplying the same features or a closely related classifier would reproduce model preferences rather than provide independent evidence. Independent validation consequently excludes all RF and CNN outputs from its evidence score and category rules. This paper reports the workflow from environment setup through independent validation, including the result that no signal satisfies the strong-candidate definition.
 
 ## 2. Data and provenance
 
@@ -48,23 +48,23 @@ Both classes use four chronological Kepler products per target in scale-up quali
 
 ### 2.4 Unclassified search pool
 
-candidate screening uses the official Kepler time-series table to construct a pool with `object_status=0`, Kepler magnitude 10-15, and at least eight available quarters. Every KIC appearing anywhere in the cumulative KOI table or the confirmed Kepler-name table is removed. The resulting eligible pool contains 100,347 targets. Because a full-pool search exceeds the intended workstation budget, 250 targets are selected by ascending SHA-256 of a fixed seed and KIC. The sampling hash is independent of flux morphology, BLS results, and model scores.
+Candidate screening uses the official Kepler time-series table to construct a pool with `object_status=0`, Kepler magnitude 10-15, and at least eight available quarters. Every KIC appearing anywhere in the cumulative KOI table or the confirmed Kepler-name table is removed. The resulting eligible pool contains 100,347 targets. Because a full-pool search exceeds the intended workstation budget, 250 targets are selected by ascending SHA-256 of a fixed seed and KIC. The sampling hash is independent of flux morphology, BLS results, and model scores.
 
 ## 3. Methods
 
 ### 3.1 Environment and reproducibility controls
 
-environment specification fixes Python 3.11, pinned direct dependencies, deterministic random seeds, repository-relative paths, and structured YAML configuration. Each major stage writes a machine-readable run record and a human-readable report. The default test suite is deterministic; the real MAST smoke test is opt-in to avoid making routine verification depend on network state.
+The research environment fixes Python 3.11, pinned direct dependencies, deterministic random seeds, repository-relative paths, and structured YAML configuration. Each major stage writes a machine-readable run record and a human-readable report. The default test suite is deterministic; the real MAST smoke test is opt-in to avoid making routine verification depend on network state.
 
 ### 3.2 Light-curve acquisition and preprocessing
 
 The acquisition layer distinguishes missing targets, download failures, corrupt products, and valid cache hits. Preprocessing removes non-finite samples and cadences rejected by the configured Kepler quality bitmask. Extreme positive and negative outliers are clipped asymmetrically. Only short internal gaps, at most three cadences, are interpolated; every interpolated row is marked and later excluded from BLS.
 
-Each source-file segment is median-normalized separately. A Savitzky-Golay trend with a 401-cadence window and polynomial order 2 is estimated iteratively. The window is longer than the trial transit durations, reducing the risk that the detrending model absorbs short transit-like events. preprocessing transit-preservation checks compare representative known systems before and after detrending. This operation is not a guarantee of unbiased depth recovery for all periods, stellar variability regimes, or transit durations.
+Each source-file segment is median-normalized separately. A Savitzky-Golay trend with a 401-cadence window and polynomial order 2 is estimated iteratively. The window is longer than the trial transit durations, reducing the risk that the detrending model absorbs short transit-like events. Preprocessing transit-preservation checks compare representative known systems before and after detrending. This operation is not a guarantee of unbiased depth recovery for all periods, stellar variability regimes, or transit durations.
 
 ### 3.3 Box Least Squares search
 
-SXS uses `astropy.timeseries.BoxLeastSquares` [6]. The search spans 0.5-50 days with trial durations of 1, 2, 4, 8, and 12 hours. Frequency sampling is five points per Rayleigh resolution element, based on each light curve's time baseline. The BLS objective is signal-to-noise. The five highest distinct peaks are retained, subject to at least 1% relative period separation. Catalog periods and epochs are never supplied to detection.
+SXS uses `astropy.timeseries.BoxLeastSquares` [6]. The search spans 0.5-50 days with configured trial durations of 1, 2, 4, 8, and 12 hours. The implementation requires durations strictly shorter than the minimum period, so the 12-hour entry is excluded and the effective grid is 1, 2, 4, and 8 hours. Frequency sampling is five points per Rayleigh resolution element, based on each light curve's time baseline. The BLS objective is signal-to-noise. The five highest distinct peaks are retained, subject to at least 1% relative period separation. Catalog periods and epochs are never supplied to detection.
 
 An exact recovery requires a candidate period within 1% of the catalog period. Half-period and double-period aliases are retained only as diagnostics. End-to-end recall uses all 36 eligible v1 planets, including those for which BLS proposes no matching peak.
 
@@ -74,7 +74,7 @@ The Random Forest uses 13 numerical features derived from BLS and folded photome
 
 Both models are evaluated with five-fold `StratifiedGroupKFold`, grouped by target identifier. Saved out-of-fold predictions are the only source of reported candidate-level generalization metrics. Models subsequently fitted on the complete labeled set are operational artifacts and are not evaluated on their own training predictions.
 
-scale-up qualification defines a manual-review threshold by maximizing precision subject to grouped out-of-fold recall of at least 0.90. CNN replaces RF only if it improves precision by at least 0.02 and has fold-to-fold F1 standard deviation at most 0.10. This policy selects RF v2 at threshold 0.221107. The threshold is an exploratory operating point, not a probability calibration.
+Scale-up qualification defines a manual-review threshold by maximizing precision subject to grouped out-of-fold recall of at least 0.90. CNN replaces RF only if it improves precision by at least 0.02 and has fold-to-fold F1 standard deviation at most 0.10. This policy selects RF v2 at threshold 0.221107. The threshold is an exploratory operating point, not a probability calibration.
 
 ### 3.5 Candidate screening
 
@@ -135,13 +135,13 @@ The scaled BLS run recovers 227/434 eligible planets (52.30%) in the top five, c
 
 At the scale-up qualification review operating point, RF v2 reaches precision 0.412 and recall 0.903 at threshold 0.221107. CNN reaches recall 0.912 at threshold 0.394803 but precision is 0.198 and fold-F1 standard deviation is 0.166. The prespecified policy therefore selects RF v2 and retains CNN only as a secondary diagnostic.
 
-### 4.3 candidate screening bounded candidate search
+### 4.3 Bounded candidate search
 
 All 250 selected targets complete four-product acquisition, preprocessing, and blind BLS search. The run produces 1,250 peaks. RF v2 flags 151 at its frozen review threshold; 110 also have no failed preliminary odd/even, phase-0.5 secondary, or available moment-centroid check. The highest-scoring 20 form the independent validation queue. A live post-ranking catalog recheck finds no cumulative KOI row and no confirmed Kepler name for the 14 unique KICs at that time. This catalog absence means only that the targets were not present in those tables; it does not establish astrophysical novelty.
 
 ### 4.4 Independent validation
 
-The 20 candidate-level null distributions contain 1,000 draws each. No signal reaches the prespecified strong FAP threshold of 0.01. The best result is KIC 8300900-r1: 19 of 1,000 null maxima equal or exceed the observed power, giving FAP 20/1,001 = 0.01998. The second-best signal has FAP 0.05594, already above the key-failure boundary.
+The 20 candidate-level views contain 1,000 null draws each, shared among signals from the same target. There are 14 target-level null distributions, not 20 independently simulated distributions. No signal reaches the prespecified strong FAP threshold of 0.01. The best result is KIC 8300900-r1: 19 of 1,000 null maxima equal or exceed the observed power, giving FAP 20/1,001 = 0.01998. The second-best signal has FAP 0.05594, already above the key-failure boundary.
 
 All 20 formal odd/even tests are available and none fails at p < 0.01. One signal, KIC 9767793-r3, has a significant phase-0.5 secondary under the configured rule. One signal, KIC 6268872-r5, has a fitted V/grazing geometry. The fit for KIC 10124049-r2 does not converge and is retained as unavailable. KIC 3655287 has a Gaia neighbor within the high-risk separation and magnitude criteria, affecting all three shortlisted periods on that target.
 
@@ -184,7 +184,7 @@ Compared with survey-scale systems, SXS is intentionally small. Robovetter uses 
 
 ## 6. Limitations
 
-1. **Selection and sample size.** The v1 benchmark is small and curated. scale-up qualification is larger but remains selected by catalog signal-to-noise, magnitude, quarter coverage, and dispositions. Neither sample supports occurrence-rate inference.
+1. **Selection and sample size.** The v1 benchmark is small and curated. Scale-up qualification is larger but remains selected by catalog signal-to-noise, magnitude, quarter coverage, and dispositions. Neither sample supports occurrence-rate inference.
 2. **Candidate correlation.** Multiple BLS peaks can arise from one target. Grouped cross-validation prevents train/evaluation leakage but does not make candidate rows statistically independent.
 3. **Four-product cap.** The scaled search and validation program uses four chronological Kepler products per target. This makes workstation execution feasible but discards available temporal coverage and can change recovery and FAP behavior.
 4. **Detection model.** BLS assumes strictly periodic, box-like events. Transit-timing variations, circumbinary dynamics, stellar activity, shallow events, and competing multi-planet peaks can reduce recovery or promote aliases.
@@ -202,13 +202,13 @@ Compared with survey-scale systems, SXS is intentionally small. Robovetter uses 
 
 The release includes pinned dependency files, YAML configurations, deterministic tests, source modules, machine-readable metrics, catalog provenance, the frozen candidate screening shortlist, 20,000 independent-validation FAP draws, external cross-match summaries, and workflow-specific reports. Large raw FITS products, TESS cache files, intermediate null caches, trained binary models, and generated tensors are excluded from version control and can be regenerated from public services subject to archive availability.
 
-The primary commands are documented in `README.md`. The default test command is `python -m pytest`; the accepted release passes 35 tests, with one opt-in live-network test skipped by default. Exact floating-point identity across operating systems or binary builds is not guaranteed. Reproducing stored results requires the committed catalog snapshots and no catalog refresh.
+The primary commands are documented in `README.md`. The historical research audit recorded 35 passing tests and one opt-in live-network test skipped by default; that is not the current development-suite count. Run `python -m pytest -m "not network"` for the current non-network suite. Exact floating-point identity across operating systems or binary builds is not guaranteed. Reproducing stored results requires the committed catalog snapshots and no catalog refresh.
 
 ## 8. Conclusion
 
 The SXS research program is a complete, auditable computational astronomy workflow spanning official data acquisition, preprocessing, transit recovery, target-grouped model evaluation, bounded candidate search, and independent vetting. Its strongest positive benchmark result is the feature-based vetter's reduction of baseline candidate false-positive rate from 1.00 at the BLS-only stage to 0.07 while retaining 12 of 15 BLS-recovered planets. Its most important search result is negative: among 20 ML-prioritized signals, independent validation identifies no strong candidate, one weak candidate, and 19 likely false positives.
 
-This outcome supports the project's central methodological claim rather than a discovery claim. A reproducible candidate-search pipeline should be able to reject its own highly ranked outputs when independent evidence is insufficient. KIC 8300900-r1 remains an unconfirmed weak signal requiring analysis beyond SXS. No object reported here is a confirmed exoplanet or a claimed new discovery.
+This outcome supports the project's central methodological claim rather than a discovery claim. A reproducible candidate-search pipeline should be able to reject its own highly ranked outputs when independent evidence is insufficient. KIC 8300900-r1 remains an unconfirmed weak signal requiring analysis beyond SXS. No object in the bounded-search shortlist is presented as a confirmed exoplanet or a claimed new discovery; the recovery benchmarks use previously catalog-confirmed planets.
 
 ## Acknowledgments
 

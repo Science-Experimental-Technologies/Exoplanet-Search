@@ -8,7 +8,11 @@ authors:
     affiliation: "Science Experimental Technologies"
 version: 1.1.0
 date-released: 2026-08-29
-license: "LicenseRef-SXS-Source-Available-1.0"
+license-url: "https://github.com/Science-Experimental-Technologies/Exoplanet-Search/blob/main/LICENSE"
+url: "https://science-experimental-technologies.github.io/Exoplanet-Search/"
+contact:
+  - name: "Science Experimental Technologies"
+    email: "scix.official@gmail.com"
 repository-code: "https://github.com/Science-Experimental-Technologies/Exoplanet-Search"
 abstract: >-
   A reproducible computational astronomy pipeline for Kepler light-curve
@@ -24,13 +28,14 @@ keywords:
   - TESS
   - reproducible research
   - machine learning
-preferred-citation:
-  type: report
-  title: "SXS: A Reproducible Kepler Transit-Recovery and Independent Vetting Pipeline"
-  authors:
-    - family-names: "Andrean"
-      given-names: "Rasya"
-      affiliation: "Science Experimental Technologies"
-  year: 2026
-  month: 8
-  version: 1.1.0
+references:
+  - type: report
+    title: "SXS: A Reproducible Kepler Transit-Recovery and Independent Vetting Pipeline"
+    authors:
+      - family-names: "Andrean"
+        given-names: "Rasya"
+        affiliation: "Science Experimental Technologies"
+    year: 2026
+    month: 8
+    version: 1.0.0
+    url: "https://github.com/Science-Experimental-Technologies/Exoplanet-Search/blob/v1.1.0/output/pdf/sxs_preprint_v1.0.0.pdf"

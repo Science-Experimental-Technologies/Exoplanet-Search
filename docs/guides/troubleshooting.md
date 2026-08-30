@@ -39,9 +39,10 @@ files to satisfy the contract.
 
 ## The production model binary is missing
 
-Large model binaries are intentionally untracked. Reproduce scale-up training
-or obtain the exact authorized release artifact associated with the selection
-metadata. Never substitute a differently trained file under the expected name.
+Large model binaries are intentionally untracked and are not included in the
+current release bundles or container. Reproduce scale-up training in a separate
+checkout, without `--resume` on the first run. Never substitute a differently
+trained file under the expected name.
 
 ## Validation external queries fail
 

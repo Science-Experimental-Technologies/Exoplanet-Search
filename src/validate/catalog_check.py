@@ -277,13 +277,20 @@ def _plot_confusion_matrices(models: Sequence[dict[str, Any]], destination: Path
 def _write_benchmark_report(result: dict[str, Any], destination: Path) -> None:
     evaluation = result["evaluation"]
     rows = result["models"]
+    by_model = {row["model"]: row for row in rows}
+    bls = by_model["bls_only"]
+    rf = by_model["feature_model"]
+    cnn = by_model["cnn_1d"]
+    lower, upper = evaluation["period_domain_days"]
+    tolerance = 100 * evaluation["period_match_tolerance_fraction"]
     lines = [
         "# SXS v1 Benchmark Report",
         "",
         "## Executive result",
         "",
-        f"BLS recovered **{evaluation['bls_detected_planets']} of {evaluation['eligible_confirmed_planets']} eligible confirmed planets (41.67%)** in the fixed 0.5–50 day domain. "
-        "Applying the leakage-safe feature model retained 12 planets (33.33% end-to-end recall) while reducing candidate-level false-positive rate from 100% to 7%. The CNN retained 8 planets (22.22%) with a 23% false-positive rate.",
+        f"BLS recovered **{evaluation['bls_detected_planets']} of {evaluation['eligible_confirmed_planets']} eligible confirmed planets ({bls['end_to_end_recall']:.2%})** in the configured {lower:g}–{upper:g} day domain. "
+        f"The target-grouped feature model retained {rf['end_to_end_recovered_planets']} planets ({rf['end_to_end_recall']:.2%} end-to-end recall) with candidate FPR {rf['candidate_vetting_metrics']['false_positive_rate']:.3f}. "
+        f"The CNN retained {cnn['end_to_end_recovered_planets']} planets ({cnn['end_to_end_recall']:.2%}) with candidate FPR {cnn['candidate_vetting_metrics']['false_positive_rate']:.3f}.",
         "",
         "| Stage | Candidate precision | Candidate recall | Candidate FPR | Candidate F1 | End-to-end recall |",
         "|---|---:|---:|---:|---:|---:|",
@@ -300,27 +307,27 @@ def _write_benchmark_report(result: dict[str, Any], destination: Path) -> None:
         "",
         "## Evaluation contract",
         "",
-        "- Detection recall denominator: 36 confirmed planets whose official periods fall within the configured BLS domain. Eleven longer-period planets are excluded before scoring.",
-        "- A BLS recovery requires a top-five period within ±1% of the official period; harmonic matches are not counted in the primary metric.",
-        "- Vetting positives: the 15 exact BLS recoveries. Vetting negatives: 100 BLS candidates from 20 official Kepler `FALSE POSITIVE` systems.",
-        "- Feature and CNN decisions use five-fold out-of-fold probabilities grouped by target. No final-model training prediction is used in benchmark metrics.",
+        f"- Detection recall denominator: {evaluation['eligible_confirmed_planets']} confirmed planets inside the configured BLS domain. Out-of-domain planets are excluded before scoring.",
+        f"- BLS recovery requires a proposed period within ±{tolerance:g}% of the official period; harmonic matches do not count in the primary metric.",
+        f"- Vetting positives: {evaluation['positive_vetting_candidates']} exact BLS recoveries. Vetting negatives: {evaluation['official_false_positive_candidates']} candidates from official false-positive systems.",
+        f"- Prediction provenance: {evaluation['model_predictions']}. No final-model training prediction is used in benchmark metrics.",
         "- Candidate FPR uses negative candidates as units. End-to-end recall uses confirmed planets as units; these denominators are intentionally reported separately.",
         "",
         "## Catalog cross-check",
         "",
-        "Every operational candidate is checked against the local provenance-bearing NASA Exoplanet Archive snapshot by configured host and ±1% period. Matches are `recovered_known`; targets drawn from the official false-positive sample remain `official_false_positive_system`; other unmatched signals are `unvalidated_candidate_requires_independent_confirmation`.",
+        f"Every operational candidate is checked against the local provenance-bearing NASA Exoplanet Archive snapshot by configured host and ±{tolerance:g}% period. Matches are `recovered_known`; targets drawn from the official false-positive sample remain `official_false_positive_system`; other unmatched signals are `unvalidated_candidate_requires_independent_confirmation`.",
         "",
         "Operational probabilities in `catalog_checked_candidates.parquet` come from final models fitted on the complete model-benchmark dataset and are intended for pipeline execution only. They are not used for the benchmark table above.",
         "",
         "## Interpretation",
         "",
-        "The feature model supplies the strongest current trade-off: precision rises from 0.130 to 0.632 and FPR falls to 0.070, at the cost of rejecting three of the 15 detected planets. Because ML cannot recover planets BLS never proposed, overall recall falls from 0.417 to 0.333.",
+        "Candidate precision/FPR and end-to-end recovery measure different populations. A downstream classifier cannot recover a planet absent from the BLS proposal set. Compare the generated metrics above rather than assuming a fixed improvement across datasets.",
         "",
-        "The CNN is not competitive at this sample size. Its fold variance and weaker fixed-threshold precision indicate that a larger, consistently quarter-matched training set and nested validation are required before it should gate candidates.",
+        "Model-selection conclusions require the recorded sample, fold-level evidence, and operating-point policy. The CNN uses held-out folds for early stopping; nested validation would provide a stricter assessment.",
         "",
         "## Limitations",
         "",
-        "This benchmark is small and Kepler-specific. Five candidates from each false-positive system create correlated rows, although group-wise splitting prevents leakage. Positive and negative quarter coverage differs, thresholds are not independently calibrated, and catalog non-matches are not scientific discoveries. Any unmatched output requires independent pixel-level vetting, centroid analysis, and external confirmation.",
+        "This benchmark is selected and Kepler-specific. Multiple candidates from a false-positive system create correlated rows; target grouping prevents cross-target leakage, not all model-selection bias. Positive and negative coverage can differ, thresholds are not independently calibrated, and catalog non-matches are not scientific discoveries. Unmatched outputs require independent follow-up.",
         "",
         "## Official data sources",
         "",

@@ -4,11 +4,13 @@
 
 **Affiliation:** Science Experimental Technologies
 
+## Abstract
+
 SCIX Exoplanet Search (SXS) is a reproducible pipeline combining Box Least Squares (BLS) transit detection with machine-learning ranking and independent candidate vetting in public Kepler photometry. In the version 1 benchmark, BLS recovered 15 of 36 eligible confirmed planets in its five highest peaks, while the Random Forest (RF) retained 12 of 36 end to end (33.33%) with a candidate-level false-positive rate (FPR) of 0.070. The scaled version 2 search recovered 227 of 434 eligible planets with BLS (52.30%) and then examined a deterministic sample of 250 targets without cumulative-KOI or confirmed-Kepler-name history. Independent review of the resulting shortlist found no strong candidate, one weak candidate, and 19 likely false positives; SXS makes no planet-discovery claim.
 
 ## Data and Methods
 
-Confirmed-planet parameters came from the NASA Exoplanet Archive `pscomppars` table, and official false-positive labels came from the cumulative KOI table [1]. Kepler long-cadence light curves were obtained from MAST with Lightkurve [2]. After quality filtering, segment normalization, and Savitzky-Golay detrending, BLS searched periods of 0.5–50 days and retained five distinct peaks per target. A 13-feature RF ranked peaks using BLS and folded-light-curve diagnostics. Five-fold `StratifiedGroupKFold` evaluation grouped all signals by target to prevent train-test leakage. The scale-up qualification RF threshold of 0.221107 was selected to maximize precision subject to out-of-fold recall of at least 0.90. independent validation excluded RF scores from its evidence rules and instead used 1,000 segment-wise circular-shuffle BLS searches per target, odd/even and secondary-eclipse tests following DR25-style diagnostics [3], limb-darkened `batman` fits [4], Gaia DR3 scene checks [5], TESS photometry, and an ExoFOP-derived TOI lookup [6,7].
+Confirmed-planet parameters came from the NASA Exoplanet Archive `pscomppars` table, and official false-positive labels came from the cumulative KOI table [1]. Kepler long-cadence light curves were obtained from MAST with Lightkurve [2]. After quality filtering, segment normalization, and Savitzky-Golay detrending, Box Least Squares (BLS) searched periods of 0.5–50 days and retained five distinct peaks per target. A 13-feature Random Forest (RF) ranked peaks using BLS and folded-light-curve diagnostics. Five-fold `StratifiedGroupKFold` evaluation grouped all signals by target to prevent cross-target leakage. The RF threshold of 0.221107 maximized precision subject to out-of-fold recall of at least 0.90. Independent validation excluded RF scores from its evidence rules and used 1,000 segment-wise circular-shuffle BLS searches per target, odd/even and secondary-eclipse tests following DR25-style diagnostics [3], limb-darkened `batman` fits [4], Gaia DR3 scene checks [5], TESS photometry, and an ExoFOP-derived TOI lookup [6,7].
 
 ## Results
 
@@ -37,8 +39,6 @@ The benchmark and bounded 250-target search are too small and selected to suppor
 This work was independently funded by Rasya Andrean and Urus Foundation. It made use of public services and data from the NASA Exoplanet Archive, MAST, Gaia, TESS, and ExoFOP.
 
 ## Data and Software Availability
-
-Repository: https://github.com/Science-Experimental-Technologies/Exoplanet-Search
 
 Repository: `https://github.com/Science-Experimental-Technologies/Exoplanet-Search`; archived public research release: `v1.0.0`. Current revisions use the SXS Source-Available Commercial License 1.0; the archived `v1.0.0` copy retains its original license. Versioned configuration, catalog snapshots, metrics, shortlisted-candidate products, independent-vetting tables, and manuscript sources are included. Raw mission products remain available from their source archives.
 

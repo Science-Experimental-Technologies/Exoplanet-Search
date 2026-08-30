@@ -14,7 +14,9 @@ The scale-up qualification RF score is retained only as provenance and is not in
 
 ### Empirical BLS FAP
 
-For every candidate, 1,000 null realizations were evaluated over the same 0.5–50 day period grid and duration grid as candidate screening. Each Kepler source-file segment was circularly shifted by an independent random offset, preserving cadence sampling and within-segment correlated structure while breaking a common ephemeris. The test statistic is the maximum BLS power over the full grid, so it includes the period-search look-elsewhere effect. We use the add-one estimator `(exceedances + 1)/(N + 1)`; resolution is 0.000999.
+For each of 14 unique targets, 1,000 null realizations were evaluated over the same 0.5–50 day period grid and duration grid as candidate screening. Each Kepler source-file segment was circularly shifted by an independent random offset, preserving cadence sampling and within-segment correlated structure while breaking a common ephemeris. The test statistic is the maximum BLS power over the full grid, so it includes the period-search look-elsewhere effect. We use the add-one estimator `(exceedances + 1)/(N + 1)`; resolution is 0.000999.
+
+The same target-level distribution is reused for its shortlisted signals, producing 20,000 candidate-level rows from 14,000 target-level null realizations. These rows are not independent draws across candidates sharing a target.
 
 ### Formal light-curve tests
 
@@ -32,7 +34,7 @@ The score is an audit aid, not a probability: FAP pass/borderline/fail = +3/+1/-
 
 ## Candidate results
 
-| P9 rank | Candidate | P (d) | FAP | Odd/even p | Secondary sig. | Shape | Rp (R_earth) | Gaia risk | TESS | ExoFOP | Score | Category |
+| Validation rank | Candidate | P (d) | FAP | Odd/even p | Secondary sig. | Shape | Rp (R_earth) | Gaia risk | TESS | ExoFOP | Score | Category |
 |---:|---|---:|---:|---:|---:|---|---:|:---:|:---:|---|---:|---|
 | 1 | 8300900-r1 | 5.090289 | 0.0200 | 0.778 | -0.39 | U_shaped | 2.34 | no | available | no_public_record | 6 | `weak_candidate` |
 | 2 | 8163439-r1 | 14.151354 | 0.0559 | 0.0937 | 1.29 | U_shaped | 4.91 | no | available | no_public_record | 2 | `likely_false_positive` |
@@ -48,7 +50,7 @@ The score is an audit aid, not a probability: FAP pass/borderline/fail = +3/+1/-
 | 12 | 8159207-r3 | 15.083637 | 0.9870 | 0.526 | 0.77 | U_shaped | 2.31 | no | available | no_public_record | 2 | `likely_false_positive` |
 | 13 | 8300900-r5 | 5.506531 | 0.9990 | 0.433 | -0.49 | U_shaped | 1.66 | no | available | no_public_record | 2 | `likely_false_positive` |
 | 14 | 9650424-r5 | 3.053610 | 1.0000 | 0.658 | -1.10 | U_shaped | 9.23 | no | available | no_public_record | 2 | `likely_false_positive` |
-| 15 | 6268872-r5 | 24.246530 | 0.9960 | 0.255 | -0.13 | V_or_grazing | 6.71 | no | confirmed | no_public_record | 0 | `likely_false_positive` |
+| 15 | 6268872-r5 | 24.246530 | 0.9960 | 0.255 | -0.13 | V_or_grazing | 6.71 | no | period_support | no_public_record | 0 | `likely_false_positive` |
 | 16 | 10124049-r2 | 15.285027 | 0.8621 | 0.654 | 0.58 | unavailable | — | no | available | no_public_record | -1 | `likely_false_positive` |
 | 17 | 9767793-r3 | 10.283070 | 0.6034 | 0.419 | 3.05 | U_shaped | 1.14 | no | available | no_public_record | -2 | `likely_false_positive` |
 | 18 | 3655287-r1 | 18.478278 | 0.6983 | 0.552 | -0.44 | U_shaped | 1.73 | yes | available | no_public_record | -2 | `likely_false_positive` |

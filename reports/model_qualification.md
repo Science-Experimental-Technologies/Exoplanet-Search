@@ -2,9 +2,9 @@
 
 ## Acceptance result
 
-scale-up qualification uses **371 confirmed hosts / 434 planets** and **400 balanced official false-positive hosts**, versus 20 + 20 systems in v1. The candidate-level ML dataset contains 2227 rows (227 positive, 2000 negative) across 619 target groups.
+Scale-up qualification uses **371 confirmed hosts / 434 planets** and **400 balanced official false-positive hosts**, versus 20 + 20 systems in v1. The candidate-level ML dataset contains 2227 rows (227 positive, 2000 negative) across 619 target groups.
 
-The production model selected for candidate screening is **rf_v2** at threshold **0.221107**. candidate screening is not executed by this report.
+The production model selected for candidate screening is **rf_v2** at threshold **0.221107**. Candidate screening is not executed by this report.
 
 ## Selection and resource policy
 

@@ -1,6 +1,6 @@
 # Python API Reference
 
-The stable public interface is the CLI. The functions below are useful for
+The recommended public interface is the CLI. The functions below are useful for
 testing and research extensions, but module-level APIs may evolve between
 releases.
 

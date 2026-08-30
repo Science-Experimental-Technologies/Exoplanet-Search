@@ -16,6 +16,9 @@ https://github.com/Science-Experimental-Technologies/Exoplanet-Search
 GitHub's **Cite this repository** control reads `CITATION.cff` and can export
 common citation formats.
 
+The top-level CFF entry identifies the software release. The separately listed
+research report remains version 1.0.0; it does not replace the software citation.
+
 ## Required attribution
 
 > Built with SXS — SCIX Exoplanet Search, created by Rasya Andrean under
