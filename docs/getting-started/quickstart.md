@@ -12,7 +12,9 @@ recorded help output and a baseline dry-run preview with copyable transcripts.
 python -m src.cli --help
 ```
 
-SXS exposes four workflows: `baseline`, `scaleup`, `search`, and `validate`.
+SXS exposes the research workflows `baseline`, `scaleup`, `search`, and
+`validate`, plus `demo`, `analyze`, `report`, `inject`, and `evaluate` in the
+[analysis workbench](../guides/workbench.md).
 
 ## 2. Preview the baseline workflow
 

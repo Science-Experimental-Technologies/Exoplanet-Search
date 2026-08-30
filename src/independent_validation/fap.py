@@ -13,23 +13,35 @@ import pandas as pd
 from astropy.timeseries import BoxLeastSquares
 
 from src.detect.bls_search import build_period_grid
+from src.provenance import atomic_json, file_hash, fingerprint, runtime_identity
 
 
 def run_fap(shortlist: pd.DataFrame, config: dict[str, Any]) -> pd.DataFrame:
     """Return one row per candidate and null realization, including aggregate FAP."""
 
     settings = config["fap"]
+    if settings["shuffle_method"] != "independent_segment_circular_shift":
+        raise ValueError("Unsupported FAP shuffle_method")
+    roll_fraction = float(settings.get("minimum_roll_fraction", 0.05))
+    if not 0 < roll_fraction < 0.5 or int(settings["permutations_per_target"]) < 1:
+        raise ValueError("FAP requires permutations >= 1 and 0 < minimum_roll_fraction < 0.5")
+    runtime = runtime_identity()
     artifact = Path(config["artifacts"]["fap_results"])
     cache_dir = artifact.parent / "null_cache"
     cache_dir.mkdir(parents=True, exist_ok=True)
     targets = sorted(shortlist["target_id"].astype(str).unique())
-    tasks: list[tuple[str, str, dict[str, Any], int, int, str]] = []
+    tasks = []
+    caches = {}
     for target_id in targets:
-        cache = cache_dir / f"{target_id}.parquet"
-        if _valid_cache(cache, int(settings["permutations_per_target"]), settings["shuffle_method"]):
-            continue
         seed = _stable_seed(int(config["project"]["random_seed"]), target_id)
         source = Path(config["inputs"]["processed_light_curves"]) / f"{target_id}_clean.parquet"
+        key = fingerprint({"target": target_id, "source": file_hash(source), "bls": config["bls"],
+                           "seed": seed, "roll_fraction": roll_fraction, "runtime": runtime,
+                           "method": settings["shuffle_method"], "draws": int(settings["permutations_per_target"])})
+        cache = cache_dir / f"{key}.parquet"
+        caches[target_id] = cache
+        if _valid_cache(cache, int(settings["permutations_per_target"]), key):
+            continue
         tasks.append(
             (
                 target_id,
@@ -38,6 +50,8 @@ def run_fap(shortlist: pd.DataFrame, config: dict[str, Any]) -> pd.DataFrame:
                 int(settings["permutations_per_target"]),
                 seed,
                 str(cache),
+                roll_fraction,
+                key,
             )
         )
     if tasks:
@@ -50,7 +64,7 @@ def run_fap(shortlist: pd.DataFrame, config: dict[str, Any]) -> pd.DataFrame:
     n_permutations = int(settings["permutations_per_target"])
     for _, candidate in shortlist.iterrows():
         target_id = str(candidate["target_id"])
-        null = pd.read_parquet(cache_dir / f"{target_id}.parquet")
+        null = pd.read_parquet(caches[target_id])
         observed_power = float(candidate["power"])
         exceed = null["null_max_power"].to_numpy(dtype=float) >= observed_power
         count = int(exceed.sum())
@@ -71,8 +85,8 @@ def run_fap(shortlist: pd.DataFrame, config: dict[str, Any]) -> pd.DataFrame:
     return result
 
 
-def _target_null_worker(task: tuple[str, str, dict[str, Any], int, int, str]) -> str:
-    target_id, source, bls, permutations, seed, destination = task
+def _target_null_worker(task: tuple) -> str:
+    target_id, source, bls, permutations, seed, destination, roll_fraction, key = task
     frame = pd.read_parquet(source)
     observed = frame.loc[
         (~frame["is_interpolated"].astype(bool))
@@ -100,7 +114,7 @@ def _target_null_worker(task: tuple[str, str, dict[str, Any], int, int, str]) ->
         shuffled_error = error.copy()
         shifts = []
         for indices in segment_indices:
-            minimum = max(1, int(np.ceil(0.05 * len(indices))))
+            minimum = max(1, int(np.ceil(roll_fraction * len(indices))))
             maximum = max(minimum + 1, len(indices) - minimum)
             shift = int(rng.integers(minimum, maximum))
             shuffled_flux[indices] = np.roll(flux[indices], shift)
@@ -131,17 +145,22 @@ def _target_null_worker(task: tuple[str, str, dict[str, Any], int, int, str]) ->
     temporary = path.with_suffix(".parquet.tmp")
     output.to_parquet(temporary, index=False)
     temporary.replace(path)
+    atomic_json(path.with_suffix(".json"), {"fingerprint": key, "sha256": file_hash(path)})
     return target_id
 
 
-def _valid_cache(path: Path, expected_rows: int, method: str) -> bool:
-    if not path.is_file() or method != "independent_segment_circular_shift":
+def _valid_cache(path: Path, expected_rows: int, key: str) -> bool:
+    if not path.is_file():
         return False
     try:
-        cached = pd.read_parquet(path, columns=["iteration"])
-    except (OSError, ValueError):
+        metadata = json.loads(path.with_suffix(".json").read_text(encoding="utf-8"))
+        if metadata.get("fingerprint") != key or metadata.get("sha256") != file_hash(path):
+            return False
+        cached = pd.read_parquet(path, columns=["iteration", "null_max_power"])
+    except (OSError, ValueError, KeyError):
         return False
-    return len(cached) == expected_rows and cached["iteration"].nunique() == expected_rows
+    return (len(cached) == expected_rows and set(cached["iteration"]) == set(range(expected_rows))
+            and np.isfinite(cached["null_max_power"]).all())
 
 
 def _stable_seed(base: int, target_id: str) -> int:

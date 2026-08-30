@@ -15,6 +15,8 @@ from typing import Any, Callable, Mapping, Sequence
 
 import yaml
 
+from src.provenance import ResumeGuard
+
 LOGGER = logging.getLogger("sxs.pipeline")
 
 STAGE_NAMES = {
@@ -51,13 +53,18 @@ def run_pipeline(
         raise FileNotFoundError(f"Configuration does not exist: {config_file}")
     config = yaml.safe_load(config_file.read_text(encoding="utf-8"))
     _validate_config(config)
+    if resume and refresh_catalog:
+        raise ValueError("Catalog refresh changes inputs; use a new workspace without --resume")
+    guard = None if dry_run and not resume else ResumeGuard("baseline", config, resume)
     runners = dict(stage_runners or _default_stage_runners())
     missing_runners = sorted(set(range(from_stage, to_stage + 1)) - set(runners))
     if missing_runners:
         raise PipelineError(f"No runner configured for stages: {missing_runners}")
 
     if from_stage > 1 and not dry_run:
-        incomplete = [stage for stage in range(1, from_stage) if not stage_complete(stage, config)]
+        if not resume:
+            raise PipelineError("Starting after acquisition requires --resume with a compatible fingerprinted checkpoint")
+        incomplete = [stage for stage in range(1, from_stage) if not guard.allows(stage) or not stage_complete(stage, config)]
         if incomplete:
             names = ", ".join(f"{stage}:{STAGE_NAMES[stage]}" for stage in incomplete)
             raise PipelineError(f"Cannot start at stage {from_stage}; prerequisites incomplete: {names}")
@@ -82,15 +89,17 @@ def run_pipeline(
         name = STAGE_NAMES[stage]
         stage_record: dict[str, Any] = {"stage": stage, "name": name}
         if dry_run:
-            stage_record["status"] = "would_skip" if resume and stage_complete(stage, config) else "would_run"
+            stage_record["status"] = "would_skip" if resume and guard.allows(stage) and stage_complete(stage, config) else "would_run"
             record["stages"].append(stage_record)
             continue
-        if resume and stage > 0 and stage_complete(stage, config):
+        if resume and stage > 0 and guard.allows(stage) and stage_complete(stage, config):
             stage_record["status"] = "skipped_complete"
             record["stages"].append(stage_record)
             LOGGER.info("Stage %d (%s): skipped; required outputs exist", stage, name)
             continue
         LOGGER.info("Stage %d (%s): starting", stage, name)
+        if stage > 0:
+            guard.invalidate_from(stage, range(1, 6))
         stage_started = datetime.now(timezone.utc)
         clock = time.perf_counter()
         try:
@@ -109,6 +118,7 @@ def run_pipeline(
             record["status"] = "failed"
             record["finished_at_utc"] = datetime.now(timezone.utc).isoformat()
             _write_run_record(record, config, log_path)
+            guard.save()
             raise PipelineError(f"Stage {stage} ({name}) failed: {exc}") from exc
         stage_record.update(
             {
@@ -119,6 +129,7 @@ def run_pipeline(
             }
         )
         record["stages"].append(stage_record)
+        guard.mark(stage)
         LOGGER.info("Stage %d (%s): completed in %.1f s", stage, name, stage_record["duration_seconds"])
 
     record["status"] = "dry_run" if dry_run else "completed"
@@ -126,6 +137,7 @@ def run_pipeline(
     if not dry_run:
         written = _write_run_record(record, config, log_path)
         record["run_log"] = _portable_path(written)
+        guard.save()
     return record
 
 

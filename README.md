@@ -40,7 +40,7 @@ SXS is a computational astronomy system for detecting and reviewing transit-like
 
 ## CLI preview
 
-![SXS command-line help: baseline, scaleup, search, and validate](docs/assets/cli/help.svg)
+![Exoplanet Search command-line help](docs/assets/cli/help.svg)
 
 Recorded CLI output, rendered as a terminal preview—not a graphical application.
 See the [preview gallery](https://science-experimental-technologies.github.io/Exoplanet-Search/getting-started/cli-preview/)
@@ -149,6 +149,27 @@ Choose the dependency profile appropriate to the task:
 
 ## Reproduction
 
+### Try an isolated offline example
+
+Current-branch features (not included in the published v1.1.0 bundles):
+
+```bash
+python -m src.cli demo --output runs/demo
+python -m src.cli analyze --input runs/demo/input.csv --time-system relative --output runs/analysis
+python -m src.cli inject --periods 3 --depths 0.005 --repeats 5 --output runs/injections
+python -m src.cli evaluate --demo --trees 20 --bootstrap 100 --output runs/evaluation
+```
+
+Open `runs/demo/report.html` for the offline analysis report. These synthetic
+examples do not constitute scientific discoveries or update archived metrics.
+The [workbench guide](docs/guides/workbench.md) covers FITS/KIC input, model
+compatibility, HTML reports, injection recovery, and nested grouped evaluation.
+Output folders must be new. Legacy workflows accept `--workspace DIR` for
+separate configs and outputs; their `--resume` now requires content-verified
+checkpoints rather than archived reports alone.
+
+### Reproduce the research workflow
+
 The unified interface names workflows by scientific responsibility:
 
 ```powershell
@@ -210,6 +231,7 @@ Project-authored evidence is tracked in these records:
 - [Independent validation](reports/independent_validation.md)
 - [RNAAS-length manuscript draft](reports/rnaas_draft.md)
 - [Documentation and consistency audit](reports/documentation_audit.md)
+- [Workbench implementation and verification](reports/workbench_verification.md)
 - [Archived research preprint v1.0.0](output/pdf/sxs_preprint_v1.0.0.pdf) — see [publication status and corrections](docs/project/publication.md) before reuse
 
 <details>

@@ -27,8 +27,9 @@ def _temporary_config(tmp_path: Path) -> Path:
     return destination
 
 
-def test_pipeline_runs_selected_stages_in_order(tmp_path: Path) -> None:
+def test_pipeline_runs_selected_stages_in_order(tmp_path: Path, monkeypatch) -> None:
     config = _temporary_config(tmp_path)
+    monkeypatch.chdir(tmp_path)
     called: list[int] = []
 
     def runner(stage: int):
@@ -74,8 +75,9 @@ def test_pipeline_dry_run_has_no_side_effects(tmp_path: Path) -> None:
     assert not (tmp_path / "reports").exists()
 
 
-def test_pipeline_records_failure_before_raising(tmp_path: Path) -> None:
+def test_pipeline_records_failure_before_raising(tmp_path: Path, monkeypatch) -> None:
     config = _temporary_config(tmp_path)
+    monkeypatch.chdir(tmp_path)
     log = tmp_path / "failed.json"
 
     def fail(config_path: Path, refresh: bool) -> dict[str, object]:
@@ -86,3 +88,19 @@ def test_pipeline_records_failure_before_raising(tmp_path: Path) -> None:
     payload = json.loads(log.read_text(encoding="utf-8"))
     assert payload["status"] == "failed"
     assert payload["stages"][0]["error_type"] == "RuntimeError"
+
+
+def test_pipeline_resume_checks_checkpoint_before_skipping(tmp_path, monkeypatch):
+    config = _temporary_config(tmp_path)
+    monkeypatch.chdir(tmp_path)
+    called = []
+    monkeypatch.setattr("src.pipeline.stage_complete", lambda stage, config: stage == 1)
+    def runner(path, refresh):
+        called.append(1)
+        return {}
+    run_pipeline(config, from_stage=1, to_stage=1, stage_runners={1: runner})
+    second = run_pipeline(config, from_stage=1, to_stage=1, resume=True, stage_runners={1: runner})
+    assert called == [1] and second["stages"][0]["status"] == "skipped_complete"
+    config.write_text(config.read_text() + "\nnew_setting: changed\n")
+    with pytest.raises(RuntimeError, match="changed"):
+        run_pipeline(config, from_stage=1, to_stage=1, resume=True, stage_runners={1: runner})

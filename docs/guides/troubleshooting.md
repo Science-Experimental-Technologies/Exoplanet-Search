@@ -28,14 +28,16 @@ errors merely because this warning also appears.
 
 - keep acquisition serial where the provided config sets `workers: 1`;
 - remove only the exact corrupt cached product after verifying its path;
-- rerun with the same config and `--resume`; and
+- use `--resume` only when its content checkpoint still matches; manual cache
+  changes invalidate it, so restart in a new workspace when required; and
 - preserve the manifest/error record for provenance.
 
 ## A resumed stage is rejected
 
-SXS checks required prerequisite artifacts. Confirm that the config points to
-the correct dataset and that required files are nonempty. Do not create dummy
-files to satisfy the contract.
+SXS checks a content fingerprint before its prerequisite artifacts. Config,
+runtime/source changes, changed files, and legacy/missing checkpoints are
+rejected. Do not create dummy checkpoint files. Start a new isolated workspace
+for changed inputs; see [Analysis Workbench](workbench.md).
 
 ## The production model binary is missing
 

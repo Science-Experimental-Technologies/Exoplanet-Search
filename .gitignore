@@ -84,3 +84,6 @@ models/*
 *.pt
 *.pth
 mlruns/
+# Local content-verified workflow checkpoints and isolated experiments
+.sxs-state/
+runs/

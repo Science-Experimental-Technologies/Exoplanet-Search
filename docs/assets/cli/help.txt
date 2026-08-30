@@ -7,5 +7,11 @@ Commands:
   scaleup   Build the scaled benchmark and qualify the production model
   search    Screen the deterministic unknown-target sample
   validate  Run independent statistical and astrophysical validation
+  demo      Run an offline synthetic transit example
+  analyze   Analyze a CSV/FITS light curve or a Kepler KIC
+  report    Rebuild a self-contained analysis HTML report
+  inject    Measure conditional transit injection recovery
+  evaluate  Run nested target-grouped RF evaluation
 
 Pass --help after a command to see workflow-specific options.
+Legacy workflows accept --workspace DIR for isolated configs and outputs.

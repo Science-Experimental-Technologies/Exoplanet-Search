@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="484" viewBox="0 0 1120 484" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="652" viewBox="0 0 1120 652" role="img" aria-labelledby="title desc">
 <title id="title">Command overview</title>
 <desc id="desc">python -m src.cli --help. Recorded CLI stdout. Styled terminal rendering; not an application window screenshot.</desc>
-<rect x="1" y="1" width="1118" height="482" rx="16" fill="#0b121b" stroke="#334254"/>
+<rect x="1" y="1" width="1118" height="650" rx="16" fill="#0b121b" stroke="#334254"/>
 <path d="M1 64H1119" stroke="#334254"/>
 <rect x="30" y="23" width="18" height="18" rx="3" fill="#68dacb"/>
 <text x="62" y="40" font-family="Arial, sans-serif" font-size="18" fill="#f3f7fa">SXS / Command overview</text>
@@ -17,8 +17,14 @@
 <text x="36" y="318" fill="#dce5ed" xml:space="preserve">  scaleup   Build the scaled benchmark and qualify the production model</text>
 <text x="36" y="346" fill="#dce5ed" xml:space="preserve">  search    Screen the deterministic unknown-target sample</text>
 <text x="36" y="374" fill="#dce5ed" xml:space="preserve">  validate  Run independent statistical and astrophysical validation</text>
-<text x="36" y="402" fill="#dce5ed" xml:space="preserve"></text>
-<text x="36" y="430" fill="#dce5ed" xml:space="preserve">Pass --help after a command to see workflow-specific options.</text>
+<text x="36" y="402" fill="#dce5ed" xml:space="preserve">  demo      Run an offline synthetic transit example</text>
+<text x="36" y="430" fill="#dce5ed" xml:space="preserve">  analyze   Analyze a CSV/FITS light curve or a Kepler KIC</text>
+<text x="36" y="458" fill="#dce5ed" xml:space="preserve">  report    Rebuild a self-contained analysis HTML report</text>
+<text x="36" y="486" fill="#dce5ed" xml:space="preserve">  inject    Measure conditional transit injection recovery</text>
+<text x="36" y="514" fill="#dce5ed" xml:space="preserve">  evaluate  Run nested target-grouped RF evaluation</text>
+<text x="36" y="542" fill="#dce5ed" xml:space="preserve"></text>
+<text x="36" y="570" fill="#dce5ed" xml:space="preserve">Pass --help after a command to see workflow-specific options.</text>
+<text x="36" y="598" fill="#dce5ed" xml:space="preserve">Legacy workflows accept --workspace DIR for isolated configs and outputs.</text>
 </g>
-<text x="36" y="460" font-family="Arial, sans-serif" font-size="13" fill="#99aabd">Recorded CLI stdout. Styled terminal rendering; not an application window screenshot.</text>
+<text x="36" y="628" font-family="Arial, sans-serif" font-size="13" fill="#99aabd">Recorded CLI stdout. Styled terminal rendering; not an application window screenshot.</text>
 </svg>

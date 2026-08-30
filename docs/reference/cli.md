@@ -12,8 +12,19 @@ python -m src.cli <command> [options]
 | `scaleup` | Build the scaled benchmark and qualify the production model |
 | `search` | Screen the deterministic unknown-target sample |
 | `validate` | Run independent statistical and astrophysical validation |
+| `demo` | Offline synthetic transit demonstration |
+| `analyze` | CSV/FITS or single-KIC analysis |
+| `report` | Rebuild an offline HTML analysis report |
+| `inject` | Conditional flux-level injection recovery |
+| `evaluate` | Nested target-grouped RF evaluation and bootstrap intervals |
 
 Passing `--help` after a command prints its current parser reference.
+
+See [Analysis Workbench](../guides/workbench.md) for the five new commands.
+They write new output directories and are unreleased current-branch features.
+The top-level dispatcher also accepts `--workspace DIR` after a legacy command
+to isolate its configuration and relative outputs. Workspace errors and uncaught
+workbench errors exit nonzero; there is not yet a universal error-code schema.
 
 ## `baseline`
 
@@ -34,7 +45,7 @@ python -m src.cli baseline
 | `--config` | `configs/base.yaml` | YAML configuration |
 | `--from-stage` | `0` | First baseline stage to execute |
 | `--to-stage` | `5` | Final baseline stage to execute |
-| `--resume` | off | Skip completed stages with accepted minimum artifacts |
+| `--resume` | off | Require matching content checkpoint before skipping recorded completed stages |
 | `--refresh-catalog` | off | Refresh official catalog snapshots before use |
 | `--dry-run` | off | Emit the execution plan without running stages |
 | `--log-path` | generated path | Override detailed run-record destination; the latest run record is still updated |

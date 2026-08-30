@@ -52,7 +52,10 @@ The live MAST test is separate because it depends on external state.
 
 A fresh Git clone includes archived reports and compact tables, but not fitted
 models, raw light curves, or folded training tensors. Existence-based resume
-checks can skip archived stages even when those untracked inputs are missing.
+checks in older releases could skip archived stages when those inputs were missing.
+Current-branch resume requires matching content fingerprints and recorded steps;
+it rejects legacy checkpoints. Use `--workspace DIR` to isolate a new run as
+described in the [workbench guide](../guides/workbench.md).
 For a new computation, use a separate checkout and run `baseline`, `scaleup`,
 and `search` without `--resume` initially. Full baseline execution creates the
 benchmark required by scaled training in an empty container workspace. Reserve

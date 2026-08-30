@@ -111,6 +111,7 @@ nav:
       - Algorithms: concepts/algorithms.md
       - Data Pipeline: concepts/data-pipeline.md
   - Guides:
+      - Analysis Workbench: guides/workbench.md
       - Basic Usage: guides/basic-usage.md
       - Advanced Usage: guides/advanced-usage.md
       - Interpreting Results: guides/interpreting-results.md

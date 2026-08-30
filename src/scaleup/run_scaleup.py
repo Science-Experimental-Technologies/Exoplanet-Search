@@ -13,6 +13,7 @@ from typing import Any, Callable, Sequence
 import yaml
 
 from src.config import artifact_path
+from src.provenance import ResumeGuard
 
 LOGGER = logging.getLogger("sxs.scaleup.pipeline")
 
@@ -24,6 +25,7 @@ def run_scaleup(
 ) -> dict[str, Any]:
     config_file = Path(config_path)
     config = yaml.safe_load(config_file.read_text(encoding="utf-8"))
+    guard = ResumeGuard("scaleup", config, resume)
     steps: list[tuple[str, Callable[[], dict[str, Any]], Callable[[], bool]]] = [
         ("catalog_selection", lambda: _catalog(config_file), lambda: _catalog_complete(config)),
         ("prefetch", lambda: _prefetch(config_file), lambda: _prefetch_complete()),
@@ -41,13 +43,15 @@ def run_scaleup(
     }
     try:
         for name, runner, complete in steps:
-            if resume and complete():
+            if resume and guard.allows(name) and complete():
                 record["steps"].append({"name": name, "status": "skipped_complete"})
                 LOGGER.info("%s: skipped", name)
                 continue
             LOGGER.info("%s: starting", name)
+            guard.invalidate_from(name, [step[0] for step in steps])
             clock = time.perf_counter()
             summary = runner()
+            guard.mark(name)
             record["steps"].append(
                 {
                     "name": name,
@@ -69,6 +73,7 @@ def run_scaleup(
         Path("reports/scaleup_run_latest.json").write_text(
             json.dumps(record, indent=2) + "\n", encoding="utf-8"
         )
+        guard.save()
     return record
 
 

@@ -49,11 +49,10 @@ review population cannot be silently replaced.
 
 ## Resumption
 
-Baseline and scale-up workflows check minimum acceptance artifacts before
-skipping completed work. Candidate search also supports `--resume`. Resumption
-is a resource-control feature, not permission to mix incompatible artifacts.
-The configuration, model selection, and prerequisite files must still match the
-intended run.
+Baseline, scale-up, and candidate search require a fingerprinted checkpoint
+before `--resume` can skip recorded completed work. Configurations, code/runtime,
+and local artifacts must match. Legacy existence-only records are rejected.
+Use [isolated workspaces](../guides/workbench.md) for new experiments.
 
 Independent validation exposes explicit stages rather than a generic resume
 flag. Each stage consumes the prior accepted artifact set.

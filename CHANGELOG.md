@@ -6,6 +6,13 @@ All notable changes to this project are documented in this file. The format foll
 
 ### Added
 
+- Content-verified legacy-workflow resume, content-addressed FAP caches, and
+  isolated `--workspace` execution with explicit legacy-cache migration.
+- Offline `demo`, single-file/KIC `analyze`, and script-free HTML `report` commands.
+- Physical flux-level `inject` experiments with ephemeris recovery criteria and
+  uninjected controls; results remain separate from archived benchmarks.
+- Nested target-grouped RF `evaluate` command with inner-only model/threshold
+  selection, outer predictions, split audits, and target-bootstrap intervals.
 - Material for MkDocs documentation covering installation, scientific methods,
   research results, workflows, configuration, artifacts, and project governance.
 - Strict documentation builds on pull requests and GitHub Pages deployment from

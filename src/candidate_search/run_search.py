@@ -15,6 +15,7 @@ import yaml
 from src.candidate_search.pool_builder import build_unknown_pool
 from src.candidate_search.prefetch import prefetch
 from src.candidate_search.search import run_candidate_search
+from src.provenance import ResumeGuard
 
 LOGGER = logging.getLogger("sxs.candidate_search.pipeline")
 
@@ -24,6 +25,7 @@ def run_candidate_search_workflow(
 ) -> dict[str, Any]:
     config_file = Path(config_path)
     config = yaml.safe_load(config_file.read_text(encoding="utf-8"))
+    guard = ResumeGuard("search", config, resume)
     artifacts = config["candidate_search"]["artifacts"]
     record: dict[str, Any] = {
         "started_at_utc": datetime.now(timezone.utc).isoformat(),
@@ -32,20 +34,23 @@ def run_candidate_search_workflow(
         "steps": [],
     }
     try:
-        if resume and Path(artifacts["selection_summary"]).is_file():
+        if resume and guard.allows("unknown_pool") and Path(artifacts["selection_summary"]).is_file():
             record["steps"].append({"name": "unknown_pool", "status": "skipped_complete"})
         else:
+            guard.invalidate_from("unknown_pool", ["unknown_pool", "prefetch", "candidate_search"])
             record["steps"].append(
                 {"name": "unknown_pool", "status": "completed", "summary": build_unknown_pool(config_file)}
             )
+        guard.mark("unknown_pool")
         prefetch_path = Path("data/search/processed/prefetch_summary.json")
         prefetch_complete = False
         if prefetch_path.is_file():
             payload = json.loads(prefetch_path.read_text(encoding="utf-8"))
             prefetch_complete = payload.get("available_targets") == payload.get("configured_targets")
-        if resume and prefetch_complete:
+        if resume and guard.allows("prefetch") and prefetch_complete:
             record["steps"].append({"name": "prefetch", "status": "skipped_complete"})
         else:
+            guard.invalidate_from("prefetch", ["unknown_pool", "prefetch", "candidate_search"])
             result = prefetch(config_file)
             record["steps"].append(
                 {
@@ -54,13 +59,16 @@ def run_candidate_search_workflow(
                     "summary": {key: value for key, value in result.items() if key != "targets"},
                 }
             )
-        if resume and Path(artifacts["shortlist"]).is_file() and Path(artifacts["report"]).is_file():
+        guard.mark("prefetch")
+        if resume and guard.allows("candidate_search") and Path(artifacts["shortlist"]).is_file() and Path(artifacts["report"]).is_file():
             record["steps"].append({"name": "candidate_search", "status": "skipped_complete"})
         else:
+            guard.invalidate_from("candidate_search", ["unknown_pool", "prefetch", "candidate_search"])
             result = run_candidate_search(config_file)
             record["steps"].append(
                 {"name": "candidate_search", "status": "completed", "summary": result}
             )
+        guard.mark("candidate_search")
         record["acceptance"] = evaluate_acceptance(config)
         record["status"] = "completed" if record["acceptance"]["passed"] else "acceptance_failed"
     except Exception as exc:
@@ -73,6 +81,7 @@ def run_candidate_search_workflow(
         output = Path(artifacts["run_record"])
         output.parent.mkdir(parents=True, exist_ok=True)
         output.write_text(json.dumps(record, indent=2) + "\n", encoding="utf-8")
+        guard.save()
     return record
 
 

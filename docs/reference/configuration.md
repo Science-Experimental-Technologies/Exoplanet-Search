@@ -101,10 +101,11 @@ Paths to the frozen shortlist, eligible pool, and processed target light curves.
 ### `fap`
 
 The supplied config uses 1,000 permutations per target, eight workers, and
-independent segment circular shifts. The worker currently hard-codes the
-minimum roll fraction to 5%; editing `minimum_roll_fraction` in YAML alone does
-not change that implementation. A different null construction requires a
-reviewed code change and fresh null caches.
+independent segment circular shifts. `minimum_roll_fraction` is now honored
+and must be between 0 and 0.5. Unsupported shuffle methods are rejected.
+Content-addressed null caches include input data, settings, seed, and runtime
+fingerprints; legacy caches without matching metadata are not reused. See the
+[workbench guide](../guides/workbench.md) for migration and isolation.
 
 ### `vetting`
 
