@@ -123,6 +123,7 @@ nav:
       - Python API: reference/api.md
   - Project:
       - Reproducibility: project/reproducibility.md
+      - Independent User Testing: project/user-testing.md
       - Citation: project/citation.md
       - Publication Status: project/publication.md
       - Contributing: project/contributing.md

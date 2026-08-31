@@ -53,7 +53,8 @@
 - Public archive availability and schemas can change after the frozen record.
 - Full runs are storage-, network-, and compute-intensive.
 - Windows has the strongest complete-workstation validation; hosted CI covers
-  the deterministic core on Ubuntu rather than full TensorFlow/MLflow training.
+  the deterministic core and installed wheel on Ubuntu, Windows, and macOS
+  rather than full TensorFlow/MLflow training on every platform.
 
 These constraints are part of the result. They should remain visible in any
 publication, redistribution, competition entry, or downstream project using

@@ -33,6 +33,12 @@ def run_candidate_search_workflow(
         "config": str(config_file),
         "steps": [],
     }
+    def checkpoint():
+        from src.provenance import atomic_json
+        from src.execution import progress
+        atomic_json(Path(artifacts["run_record"]), record)
+        progress("search", len(record["steps"]), 3)
+        guard.save()
     try:
         if resume and guard.allows("unknown_pool") and Path(artifacts["selection_summary"]).is_file():
             record["steps"].append({"name": "unknown_pool", "status": "skipped_complete"})
@@ -42,6 +48,7 @@ def run_candidate_search_workflow(
                 {"name": "unknown_pool", "status": "completed", "summary": build_unknown_pool(config_file)}
             )
         guard.mark("unknown_pool")
+        checkpoint()
         prefetch_path = Path("data/search/processed/prefetch_summary.json")
         prefetch_complete = False
         if prefetch_path.is_file():
@@ -60,6 +67,7 @@ def run_candidate_search_workflow(
                 }
             )
         guard.mark("prefetch")
+        checkpoint()
         if resume and guard.allows("candidate_search") and Path(artifacts["shortlist"]).is_file() and Path(artifacts["report"]).is_file():
             record["steps"].append({"name": "candidate_search", "status": "skipped_complete"})
         else:
@@ -69,10 +77,11 @@ def run_candidate_search_workflow(
                 {"name": "candidate_search", "status": "completed", "summary": result}
             )
         guard.mark("candidate_search")
+        checkpoint()
         record["acceptance"] = evaluate_acceptance(config)
         record["status"] = "completed" if record["acceptance"]["passed"] else "acceptance_failed"
-    except Exception as exc:
-        record["status"] = "failed"
+    except (Exception, KeyboardInterrupt) as exc:
+        record["status"] = "interrupted" if isinstance(exc, KeyboardInterrupt) else "failed"
         record["error_type"] = type(exc).__name__
         record["error"] = str(exc)
         raise

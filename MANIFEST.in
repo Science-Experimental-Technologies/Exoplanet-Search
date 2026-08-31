@@ -1,0 +1,4 @@
+include requirements-core.txt
+include requirements.txt
+include NOTICE
+recursive-include configs *.yaml

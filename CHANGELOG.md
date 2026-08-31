@@ -4,8 +4,16 @@ All notable changes to this project are documented in this file. The format foll
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-08-31
+
 ### Added
 
+- Standalone wheel with packaged YAML defaults and clean-environment CLI checks.
+- Core CI on Ubuntu, Windows, and macOS with Python 3.11 and 3.12.
+- OS-backed workspace locks, CLI lifecycle records and documented exit codes.
+- Per-stage workflow checkpoints, partial injection/evaluation outputs, and
+  resumable FAP batches with verified random-generator state.
+- Expanded scientific runtime provenance and an independent-user testing protocol.
 - Content-verified legacy-workflow resume, content-addressed FAP caches, and
   isolated `--workspace` execution with explicit legacy-cache migration.
 - Offline `demo`, single-file/KIC `analyze`, and script-free HTML `report` commands.
@@ -77,6 +85,7 @@ All notable changes to this project are documented in this file. The format foll
 - The scale-up program expanded the labeled data, froze model selection, conducted the bounded candidate search, completed independent validation, and prepared publication artifacts.
 - Public version numbering begins with the `1.0.0` release.
 
-[Unreleased]: https://github.com/Science-Experimental-Technologies/Exoplanet-Search/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/Science-Experimental-Technologies/Exoplanet-Search/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/Science-Experimental-Technologies/Exoplanet-Search/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/Science-Experimental-Technologies/Exoplanet-Search/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/tag/v1.0.0

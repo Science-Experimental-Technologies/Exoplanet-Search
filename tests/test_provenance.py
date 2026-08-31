@@ -75,11 +75,44 @@ def test_fap_cache_reuse_and_seed_invalidation(tmp_path, monkeypatch):
                       "frequency_oversampling": 2, "duration_oversampling": 10, "objective": "snr", "method": "fast"}}
     shortlist = pd.DataFrame({"target_id": ["1"], "candidate_id": ["1-r1"], "power": [20.]})
     first = run_fap(shortlist, config)
-    cache = next((tmp_path / "null_cache").glob("*.parquet"))
+    cache = next(p for p in (tmp_path / "null_cache").glob("*.parquet") if ".partial." not in p.name)
     checksum = file_hash(cache)
     run_fap(shortlist, config)
-    assert len(list((tmp_path / "null_cache").glob("*.parquet"))) == 1
+    assert len([p for p in (tmp_path / "null_cache").glob("*.parquet") if ".partial." not in p.name]) == 1
     config["project"]["random_seed"] = 4
     run_fap(shortlist, config)
-    assert len(list((tmp_path / "null_cache").glob("*.parquet"))) == 2
+    assert len([p for p in (tmp_path / "null_cache").glob("*.parquet") if ".partial." not in p.name]) == 2
     assert file_hash(cache) == checksum and len(first) == 2
+
+
+def test_fap_partial_resume_preserves_random_sequence(tmp_path, monkeypatch):
+    import src.independent_validation.fap as module
+    from src.workbench import prepare, synthetic_curve
+    frame, _ = synthetic_curve()
+    processed, _ = prepare(frame)
+    source = tmp_path / "curve.parquet"
+    processed.to_parquet(source, index=False)
+    bls = {"minimum_period_days": .5, "maximum_period_days": 8,
+           "durations_hours": [2., 4.], "frequency_oversampling": 2,
+           "duration_oversampling": 10, "objective": "snr", "method": "fast"}
+    destination = tmp_path / "resumed.parquet"
+    task = ("1", str(source), bls, 27, 42, str(destination), .1, "test-key")
+    original = module.BoxLeastSquares
+    calls = 0
+
+    def interrupt(*args, **kwargs):
+        nonlocal calls
+        calls += 1
+        if calls == 26:
+            raise KeyboardInterrupt()
+        return original(*args, **kwargs)
+
+    monkeypatch.setattr(module, "BoxLeastSquares", interrupt)
+    with pytest.raises(KeyboardInterrupt):
+        module._target_null_worker(task)
+    assert len(pd.read_parquet(destination.with_suffix(".partial.parquet"))) == 25
+    monkeypatch.setattr(module, "BoxLeastSquares", original)
+    module._target_null_worker(task)
+    fresh = tmp_path / "fresh.parquet"
+    module._target_null_worker((*task[:5], str(fresh), *task[6:]))
+    pd.testing.assert_frame_equal(pd.read_parquet(destination), pd.read_parquet(fresh))

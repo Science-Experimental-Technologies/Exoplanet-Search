@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "scix-exoplanet-search"
-version = "1.1.0"
+version = "1.2.0"
 description = "Reproducible exoplanet transit recovery pipeline using public light curves"
 readme = "README.md"
 requires-python = ">=3.11,<3.13"

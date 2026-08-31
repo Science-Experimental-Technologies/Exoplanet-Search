@@ -53,7 +53,7 @@ The live MAST test is separate because it depends on external state.
 A fresh Git clone includes archived reports and compact tables, but not fitted
 models, raw light curves, or folded training tensors. Existence-based resume
 checks in older releases could skip archived stages when those inputs were missing.
-Current-branch resume requires matching content fingerprints and recorded steps;
+Since v1.2.0, resume requires matching content fingerprints and recorded steps;
 it rejects legacy checkpoints. Use `--workspace DIR` to isolate a new run as
 described in the [workbench guide](../guides/workbench.md).
 For a new computation, use a separate checkout and run `baseline`, `scaleup`,
@@ -78,3 +78,18 @@ The README, documentation site, RNAAS draft, and reports must agree on at least:
 - 250 searched targets and a 20-signal queue;
 - 0 strong, 1 weak, and 19 likely false positives; and
 - KIC 8300900-r1 FAP 0.01998.
+
+## Runtime identity and checkpoint migration
+
+Run provenance records Python, operating system, architecture, source hashes,
+and installed versions of NumPy, pandas, Astropy, SciPy, scikit-learn,
+Lightkurve, batman-package, TensorFlow/TensorFlow-CPU, MLflow, Astroquery,
+PyArrow, Matplotlib, joblib, and PyYAML. Missing optional packages are recorded
+as unavailable. This inventory does not promise bitwise equality across CPUs
+or replace preservation of original inputs and complete environment manifests.
+
+The expanded identity intentionally invalidates older resume and FAP cache
+fingerprints. Keep old results for audit and start a new isolated experiment;
+do not hand-edit checkpoint identities. See the
+[workbench guide](../guides/workbench.md#1-safe-cache-resume-and-workspaces)
+for locks, partial progress, and limitations after abrupt termination.

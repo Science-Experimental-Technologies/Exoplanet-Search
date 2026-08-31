@@ -1,0 +1,35 @@
+name: Independent user test
+description: Report an independent installation and offline workflow trial
+title: "[User test]: "
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Release or commit
+      placeholder: v1.2.0
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: OS, architecture, and Python version
+    validations:
+      required: true
+  - type: textarea
+    id: results
+    attributes:
+      label: Installation method and results
+      description: List each protocol step as passed, failed, or not attempted. Include time to first report.
+    validations:
+      required: true
+  - type: textarea
+    id: errors
+    attributes:
+      label: Error output or usability problems
+      description: Redact personal paths, credentials, and private data before attaching logs or screenshots.
+  - type: checkboxes
+    id: independence
+    attributes:
+      label: Testing context
+      options:
+        - label: I performed this trial independently, outside the project maintainer team and automated CI.

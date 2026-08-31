@@ -307,11 +307,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         level=logging.DEBUG if args.verbose else logging.INFO,
         format="%(asctime)s | %(levelname)s | %(name)s | %(message)s",
     )
-    try:
-        summary = run_independent_validation(args.config, args.stage)
-    except Exception:
-        LOGGER.exception("independent validation failed")
-        return 2
+    summary = run_independent_validation(args.config, args.stage)
     print(json.dumps(summary, indent=2))
     return 0
 

@@ -21,10 +21,30 @@ python -m src.cli <command> [options]
 Passing `--help` after a command prints its current parser reference.
 
 See [Analysis Workbench](../guides/workbench.md) for the five new commands.
-They write new output directories and are unreleased current-branch features.
+They write new output directories and are included in v1.2.0.
 The top-level dispatcher also accepts `--workspace DIR` after a legacy command
-to isolate its configuration and relative outputs. Workspace errors and uncaught
-workbench errors exit nonzero; there is not yet a universal error-code schema.
+to isolate its configuration and relative outputs.
+
+## Exit codes and status
+
+The unified `sxs` / `python -m src.cli` dispatcher uses:
+
+| Code | Meaning |
+|---|---|
+| 0 | Completed, help, or successful dry run |
+| 1 | Execution failure, including pipeline/runtime exceptions |
+| 2 | Argument error, missing file, invalid value, or missing configuration key |
+| 3 | Workflow completed without satisfying its acceptance checks |
+| 4 | Workspace locked by another process |
+| 130 | Handled keyboard interruption |
+
+Errors are summarized on stderr without an uncaught traceback. Once the output
+destination is known, `operation.json` (workbench) or
+`.sxs-state/operation_latest.json` (legacy workflows/report rebuilds) records
+status, timestamps, progress where available, exit code, and error text.
+Detailed workflow records remain available. Wrapped pipeline errors use code 1
+even if their underlying cause was an invalid value. A hard process kill or
+failure to write to disk cannot guarantee a final status record.
 
 ## `baseline`
 
@@ -51,8 +71,7 @@ python -m src.cli baseline
 | `--log-path` | generated path | Override detailed run-record destination; the latest run record is still updated |
 | `--verbose` | off | Enable debug logging |
 
-Exit code `0` indicates success. Configuration, prerequisite, and pipeline
-errors return `2`.
+The shared exit-code contract above applies.
 
 ## `scaleup`
 
@@ -62,7 +81,7 @@ python -m src.cli scaleup [--config PATH] [--resume]
 
 `--config` defaults to `configs/scaleup.yaml`. `--resume` skips accepted work
 where the scale-up orchestrator supports it. A completed record returns `0`;
-an incomplete acceptance state returns `3`; an exception returns `2`.
+an incomplete acceptance state returns `3`; exceptions use the shared contract.
 
 ## `search`
 
@@ -74,8 +93,7 @@ python -m src.cli search [--config PATH] [--resume]
 frozen model selection and model binary. Completed status returns `0`; a
 non-completed record returns `3`.
 
-Uncaught search exceptions print a traceback and exit nonzero (normally `1`).
-There is no shared error-code contract across all four workflows.
+Search exceptions use the shared contract.
 
 ## `validate`
 
@@ -95,4 +113,4 @@ python -m src.cli validate
 | `all` | Complete sequence |
 
 The default config is `configs/independent_validation.yaml`; the default stage
-is `all`. A caught validation exception returns `2`.
+is `all`. Validation exceptions use the shared contract.

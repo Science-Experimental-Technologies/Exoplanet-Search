@@ -52,18 +52,14 @@ def _print_help() -> None:
     )
 
 
-def main(argv: Sequence[str] | None = None) -> int:
-    arguments = list(sys.argv[1:] if argv is None else argv)
-    if not arguments or arguments[0] in {"-h", "--help"}:
-        _print_help()
-        return 0
-
+def _dispatch(arguments, operation) -> int:
+    from src.execution import WorkspaceLock
     command_name = arguments.pop(0)
     command = _commands().get(command_name)
     if command is None:
-        print(f"Unknown command: {command_name}", file=sys.stderr)
-        _print_help()
-        return 2
+        raise ValueError(f"Unknown command: {command_name}")
+    if "--help" in arguments or "-h" in arguments:
+        return command(arguments)
     if "--workspace" in arguments:
         if command_name not in {"baseline", "scaleup", "search", "validate"}:
             raise ValueError("Use --output for workbench commands, --workspace for legacy workflows")
@@ -73,9 +69,57 @@ def main(argv: Sequence[str] | None = None) -> int:
         destination = Path(arguments[index + 1])
         del arguments[index:index + 2]
         from src.provenance import isolated_workspace
-        with isolated_workspace(destination, Path(__file__).resolve().parent.parent / "configs"):
+        operation.contexts.enter_context(isolated_workspace(destination))
+        operation.register(Path.cwd(), legacy=True)
+        return command(arguments)
+    if command_name in {"baseline", "scaleup", "search", "validate"}:
+        if "--dry-run" in arguments:
             return command(arguments)
+        operation.contexts.enter_context(WorkspaceLock(Path.cwd()))
+        operation.register(Path.cwd(), legacy=True)
+        return command(arguments)
+    if command_name == "report":
+        from argparse import ArgumentParser
+        parser = ArgumentParser(add_help=False)
+        parser.add_argument("--run-dir", type=Path, required=True)
+        options, _ = parser.parse_known_args(arguments)
+        if not options.run_dir.is_dir():
+            raise FileNotFoundError(f"Run directory does not exist: {options.run_dir}")
+        operation.contexts.enter_context(WorkspaceLock(options.run_dir))
+        operation.register(options.run_dir, legacy=True)
+        return command(arguments)
     return command(arguments)
+
+
+def main(argv: Sequence[str] | None = None) -> int:
+    arguments = list(sys.argv[1:] if argv is None else argv)
+    if not arguments or arguments[0] in {"-h", "--help"}:
+        _print_help()
+        return 0
+
+    from src.execution import ACTIVE_OPERATION, Operation, WorkspaceBusy
+    operation = Operation(arguments[0])
+    token = ACTIVE_OPERATION.set(operation)
+    try:
+        code = _dispatch(arguments, operation)
+        operation.finish("completed" if code == 0 else "acceptance_failed" if code == 3 else "failed", code)
+        return code
+    except SystemExit as exc:
+        code = int(exc.code or 0)
+        operation.finish("completed" if code == 0 else "failed", code)
+        return code
+    except KeyboardInterrupt:
+        operation.finish("interrupted", 130, "Interrupted by user")
+        print("SXS interrupted. Completed checkpoints and partial outputs are retained.", file=sys.stderr)
+        return 130
+    except Exception as exc:
+        code = 4 if isinstance(exc, WorkspaceBusy) else 2 if isinstance(exc, (ValueError, FileNotFoundError, KeyError)) else 1
+        operation.finish("failed", code, str(exc))
+        print(f"SXS error [{code}]: {exc}", file=sys.stderr)
+        return code
+    finally:
+        operation.close()
+        ACTIVE_OPERATION.reset(token)
 
 
 if __name__ == "__main__":

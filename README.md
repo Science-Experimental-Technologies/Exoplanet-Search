@@ -95,17 +95,27 @@ flowchart LR
 
 ## Installation
 
-SXS supports Python 3.11 and 3.12. Windows received the complete workstation validation; CI verifies the deterministic core on Ubuntu.
+SXS supports Python 3.11 and 3.12. Windows received the full workstation research validation; the CI matrix tests the deterministic core and installed wheel on Ubuntu, Windows, and macOS.
 
 ### Platform downloads
 
 | Platform | Release bundle | Installation entry point |
 |---|---|---|
-| Windows | [Download `.zip`](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/download/v1.1.0/sxs-v1.1.0-windows-python.zip) | `PLATFORM_INSTALL.md` using PowerShell |
-| macOS | [Download `.tar.gz`](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/download/v1.1.0/sxs-v1.1.0-macos-python.tar.gz) | `PLATFORM_INSTALL.md` using Terminal |
-| Linux | [Download `.tar.gz`](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/download/v1.1.0/sxs-v1.1.0-linux-python.tar.gz) | `PLATFORM_INSTALL.md` using a POSIX shell |
+| Windows | [Download `.zip`](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/download/v1.2.0/sxs-v1.2.0-windows-python.zip) | `PLATFORM_INSTALL.md` using PowerShell |
+| macOS | [Download `.tar.gz`](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/download/v1.2.0/sxs-v1.2.0-macos-python.tar.gz) | `PLATFORM_INSTALL.md` using Terminal |
+| Linux | [Download `.tar.gz`](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/download/v1.2.0/sxs-v1.2.0-linux-python.tar.gz) | `PLATFORM_INSTALL.md` using a POSIX shell |
 
-All three bundles contain the same Python source and scientific record. Verify downloads against [`SHA256SUMS.txt`](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/download/v1.1.0/SHA256SUMS.txt).
+All three bundles contain the same Python source and scientific record. Verify downloads against [`SHA256SUMS.txt`](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/download/v1.2.0/SHA256SUMS.txt).
+
+For CLI use without a checkout, download the [standalone wheel](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/download/v1.2.0/scix_exoplanet_search-1.2.0-py3-none-any.whl), verify its checksum, and install it in a Python virtual environment:
+
+```bash
+python -m pip install scix_exoplanet_search-1.2.0-py3-none-any.whl
+sxs demo --output demo
+```
+
+Open `demo/report.html`. The wheel bundles default configurations, not observations
+or trained models. See the [installation guide](docs/getting-started/installation.md).
 
 ### Container package (GHCR)
 
@@ -151,7 +161,7 @@ Choose the dependency profile appropriate to the task:
 
 ### Try an isolated offline example
 
-Current-branch features (not included in the published v1.1.0 bundles):
+Analysis workbench commands included in v1.2.0:
 
 ```bash
 python -m src.cli demo --output runs/demo
@@ -266,7 +276,7 @@ If SXS materially supports your research or technical work, cite the release met
 
 ```text
 Andrean, R. (2026). SCIX Exoplanet Search (SXS): Reproducible Kepler
-Transit Recovery and Independent Vetting (Version 1.1.0).
+Transit Recovery and Independent Vetting (Version 1.2.0).
 Science Experimental Technologies.
 https://github.com/Science-Experimental-Technologies/Exoplanet-Search
 ```
@@ -284,6 +294,9 @@ For research collaboration, commercial licensing, or royalty administration, con
 ## Contributing
 
 Focused bug reports, reproducibility improvements, and scientifically justified pull requests are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) and the [Code of Conduct](CODE_OF_CONDUCT.md) before contributing. Contributions retain their repository-recorded credit but do not remove the original creator attribution or alter the project license.
+
+New users can follow the [independent testing protocol](docs/project/user-testing.md)
+and report installation or usability problems through the dedicated issue template.
 
 ## License and commercial use
 

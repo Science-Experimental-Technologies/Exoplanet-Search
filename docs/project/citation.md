@@ -8,7 +8,7 @@ the project license.
 
 ```text
 Andrean, R. (2026). SCIX Exoplanet Search (SXS): Reproducible Kepler
-Transit Recovery and Independent Vetting (Version 1.1.0).
+Transit Recovery and Independent Vetting (Version 1.2.0).
 Science Experimental Technologies.
 https://github.com/Science-Experimental-Technologies/Exoplanet-Search
 ```
@@ -45,9 +45,9 @@ candidate classifications.
 
 ## Version choice
 
-Cite the exact version or commit used. Release 1.1.0 contains the current
-source-available licensing, repository identity, and cross-platform packaging.
-This documentation site was added on the default branch after that release.
+Cite the exact version or commit used. Release 1.2.0 adds the analysis workbench,
+standalone wheel, execution safeguards, and expanded CI to the source-available
+software. The documentation website follows the default branch.
 The scientific preprint artifact remains version 1.0.0 because
 the research metrics did not change in the packaging/documentation release.
 

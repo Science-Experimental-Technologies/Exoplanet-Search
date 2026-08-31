@@ -60,16 +60,22 @@ def run_scaleup(
                     "summary": summary,
                 }
             )
+            Path("reports").mkdir(parents=True, exist_ok=True)
+            Path("reports/scaleup_run_latest.json").write_text(json.dumps(record, indent=2) + "\n", encoding="utf-8")
+            from src.execution import progress
+            progress("scaleup", len(record["steps"]), len(steps))
+            guard.save()
         acceptance = evaluate_acceptance(config)
         record["acceptance"] = acceptance
         record["status"] = "completed" if acceptance["passed"] else "acceptance_failed"
-    except Exception as exc:
-        record["status"] = "failed"
+    except (Exception, KeyboardInterrupt) as exc:
+        record["status"] = "interrupted" if isinstance(exc, KeyboardInterrupt) else "failed"
         record["error_type"] = type(exc).__name__
         record["error"] = str(exc)
         raise
     finally:
         record["finished_at_utc"] = datetime.now(timezone.utc).isoformat()
+        Path("reports").mkdir(parents=True, exist_ok=True)
         Path("reports/scaleup_run_latest.json").write_text(
             json.dumps(record, indent=2) + "\n", encoding="utf-8"
         )
@@ -209,11 +215,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     parser.add_argument("--resume", action="store_true")
     args = parser.parse_args(argv)
     logging.basicConfig(level=logging.INFO, format="%(asctime)s | %(levelname)s | %(name)s | %(message)s")
-    try:
-        record = run_scaleup(args.config, resume=args.resume)
-    except Exception as exc:
-        LOGGER.exception("scale-up qualification failed: %s", exc)
-        return 2
+    record = run_scaleup(args.config, resume=args.resume)
     print(json.dumps(record, indent=2))
     return 0 if record["status"] == "completed" else 3
 

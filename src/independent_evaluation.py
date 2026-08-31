@@ -110,6 +110,13 @@ def evaluate(frame: pd.DataFrame, output: Path, *, outer: int = 5, inner: int = 
         assignment[test], thresholds[test] = fold, selected["threshold"]
         folds.append({"fold": fold, "train_targets": sorted(set(groups[train])), "test_targets": sorted(set(groups[test])),
                       "inner_splits": audits, "choices": choices, "selected": selected, "metrics": metrics(y[test], predicted[test])})
+        partial = frame.loc[assignment >= 0, ["sample_id", "target_id", "label"]].copy()
+        partial["outer_fold"], partial["rf_score"] = assignment[assignment >= 0], probability[assignment >= 0]
+        partial["threshold"], partial["predicted"] = thresholds[assignment >= 0], predicted[assignment >= 0]
+        partial.to_csv(output / "outer_predictions.partial.csv", index=False)
+        atomic_json(output / "folds.partial.json", {"completed_folds": folds})
+        from src.execution import progress
+        progress("evaluation", fold + 1, outer)
     if (assignment < 0).any():
         raise RuntimeError("Missing outer-fold predictions")
     predictions = frame[["sample_id", "target_id", "label"]].copy()

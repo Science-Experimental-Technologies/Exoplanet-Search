@@ -47,9 +47,9 @@ download must be explicitly versioned and verified against its selection metadat
 
 ## Which platform should I use?
 
-Windows has the complete workstation validation. Ubuntu runs the deterministic
-core in CI. macOS has a supported Python bundle/instructions but is not claimed
-as separately validated for the full scientific workflow.
+Windows has the complete workstation research validation. The CI matrix checks
+the deterministic core and installed wheel on Ubuntu, Windows, and macOS.
+This is not full scientific reproduction or CNN validation on every platform.
 
 ## Is SXS open source?
 

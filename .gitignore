@@ -86,4 +86,5 @@ models/*
 mlruns/
 # Local content-verified workflow checkpoints and isolated experiments
 .sxs-state/
+.sxs-locks/
 runs/

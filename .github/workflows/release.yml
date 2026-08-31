@@ -32,13 +32,20 @@ jobs:
 
       - name: Verify tagged revision
         run: |
+          python scripts/check_release_metadata.py "${GITHUB_REF_NAME#v}"
           python -m pip check
           python -m pytest -m "not network"
+
+      - name: Build and test standalone wheel
+        run: |
+          python -m pip wheel --no-deps --wheel-dir dist/wheels .
+          python scripts/check_wheel.py dist/wheels
+          python scripts/check_installed_package.py dist/wheels
 
       - name: Build Windows, macOS, and Linux bundles
         env:
           RELEASE_VERSION: ${{ github.ref_name }}
-        run: python scripts/build_release_bundles.py --version "${RELEASE_VERSION#v}"
+        run: python scripts/build_release_bundles.py --version "${RELEASE_VERSION#v}" --extra-file dist/wheels/*.whl --extra-file output/pdf/sxs_preprint_v1.0.0.pdf
 
       - name: Publish GitHub Release
         uses: softprops/action-gh-release@v2
@@ -54,6 +61,8 @@ jobs:
             - **macOS:** `sxs-${{ github.ref_name }}-macos-python.tar.gz`
             - **Linux:** `sxs-${{ github.ref_name }}-linux-python.tar.gz`
 
+            The attached `scix_exoplanet_search-*.whl` installs with `python -m pip install <wheel-file>` in a clean Python environment. Then run `sxs demo`. Default workflow configurations are bundled. All five attached payloads are covered by `SHA256SUMS.txt`.
+
             Python 3.11 or 3.12 is required. SXS is scientific software, not a standalone graphical application. Candidate outputs are unconfirmed and require independent review.
 
             Current revisions use the SXS Source-Available Commercial License 1.0. Review `LICENSE`, `NOTICE`, and `COMMERCIAL_USE.md` before redistribution or commercial use.
@@ -62,5 +71,6 @@ jobs:
             dist/sxs-*-macos-python.tar.gz
             dist/sxs-*-linux-python.tar.gz
             dist/SHA256SUMS.txt
+            dist/wheels/*.whl
             output/pdf/sxs_preprint_v1.0.0.pdf
           fail_on_unmatched_files: true

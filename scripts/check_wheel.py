@@ -13,7 +13,8 @@ def check(wheel: Path) -> None:
         names = archive.namelist()
         if "cli.py" in names:
             raise ValueError("Wheel contains stale flattened modules; rebuild from a clean source tree")
-        for required in ("src/__init__.py", "src/cli.py", "src/pipeline.py"):
+        for required in ("src/__init__.py", "src/cli.py", "src/pipeline.py", "src/default_configs/base.yaml",
+                         "src/default_configs/scaleup.yaml", "src/default_configs/independent_validation.yaml"):
             if required not in names:
                 raise ValueError(f"Wheel missing runtime module: {required}")
         entry = next(name for name in names if name.endswith(".dist-info/entry_points.txt"))

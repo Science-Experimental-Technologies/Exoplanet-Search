@@ -7,9 +7,9 @@ import json
 from pathlib import Path
 import platform
 from importlib.metadata import version, PackageNotFoundError
+from importlib.resources import files
 from contextlib import contextmanager
 import os
-import shutil
 import math
 
 
@@ -24,13 +24,16 @@ def fingerprint(value: object) -> str:
 
 def runtime_identity() -> dict:
     packages = {}
-    for name in ("numpy", "pandas", "astropy", "scipy", "scikit-learn"):
+    for name in ("numpy", "pandas", "astropy", "scipy", "scikit-learn", "lightkurve",
+                 "batman-package", "tensorflow", "tensorflow-cpu", "mlflow", "astroquery",
+                 "pyarrow", "matplotlib", "joblib", "PyYAML"):
         try:
             packages[name] = version(name)
         except PackageNotFoundError:
             packages[name] = "unavailable"
     root = Path(__file__).parent
     return {"python": platform.python_version(), "packages": packages,
+            "platform": platform.platform(), "machine": platform.machine(),
             "source": {p.relative_to(root).as_posix(): file_hash(p) for p in sorted(root.rglob("*.py"))}}
 
 
@@ -113,10 +116,24 @@ class ResumeGuard:
                                "completed": sorted(self.completed)})
 
 
+def default_config_source():
+    checkout = Path(__file__).resolve().parent.parent / "configs"
+    return checkout if checkout.is_dir() else files("src").joinpath("default_configs")
+
+
 @contextmanager
-def isolated_workspace(destination: Path, config_source: Path):
+def isolated_workspace(destination: Path, config_source=None):
+    from src.execution import WorkspaceLock
+    with WorkspaceLock(destination):
+        with _isolated_workspace(destination, config_source) as workspace:
+            yield workspace
+
+
+@contextmanager
+def _isolated_workspace(destination: Path, config_source=None):
     """Create an explicit legacy-workflow sandbox; reuse only marked workspaces."""
     destination = destination.resolve()
+    config_source = default_config_source() if config_source is None else config_source
     marker = destination / ".sxs-workspace.json"
     if destination.exists():
         if not marker.is_file():
@@ -125,8 +142,11 @@ def isolated_workspace(destination: Path, config_source: Path):
         if not config_source.is_dir():
             raise ValueError("Workspace creation requires a checkout/configuration directory")
         destination.mkdir(parents=True)
-        shutil.copytree(config_source, destination / "configs")
-        atomic_json(marker, {"schema_version": 1, "source_configs": str(config_source.resolve()),
+        (destination / "configs").mkdir()
+        for config in config_source.iterdir():
+            if config.name.endswith(".yaml") and config.is_file():
+                (destination / "configs" / config.name).write_bytes(config.read_bytes())
+        atomic_json(marker, {"schema_version": 1, "source_configs": str(config_source),
                              "purpose": "isolated legacy workflow outputs"})
     previous = Path.cwd()
     try:

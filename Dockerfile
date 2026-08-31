@@ -26,8 +26,8 @@ WORKDIR /opt/sxs
 COPY --chown=sxs:sxs src/ ./src/
 COPY --chown=sxs:sxs configs/ ./configs/
 COPY --chown=sxs:sxs LICENSE NOTICE COMMERCIAL_USE.md DISCLAIMER.md README.md ./
-RUN mkdir -p data models reports \
-    && chown sxs:sxs /opt/sxs data models reports
+RUN mkdir -p data models reports /opt/.sxs-locks \
+    && chown sxs:sxs /opt/sxs data models reports /opt/.sxs-locks
 
 USER 10001:10001
 ENTRYPOINT ["python", "-m", "src.cli"]

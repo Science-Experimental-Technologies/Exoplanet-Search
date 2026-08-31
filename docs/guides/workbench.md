@@ -1,7 +1,7 @@
 # Isolated experiments and analysis workbench
 
-These commands are **unreleased current-branch features**, not additions to the
-published v1.1.0 bundles. Use a current checkout with `requirements-core.txt`.
+These commands are included in **v1.2.0**. Install the release wheel or use a
+current checkout with `requirements-core.txt`.
 They do not replace the archived research metrics or confirm planets.
 
 ## 1. Safe cache, resume, and workspaces
@@ -21,7 +21,8 @@ python -m src.cli validate --workspace runs/research-a
 ```
 
 The complete research sequence needs `requirements.txt` and public archive
-access. Workspace creation copies the checkout's `configs/` directory, not
+access. Workspace creation copies the checkout's `configs/` directory (or
+bundled defaults when installed from a wheel), not
 models, observations, or prior results. Later commands reuse those workspace
 configs, not updated checkout configs. Edit them deliberately for a new
 experiment. Relative `--config` and artifact paths resolve inside the workspace.
@@ -32,9 +33,13 @@ workspace/config copy, but does not execute scientific stages.
 The guard conservatively hashes `data/`, `models/`, `reports/`, configured path
 directories, and existing configured files. Hashing large downloads costs I/O.
 Changing another workflow's outputs can invalidate an earlier checkpoint;
-this is intentional fail-closed behavior. Do not run concurrent workflows in
-one workspace. Handled failures save completed-step state; an abrupt process
-kill may leave no compatible checkpoint. There is no unsafe force-resume flag.
+this is intentional fail-closed behavior. CLI operations acquire an OS-backed
+workspace lock; a second writer exits with code 4. Lock files persist under
+the workspace parent's `.sxs-locks/`, but OS locks release on process exit.
+Direct Python API callers must coordinate their own writes.
+Completed stages save checkpoints immediately, and handled failures save state.
+An abrupt kill during a stage may still invalidate a previous checkpoint.
+There is no unsafe force-resume flag.
 Starting the baseline after acquisition requires a compatible `--resume`.
 Combining `--refresh-catalog` with `--resume` is rejected; a refreshed catalog
 belongs in a new experiment.
@@ -46,6 +51,24 @@ coverage. Legacy caches remain on disk but are not silently reused. Only
 `independent_segment_circular_shift` is supported; the roll fraction must be
 between 0 and 0.5. New null runs do not overwrite the archived science unless
 you explicitly run the legacy workflow against its original output paths.
+
+FAP saves partial draws every 25 realizations and at completion, including the
+random-generator state. Only matching fingerprint/checksum/iteration records
+are resumed. Changing the runtime, source, or settings starts a new cache.
+
+### Progress and interruptions
+
+CLI workbench runs write `operation.json`; legacy workflows and report rebuilds
+write `.sxs-state/operation_latest.json`. Status is `running`, `completed`,
+`acceptance_failed`, `failed`, or `interrupted`. Ctrl+C returns 130 when handled.
+A hard kill cannot write a final status, so a stale `running` record does not
+prove a live process. Errors before a destination is established only reach stderr.
+See the [exit-code reference](../reference/cli.md#exit-codes-and-status).
+
+Injection trials and outer RF folds save `.partial.csv` / `.partial.json`
+artifacts after each completed unit. They support inspection after interruption,
+not automatic workbench resume. Restart these experiments in a new output folder;
+never treat partial output as a completed benchmark.
 
 ## 2. Offline demo
 

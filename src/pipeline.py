@@ -104,10 +104,10 @@ def run_pipeline(
         clock = time.perf_counter()
         try:
             summary = runners[stage](config_file, refresh_catalog)
-        except Exception as exc:
+        except (Exception, KeyboardInterrupt) as exc:
             stage_record.update(
                 {
-                    "status": "failed",
+                    "status": "interrupted" if isinstance(exc, KeyboardInterrupt) else "failed",
                     "started_at_utc": stage_started.isoformat(),
                     "duration_seconds": round(time.perf_counter() - clock, 3),
                     "error_type": type(exc).__name__,
@@ -115,10 +115,12 @@ def run_pipeline(
                 }
             )
             record["stages"].append(stage_record)
-            record["status"] = "failed"
+            record["status"] = "interrupted" if isinstance(exc, KeyboardInterrupt) else "failed"
             record["finished_at_utc"] = datetime.now(timezone.utc).isoformat()
             _write_run_record(record, config, log_path)
             guard.save()
+            if isinstance(exc, KeyboardInterrupt):
+                raise
             raise PipelineError(f"Stage {stage} ({name}) failed: {exc}") from exc
         stage_record.update(
             {
@@ -130,6 +132,10 @@ def run_pipeline(
         )
         record["stages"].append(stage_record)
         guard.mark(stage)
+        from src.execution import progress
+        progress("baseline", stage - from_stage + 1, to_stage - from_stage + 1)
+        _write_run_record(record, config, log_path)
+        guard.save()
         LOGGER.info("Stage %d (%s): completed in %.1f s", stage, name, stage_record["duration_seconds"])
 
     record["status"] = "dry_run" if dry_run else "completed"
@@ -337,19 +343,15 @@ def main(argv: Sequence[str] | None = None) -> int:
         level=logging.DEBUG if args.verbose else logging.INFO,
         format="%(asctime)s | %(levelname)s | %(name)s | %(message)s",
     )
-    try:
-        record = run_pipeline(
-            args.config,
-            from_stage=args.from_stage,
-            to_stage=args.to_stage,
-            resume=args.resume,
-            refresh_catalog=args.refresh_catalog,
-            dry_run=args.dry_run,
-            log_path=args.log_path,
-        )
-    except (ValueError, FileNotFoundError, PipelineError) as exc:
-        LOGGER.error("%s", exc)
-        return 2
+    record = run_pipeline(
+        args.config,
+        from_stage=args.from_stage,
+        to_stage=args.to_stage,
+        resume=args.resume,
+        refresh_catalog=args.refresh_catalog,
+        dry_run=args.dry_run,
+        log_path=args.log_path,
+    )
     print(json.dumps(record, indent=2))
     return 0
 

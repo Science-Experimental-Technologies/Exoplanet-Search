@@ -59,6 +59,8 @@ def run_fap(shortlist: pd.DataFrame, config: dict[str, Any]) -> pd.DataFrame:
             futures = {executor.submit(_target_null_worker, task): task[0] for task in tasks}
             for future in as_completed(futures):
                 future.result()
+                from src.execution import progress
+                progress("fap_targets", sum(item.done() for item in futures), len(futures))
 
     frames: list[pd.DataFrame] = []
     n_permutations = int(settings["permutations_per_target"])
@@ -108,8 +110,20 @@ def _target_null_worker(task: tuple) -> str:
     dy = error if np.all(np.isfinite(error) & (error > 0)) else None
     segment_indices = [np.flatnonzero(segments == value) for value in np.unique(segments)]
     rng = np.random.default_rng(seed)
+    partial_path = Path(destination).with_suffix(".partial.parquet")
+    partial_metadata = partial_path.with_suffix(".json")
     rows = []
-    for iteration in range(permutations):
+    try:
+        metadata = json.loads(partial_metadata.read_text(encoding="utf-8"))
+        partial = pd.read_parquet(partial_path)
+        if (metadata["fingerprint"] == key and metadata["sha256"] == file_hash(partial_path)
+                and len(partial) <= permutations and list(partial.iteration) == list(range(len(partial)))
+                and np.isfinite(partial.null_max_power).all()):
+            rng.bit_generator.state = metadata["rng_state"]
+            rows = partial.to_dict("records")
+    except (OSError, ValueError, KeyError, AttributeError):
+        pass  # Invalid partial checkpoints are never trusted.
+    for iteration in range(len(rows), permutations):
         shuffled_flux = flux.copy()
         shuffled_error = error.copy()
         shifts = []
@@ -140,6 +154,11 @@ def _target_null_worker(task: tuple) -> str:
                 "seed": seed,
             }
         )
+        if len(rows) % 25 == 0 or len(rows) == permutations:
+            partial_path.parent.mkdir(parents=True, exist_ok=True)
+            pd.DataFrame(rows).to_parquet(partial_path, index=False)
+            atomic_json(partial_metadata, {"fingerprint": key, "sha256": file_hash(partial_path),
+                                          "rng_state": rng.bit_generator.state})
     output = pd.DataFrame(rows)
     path = Path(destination)
     temporary = path.with_suffix(".parquet.tmp")

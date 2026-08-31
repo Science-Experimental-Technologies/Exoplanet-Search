@@ -72,6 +72,9 @@ def run_injections(frame: pd.DataFrame, output: Path, *, periods: list[float], d
                              "control_matches_same_ephemeris": recovered(control, period, epoch, minimum_snr),
                              "best_period_days": float(candidates.iloc[0].period_days),
                              "best_snr": float(candidates.iloc[0].snr)})
+                pd.DataFrame(rows).to_csv(output / "injection_trials.partial.csv", index=False)
+                from src.execution import progress
+                progress("injection", len(rows), len(periods) * len(depths) * repeats)
     trials = pd.DataFrame(rows)
     trials.to_csv(output / "injection_trials.csv", index=False)
     summary = trials.groupby(["period_days", "nominal_depth_rp_squared"], as_index=False).agg(

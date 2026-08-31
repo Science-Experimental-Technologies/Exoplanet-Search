@@ -10,13 +10,14 @@ see the [GHCR container guide](container.md).
 
 - Python 3.11 or 3.12
 - Git for a repository checkout, or one platform bundle from the
-  [v1.1.0 release](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/tag/v1.1.0)
+  [v1.2.0 release](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/tag/v1.2.0)
 - Enough disk space for the chosen public mission products
 - Network access for MAST and catalog acquisition
 
-Windows received the full workstation validation. The deterministic core is
-also checked on Ubuntu in CI. macOS uses the same Python environment but is not
-claimed as a separately validated scientific platform.
+Windows received the full workstation research validation. The CI matrix checks
+the deterministic core and installed wheel on Ubuntu, Windows, and macOS with
+Python 3.11 and 3.12. This does not imply that the full research/CNN workflow has
+been scientifically reproduced on all platforms. See the latest CI results.
 
 ## Choose a dependency profile
 
@@ -67,7 +68,7 @@ Use the complete environment for an end-to-end research reproduction.
 ## Install from a release bundle
 
 Download the archive for your platform, extract it, and open
-`PLATFORM_INSTALL.md` inside the extracted `sxs-1.1.0` directory. All platform
+`PLATFORM_INSTALL.md` inside the extracted `sxs-1.2.0` directory. All platform
 archives contain the same source and scientific record; only the installation
 guide differs.
 
@@ -76,13 +77,13 @@ Verify the archive checksum before use:
 === "Windows PowerShell"
 
     ```powershell
-    Get-FileHash .\sxs-v1.1.0-windows-python.zip -Algorithm SHA256
+    Get-FileHash .\sxs-v1.2.0-windows-python.zip -Algorithm SHA256
     ```
 
 === "macOS / Linux"
 
     ```bash
-    shasum -a 256 sxs-v1.1.0-*-python.*
+    shasum -a 256 sxs-v1.2.0-*-python.*
     ```
 
 Compare the result with `SHA256SUMS.txt` on the release page.
@@ -95,9 +96,8 @@ python -m pytest -m "not network"
 python -m src.cli baseline --config configs/base.yaml --dry-run
 ```
 
-For release 1.1.0, `python -m pytest` reports 36 passed and one network test
-skipped. The command above uses `-m "not network"` and deselects that network
-test instead. Warnings from optional Lightkurve components do not by
+The command above uses `-m "not network"` and deselects the opt-in network
+test. Test counts are revision-specific. Warnings from optional Lightkurve components do not by
 themselves indicate a failed SXS test.
 
 ## Optional network test
@@ -119,10 +119,20 @@ The MAST smoke test performs a real external query and is deliberately opt-in.
 
 Continue with the [quickstart](quickstart.md) after these checks pass.
 
-## Optional installed command
+## Standalone wheel and installed command
 
-From a source checkout, `python -m pip install .` installs the `sxs` command
-with the core dependency profile. Full model training still needs
-`requirements.txt`. Run scientific workflows from the checkout root: the
-wheel supplies Python modules, not configurations, catalogs, or trained models.
-The module interface `python -m src.cli` remains available from the checkout.
+The release wheel installs the `sxs` command and core dependencies without a
+source checkout. In a Python 3.11/3.12 virtual environment, download the wheel
+and checksum manifest from the release, verify its checksum, then run:
+
+```bash
+python -m pip install scix_exoplanet_search-1.2.0-py3-none-any.whl
+sxs demo --output demo
+sxs baseline --workspace research-a --dry-run
+```
+
+Open `demo/report.html`. YAML defaults are included and copied into the selected
+workspace. Observations, catalogs, and trained models are not bundled in the
+wheel. Full model training additionally requires `requirements.txt` from the
+matching source bundle. From a checkout, `python -m pip install .` provides the
+same installed command. No PyPI publication is implied.

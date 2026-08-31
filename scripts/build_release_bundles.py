@@ -21,7 +21,8 @@ Requirements: 64-bit Windows, Python 3.11 or 3.12, and PowerShell.
 py -3.11 -m venv .venv
 .\\.venv\\Scripts\\Activate.ps1
 python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
+python -m pip install .
+python -m src.cli demo
 python -m pytest -m \"not network\"
 ```
 """,
@@ -33,7 +34,8 @@ Requirements: macOS with Python 3.11 or 3.12 and a POSIX shell.
 python3.11 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
+python -m pip install .
+python -m src.cli demo
 python -m pytest -m \"not network\"
 ```
 """,
@@ -45,7 +47,8 @@ Requirements: a 64-bit Linux distribution with Python 3.11 or 3.12 and a POSIX s
 python3.11 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
+python -m pip install .
+python -m src.cli demo
 python -m pytest -m \"not network\"
 ```
 """,
@@ -97,6 +100,8 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--version", required=True)
     parser.add_argument("--output", type=Path, default=Path("dist"))
+    parser.add_argument("--extra-file", action="append", type=Path, default=[],
+                        help="Additional release asset to include in SHA256SUMS")
     args = parser.parse_args()
 
     repository = Path(__file__).resolve().parents[1]
@@ -124,7 +129,7 @@ def main() -> None:
 
     checksum_file = output / "SHA256SUMS.txt"
     checksum_file.write_text(
-        "".join(f"{sha256(path)}  {path.name}\n" for path in archives),
+        "".join(f"{sha256(path)}  {path.name}\n" for path in archives + args.extra_file),
         encoding="utf-8",
         newline="\n",
     )

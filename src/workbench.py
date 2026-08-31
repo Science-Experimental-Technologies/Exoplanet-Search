@@ -24,6 +24,8 @@ DEFAULT_SEARCH = dict(minimum_period_days=0.5, maximum_period_days=8.,
 def new_run(output: str | Path | None, kind: str) -> Path:
     path = Path(output) if output else Path("runs") / f"{kind}-{datetime.now(timezone.utc):%Y%m%dT%H%M%S}-{uuid.uuid4().hex[:8]}"
     path.mkdir(parents=True, exist_ok=False)
+    from src.execution import register_output
+    register_output(path)
     return path
 
 
