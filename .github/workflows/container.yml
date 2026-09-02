@@ -103,7 +103,7 @@ jobs:
 
       - name: Generate SPDX SBOM
         if: github.event_name != 'pull_request' && (github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/v'))
-        uses: anchore/sbom-action@v0.24.0
+        uses: anchore/sbom-action@v0.24.2
         with:
           image: ${{ steps.image.outputs.name }}:sha-${{ github.sha }}
           format: spdx-json
