@@ -48,7 +48,7 @@ CI and release results are available in
 The release workflow attaches three source bundles, the wheel, the unchanged
 archived PDF, and a checksum manifest covering all five payloads.
 
-## External acceptance still required
+## Initial external acceptance checkpoint
 
 At this audit checkpoint, anonymous GHCR token access returned **HTTP 401**.
 The available browser was signed out of GitHub; changing package visibility
@@ -62,6 +62,21 @@ python scripts/check_public_distribution.py --tag v1.2.0
 Independent user trials require people outside the maintainer team. The
 [protocol](../docs/project/user-testing.md) describes the evidence to collect.
 Preparing that protocol does not complete those trials.
+
+### GHCR access follow-up — 2026-08-31
+
+After owner sign-in, the package's Public option was found to be disabled by
+organization policy. With explicit owner approval, public package creation was
+enabled for the organization and `exoplanet-search` was changed to Public.
+No other package visibility was changed.
+
+Anonymous manifest requests now succeed for both `v1.2.0` and `main`. The
+release distribution checker exits successfully: all five release payload
+checksums and anonymous container manifest access pass. The `v1.2.0` manifest
+digest is `sha256:e02652de23549f4aaccb2f6d45c93435f08fb2b1083d8ca0c82a1e88f4b718c8`.
+This resolves the initial HTTP 401 access blocker; manifest access alone is
+not a full image-pull or local runtime test. Independent user trials remain
+outstanding and are not replaced by maintainer or CI checks.
 
 ## Operational boundaries
 

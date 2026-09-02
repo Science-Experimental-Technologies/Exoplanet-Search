@@ -37,8 +37,8 @@ do not count maintainer runs or CI jobs as independent user trials.
 
 ## Public container acceptance
 
-An owner must make the GHCR package public before anonymous users can pull it.
-Afterward, test from a client without saved registry credentials and record the
+The GHCR package was made public with owner approval on 2026-08-31.
+Test from a client without saved registry credentials and record the
 image digest and exact tag. A successful authenticated CI push alone does not
 establish public access. See the [container guide](../getting-started/container.md).
 

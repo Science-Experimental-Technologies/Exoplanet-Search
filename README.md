@@ -123,16 +123,16 @@ The Python application is packaged as a Linux/amd64 container, including the
 complete scientific dependencies. Windows and macOS require a Linux-container
 runtime; this is not a native executable for those platforms.
 
-At the 2026-08-30 audit checkpoint, anonymous registry access was still denied.
-Until a package owner enables public visibility, use an authorized registry
-login or the [local container build](docs/getting-started/container.md#build-locally).
+The [GHCR package](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/pkgs/container/exoplanet-search)
+is public. Anonymous manifest access for `v1.2.0` and `main` was verified on
+2026-08-31; no GitHub login is needed for public registry access.
 
 ```bash
-docker pull ghcr.io/science-experimental-technologies/exoplanet-search:main
-docker run --rm ghcr.io/science-experimental-technologies/exoplanet-search:main --help
+docker pull ghcr.io/science-experimental-technologies/exoplanet-search:v1.2.0
+docker run --rm ghcr.io/science-experimental-technologies/exoplanet-search:v1.2.0 --help
 ```
 
-`main` follows tested default-branch builds, not the historical `v1.1.0` release.
+`v1.2.0` is the numbered container release; `main` follows tested default-branch builds.
 See the [container guide](docs/getting-started/container.md) for persistent data,
 digest pinning, local builds, and initial package visibility setup. There are no
 npm, NuGet, Maven, or RubyGems packages: SXS currently has no SDK in those languages.

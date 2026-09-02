@@ -32,15 +32,20 @@ CPU environment, not a desktop application or a GPU-configured image.
 
 ## Pull and inspect
 
+The [GHCR package](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/pkgs/container/exoplanet-search)
+is public. Anonymous manifest access for `v1.2.0` and `main` was verified on
+2026-08-31. Public registry access does not require a GitHub account or token.
+
 ```bash
-docker pull ghcr.io/science-experimental-technologies/exoplanet-search:main
-docker run --rm ghcr.io/science-experimental-technologies/exoplanet-search:main --help
-docker run --rm ghcr.io/science-experimental-technologies/exoplanet-search:main baseline --dry-run
+docker pull ghcr.io/science-experimental-technologies/exoplanet-search:v1.2.0
+docker run --rm ghcr.io/science-experimental-technologies/exoplanet-search:v1.2.0 --help
+docker run --rm ghcr.io/science-experimental-technologies/exoplanet-search:v1.2.0 baseline --dry-run
 ```
 
 The `main` tag follows successful builds of the default branch. Each publication
-also has a `sha-<full-git-commit>` tag. Future `v*` tags containing the container
-workflow publish a matching version tag; the earlier `v1.1.0` source release
+also has a `sha-<full-git-commit>` tag. The `v1.2.0` container is available;
+future `v*` tags containing the workflow publish a matching version tag.
+The earlier `v1.1.0` source release
 is not retroactively assigned a container. There is no implicit `latest` tag.
 
 For an exact reproduction, record the image digest printed by `docker pull`
@@ -109,7 +114,14 @@ package's repository link and Actions access there as well. Repository access
 inheritance and package visibility are different settings. See GitHub's
 [Container registry documentation](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry).
 
-An unauthenticated `docker pull` must succeed before announcing public access.
+If Public is disabled by organization administrators, an organization owner
+must review **Organization settings → Packages → Package creation → Public**.
+Enabling that policy allows organization members to publish public packages;
+it does not automatically publish existing private packages. The organization
+policy and this package's public visibility were enabled with owner approval
+on 2026-08-31. Other packages' visibility was not changed.
+
+An unauthenticated `docker pull` must succeed before claiming a verified full pull.
 An authorization error can mean that first-time visibility setup is still
 pending; it does not necessarily indicate an invalid image tag. Do not paste
 tokens into Dockerfiles, issue reports, or configuration files.
