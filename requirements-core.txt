@@ -5,7 +5,7 @@ scipy==1.14.1
 pandas==2.2.3
 pyarrow==19.0.1
 astropy==7.0.1
-astroquery==0.4.10
+astroquery==0.4.11
 lightkurve==2.5.1
 batman-package==2.5.3
 scikit-learn==1.6.1
