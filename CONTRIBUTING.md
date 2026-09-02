@@ -15,7 +15,14 @@ python -m pip install -r requirements.txt
 
 On Linux or macOS, create the environment with `python3.11 -m venv .venv` and activate with `source .venv/bin/activate`. The non-network test suite runs with `requirements-core.txt`; full training and TensorFlow/MLflow checks require `requirements.txt`. Install `requirements-docs.txt` as well for documentation builds.
 
-The CI workflow installs `requirements-core.txt` and runs the non-network suite on Ubuntu with Python 3.11 and 3.12. A separate container workflow checks the full environment, imports TensorFlow/MLflow, and runs the non-network tests; it does not rerun the full research experiment. Contributors changing training or full-pipeline behavior must also run the relevant full-stack checks. Windows validation remains manual/local rather than a hosted CI claim.
+The CI workflow installs `requirements-core.txt` and runs the non-network suite
+and installed-wheel checks on Ubuntu, Windows, and macOS with Python 3.11 and
+3.12. A separate Linux-container workflow checks the full environment, imports
+TensorFlow/MLflow, and runs the non-network tests; it does not rerun the full
+research experiment. Contributors changing training or full-pipeline behavior
+must also run the relevant full-stack checks. The complete workstation research
+run was validated on Windows; hosted Windows CI covers the deterministic core,
+not the full research reproduction.
 
 ## Tests and style
 
