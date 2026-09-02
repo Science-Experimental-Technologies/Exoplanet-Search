@@ -23,7 +23,7 @@ and [COMMERCIAL_USE.md](https://github.com/Science-Experimental-Technologies/Exo
 
 The tagged `v1.0.0` was previously distributed under MIT. Rights validly
 received with that copy are not retroactively withdrawn. Current revisions and
-the `v1.1.0` release carry the current license.
+the `v1.1.0` and `v1.2.0` releases carry the current license.
 
 !!! warning "Obtain legal advice"
     The documentation summarizes project terms and is not legal advice. Review
@@ -43,6 +43,12 @@ and include:
 
 See the complete [security policy](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/blob/main/SECURITY.md)
 for the private reporting channel and public scientific-issue scope.
+
+Repository automation also performs CodeQL analysis, pull-request dependency
+review, weekly Dependabot checks, container SBOM generation, and GitHub artifact
+attestation. These controls reduce supply-chain risk but do not replace review
+of scientific assumptions, upstream advisories, or the
+[independent legal checklist](legal-review-checklist.md).
 
 ## Scientific integrity issues
 

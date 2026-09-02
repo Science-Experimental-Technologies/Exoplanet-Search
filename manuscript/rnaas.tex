@@ -1,0 +1,109 @@
+\documentclass[RNAAS]{aastex7}
+
+\begin{document}
+\title{SXS: A Reproducible Pipeline for Kepler Transit Recovery and Candidate Vetting}
+\author{Rasya Andrean}
+\affiliation{Science Experimental Technologies}
+\email{scix.official@gmail.com}
+
+\begin{abstract}
+SCIX Exoplanet Search (SXS) is a reproducible pipeline combining Box Least
+Squares (BLS) transit detection with machine-learning ranking and independent
+candidate vetting in public Kepler photometry. In the version 1 benchmark, BLS
+recovered 15 of 36 eligible confirmed planets in its five highest peaks, while
+the Random Forest (RF) retained 12 of 36 end to end (33.33\%) with a
+candidate-level false-positive rate (FPR) of 0.070. The scaled version 2 search
+recovered 227 of 434 eligible planets with BLS (52.30\%) and then examined a
+deterministic sample of 250 targets without cumulative-KOI or
+confirmed-Kepler-name history. Independent review of the resulting shortlist
+found no strong candidate, one weak candidate, and 19 likely false positives;
+SXS makes no planet-discovery claim.
+\end{abstract}
+
+\keywords{Exoplanet detection (489) --- Transit photometry (1709) ---
+Astronomy software (1855)}
+
+\section{Data and Methods}
+Confirmed-planet parameters came from the NASA Exoplanet Archive
+\texttt{pscomppars} table, and official false-positive labels came from the
+cumulative KOI table \citep{nasaarchive}. Kepler long-cadence light curves were obtained from MAST
+with Lightkurve \citep{lightkurve2018}. After quality filtering, segment
+normalization, and Savitzky--Golay detrending, BLS searched periods of
+0.5--50 days and retained five distinct peaks per target. A 13-feature RF
+ranked peaks using BLS and folded-light-curve diagnostics. Five-fold
+\texttt{StratifiedGroupKFold} evaluation grouped all signals by target. The RF
+threshold of 0.221107 maximized precision subject to out-of-fold recall of at
+least 0.90. Independent validation excluded RF scores from its evidence rules
+and used 1,000 segment-wise circular-shuffle BLS searches per target, odd/even
+and secondary-eclipse tests following DR25-style diagnostics
+\citep{thompson2018}, limb-darkened \texttt{batman} fits
+\citep{kreidberg2015}, Gaia DR3 scene checks \citep{gaiaarchive}, TESS
+photometry \citep{tessarchive}, and an ExoFOP-derived TOI lookup
+\citep{toidocs}.
+
+\section{Results}
+The original benchmark contained 36 planets inside the fixed search range.
+BLS recovered 15/36 (41.67\%); RF classification retained 12/15 recovered
+signals, giving end-to-end recovery of 12/36 (33.33\%). Candidate-level RF
+precision was 0.632, recall was 0.800, and FPR was 0.070. In the scaled
+benchmark, BLS recovered 227/434 planets (52.30\%). At the exploratory
+manual-review threshold, RF v2 achieved precision 0.412, recall 0.903, and FPR
+0.146 from target-grouped out-of-fold predictions. The FPR is derived from 292
+false passes among 2,000 negative peaks.
+
+\begin{deluxetable}{lcccc}
+\tablecaption{Pipeline performance and validation outcome\label{tab:results}}
+\tablehead{\colhead{Stage} & \colhead{Precision} & \colhead{Recall} &
+\colhead{FPR} & \colhead{Recovery or outcome}}
+\startdata
+v1 BLS proposal set & 0.130 & 1.000 & 1.000 & 15/36 (41.67\%) \\
+v1 RF, threshold 0.5 & 0.632 & 0.800 & 0.070 & 12/36 (33.33\%) \\
+v2 BLS proposal set & \nodata & \nodata & \nodata & 227/434 (52.30\%) \\
+v2 RF, threshold 0.221107 & 0.412 & 0.903 & 0.146 & 205 TP; 292 FP \\
+Independent vetting & \nodata & \nodata & \nodata & 0 strong; 1 weak; 19 likely FP
+\enddata
+\end{deluxetable}
+
+All 250 screening targets completed acquisition, preprocessing, and blind BLS
+search, producing 1,250 peaks. RF v2 flagged 151 peaks; 110 also passed the
+available preliminary odd/even, phase-0.5 secondary, and moment-centroid
+checks. The 20 highest-ranked signals, spanning 14 KIC targets, were frozen
+before independent validation.
+
+No shortlisted signal met the strong empirical-FAP threshold of 0.01. The sole
+weak signal, KIC 8300900-r1, has period 5.090289 days and empirical BLS FAP
+20/1,001 = 0.01998. It passed the configured odd/even, secondary, morphology,
+physical-size, and Gaia checks, but lacked TESS period support and is not a
+confirmed exoplanet. Nineteen signals were classified as likely false positives
+under prespecified key-failure rules. No position-matched public TOI record was
+found for the 14 targets, but catalog absence was assigned no positive
+evidential weight.
+
+SXS demonstrates the separation between ranking performance and independent
+evidence: an RF can prioritize transit-like morphology while most high-ranked
+signals fail a target-specific null test or another independent check. The
+result is a reproducible methodology and negative-result case study rather
+than a validation catalog.
+
+\section{Limitations and Availability}
+The benchmark and bounded 250-target search are too small and selected to
+support occurrence-rate inference. The RF threshold is an exploratory review
+threshold, not a calibrated planetary probability, and the empirical FAP is
+conditional on the shuffle scheme, detrending, sampling, and search grid rather
+than a VESPA-style Bayesian false-positive probability. Only four Kepler
+products per search target were analyzed, and no pixel-level analysis,
+spectroscopy, or new physical follow-up was performed.
+
+Software, configurations, catalog snapshots, metrics, and validation products
+are available at \url{https://github.com/Science-Experimental-Technologies/Exoplanet-Search}
+(software release v1.2.0). The archived research release is v1.0.0. A permanent
+archive DOI will be inserted here only after a Zenodo record is published.
+
+\acknowledgments
+This work was independently funded by Rasya Andrean and Urus Foundation. It
+made use of public services and data from the NASA Exoplanet Archive, MAST,
+Gaia, TESS, and ExoFOP.
+
+\bibliography{references}
+\bibliographystyle{aasjournal}
+\end{document}

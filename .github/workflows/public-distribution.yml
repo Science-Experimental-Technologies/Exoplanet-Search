@@ -1,0 +1,52 @@
+name: Public distribution
+
+"on":
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/public-distribution.yml"
+      - "scripts/check_public_distribution.py"
+  schedule:
+    - cron: "41 20 * * 1"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Published release and container tag to verify
+        required: true
+        default: v1.2.0
+        type: string
+
+permissions:
+  contents: read
+  packages: read
+
+jobs:
+  anonymous-pull:
+    name: Anonymous pull and runtime test
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      RELEASE_TAG: ${{ inputs.tag || 'v1.2.0' }}
+      IMAGE: ghcr.io/science-experimental-technologies/exoplanet-search
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Verify release assets and anonymous manifest access
+        run: python scripts/check_public_distribution.py --tag "$RELEASE_TAG"
+
+      - name: Pull without saved registry credentials
+        shell: bash
+        run: |
+          anonymous_config="$RUNNER_TEMP/anonymous-docker"
+          mkdir -p "$anonymous_config"
+          echo "DOCKER_CONFIG=$anonymous_config" >> "$GITHUB_ENV"
+          DOCKER_CONFIG="$anonymous_config" docker pull "$IMAGE:$RELEASE_TAG"
+
+      - name: Test the anonymously pulled image
+        shell: bash
+        run: |
+          docker image inspect "$IMAGE:$RELEASE_TAG" --format '{{json .RepoDigests}}'
+          docker run --rm "$IMAGE:$RELEASE_TAG" --help
+          docker run --rm "$IMAGE:$RELEASE_TAG" baseline --config configs/base.yaml --dry-run
+          docker run --rm --entrypoint python "$IMAGE:$RELEASE_TAG" -m pip check

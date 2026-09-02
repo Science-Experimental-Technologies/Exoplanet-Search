@@ -126,6 +126,23 @@ An authorization error can mean that first-time visibility setup is still
 pending; it does not necessarily indicate an invalid image tag. Do not paste
 tokens into Dockerfiles, issue reports, or configuration files.
 
+## Supply-chain evidence
+
+New `main` and numbered container builds generate an SPDX JSON software bill of
+materials and GitHub build-provenance and SBOM attestations after the tested
+image is pushed. Verify a published image against this repository with a recent
+GitHub CLI:
+
+```bash
+gh attestation verify \
+  oci://ghcr.io/science-experimental-technologies/exoplanet-search:main \
+  -R Science-Experimental-Technologies/Exoplanet-Search
+```
+
+Attestations apply only to images produced after the attestation workflow was
+added. They establish build provenance and package contents; they do not imply
+scientific validation or vulnerability-free software.
+
 ## Licensing and contact
 
 The SXS application remains under the SXS Source-Available Commercial License

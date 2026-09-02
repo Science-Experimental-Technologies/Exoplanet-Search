@@ -64,6 +64,13 @@ current journal instructions, and publication-license terms. The journal's
 article license and the software's custom commercial license are distinct;
 this audit does not accept a publishing agreement or change software rights.
 
+Editable AASTeX source, bibliography, an editorial-note draft, and a concrete
+submission checklist are in [`manuscript/`](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/tree/main/manuscript).
+The AAS account holder must personally verify the metadata and accept the
+publication agreement. A prepared package is not a submitted manuscript.
+
+For permanent software archiving, follow the [Zenodo DOI checklist](zenodo-doi.md).
+
 ## Future PDF generation
 
 Use `scripts/build_preprint_pdf.py` for a new working PDF. Its default output

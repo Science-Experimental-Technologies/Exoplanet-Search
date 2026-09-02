@@ -47,3 +47,10 @@ from a checkout. It verifies all published release checksums through anonymous
 downloads and separately checks anonymous GHCR manifest access. A successful
 manifest request is not a full image pull or runtime test; any failed component
 produces a nonzero exit status. The checker never changes package permissions.
+
+The `Public distribution` GitHub Actions workflow performs the stronger
+container check on a clean hosted runner. It uses a fresh Docker configuration,
+pulls the public release tag without registry login, then runs the CLI help,
+baseline dry-run, and dependency consistency checks. A green run proves public
+pull and runtime behavior for that tag; it is still maintainer automation, not
+an independent human usability trial.

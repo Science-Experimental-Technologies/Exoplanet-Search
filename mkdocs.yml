@@ -126,7 +126,9 @@ nav:
       - Independent User Testing: project/user-testing.md
       - Citation: project/citation.md
       - Publication Status: project/publication.md
+      - Zenodo Archive and DOI: project/zenodo-doi.md
       - Contributing: project/contributing.md
       - Documentation Maintenance: project/documentation.md
       - License and Security: project/license-security.md
+      - Legal Review Checklist: project/legal-review-checklist.md
   - FAQ: faq.md

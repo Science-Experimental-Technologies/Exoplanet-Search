@@ -12,6 +12,8 @@
 
 <p align="center">
   <a href="https://github.com/Science-Experimental-Technologies/Exoplanet-Search/actions/workflows/ci.yml"><img src="https://github.com/Science-Experimental-Technologies/Exoplanet-Search/actions/workflows/ci.yml/badge.svg" alt="Continuous integration"></a>
+  <a href="https://github.com/Science-Experimental-Technologies/Exoplanet-Search/actions/workflows/codeql.yml"><img src="https://github.com/Science-Experimental-Technologies/Exoplanet-Search/actions/workflows/codeql.yml/badge.svg" alt="CodeQL"></a>
+  <a href="https://github.com/Science-Experimental-Technologies/Exoplanet-Search/actions/workflows/public-distribution.yml"><img src="https://github.com/Science-Experimental-Technologies/Exoplanet-Search/actions/workflows/public-distribution.yml/badge.svg" alt="Public distribution test"></a>
   <a href="https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/latest"><img src="https://img.shields.io/github/v/release/Science-Experimental-Technologies/Exoplanet-Search?display_name=tag&label=release&color=16A3B6" alt="Latest release"></a>
   <a href="pyproject.toml"><img src="https://img.shields.io/badge/Python-3.11%20%7C%203.12-3776AB?logo=python&logoColor=white" alt="Python 3.11 and 3.12"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-SXS%20Source--Available-16A3B6" alt="SXS Source-Available Commercial License 1.0"></a>
@@ -240,6 +242,8 @@ Project-authored evidence is tracked in these records:
 - [Candidate screening](reports/candidate_screening.md)
 - [Independent validation](reports/independent_validation.md)
 - [RNAAS-length manuscript draft](reports/rnaas_draft.md)
+- [AASTeX RNAAS submission package](manuscript/README.md)
+- [Zenodo DOI publication checklist](docs/project/zenodo-doi.md)
 - [Documentation and consistency audit](reports/documentation_audit.md)
 - [Workbench implementation and verification](reports/workbench_verification.md)
 - [Archived research preprint v1.0.0](output/pdf/sxs_preprint_v1.0.0.pdf) — see [publication status and corrections](docs/project/publication.md) before reuse

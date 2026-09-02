@@ -7,6 +7,8 @@ name: Release
 
 permissions:
   contents: write
+  id-token: write
+  attestations: write
 
 jobs:
   publish:
@@ -46,6 +48,16 @@ jobs:
         env:
           RELEASE_VERSION: ${{ github.ref_name }}
         run: python scripts/build_release_bundles.py --version "${RELEASE_VERSION#v}" --extra-file dist/wheels/*.whl --extra-file output/pdf/sxs_preprint_v1.0.0.pdf
+
+      - name: Attest release payloads
+        uses: actions/attest@v4
+        with:
+          subject-path: dist/**
+
+      - name: Attest archived research PDF
+        uses: actions/attest@v4
+        with:
+          subject-path: output/pdf/sxs_preprint_v1.0.0.pdf
 
       - name: Publish GitHub Release
         uses: softprops/action-gh-release@v2
