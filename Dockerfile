@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM python:3.11-slim-bookworm
+FROM python:3.14-slim-bookworm
 
 LABEL org.opencontainers.image.title="SXS — SCIX Exoplanet Search" \
       org.opencontainers.image.description="Kepler transit recovery and independent candidate vetting. No confirmed discoveries." \
