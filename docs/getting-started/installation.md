@@ -10,7 +10,7 @@ see the [GHCR container guide](container.md).
 
 - Python 3.11 or 3.12
 - Git for a repository checkout, or one platform bundle from the
-  [v1.2.0 release](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/tag/v1.2.0)
+  [v1.3.0 release](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/tag/v1.3.0)
 - Enough disk space for the chosen public mission products
 - Network access for MAST and catalog acquisition
 
@@ -68,7 +68,7 @@ Use the complete environment for an end-to-end research reproduction.
 ## Install from a release bundle
 
 Download the archive for your platform, extract it, and open
-`PLATFORM_INSTALL.md` inside the extracted `sxs-1.2.0` directory. All platform
+`PLATFORM_INSTALL.md` inside the extracted `sxs-1.3.0` directory. All platform
 archives contain the same source and scientific record; only the installation
 guide differs.
 
@@ -77,13 +77,13 @@ Verify the archive checksum before use:
 === "Windows PowerShell"
 
     ```powershell
-    Get-FileHash .\sxs-v1.2.0-windows-python.zip -Algorithm SHA256
+    Get-FileHash .\sxs-v1.3.0-windows-python.zip -Algorithm SHA256
     ```
 
 === "macOS / Linux"
 
     ```bash
-    shasum -a 256 sxs-v1.2.0-*-python.*
+    shasum -a 256 sxs-v1.3.0-*-python.*
     ```
 
 Compare the result with `SHA256SUMS.txt` on the release page.
@@ -126,7 +126,7 @@ source checkout. In a Python 3.11/3.12 virtual environment, download the wheel
 and checksum manifest from the release, verify its checksum, then run:
 
 ```bash
-python -m pip install scix_exoplanet_search-1.2.0-py3-none-any.whl
+python -m pip install scix_exoplanet_search-1.3.0-py3-none-any.whl
 sxs demo --output demo
 sxs baseline --workspace research-a --dry-run
 ```

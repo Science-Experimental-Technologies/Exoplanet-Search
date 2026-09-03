@@ -23,7 +23,7 @@ and [COMMERCIAL_USE.md](https://github.com/Science-Experimental-Technologies/Exo
 
 The tagged `v1.0.0` was previously distributed under MIT. Rights validly
 received with that copy are not retroactively withdrawn. Current revisions and
-the `v1.1.0` and `v1.2.0` releases carry the current license.
+the `v1.1.0`, `v1.2.0`, and `v1.3.0` releases carry the current license.
 
 !!! warning "Obtain legal advice"
     The documentation summarizes project terms and is not legal advice. Review

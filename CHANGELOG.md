@@ -4,6 +4,28 @@ All notable changes to this project are documented in this file. The format foll
 
 ## [Unreleased]
 
+## [1.3.0] - 2026-09-03
+
+### Added
+
+- CodeQL analysis, pull-request dependency review, and weekly Dependabot checks
+  for Python, Docker, and GitHub Actions dependencies.
+- Anonymous GHCR pull and runtime verification on a clean hosted runner.
+- SPDX container SBOM generation plus GitHub build-provenance and SBOM
+  attestations for new container builds.
+- Artifact attestations for future GitHub release payloads.
+- AASTeX v7 RNAAS source, bibliography, editorial-note draft, submission
+  checklist, and explicit scientific-number consistency record.
+- Zenodo DOI integration guidance and an independent legal-review checklist.
+- Zenodo preservation integration for the organization repository.
+
+### Changed
+
+- Clarified the distinction between hosted cross-platform core CI and the
+  complete Windows workstation research validation.
+- Removed the stale local-only `v2.0.0` development tag; public software
+  versioning continues independently from the research labels “v1” and “v2.”
+
 ## [1.2.0] - 2026-08-31
 
 ### Added
@@ -85,7 +107,8 @@ All notable changes to this project are documented in this file. The format foll
 - The scale-up program expanded the labeled data, froze model selection, conducted the bounded candidate search, completed independent validation, and prepared publication artifacts.
 - Public version numbering begins with the `1.0.0` release.
 
-[Unreleased]: https://github.com/Science-Experimental-Technologies/Exoplanet-Search/compare/v1.2.0...HEAD
+[Unreleased]: https://github.com/Science-Experimental-Technologies/Exoplanet-Search/compare/v1.3.0...HEAD
+[1.3.0]: https://github.com/Science-Experimental-Technologies/Exoplanet-Search/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/Science-Experimental-Technologies/Exoplanet-Search/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/Science-Experimental-Technologies/Exoplanet-Search/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/tag/v1.0.0

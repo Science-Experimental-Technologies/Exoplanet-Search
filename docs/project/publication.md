@@ -18,9 +18,9 @@ submission, acceptance, or external scientific validation.
 | `output/pdf/sxs_preprint_v1.0.0.pdf` | Archived research PDF; not automatically synchronized with current Markdown |
 | `CITATION.cff` | Software release citation; research-report metadata is a separate reference |
 
-Public software releases `v1.0.0`, `v1.1.0`, and `v1.2.0` are not the same thing as the
+Public software releases `v1.0.0`, `v1.1.0`, `v1.2.0`, and `v1.3.0` are not the same thing as the
 research labels “v1” (baseline) and “v2” (scaled benchmark/search). The research
-PDF remains version 1.0.0; versions 1.1.0 and 1.2.0 are software releases. A
+PDF remains version 1.0.0; versions 1.1.0 through 1.3.0 are software releases. A
 `main` container tag is a moving build, not a new numbered release.
 
 ## Corrections to read with the archived PDF

@@ -8,7 +8,7 @@ the project license.
 
 ```text
 Andrean, R. (2026). SCIX Exoplanet Search (SXS): Reproducible Kepler
-Transit Recovery and Independent Vetting (Version 1.2.0).
+Transit Recovery and Independent Vetting (Version 1.3.0).
 Science Experimental Technologies.
 https://github.com/Science-Experimental-Technologies/Exoplanet-Search
 ```

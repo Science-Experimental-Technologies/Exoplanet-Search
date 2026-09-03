@@ -33,17 +33,18 @@ CPU environment, not a desktop application or a GPU-configured image.
 ## Pull and inspect
 
 The [GHCR package](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/pkgs/container/exoplanet-search)
-is public. Anonymous manifest access for `v1.2.0` and `main` was verified on
-2026-08-31. Public registry access does not require a GitHub account or token.
+is public. Anonymous pull and runtime verification for the numbered release is
+performed by the Public distribution workflow. Public registry access does not
+require a GitHub account or token.
 
 ```bash
-docker pull ghcr.io/science-experimental-technologies/exoplanet-search:v1.2.0
-docker run --rm ghcr.io/science-experimental-technologies/exoplanet-search:v1.2.0 --help
-docker run --rm ghcr.io/science-experimental-technologies/exoplanet-search:v1.2.0 baseline --dry-run
+docker pull ghcr.io/science-experimental-technologies/exoplanet-search:v1.3.0
+docker run --rm ghcr.io/science-experimental-technologies/exoplanet-search:v1.3.0 --help
+docker run --rm ghcr.io/science-experimental-technologies/exoplanet-search:v1.3.0 baseline --dry-run
 ```
 
 The `main` tag follows successful builds of the default branch. Each publication
-also has a `sha-<full-git-commit>` tag. The `v1.2.0` container is available;
+also has a `sha-<full-git-commit>` tag. The `v1.3.0` container is available;
 future `v*` tags containing the workflow publish a matching version tag.
 The earlier `v1.1.0` source release
 is not retroactively assigned a container. There is no implicit `latest` tag.

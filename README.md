@@ -103,16 +103,16 @@ SXS supports Python 3.11 and 3.12. Windows received the full workstation researc
 
 | Platform | Release bundle | Installation entry point |
 |---|---|---|
-| Windows | [Download `.zip`](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/download/v1.2.0/sxs-v1.2.0-windows-python.zip) | `PLATFORM_INSTALL.md` using PowerShell |
-| macOS | [Download `.tar.gz`](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/download/v1.2.0/sxs-v1.2.0-macos-python.tar.gz) | `PLATFORM_INSTALL.md` using Terminal |
-| Linux | [Download `.tar.gz`](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/download/v1.2.0/sxs-v1.2.0-linux-python.tar.gz) | `PLATFORM_INSTALL.md` using a POSIX shell |
+| Windows | [Download `.zip`](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/download/v1.3.0/sxs-v1.3.0-windows-python.zip) | `PLATFORM_INSTALL.md` using PowerShell |
+| macOS | [Download `.tar.gz`](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/download/v1.3.0/sxs-v1.3.0-macos-python.tar.gz) | `PLATFORM_INSTALL.md` using Terminal |
+| Linux | [Download `.tar.gz`](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/download/v1.3.0/sxs-v1.3.0-linux-python.tar.gz) | `PLATFORM_INSTALL.md` using a POSIX shell |
 
-All three bundles contain the same Python source and scientific record. Verify downloads against [`SHA256SUMS.txt`](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/download/v1.2.0/SHA256SUMS.txt).
+All three bundles contain the same Python source and scientific record. Verify downloads against [`SHA256SUMS.txt`](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/download/v1.3.0/SHA256SUMS.txt).
 
-For CLI use without a checkout, download the [standalone wheel](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/download/v1.2.0/scix_exoplanet_search-1.2.0-py3-none-any.whl), verify its checksum, and install it in a Python virtual environment:
+For CLI use without a checkout, download the [standalone wheel](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/download/v1.3.0/scix_exoplanet_search-1.3.0-py3-none-any.whl), verify its checksum, and install it in a Python virtual environment:
 
 ```bash
-python -m pip install scix_exoplanet_search-1.2.0-py3-none-any.whl
+python -m pip install scix_exoplanet_search-1.3.0-py3-none-any.whl
 sxs demo --output demo
 ```
 
@@ -126,15 +126,15 @@ complete scientific dependencies. Windows and macOS require a Linux-container
 runtime; this is not a native executable for those platforms.
 
 The [GHCR package](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/pkgs/container/exoplanet-search)
-is public. Anonymous manifest access for `v1.2.0` and `main` was verified on
-2026-08-31; no GitHub login is needed for public registry access.
+is public. Anonymous pull and runtime verification for the numbered release is
+performed by the Public distribution workflow; no GitHub login is needed.
 
 ```bash
-docker pull ghcr.io/science-experimental-technologies/exoplanet-search:v1.2.0
-docker run --rm ghcr.io/science-experimental-technologies/exoplanet-search:v1.2.0 --help
+docker pull ghcr.io/science-experimental-technologies/exoplanet-search:v1.3.0
+docker run --rm ghcr.io/science-experimental-technologies/exoplanet-search:v1.3.0 --help
 ```
 
-`v1.2.0` is the numbered container release; `main` follows tested default-branch builds.
+`v1.3.0` is the numbered container release; `main` follows tested default-branch builds.
 See the [container guide](docs/getting-started/container.md) for persistent data,
 digest pinning, local builds, and initial package visibility setup. There are no
 npm, NuGet, Maven, or RubyGems packages: SXS currently has no SDK in those languages.
@@ -280,7 +280,7 @@ If SXS materially supports your research or technical work, cite the release met
 
 ```text
 Andrean, R. (2026). SCIX Exoplanet Search (SXS): Reproducible Kepler
-Transit Recovery and Independent Vetting (Version 1.2.0).
+Transit Recovery and Independent Vetting (Version 1.3.0).
 Science Experimental Technologies.
 https://github.com/Science-Experimental-Technologies/Exoplanet-Search
 ```
