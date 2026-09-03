@@ -49,8 +49,9 @@ Counts after the 2026-08-30 editorial audit: **116 abstract words; 650 body word
 ## AASTeX package check
 
 `manuscript/rnaas.tex` was created from this checked Markdown draft on
-2026-09-02. Its abstract reproduces the same 116-word text; its single table
-reproduces every row above; and the prose retains the same values for the v1
+2026-09-02. Its abstract reproduces the same text counted as 116 words by the
+repository's Markdown checker; its single table reproduces every row above;
+and the prose retains the same values for the v1
 and v2 benchmarks, screening counts, shortlist, FAP threshold, weak signal,
 period, FAP, catalog result, and limitations. It adds no candidate or discovery
 claim. The bibliography contains only sources named in the manuscript.

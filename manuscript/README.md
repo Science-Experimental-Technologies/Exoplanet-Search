@@ -4,7 +4,8 @@ This directory contains the editable AASTeX source prepared from
 `reports/rnaas_draft.md`. It is a submission candidate, not evidence that the
 manuscript has been submitted, moderated, accepted, or published.
 
-- `rnaas.tex`: manuscript source with one table and a 116-word abstract.
+- `rnaas.tex`: manuscript source with one table and an abstract below the
+  150-word venue limit under the repository's conservative count.
 - `references.bib`: literature references cited by key in the source.
 - `cover-letter.md`: optional editorial note; paste only after author review.
 - `submission-checklist.md`: remaining account, metadata, and license steps.
