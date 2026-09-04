@@ -2,7 +2,7 @@
 setuptools==84.0.0
 numpy==1.26.4
 scipy==1.17.1
-pandas==2.2.3
+pandas==2.3.3
 pyarrow==19.0.1
 astropy==7.0.1
 astroquery==0.4.11
