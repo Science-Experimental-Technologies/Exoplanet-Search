@@ -13,7 +13,7 @@ name: Public distribution
       tag:
         description: Published release and container tag to verify
         required: true
-        default: v1.2.0
+        default: v1.3.0
         type: string
 
 permissions:
@@ -26,7 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     env:
-      RELEASE_TAG: ${{ inputs.tag || 'v1.2.0' }}
+      RELEASE_TAG: ${{ inputs.tag || 'v1.3.0' }}
       IMAGE: ghcr.io/science-experimental-technologies/exoplanet-search
     steps:
       - name: Check out repository

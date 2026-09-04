@@ -57,7 +57,7 @@ def container_check(tag):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--tag", default="v1.2.0")
+    parser.add_argument("--tag", default="v1.3.0")
     args = parser.parse_args()
     results = {"tag": args.tag}
     for name, check in (("release", release_check), ("container", container_check)):

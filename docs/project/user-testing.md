@@ -42,7 +42,7 @@ Test from a client without saved registry credentials and record the
 image digest and exact tag. A successful authenticated CI push alone does not
 establish public access. See the [container guide](../getting-started/container.md).
 
-Maintainers can run `python scripts/check_public_distribution.py --tag v1.2.0`
+Maintainers can run `python scripts/check_public_distribution.py --tag v1.3.0`
 from a checkout. It verifies all published release checksums through anonymous
 downloads and separately checks anonymous GHCR manifest access. A successful
 manifest request is not a full image pull or runtime test; any failed component
