@@ -127,6 +127,7 @@ nav:
       - Citation: project/citation.md
       - Publication Status: project/publication.md
       - Zenodo Archive and DOI: project/zenodo-doi.md
+      - PyPI Publication: project/pypi-publication.md
       - Contributing: project/contributing.md
       - Documentation Maintenance: project/documentation.md
       - License and Security: project/license-security.md

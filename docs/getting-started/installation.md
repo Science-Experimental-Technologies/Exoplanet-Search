@@ -135,4 +135,6 @@ Open `demo/report.html`. YAML defaults are included and copied into the selected
 workspace. Observations, catalogs, and trained models are not bundled in the
 wheel. Full model training additionally requires `requirements.txt` from the
 matching source bundle. From a checkout, `python -m pip install .` provides the
-same installed command. No PyPI publication is implied.
+same installed command. The approval-gated [PyPI publication procedure](../project/pypi-publication.md)
+is prepared, but use the GitHub release wheel until a public package page and
+anonymous installation have been verified.

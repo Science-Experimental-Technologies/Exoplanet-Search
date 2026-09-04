@@ -1,0 +1,125 @@
+name: Publish Python package
+
+"on":
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing immutable SXS release tag to publish
+        required: true
+        default: v1.3.0
+        type: string
+      target:
+        description: Package index destination
+        required: true
+        default: testpypi
+        type: choice
+        options:
+          - testpypi
+          - pypi
+      confirm_publish:
+        description: Confirm that this irreversible version upload is intended
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+
+concurrency:
+  group: python-package-${{ inputs.target }}-${{ inputs.tag }}
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    name: Verify published release wheel
+    if: inputs.confirm_publish
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Validate requested tag
+        shell: bash
+        env:
+          RELEASE_TAG: ${{ inputs.tag }}
+        run: |
+          if [[ ! "$RELEASE_TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "Tag must be an exact semantic version such as v1.3.0" >&2
+            exit 1
+          fi
+
+      - name: Check out the immutable tag
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ inputs.tag }}
+          persist-credentials: false
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.11"
+
+      - name: Download and verify the GitHub release wheel
+        shell: bash
+        env:
+          RELEASE_TAG: ${{ inputs.tag }}
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          version="${RELEASE_TAG#v}"
+          base="https://github.com/${REPOSITORY}/releases/download/${RELEASE_TAG}"
+          wheel="scix_exoplanet_search-${version}-py3-none-any.whl"
+          mkdir -p dist verification
+          curl --fail --location --output "dist/$wheel" "$base/$wheel"
+          curl --fail --location --output verification/SHA256SUMS.txt "$base/SHA256SUMS.txt"
+          grep "  $wheel$" verification/SHA256SUMS.txt > verification/WHEEL_SHA256.txt
+          (cd dist && sha256sum --check ../verification/WHEEL_SHA256.txt)
+          python scripts/check_release_metadata.py "$version"
+          python scripts/check_wheel.py dist
+
+      - name: Store verified distribution
+        uses: actions/upload-artifact@v7
+        with:
+          name: python-package-${{ inputs.tag }}
+          path: dist/*.whl
+          if-no-files-found: error
+          retention-days: 7
+
+  publish-testpypi:
+    name: Publish to TestPyPI
+    if: inputs.confirm_publish && inputs.target == 'testpypi'
+    needs: prepare
+    runs-on: ubuntu-latest
+    environment:
+      name: testpypi
+      url: https://test.pypi.org/p/scix-exoplanet-search
+    permissions:
+      id-token: write
+    steps:
+      - name: Download verified distribution
+        uses: actions/download-artifact@v8
+        with:
+          name: python-package-${{ inputs.tag }}
+          path: dist
+
+      - name: Publish distribution
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          repository-url: https://test.pypi.org/legacy/
+
+  publish-pypi:
+    name: Publish to PyPI
+    if: inputs.confirm_publish && inputs.target == 'pypi'
+    needs: prepare
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/p/scix-exoplanet-search
+    permissions:
+      id-token: write
+    steps:
+      - name: Download verified distribution
+        uses: actions/download-artifact@v8
+        with:
+          name: python-package-${{ inputs.tag }}
+          path: dist
+
+      - name: Publish distribution
+        uses: pypa/gh-action-pypi-publish@release/v1
