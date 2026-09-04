@@ -1,5 +1,5 @@
 # Core runtime and shared scientific stack. All direct dependencies are pinned.
-setuptools==75.8.2
+setuptools==84.0.0
 numpy==1.26.4
 scipy==1.14.1
 pandas==2.2.3
