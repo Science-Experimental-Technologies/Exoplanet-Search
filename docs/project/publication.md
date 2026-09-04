@@ -4,8 +4,9 @@
 
 The repository contains a complete research narrative and a condensed RNAAS
 draft. Neither a local PDF nor a successful software test certifies scientific
-peer review, journal acceptance, or submission readiness. No submission or DOI
-is recorded in the repository metadata.
+peer review, journal acceptance, or submission readiness. The v1.3.0 software
+is archived separately at [Zenodo](https://doi.org/10.5281/zenodo.22294859);
+that software DOI does not imply a journal submission or acceptance.
 
 The legacy `publication_ready` field in the validation run JSON means that the
 pipeline's artifact acceptance checks passed. It does not mean journal readiness,
@@ -69,7 +70,8 @@ submission checklist are in [`manuscript/`](https://github.com/Science-Experimen
 The AAS account holder must personally verify the metadata and accept the
 publication agreement. A prepared package is not a submitted manuscript.
 
-For permanent software archiving, follow the [Zenodo DOI checklist](zenodo-doi.md).
+Permanent software-archive evidence is recorded in the
+[Zenodo DOI record](zenodo-doi.md).
 
 ## Future PDF generation
 

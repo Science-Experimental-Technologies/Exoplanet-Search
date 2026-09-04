@@ -8,12 +8,17 @@ authors:
     affiliation: "Science Experimental Technologies"
 version: 1.3.0
 date-released: 2026-09-04
+doi: "10.5281/zenodo.22294859"
 license-url: "https://github.com/Science-Experimental-Technologies/Exoplanet-Search/blob/main/LICENSE"
 url: "https://science-experimental-technologies.github.io/Exoplanet-Search/"
 contact:
   - name: "Science Experimental Technologies"
     email: "scix.official@gmail.com"
 repository-code: "https://github.com/Science-Experimental-Technologies/Exoplanet-Search"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.22294859"
+    description: "Version DOI for the SXS v1.3.0 software archive"
 abstract: >-
   A reproducible computational astronomy pipeline for Kepler light-curve
   acquisition, preprocessing, Box Least Squares transit recovery,

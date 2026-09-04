@@ -6,7 +6,7 @@
 - [x] Numerical claims cross-checked against the archived reports.
 - [x] No discovery or confirmation claim.
 - [ ] Add the author's real ORCID only if one exists and is verified.
-- [ ] Publish the Zenodo record and insert its DOI in the availability statement.
+- [x] Publish the Zenodo record and insert its version DOI in the availability statement.
 - [ ] Run the AAS-recommended `texcount` command and retain its output.
 - [ ] Compile with the current AASTeX v7 distribution and inspect every page.
 - [ ] Confirm title, author spelling, affiliation, email, acknowledgments, and

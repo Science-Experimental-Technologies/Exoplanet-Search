@@ -40,7 +40,7 @@ This work was independently funded by Rasya Andrean and Urus Foundation. It made
 
 ## Data and Software Availability
 
-Repository: `https://github.com/Science-Experimental-Technologies/Exoplanet-Search`; archived public research release: `v1.0.0`. Current revisions use the SXS Source-Available Commercial License 1.0; the archived `v1.0.0` copy retains its original license. Versioned configuration, catalog snapshots, metrics, shortlisted-candidate products, independent-vetting tables, and manuscript sources are included. Raw mission products remain available from their source archives.
+Repository: `https://github.com/Science-Experimental-Technologies/Exoplanet-Search`; software release `v1.3.0`: `https://doi.org/10.5281/zenodo.22294859`; archived research artifact: `v1.0.0`. Current revisions use the SXS Source-Available Commercial License 1.0; the archived `v1.0.0` copy retains its original license. Versioned configuration, catalog snapshots, metrics, shortlisted-candidate products, independent-vetting tables, and manuscript sources are included. Raw mission products remain available from their source archives.
 
 ## References
 
