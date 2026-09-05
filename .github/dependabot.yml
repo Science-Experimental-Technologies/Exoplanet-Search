@@ -14,6 +14,12 @@ updates:
       - dependency-name: pandas
         update-types:
           - version-update:semver-major
+      - dependency-name: astropy
+        update-types:
+          - version-update:semver-major
+      - dependency-name: scikit-learn
+        update-types:
+          - version-update:semver-major
       - dependency-name: pyarrow
         update-types:
           - version-update:semver-major

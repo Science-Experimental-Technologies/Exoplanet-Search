@@ -21,6 +21,10 @@ project's reproducibility requirements.
 | 18 | pandas 2.2.3 → 2.3.3 | Accept | All six Python/OS matrix jobs passed |
 | 19 | `actions/deploy-pages` 4 → 5 | Accept | Documentation workflow passed; current maintained action line |
 | 20 | grouped PyPI updates | Split | Accept `pypdf` 6.10.0 → 6.16.1 and security-critical `mlflow` 2.21.0 → 3.16.0; defer major `pyarrow` 19 → 23 and `pytest` 8 → 9 until scientific regression benchmarks are rerun |
+| 21 | PyYAML 6.0.2 → 6.0.3 | Accept | Patch-only maintenance update; included in the combined validation run |
+| 22 | scikit-learn 1.6.1 → 1.9.0 | Defer | Major scientific-stack update; requires model and metric regression validation before adoption |
+| 23 | Astropy 7.0.1 → 8.0.1 | Defer | Major update drops part of the current compatibility envelope and requires scientific regression validation |
+| 24 | grouped PyPI updates | Split | Accept patch-only `pypdf` 6.16.1 → 6.17.0; defer major `pyarrow` 19 → 23 and `pytest` 8 → 9 |
 
 Accepted changes were applied together to the default branch and require a new
 combined CI, documentation, CodeQL, clean-wheel, and full-container result.
@@ -28,10 +32,11 @@ They do not alter the frozen v1.3.0 tag, Zenodo archive, or recorded scientific
 metrics. The next numbered software release will carry the updated dependency
 set after that combined validation.
 
-Dependabot is configured not to reopen pandas, PyArrow, or pytest major updates,
-or Python base-image updates at 3.13 and above. Those constraints must be
-revisited intentionally when the supported Python matrix expands or the
-scientific regression suite is rerun against a new major dependency line.
+Dependabot is configured not to reopen pandas, Astropy, scikit-learn, PyArrow,
+or pytest major updates, or Python base-image updates at 3.13 and above. Those
+constraints must be revisited intentionally when the supported Python matrix
+expands or the scientific regression suite is rerun against a new major
+dependency line.
 
 After dependency-graph activation exposed 87 historical alerts, the MLflow
 decision was escalated from a routine major-version deferral to a security
