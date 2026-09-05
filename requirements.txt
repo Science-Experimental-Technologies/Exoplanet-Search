@@ -14,4 +14,4 @@ plotly==6.0.0
 PyYAML==6.0.2
 pytest==8.3.5
 tensorflow==2.18.0
-mlflow==2.21.0
+mlflow==3.16.0

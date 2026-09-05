@@ -20,9 +20,6 @@ updates:
       - dependency-name: pytest
         update-types:
           - version-update:semver-major
-      - dependency-name: mlflow
-        update-types:
-          - version-update:semver-major
 
   - package-ecosystem: docker
     directory: /

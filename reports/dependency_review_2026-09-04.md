@@ -20,7 +20,7 @@ project's reproducibility requirements.
 | 17 | Python container 3.11 → 3.12 | Accept | Within the declared support range; full container workflow passed |
 | 18 | pandas 2.2.3 → 2.3.3 | Accept | All six Python/OS matrix jobs passed |
 | 19 | `actions/deploy-pages` 4 → 5 | Accept | Documentation workflow passed; current maintained action line |
-| 20 | grouped PyPI updates | Split | Accept `pypdf` 6.10.0 → 6.16.1; defer major `pyarrow` 19 → 23, `pytest` 8 → 9, and `mlflow` 2 → 3 until scientific regression benchmarks are rerun |
+| 20 | grouped PyPI updates | Split | Accept `pypdf` 6.10.0 → 6.16.1 and security-critical `mlflow` 2.21.0 → 3.16.0; defer major `pyarrow` 19 → 23 and `pytest` 8 → 9 until scientific regression benchmarks are rerun |
 
 Accepted changes were applied together to the default branch and require a new
 combined CI, documentation, CodeQL, clean-wheel, and full-container result.
@@ -28,10 +28,19 @@ They do not alter the frozen v1.3.0 tag, Zenodo archive, or recorded scientific
 metrics. The next numbered software release will carry the updated dependency
 set after that combined validation.
 
-Dependabot is configured not to reopen pandas, PyArrow, pytest, or MLflow major
-updates, or Python base-image updates at 3.13 and above. Those constraints must
-be revisited intentionally when the supported Python matrix expands or the
+Dependabot is configured not to reopen pandas, PyArrow, or pytest major updates,
+or Python base-image updates at 3.13 and above. Those constraints must be
+revisited intentionally when the supported Python matrix expands or the
 scientific regression suite is rerun against a new major dependency line.
+
+After dependency-graph activation exposed 87 historical alerts, the MLflow
+decision was escalated from a routine major-version deferral to a security
+update. MLflow 2.21.0 was the direct source of duplicated critical and high
+alerts across `requirements.txt` and its `requirements-ml.txt` alias. The 3.16.0
+line passed the pull request's CI, CodeQL, documentation, dependency-review, and
+container suites. SXS records MLflow package provenance but does not expose an
+MLflow tracking server, so the upgrade removes the vulnerable server package
+without changing the pipeline's documented scientific metrics.
 
 ## Dependency-review workflow prerequisite
 
