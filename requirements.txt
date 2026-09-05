@@ -1,6 +1,6 @@
 # Complete SXS stack. All direct dependencies are pinned.
 setuptools==84.0.0
-numpy==1.26.4
+numpy==2.4.6
 scipy==1.17.1
 pandas==2.3.3
 pyarrow==19.0.1
