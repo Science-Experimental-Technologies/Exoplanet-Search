@@ -3,7 +3,7 @@ setuptools==84.0.0
 numpy==1.26.4
 scipy==1.17.1
 pandas==2.3.3
-pyarrow==19.0.1
+pyarrow==23.0.1
 astropy==7.0.1
 astroquery==0.4.11
 lightkurve==2.6.0
@@ -12,4 +12,4 @@ scikit-learn==1.6.1
 matplotlib==3.10.1
 plotly==6.0.0
 PyYAML==6.0.3
-pytest==8.3.5
+pytest==9.0.3
