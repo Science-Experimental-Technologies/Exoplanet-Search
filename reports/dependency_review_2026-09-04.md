@@ -20,11 +20,15 @@ project's reproducibility requirements.
 | 17 | Python container 3.11 → 3.12 | Accept | Within the declared support range; full container workflow passed |
 | 18 | pandas 2.2.3 → 2.3.3 | Accept | All six Python/OS matrix jobs passed |
 | 19 | `actions/deploy-pages` 4 → 5 | Accept | Documentation workflow passed; current maintained action line |
-| 20 | grouped PyPI updates | Split | Accept `pypdf` 6.10.0 → 6.16.1 and security-critical `mlflow` 2.21.0 → 3.16.0; defer major `pyarrow` 19 → 23 and `pytest` 8 → 9 until scientific regression benchmarks are rerun |
+| 20 | grouped PyPI updates | Split | Accept `pypdf` 6.10.0 → 6.16.1 and security-critical `mlflow` 2.21.0 → 3.16.0; initially defer major `pyarrow` 19 → 23 and `pytest` 8 → 9 pending further review |
 | 21 | PyYAML 6.0.2 → 6.0.3 | Accept | Patch-only maintenance update; included in the combined validation run |
 | 22 | scikit-learn 1.6.1 → 1.9.0 | Defer | Major scientific-stack update; requires model and metric regression validation before adoption |
 | 23 | Astropy 7.0.1 → 8.0.1 | Defer | Major update drops part of the current compatibility envelope and requires scientific regression validation |
-| 24 | grouped PyPI updates | Split | Accept patch-only `pypdf` 6.16.1 → 6.17.0; defer major `pyarrow` 19 → 23 and `pytest` 8 → 9 |
+| 24 | grouped PyPI updates | Split | Accept `pypdf` 6.16.1 → 6.17.0 and security-required `pyarrow` 19.0.1 → 23.0.1; defer pytest 9 |
+| 25 | pytest 8.3.5 → 8.4.2 | Accept | Latest compatible 8.x line resolves the open tmpdir-handling advisory without crossing the major boundary |
+| 26 | Plotly 6.0.0 → 7.0.0 | Defer | Major report-rendering update; requires visual and exported-report regression review |
+| 27 | NumPy 1.26.4 → 2.4.6 | Defer | Major numerical-stack update; TensorFlow and frozen scientific-result compatibility must be validated first |
+| 28 | ReportLab 4.4.9 → 5.0.1 | Defer | Major PDF-generation update; requires rendered-document comparison before adoption |
 
 Accepted changes were applied together to the default branch and require a new
 combined CI, documentation, CodeQL, clean-wheel, and full-container result.
@@ -32,11 +36,11 @@ They do not alter the frozen v1.3.0 tag, Zenodo archive, or recorded scientific
 metrics. The next numbered software release will carry the updated dependency
 set after that combined validation.
 
-Dependabot is configured not to reopen pandas, Astropy, scikit-learn, PyArrow,
-or pytest major updates, or Python base-image updates at 3.13 and above. Those
-constraints must be revisited intentionally when the supported Python matrix
-expands or the scientific regression suite is rerun against a new major
-dependency line.
+Dependabot is configured not to reopen NumPy, pandas, Astropy, scikit-learn,
+Plotly, ReportLab, PyArrow, or pytest major updates, or Python base-image updates
+at 3.13 and above. Those constraints must be revisited intentionally when the
+supported Python matrix expands or the relevant scientific, report-rendering,
+and document-rendering regression suites are rerun against a new major line.
 
 After dependency-graph activation exposed 87 historical alerts, the MLflow
 decision was escalated from a routine major-version deferral to a security
@@ -46,6 +50,13 @@ line passed the pull request's CI, CodeQL, documentation, dependency-review, and
 container suites. SXS records MLflow package provenance but does not expose an
 MLflow tracking server, so the upgrade removes the vulnerable server package
 without changing the pipeline's documented scientific metrics.
+
+The six alerts remaining after the MLflow update were three duplicate manifest
+entries for PyArrow CVE-2026-25087 and three for pytest's vulnerable temporary
+directory handling. GitHub's advisory specifies PyArrow 23.0.1 as the first
+patched version, so the earlier reproducibility deferral was overridden by the
+direct security finding. PyArrow 23.0.1 and pytest 8.4.2 were then subjected to
+the same local dependency, test, and documentation checks before publication.
 
 ## Dependency-review workflow prerequisite
 
