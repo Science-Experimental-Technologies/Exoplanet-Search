@@ -29,6 +29,9 @@ updates:
       - dependency-name: reportlab
         update-types:
           - version-update:semver-major
+      - dependency-name: tensorflow
+        update-types:
+          - version-update:semver-minor
       - dependency-name: pyarrow
         update-types:
           - version-update:semver-major

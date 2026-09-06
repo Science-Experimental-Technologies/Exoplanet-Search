@@ -1,5 +1,5 @@
 reportlab==4.4.9
-pdfplumber==0.11.9
+pdfplumber==0.11.10
 pypdf==6.17.0
 mkdocs-material==9.7.7
 mkdocs==1.6.1

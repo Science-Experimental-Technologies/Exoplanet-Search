@@ -29,6 +29,9 @@ project's reproducibility requirements.
 | 26 | Plotly 6.0.0 → 7.0.0 | Defer | Major report-rendering update; requires visual and exported-report regression review |
 | 27 | NumPy 1.26.4 → 2.4.6 | Defer | Major numerical-stack update; TensorFlow and frozen scientific-result compatibility must be validated first |
 | 28 | ReportLab 4.4.9 → 5.0.1 | Defer | Major PDF-generation update; requires rendered-document comparison before adoption |
+| 29 | pdfplumber 0.11.9 → 0.11.10 | Accept | Patch update; documentation and repository test suites pass |
+| 30 | TensorFlow 2.18.0 → 2.21.0 | Defer | Multi-minor ML-runtime update; requires model-loading, numerical, and full-container regression work |
+| 31 | Astropy 7.0.1 → 7.2.2 | Accept | Maintained 7.x line; full local scientific and documentation suites pass |
 
 Accepted changes were applied together to the default branch and require a new
 combined CI, documentation, CodeQL, clean-wheel, and full-container result.
@@ -38,9 +41,11 @@ set after that combined validation.
 
 Dependabot is configured not to reopen NumPy, pandas, Astropy, scikit-learn,
 Plotly, ReportLab, PyArrow, or pytest major updates, or Python base-image updates
-at 3.13 and above. Those constraints must be revisited intentionally when the
-supported Python matrix expands or the relevant scientific, report-rendering,
-and document-rendering regression suites are rerun against a new major line.
+at 3.13 and above. TensorFlow minor-line updates are also held at 2.18 pending
+focused model and container regression work. Those constraints must be revisited
+intentionally when the supported Python matrix expands or the relevant
+scientific, ML-runtime, report-rendering, and document-rendering regression
+suites are rerun against a new dependency line.
 
 After dependency-graph activation exposed 87 historical alerts, the MLflow
 decision was escalated from a routine major-version deferral to a security
