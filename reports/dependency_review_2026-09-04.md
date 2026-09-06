@@ -24,8 +24,8 @@ project's reproducibility requirements.
 | 21 | PyYAML 6.0.2 → 6.0.3 | Accept | Patch-only maintenance update; included in the combined validation run |
 | 22 | scikit-learn 1.6.1 → 1.9.0 | Defer | Major scientific-stack update; requires model and metric regression validation before adoption |
 | 23 | Astropy 7.0.1 → 8.0.1 | Defer | Major update drops part of the current compatibility envelope and requires scientific regression validation |
-| 24 | grouped PyPI updates | Split | Accept `pypdf` 6.16.1 → 6.17.0 and security-required `pyarrow` 19.0.1 → 23.0.1; defer pytest 9 |
-| 25 | pytest 8.3.5 → 8.4.2 | Accept | Latest compatible 8.x line resolves the open tmpdir-handling advisory without crossing the major boundary |
+| 24 | grouped PyPI updates | Accept | Apply `pypdf` 6.16.1 → 6.17.0, security-required `pyarrow` 19.0.1 → 23.0.1, and security-required pytest 8.3.5 → 9.0.3 |
+| 25 | pytest 8.3.5 → 8.4.2 | Superseded | Advisory review showed every pytest version below 9.0.3 remains affected; use the patched 9.0.3 release instead |
 | 26 | Plotly 6.0.0 → 7.0.0 | Defer | Major report-rendering update; requires visual and exported-report regression review |
 | 27 | NumPy 1.26.4 → 2.4.6 | Defer | Major numerical-stack update; TensorFlow and frozen scientific-result compatibility must be validated first |
 | 28 | ReportLab 4.4.9 → 5.0.1 | Defer | Major PDF-generation update; requires rendered-document comparison before adoption |
@@ -52,11 +52,12 @@ MLflow tracking server, so the upgrade removes the vulnerable server package
 without changing the pipeline's documented scientific metrics.
 
 The six alerts remaining after the MLflow update were three duplicate manifest
-entries for PyArrow CVE-2026-25087 and three for pytest's vulnerable temporary
-directory handling. GitHub's advisory specifies PyArrow 23.0.1 as the first
-patched version, so the earlier reproducibility deferral was overridden by the
-direct security finding. PyArrow 23.0.1 and pytest 8.4.2 were then subjected to
-the same local dependency, test, and documentation checks before publication.
+entries for PyArrow CVE-2026-25087 and three for pytest CVE-2025-71176. GitHub's
+advisories specify PyArrow 23.0.1 and pytest 9.0.3 as the first patched versions,
+so the earlier reproducibility deferrals were overridden by the direct security
+findings. Both patched versions were subjected to the same local dependency,
+test, and documentation checks before publication. An intermediate pytest 8.4.2
+trial passed the suite but remained vulnerable and was therefore not retained.
 
 ## Dependency-review workflow prerequisite
 
