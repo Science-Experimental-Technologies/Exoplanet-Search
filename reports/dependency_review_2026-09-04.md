@@ -32,6 +32,11 @@ project's reproducibility requirements.
 | 29 | pdfplumber 0.11.9 → 0.11.10 | Accept | Patch update; documentation and repository test suites pass |
 | 30 | TensorFlow 2.18.0 → 2.21.0 | Defer | Multi-minor ML-runtime update; requires model-loading, numerical, and full-container regression work |
 | 31 | Astropy 7.0.1 → 7.2.2 | Accept | Maintained 7.x line; full local scientific and documentation suites pass |
+| 33 | Matplotlib 3.10.1 → 3.11.1 | Accept | Compatible 3.x line; scientific tests and report-generation paths pass |
+| 34 | TensorFlow 2.18.0 → 2.18.1 | Accept | Patch update within the intentionally retained 2.18 line; full container validation required |
+| 35 | pytest 9.0.3 → 9.1.1 | Accept | Compatible 9.x maintenance update; full non-network suite passes |
+| 36 | Plotly 6.0.0 → 6.9.0 | Accept | Compatible 6.x line; HTML report tests pass |
+| 37 | ReportLab 4.4.9 → 4.5.1 | Accept | Compatible 4.x line; documentation and PDF-related tests pass |
 
 Accepted changes were applied together to the default branch and require a new
 combined CI, documentation, CodeQL, clean-wheel, and full-container result.
