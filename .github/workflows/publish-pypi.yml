@@ -57,6 +57,10 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Install metadata check dependency
+        shell: bash
+        run: python -m pip install --disable-pip-version-check --no-deps "$(grep -E '^PyYAML==' requirements-core.txt)"
+
       - name: Download and verify the GitHub release wheel
         shell: bash
         env:
