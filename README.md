@@ -15,6 +15,7 @@
   <a href="https://github.com/Science-Experimental-Technologies/Exoplanet-Search/actions/workflows/codeql.yml"><img src="https://github.com/Science-Experimental-Technologies/Exoplanet-Search/actions/workflows/codeql.yml/badge.svg" alt="CodeQL"></a>
   <a href="https://github.com/Science-Experimental-Technologies/Exoplanet-Search/actions/workflows/public-distribution.yml"><img src="https://github.com/Science-Experimental-Technologies/Exoplanet-Search/actions/workflows/public-distribution.yml/badge.svg" alt="Public distribution test"></a>
   <a href="https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/latest"><img src="https://img.shields.io/github/v/release/Science-Experimental-Technologies/Exoplanet-Search?display_name=tag&label=release&color=16A3B6" alt="Latest release"></a>
+  <a href="https://pypi.org/project/scix-exoplanet-search/"><img src="https://img.shields.io/pypi/v/scix-exoplanet-search?label=PyPI&color=16A3B6" alt="PyPI package version"></a>
   <a href="https://doi.org/10.5281/zenodo.22294859"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.22294859.svg" alt="Zenodo DOI 10.5281/zenodo.22294859"></a>
   <a href="pyproject.toml"><img src="https://img.shields.io/badge/Python-3.11%20%7C%203.12-3776AB?logo=python&logoColor=white" alt="Python 3.11 and 3.12"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-SXS%20Source--Available-16A3B6" alt="SXS Source-Available Commercial License 1.0"></a>
@@ -99,6 +100,21 @@ flowchart LR
 ## Installation
 
 SXS supports Python 3.11 and 3.12. Windows received the full workstation research validation; the CI matrix tests the deterministic core and installed wheel on Ubuntu, Windows, and macOS.
+
+### Install from PyPI
+
+Install the verified production package in a virtual environment:
+
+```bash
+python -m pip install scix-exoplanet-search==1.3.0
+sxs --help
+sxs demo --output demo
+```
+
+Open `demo/report.html`. The PyPI wheel includes the core scientific dependencies
+and default configurations, but not observations or trained models. Full model
+training additionally requires the complete dependency profile from the matching
+source release.
 
 ### Platform downloads
 

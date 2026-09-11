@@ -30,6 +30,22 @@ been scientifically reproduced on all platforms. See the latest CI results.
 
 Use the complete environment for an end-to-end research reproduction.
 
+## Install from PyPI
+
+For normal CLI use, install the production package in a Python 3.11 or 3.12
+virtual environment:
+
+```bash
+python -m pip install scix-exoplanet-search==1.3.0
+sxs --help
+sxs demo --output demo
+```
+
+Open `demo/report.html`. The package includes the core scientific dependencies
+and default YAML configurations. It does not include mission observations,
+catalog snapshots, or trained models. Full RF/CNN training requires the complete
+dependency profile from the matching source release.
+
 ## Install from Git
 
 === "Windows PowerShell"
@@ -135,6 +151,6 @@ Open `demo/report.html`. YAML defaults are included and copied into the selected
 workspace. Observations, catalogs, and trained models are not bundled in the
 wheel. Full model training additionally requires `requirements.txt` from the
 matching source bundle. From a checkout, `python -m pip install .` provides the
-same installed command. The approval-gated [PyPI publication procedure](../project/pypi-publication.md)
-is prepared, but use the GitHub release wheel until a public package page and
-anonymous installation have been verified.
+same installed command. Version 1.3.0 is also available from
+[PyPI](https://pypi.org/project/scix-exoplanet-search/1.3.0/); see the
+[publication record](../project/pypi-publication.md) for verification details.
