@@ -53,7 +53,7 @@ fails. Invalid arguments use exit code `2`.
 
 ## `config-check`
 
-!!! note
+!!! info
     `config-check` is part of the upcoming 1.4.0 release and is currently
     available from the main branch.
 
