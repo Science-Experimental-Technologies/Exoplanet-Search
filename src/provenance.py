@@ -121,9 +121,63 @@ def default_config_source():
     return checkout if checkout.is_dir() else files("src").joinpath("default_configs")
 
 
+def initialize_workspace(destination: Path, config_source=None) -> dict:
+    """Create a marked workspace with independent copies of the default configs."""
+
+    destination = destination.resolve()
+    config_source = default_config_source() if config_source is None else config_source
+    with _workspace_lock(destination):
+        return _initialize_workspace_files(destination, config_source)
+
+
+@contextmanager
+def _workspace_lock(destination: Path):
+    from src.execution import WorkspaceLock
+
+    with WorkspaceLock(destination):
+        yield
+
+
+def _initialize_workspace_files(destination: Path, config_source) -> dict:
+    marker = destination / ".sxs-workspace.json"
+    if destination.exists():
+        if not marker.is_file():
+            raise ValueError("Existing directory is not an SXS workspace; choose a new directory")
+        config_directory = destination / "configs"
+        if not config_directory.is_dir():
+            raise ValueError("SXS workspace is missing its configs directory")
+        created = False
+    else:
+        if not config_source.is_dir():
+            raise ValueError("Workspace creation requires packaged workflow configurations")
+        destination.mkdir(parents=True)
+        config_directory = destination / "configs"
+        config_directory.mkdir()
+        names = []
+        for config in config_source.iterdir():
+            if config.name.endswith(".yaml") and config.is_file():
+                (config_directory / config.name).write_bytes(config.read_bytes())
+                names.append(config.name)
+        if not names:
+            raise ValueError("Workspace creation found no packaged YAML configurations")
+        atomic_json(
+            marker,
+            {
+                "schema_version": 1,
+                "source": "default-config-source",
+                "purpose": "isolated workflow outputs",
+                "configs": sorted(names),
+            },
+        )
+        created = True
+    names = sorted(path.name for path in config_directory.glob("*.yaml") if path.is_file())
+    return {"workspace": str(destination), "created": created, "configs": names}
+
+
 @contextmanager
 def isolated_workspace(destination: Path, config_source=None):
     from src.execution import WorkspaceLock
+
     with WorkspaceLock(destination):
         with _isolated_workspace(destination, config_source) as workspace:
             yield workspace
@@ -133,21 +187,9 @@ def isolated_workspace(destination: Path, config_source=None):
 def _isolated_workspace(destination: Path, config_source=None):
     """Create an explicit legacy-workflow sandbox; reuse only marked workspaces."""
     destination = destination.resolve()
+    # The caller already holds the workspace lock.
     config_source = default_config_source() if config_source is None else config_source
-    marker = destination / ".sxs-workspace.json"
-    if destination.exists():
-        if not marker.is_file():
-            raise ValueError("Existing directory is not an SXS workspace; choose a new directory")
-    else:
-        if not config_source.is_dir():
-            raise ValueError("Workspace creation requires a checkout/configuration directory")
-        destination.mkdir(parents=True)
-        (destination / "configs").mkdir()
-        for config in config_source.iterdir():
-            if config.name.endswith(".yaml") and config.is_file():
-                (destination / "configs" / config.name).write_bytes(config.read_bytes())
-        atomic_json(marker, {"schema_version": 1, "source_configs": str(config_source),
-                             "purpose": "isolated legacy workflow outputs"})
+    _initialize_workspace_files(destination, config_source)
     previous = Path.cwd()
     try:
         os.chdir(destination)

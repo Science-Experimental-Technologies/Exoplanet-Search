@@ -209,8 +209,11 @@ python -m src.cli baseline --config configs/base.yaml --dry-run
 # Validate every bundled workflow configuration without running the pipeline
 python -m src.cli config-check
 
+# Create a clean, isolated experiment workspace
+python -m src.cli init runs/research-a
+
 # Execute the baseline (required before scale-up in an empty workspace)
-python -m src.cli baseline --config configs/base.yaml
+python -m src.cli baseline --workspace runs/research-a
 
 # Reproduce scaled training and model qualification
 python -m src.cli scaleup --config configs/scaleup.yaml

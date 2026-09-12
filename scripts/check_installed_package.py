@@ -22,6 +22,7 @@ def check(wheel: Path) -> None:
         subprocess.run([str(python), "-m", "pip", "install", str(wheel.resolve())], cwd=root, check=True)
         subprocess.run([str(python), "-m", "pip", "check"], cwd=root, check=True)
         for arguments in (["--help"], ["--version"], ["doctor"], ["config-check"],
+                          ["init", "workspace", "--json"],
                           ["demo", "--output", "demo"],
                           ["baseline", "--workspace", "workspace", "--dry-run"]):
             subprocess.run([str(cli), *arguments], cwd=root, check=True)

@@ -20,6 +20,7 @@ COMMANDS = {
     "evaluate": ("src.independent_evaluation", "main"),
     "doctor": ("src.doctor", "main"),
     "config-check": ("src.config_check", "main"),
+    "init": ("src.workspace", "main"),
 }
 
 
@@ -47,7 +48,8 @@ def _print_help() -> None:
         "  inject    Measure conditional transit injection recovery\n"
         "  evaluate  Run nested target-grouped RF evaluation\n"
         "  doctor    Check the installation and optional service connectivity\n"
-        "  config-check  Validate workflow YAML without running scientific stages\n\n"
+        "  config-check  Validate workflow YAML without running scientific stages\n"
+        "  init      Create an isolated workspace with validated configurations\n\n"
         "Pass --help after a command to see workflow-specific options."
         "\nLegacy workflows accept --workspace DIR for isolated configs and outputs."
     )

@@ -13,7 +13,7 @@ def check(wheel: Path) -> None:
         names = archive.namelist()
         if "cli.py" in names:
             raise ValueError("Wheel contains stale flattened modules; rebuild from a clean source tree")
-        for required in ("src/__init__.py", "src/cli.py", "src/doctor.py", "src/config_check.py", "src/pipeline.py", "src/default_configs/base.yaml",
+        for required in ("src/__init__.py", "src/cli.py", "src/doctor.py", "src/config_check.py", "src/workspace.py", "src/pipeline.py", "src/default_configs/base.yaml",
                          "src/default_configs/scaleup.yaml", "src/default_configs/candidate_search.yaml",
                          "src/default_configs/independent_validation.yaml"):
             if required not in names:

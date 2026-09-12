@@ -12,6 +12,8 @@ All notable changes to this project are documented in this file. The format foll
   output.
 - `sxs config-check` for read-only, workflow-aware YAML validation, including
   duplicate keys, required structure, and high-impact numeric constraints.
+- `sxs init WORKSPACE` for explicit, idempotent workspace initialization with
+  copied and validated workflow configurations.
 
 ### Changed
 

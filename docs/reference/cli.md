@@ -22,6 +22,7 @@ The installed `sxs` command and module form are equivalent.
 | `evaluate` | Nested target-grouped RF evaluation and bootstrap intervals |
 | `doctor` | Read-only installation and optional service-connectivity diagnostics |
 | `config-check` | Read-only structural and semantic workflow-YAML validation |
+| `init` | Create or inspect an isolated, marked workflow workspace |
 
 Passing `--help` after a command prints its current parser reference. Use
 `sxs --version` to print the code version.
@@ -69,6 +70,23 @@ uses distinctive top-level sections to infer the workflow. An explicit
 `--workflow` also detects accidentally using a configuration for the wrong
 command. The check makes no network requests and does not require result
 artifacts. It returns `0` when every file passes and `3` when any file fails.
+
+## `init`
+
+!!! tip
+    `init` is part of the upcoming 1.4.0 release and is currently available
+    from the main branch.
+
+```text
+sxs init WORKSPACE [--json]
+```
+
+The command creates a new marked workspace and copies the four packaged YAML
+configurations into `WORKSPACE/configs/`. It validates the copies and records
+the operation under `WORKSPACE/.sxs-state/`. Repeating the command on the same
+marked workspace is safe and does not overwrite user edits. An existing
+unmarked directory is rejected. It performs no scientific computation,
+network request, or observation download.
 
 ## Exit codes and status
 

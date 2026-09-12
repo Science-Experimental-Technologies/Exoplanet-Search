@@ -12,6 +12,7 @@ scientific package versions, source hashes, and local artifact hashes.
 Changed, missing, or legacy checkpoints are rejected rather than trusted.
 
 ```bash
+python -m src.cli init runs/research-a
 python -m src.cli baseline --workspace runs/research-a --dry-run
 python -m src.cli baseline --workspace runs/research-a
 python -m src.cli baseline --workspace runs/research-a --resume
@@ -19,6 +20,11 @@ python -m src.cli scaleup --workspace runs/research-a
 python -m src.cli search --workspace runs/research-a
 python -m src.cli validate --workspace runs/research-a
 ```
+
+`init` makes workspace creation explicit and is safe to rerun: it recognizes a
+marked SXS workspace but never refreshes or overwrites its configuration files.
+Legacy workflow commands still initialize a new `--workspace` automatically for
+backward compatibility.
 
 The complete research sequence needs `requirements.txt` and public archive
 access. Workspace creation copies the checkout's `configs/` directory (or
