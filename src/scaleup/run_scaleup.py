@@ -10,9 +10,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Callable, Sequence
 
-import yaml
-
 from src.config import artifact_path
+from src.config_check import load_workflow_config
 from src.provenance import ResumeGuard
 
 LOGGER = logging.getLogger("sxs.scaleup.pipeline")
@@ -24,7 +23,7 @@ def run_scaleup(
     resume: bool = False,
 ) -> dict[str, Any]:
     config_file = Path(config_path)
-    config = yaml.safe_load(config_file.read_text(encoding="utf-8"))
+    config = load_workflow_config(config_file, "scaleup")
     guard = ResumeGuard("scaleup", config, resume)
     steps: list[tuple[str, Callable[[], dict[str, Any]], Callable[[], bool]]] = [
         ("catalog_selection", lambda: _catalog(config_file), lambda: _catalog_complete(config)),

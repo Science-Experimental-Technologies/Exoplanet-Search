@@ -19,6 +19,7 @@ COMMANDS = {
     "inject": ("src.injection", "main"),
     "evaluate": ("src.independent_evaluation", "main"),
     "doctor": ("src.doctor", "main"),
+    "config-check": ("src.config_check", "main"),
 }
 
 
@@ -45,7 +46,8 @@ def _print_help() -> None:
         "  report    Rebuild a self-contained analysis HTML report\n"
         "  inject    Measure conditional transit injection recovery\n"
         "  evaluate  Run nested target-grouped RF evaluation\n"
-        "  doctor    Check the installation and optional service connectivity\n\n"
+        "  doctor    Check the installation and optional service connectivity\n"
+        "  config-check  Validate workflow YAML without running scientific stages\n\n"
         "Pass --help after a command to see workflow-specific options."
         "\nLegacy workflows accept --workspace DIR for isolated configs and outputs."
     )

@@ -21,6 +21,7 @@ The installed `sxs` command and module form are equivalent.
 | `inject` | Conditional flux-level injection recovery |
 | `evaluate` | Nested target-grouped RF evaluation and bootstrap intervals |
 | `doctor` | Read-only installation and optional service-connectivity diagnostics |
+| `config-check` | Read-only structural and semantic workflow-YAML validation |
 
 Passing `--help` after a command prints its current parser reference. Use
 `sxs --version` to print the code version.
@@ -41,13 +42,33 @@ sxs doctor [--json] [--network] [--timeout SECONDS]
 ```
 
 Without `--network`, the command performs no external requests and checks the
-supported Python range, exact direct dependency pins, and packaged default YAML
-configurations. `--json` emits a stable machine-readable record suitable for a
-support ticket. `--network` additionally checks the fixed HTTPS endpoints for
-MAST and the NASA Exoplanet Archive; it does not download mission products.
+supported Python range, exact direct dependency pins, and structural/semantic
+validity of packaged default YAML configurations. `--json` emits a stable
+machine-readable record suitable for a support ticket. `--network` additionally
+checks the fixed HTTPS endpoints for MAST and the NASA Exoplanet Archive; it
+does not download mission products.
 
 The command returns `0` when all requested checks pass and `3` when a check
 fails. Invalid arguments use exit code `2`.
+
+## `config-check`
+
+!!! note
+    `config-check` is part of the upcoming 1.4.0 release and is currently
+    available from the main branch.
+
+```text
+sxs config-check [CONFIG ...]
+  [--workflow {auto,baseline,scaleup,search,validate}]
+  [--json]
+```
+
+With no file arguments, the command validates all four packaged workflow
+configurations against their expected workflows. For explicit files, `auto`
+uses distinctive top-level sections to infer the workflow. An explicit
+`--workflow` also detects accidentally using a configuration for the wrong
+command. The check makes no network requests and does not require result
+artifacts. It returns `0` when every file passes and `3` when any file fails.
 
 ## Exit codes and status
 

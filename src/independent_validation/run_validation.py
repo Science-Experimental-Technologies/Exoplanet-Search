@@ -14,6 +14,7 @@ import numpy as np
 import pandas as pd
 import yaml
 
+from src.config_check import load_workflow_config
 from src.independent_validation.crossmatch import run_crossmatches
 from src.independent_validation.fap import run_fap
 from src.independent_validation.metrics import run_photometric_vetting
@@ -24,7 +25,7 @@ ALLOWED_CATEGORIES = {"strong_candidate", "weak_candidate", "likely_false_positi
 
 def run_independent_validation(config_path: str | Path = "configs/independent_validation.yaml", stage: str = "all") -> dict[str, Any]:
     config_file = Path(config_path)
-    config = yaml.safe_load(config_file.read_text(encoding="utf-8"))
+    config = load_workflow_config(config_file, "validate")
     Path(config["artifacts"]["directory"]).mkdir(parents=True, exist_ok=True)
     shortlist = _freeze_inputs(config)
     target_pool = pd.read_parquet(config["inputs"]["target_pool"])

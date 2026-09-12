@@ -13,6 +13,7 @@ def test_doctor_json_reports_runtime(capsys) -> None:
     assert payload["python"]["supported"] is True
     assert all(item["ok"] for item in payload["dependencies"])
     assert all(item["available"] for item in payload["default_configs"])
+    assert all(item["valid"] for item in payload["default_configs"])
     assert payload["network"] == {"requested": False, "checks": []}
 
 

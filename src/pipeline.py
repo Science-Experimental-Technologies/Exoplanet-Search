@@ -13,8 +13,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Callable, Mapping, Sequence
 
-import yaml
-
+from src.config_check import load_workflow_config
 from src.provenance import ResumeGuard
 
 LOGGER = logging.getLogger("sxs.pipeline")
@@ -51,8 +50,7 @@ def run_pipeline(
     config_file = Path(config_path)
     if not config_file.is_file():
         raise FileNotFoundError(f"Configuration does not exist: {config_file}")
-    config = yaml.safe_load(config_file.read_text(encoding="utf-8"))
-    _validate_config(config)
+    config = load_workflow_config(config_file, "baseline")
     if resume and refresh_catalog:
         raise ValueError("Catalog refresh changes inputs; use a new workspace without --resume")
     guard = None if dry_run and not resume else ResumeGuard("baseline", config, resume)
@@ -193,7 +191,7 @@ def _default_stage_runners() -> dict[int, Callable[[Path, bool], dict[str, Any]]
 
 def _run_environment(config_path: Path, refresh_catalog: bool) -> dict[str, Any]:
     del refresh_catalog
-    config = yaml.safe_load(config_path.read_text(encoding="utf-8"))
+    config = load_workflow_config(config_path, "baseline")
     required = [
         "numpy",
         "pandas",
@@ -221,7 +219,7 @@ def _run_acquisition(config_path: Path, refresh_catalog: bool) -> dict[str, Any]
     from src.ingest.build_dataset import build_dataset
     from src.ingest.catalog_client import fetch_confirmed_transiting_catalog
 
-    config = yaml.safe_load(config_path.read_text(encoding="utf-8"))
+    config = load_workflow_config(config_path, "baseline")
     catalog_path = Path(config["catalog"]["output"])
     if refresh_catalog or not catalog_path.is_file():
         fetch_confirmed_transiting_catalog(catalog_path)
@@ -266,7 +264,7 @@ def _run_machine_learning(config_path: Path, refresh_catalog: bool) -> dict[str,
     from src.model.build_ml_dataset import build_ml_dataset
     from src.model.train_baselines import run_training
 
-    config = yaml.safe_load(config_path.read_text(encoding="utf-8"))
+    config = load_workflow_config(config_path, "baseline")
     fp_path = Path(config["machine_learning"]["negative_sample"]["catalog_output"])
     if refresh_catalog or not fp_path.is_file():
         fetch_false_positive_sample(config_path)
@@ -292,15 +290,6 @@ def _run_validation(config_path: Path, refresh_catalog: bool) -> dict[str, Any]:
         "catalog_status": checked["catalog_status"].value_counts().to_dict(),
         "models": benchmark["models"],
     }
-
-
-def _validate_config(config: dict[str, Any]) -> None:
-    required = {"project", "paths", "ingest", "catalog", "dataset", "preprocess", "bls", "machine_learning", "targets"}
-    missing = sorted(required - set(config))
-    if missing:
-        raise ValueError(f"Configuration is missing sections: {', '.join(missing)}")
-    if not config["targets"]:
-        raise ValueError("Configuration contains no validation targets")
 
 
 def _write_run_record(record: dict[str, Any], config: dict[str, Any], log_path: str | Path | None) -> Path:

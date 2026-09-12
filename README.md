@@ -206,6 +206,9 @@ The unified interface names workflows by scientific responsibility:
 # Inspect the baseline workflow without writing artifacts
 python -m src.cli baseline --config configs/base.yaml --dry-run
 
+# Validate every bundled workflow configuration without running the pipeline
+python -m src.cli config-check
+
 # Execute the baseline (required before scale-up in an empty workspace)
 python -m src.cli baseline --config configs/base.yaml
 

@@ -14,6 +14,7 @@ Commands:
   inject    Measure conditional transit injection recovery
   evaluate  Run nested target-grouped RF evaluation
   doctor    Check the installation and optional service connectivity
+  config-check  Validate workflow YAML without running scientific stages
 
 Pass --help after a command to see workflow-specific options.
 Legacy workflows accept --workspace DIR for isolated configs and outputs.

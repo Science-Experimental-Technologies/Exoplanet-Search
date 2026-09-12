@@ -10,9 +10,13 @@ All notable changes to this project are documented in this file. The format foll
 - `sxs doctor` for read-only Python, dependency, packaged-configuration, and
   optional public astronomy service diagnostics, with human-readable and JSON
   output.
+- `sxs config-check` for read-only, workflow-aware YAML validation, including
+  duplicate keys, required structure, and high-impact numeric constraints.
 
 ### Changed
 
+- Baseline, scale-up, candidate-search, and independent-validation entry points
+  now reject invalid configurations before creating workflow artifacts.
 - The top-level dispatcher now imports only the selected command, reducing
   startup cost and preventing unrelated optional-library warnings.
 - Packaging metadata now uses the PEP 639 license-expression and license-files

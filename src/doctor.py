@@ -12,6 +12,7 @@ import sys
 from urllib.request import Request, urlopen
 
 from src import __version__
+from src.config_check import check_config
 from src.provenance import default_config_source
 
 
@@ -23,6 +24,12 @@ REQUIRED_CONFIGS = (
     "independent_validation.yaml",
     "scaleup.yaml",
 )
+CONFIG_WORKFLOWS = {
+    "base.yaml": "baseline",
+    "candidate_search.yaml": "search",
+    "independent_validation.yaml": "validate",
+    "scaleup.yaml": "scaleup",
+}
 NETWORK_ENDPOINTS = {
     "mast": "https://mast.stsci.edu/",
     "nasa_exoplanet_archive": "https://exoplanetarchive.ipac.caltech.edu/",
@@ -74,10 +81,20 @@ def _dependency_checks() -> list[dict[str, object]]:
 
 def _config_checks() -> list[dict[str, object]]:
     source = default_config_source()
-    return [
-        {"name": name, "available": source.joinpath(name).is_file()}
-        for name in REQUIRED_CONFIGS
-    ]
+    checks = []
+    for name in REQUIRED_CONFIGS:
+        path = source.joinpath(name)
+        result = check_config(Path(str(path)), CONFIG_WORKFLOWS[name])
+        checks.append(
+            {
+                "name": name,
+                "workflow": CONFIG_WORKFLOWS[name],
+                "available": path.is_file(),
+                "valid": result["valid"],
+                "errors": result["errors"],
+            }
+        )
+    return checks
 
 
 def _network_checks(timeout: float) -> list[dict[str, object]]:
@@ -99,7 +116,7 @@ def diagnose(*, network: bool = False, timeout: float = 5.0) -> dict[str, object
     configs = _config_checks()
     network_checks = _network_checks(timeout) if network else []
     checks_ok = python_ok and all(item["ok"] for item in dependencies) and all(
-        item["available"] for item in configs
+        item["available"] and item["valid"] for item in configs
     )
     if network:
         checks_ok = checks_ok and all(item["ok"] for item in network_checks)
@@ -138,7 +155,10 @@ def _print_human(result: dict[str, object]) -> None:
     for item in dependencies:
         if not item["ok"]:
             print(f"  - {item['name']}: expected {item['expected']}, found {item['installed'] or 'missing'}")
-    print(f"Default configs: {sum(bool(item['available']) for item in configs)}/{len(configs)} available")
+    print(
+        f"Default configs: {sum(bool(item['available']) and bool(item['valid']) for item in configs)}"
+        f"/{len(configs)} available and valid"
+    )
     if network["requested"]:
         for item in network["checks"]:
             detail = item.get("status", item.get("error", "unavailable"))

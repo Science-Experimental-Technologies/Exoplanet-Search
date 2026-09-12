@@ -15,6 +15,7 @@ import yaml
 from src.candidate_search.pool_builder import build_unknown_pool
 from src.candidate_search.prefetch import prefetch
 from src.candidate_search.search import run_candidate_search
+from src.config_check import load_workflow_config
 from src.provenance import ResumeGuard
 
 LOGGER = logging.getLogger("sxs.candidate_search.pipeline")
@@ -24,7 +25,7 @@ def run_candidate_search_workflow(
     config_path: str | Path = "configs/candidate_search.yaml", *, resume: bool = False
 ) -> dict[str, Any]:
     config_file = Path(config_path)
-    config = yaml.safe_load(config_file.read_text(encoding="utf-8"))
+    config = load_workflow_config(config_file, "search")
     guard = ResumeGuard("search", config, resume)
     artifacts = config["candidate_search"]["artifacts"]
     record: dict[str, Any] = {

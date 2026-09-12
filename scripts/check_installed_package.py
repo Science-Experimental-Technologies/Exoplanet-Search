@@ -21,7 +21,7 @@ def check(wheel: Path) -> None:
         cli = scripts / ("sxs.exe" if sys.platform == "win32" else "sxs")
         subprocess.run([str(python), "-m", "pip", "install", str(wheel.resolve())], cwd=root, check=True)
         subprocess.run([str(python), "-m", "pip", "check"], cwd=root, check=True)
-        for arguments in (["--help"], ["--version"], ["doctor"],
+        for arguments in (["--help"], ["--version"], ["doctor"], ["config-check"],
                           ["demo", "--output", "demo"],
                           ["baseline", "--workspace", "workspace", "--dry-run"]):
             subprocess.run([str(cli), *arguments], cwd=root, check=True)
@@ -30,6 +30,10 @@ def check(wheel: Path) -> None:
         ))
         assert diagnostics["status"] == "ok"
         assert diagnostics["sxs"]["code_version"] == diagnostics["sxs"]["distribution_version"]
+        config_report = json.loads(subprocess.check_output(
+            [str(cli), "config-check", "--json"], cwd=root, text=True
+        ))
+        assert config_report["valid"] and len(config_report["checks"]) == 4
         assert json.loads((root / "demo/expected.json").read_text())["best_period_recovered"]
         assert (root / "demo/report.html").is_file()
         assert json.loads((root / "demo/operation.json").read_text())["status"] == "completed"

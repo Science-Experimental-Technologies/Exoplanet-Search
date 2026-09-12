@@ -20,7 +20,8 @@ preference.
 2. Copy the relevant YAML file to a new, clearly named configuration.
 3. Change one documented assumption at a time.
 4. Write outputs to new artifact paths; do not overwrite the accepted record.
-5. Run a dry run where supported.
+5. Run `sxs config-check path/to/config.yaml`, then use a dry run where
+   supported.
 6. Record the config path, Git commit, dependency environment, and generated
    run record.
 7. Label the result as a new experiment, not as the published benchmark.
@@ -44,3 +45,22 @@ preference.
 
 See the complete [configuration reference](../reference/configuration.md) for
 every section and its accepted role.
+
+## Validate before execution
+
+```bash
+# Check all four bundled configurations
+sxs config-check
+
+# Infer the workflow from a custom file
+sxs config-check configs/my-experiment.yaml
+
+# Require one workflow contract and emit JSON
+sxs config-check configs/my-search.yaml --workflow search --json
+```
+
+The validator rejects malformed YAML, duplicate mapping keys, missing required
+sections or keys, invalid positive counts/ranges, duplicate baseline target IDs,
+and a shortlist larger than the search sample. It validates configuration—not
+the existence of data, model, or result artifacts. Workflow entry points apply
+the same validation automatically before creating their normal outputs.

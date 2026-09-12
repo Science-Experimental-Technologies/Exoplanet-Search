@@ -22,10 +22,13 @@ installation diagnosis with:
 ```bash
 sxs --version
 sxs doctor
+sxs config-check
 ```
 
 Add `--json` for a support-friendly record or `--network` to test the public
 MAST and NASA Exoplanet Archive endpoints without downloading observations.
+`config-check` validates all four workflow YAML files without executing a
+scientific stage or requiring downloaded data.
 
 ## 2. Preview the baseline workflow
 
