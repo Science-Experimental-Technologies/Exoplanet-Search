@@ -25,6 +25,7 @@ sxs doctor
 sxs config-check
 sxs init runs/research-a
 sxs status runs/research-a
+sxs support-bundle runs/research-a --output sxs-support.zip
 ```
 
 Add `--json` for a support-friendly record or `--network` to test the public
@@ -35,6 +36,8 @@ scientific stage or requiring downloaded data.
 does not run the pipeline or download observations.
 `status` then reports configuration health and recorded workflow state without
 changing the workspace.
+Use `support-bundle` only when you need to share bounded diagnostic metadata;
+inspect `diagnostics.json` inside the resulting ZIP before uploading it.
 
 ## 2. Preview the baseline workflow
 

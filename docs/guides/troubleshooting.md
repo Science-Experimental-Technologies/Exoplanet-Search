@@ -64,6 +64,18 @@ warnings as failures. Fix the source rather than disabling strict validation.
 
 ## Still blocked
 
+Create a bounded diagnostic archive:
+
+```bash
+sxs support-bundle runs/research-a --output sxs-support.zip
+```
+
+Open the ZIP and review `diagnostics.json` before sharing it. The bundle contains
+version, dependency, config-validity/hash, operation, checkpoint, and run-status
+metadata. It excludes configuration contents, observations, candidates, models,
+logs, environment variables, credentials, and absolute workspace paths. It
+makes no network requests.
+
 Open a focused issue with the release, operating system, Python version,
 command, configuration path, smallest relevant log excerpt, and whether the
 failure is deterministic. Do not attach credentials, tokens, or private data.

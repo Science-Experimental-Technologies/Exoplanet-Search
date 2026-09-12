@@ -215,6 +215,9 @@ python -m src.cli init runs/research-a
 # Inspect configuration and recorded workflow state without modifying it
 python -m src.cli status runs/research-a
 
+# Create a privacy-conscious diagnostic archive for a support request
+python -m src.cli support-bundle runs/research-a --output sxs-support.zip
+
 # Execute the baseline (required before scale-up in an empty workspace)
 python -m src.cli baseline --workspace runs/research-a
 

@@ -24,6 +24,7 @@ The installed `sxs` command and module form are equivalent.
 | `config-check` | Read-only structural and semantic workflow-YAML validation |
 | `init` | Create or inspect an isolated, marked workflow workspace |
 | `status` | Inspect configuration and recorded workspace state without mutation |
+| `support-bundle` | Create a bounded, privacy-conscious diagnostic ZIP |
 
 Passing `--help` after a command prints its current parser reference. Use
 `sxs --version` to print the code version.
@@ -106,6 +107,21 @@ workflow run records. Corrupt metadata or configurations produce exit code 3;
 missing checkpoints and run records are valid for a new workspace. This is a
 bounded metadata check: it does not recompute artifact hashes, contact external
 services, or prove that a recorded `running` process remains active.
+
+## `support-bundle`
+
+```text
+sxs support-bundle [WORKSPACE] [--output ZIP] [--json]
+```
+
+The default workspace is the current directory and the default output is
+`WORKSPACE/sxs-support-bundle.zip`. The command never overwrites an existing
+archive. It writes only `README.txt` and `diagnostics.json`, containing runtime
+versions, dependency checks, config validity and SHA-256 values, plus bounded
+operation/checkpoint/run status. It excludes configuration contents,
+observations, candidate tables, models, logs, environment variables,
+credentials, and absolute workspace paths. No network request is made. Always
+review `diagnostics.json` before sharing the archive.
 
 ## Exit codes and status
 

@@ -35,6 +35,18 @@ each passed/failed step, exact error output, and time to the first useful report
 Attach a redacted screenshot if helpful. Report failures as well as successes;
 do not count maintainer runs or CI jobs as independent user trials.
 
+For Python-installation failures, attach a reviewed diagnostic archive when
+practical:
+
+```bash
+sxs support-bundle WORKSPACE --output sxs-support.zip
+```
+
+Inspect `diagnostics.json` before attachment. The archive intentionally omits
+observations, configuration contents, logs, credentials, and absolute workspace
+paths; include a separately redacted error excerpt when the failure itself is
+not represented by recorded status metadata.
+
 ## Public container acceptance
 
 The GHCR package was made public with owner approval on 2026-08-31.

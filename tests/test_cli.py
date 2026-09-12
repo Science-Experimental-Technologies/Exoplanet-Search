@@ -16,6 +16,7 @@ def test_unified_cli_help(capsys) -> None:
     assert "config-check" in output
     assert "init" in output
     assert "status" in output
+    assert "support-bundle" in output
 
 
 def test_unified_cli_version(capsys) -> None:

@@ -24,6 +24,7 @@ def check(wheel: Path) -> None:
         for arguments in (["--help"], ["--version"], ["doctor"], ["config-check"],
                           ["init", "workspace", "--json"],
                           ["status", "workspace", "--json"],
+                          ["support-bundle", "workspace", "--output", "support.zip", "--json"],
                           ["demo", "--output", "demo"],
                           ["baseline", "--workspace", "workspace", "--dry-run"]):
             subprocess.run([str(cli), *arguments], cwd=root, check=True)
@@ -40,6 +41,7 @@ def check(wheel: Path) -> None:
         assert (root / "demo/report.html").is_file()
         assert json.loads((root / "demo/operation.json").read_text())["status"] == "completed"
         assert (root / "workspace/configs/base.yaml").is_file()
+        assert (root / "support.zip").is_file()
         origin = subprocess.check_output([str(python), "-I", "-c", "import src; print(src.__file__)"], cwd=root, text=True).strip()
         assert Path(origin).resolve().is_relative_to(environment.resolve()), origin
     print("Installed console script, offline demo, and packaged workspace defaults passed")

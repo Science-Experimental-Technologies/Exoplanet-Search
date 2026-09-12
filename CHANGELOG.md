@@ -16,6 +16,8 @@ All notable changes to this project are documented in this file. The format foll
   copied and validated workflow configurations.
 - `sxs status [WORKSPACE]` for read-only configuration, operation, checkpoint,
   and workflow run-record summaries.
+- `sxs support-bundle [WORKSPACE]` for a bounded diagnostic ZIP that excludes
+  scientific data, configuration contents, logs, credentials, and local paths.
 
 ### Changed
 
