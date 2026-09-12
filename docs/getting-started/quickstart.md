@@ -24,6 +24,7 @@ sxs --version
 sxs doctor
 sxs config-check
 sxs init runs/research-a
+sxs status runs/research-a
 ```
 
 Add `--json` for a support-friendly record or `--network` to test the public
@@ -32,6 +33,8 @@ MAST and NASA Exoplanet Archive endpoints without downloading observations.
 scientific stage or requiring downloaded data.
 `init` creates a marked workspace, copies those validated configurations, and
 does not run the pipeline or download observations.
+`status` then reports configuration health and recorded workflow state without
+changing the workspace.
 
 ## 2. Preview the baseline workflow
 

@@ -23,6 +23,7 @@ The installed `sxs` command and module form are equivalent.
 | `doctor` | Read-only installation and optional service-connectivity diagnostics |
 | `config-check` | Read-only structural and semantic workflow-YAML validation |
 | `init` | Create or inspect an isolated, marked workflow workspace |
+| `status` | Inspect configuration and recorded workspace state without mutation |
 
 Passing `--help` after a command prints its current parser reference. Use
 `sxs --version` to print the code version.
@@ -87,6 +88,24 @@ the operation under `WORKSPACE/.sxs-state/`. Repeating the command on the same
 marked workspace is safe and does not overwrite user edits. An existing
 unmarked directory is rejected. It performs no scientific computation,
 network request, or observation download.
+
+## `status`
+
+!!! example
+    `status` is part of the upcoming 1.4.0 release and is currently available
+    from the main branch.
+
+```text
+sxs status [WORKSPACE] [--json]
+```
+
+`WORKSPACE` defaults to the current directory. The command recognizes marked
+SXS workspaces and the source checkout, validates all four workflow configs,
+and summarizes the last operation, readable resume checkpoints, and latest
+workflow run records. Corrupt metadata or configurations produce exit code 3;
+missing checkpoints and run records are valid for a new workspace. This is a
+bounded metadata check: it does not recompute artifact hashes, contact external
+services, or prove that a recorded `running` process remains active.
 
 ## Exit codes and status
 

@@ -13,6 +13,7 @@ Changed, missing, or legacy checkpoints are rejected rather than trusted.
 
 ```bash
 python -m src.cli init runs/research-a
+python -m src.cli status runs/research-a
 python -m src.cli baseline --workspace runs/research-a --dry-run
 python -m src.cli baseline --workspace runs/research-a
 python -m src.cli baseline --workspace runs/research-a --resume
@@ -25,6 +26,12 @@ python -m src.cli validate --workspace runs/research-a
 marked SXS workspace but never refreshes or overwrites its configuration files.
 Legacy workflow commands still initialize a new `--workspace` automatically for
 backward compatibility.
+
+`status` is read-only. It checks workspace metadata, the four YAML contracts,
+the last operation record, checkpoint readability, and recorded workflow
+statuses. It deliberately does not recompute checkpoint fingerprints or inspect
+large artifact hashes. A recorded `running` state can be stale after a hard
+process kill; it is not proof that a process is active.
 
 The complete research sequence needs `requirements.txt` and public archive
 access. Workspace creation copies the checkout's `configs/` directory (or

@@ -16,6 +16,7 @@ Commands:
   doctor    Check the installation and optional service connectivity
   config-check  Validate workflow YAML without running scientific stages
   init      Create an isolated workspace with validated configurations
+  status    Inspect workspace configuration and recorded workflow state
 
 Pass --help after a command to see workflow-specific options.
 Legacy workflows accept --workspace DIR for isolated configs and outputs.

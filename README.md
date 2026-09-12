@@ -212,6 +212,9 @@ python -m src.cli config-check
 # Create a clean, isolated experiment workspace
 python -m src.cli init runs/research-a
 
+# Inspect configuration and recorded workflow state without modifying it
+python -m src.cli status runs/research-a
+
 # Execute the baseline (required before scale-up in an empty workspace)
 python -m src.cli baseline --workspace runs/research-a
 

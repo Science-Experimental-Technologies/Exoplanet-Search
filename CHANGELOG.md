@@ -14,6 +14,8 @@ All notable changes to this project are documented in this file. The format foll
   duplicate keys, required structure, and high-impact numeric constraints.
 - `sxs init WORKSPACE` for explicit, idempotent workspace initialization with
   copied and validated workflow configurations.
+- `sxs status [WORKSPACE]` for read-only configuration, operation, checkpoint,
+  and workflow run-record summaries.
 
 ### Changed
 
