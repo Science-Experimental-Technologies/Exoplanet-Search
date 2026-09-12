@@ -57,6 +57,7 @@ dependency profile from the matching source release.
     .\.venv\Scripts\Activate.ps1
     python -m pip install --upgrade pip
     python -m pip install -r requirements.txt
+    python -m pip install --no-deps -e .
     ```
 
 === "macOS"
@@ -68,6 +69,7 @@ dependency profile from the matching source release.
     source .venv/bin/activate
     python -m pip install --upgrade pip
     python -m pip install -r requirements.txt
+    python -m pip install --no-deps -e .
     ```
 
 === "Linux"
@@ -79,6 +81,7 @@ dependency profile from the matching source release.
     source .venv/bin/activate
     python -m pip install --upgrade pip
     python -m pip install -r requirements.txt
+    python -m pip install --no-deps -e .
     ```
 
 ## Install from a release bundle
@@ -107,10 +110,16 @@ Compare the result with `SHA256SUMS.txt` on the release page.
 ## Verify the environment
 
 ```bash
+sxs --version
 python -m pip check
 python -m pytest -m "not network"
 python -m src.cli baseline --config configs/base.yaml --dry-run
 ```
+
+On the main branch, run `sxs doctor` for installation diagnostics.
+`sxs doctor --json` produces a machine-readable support record. Add `--network`
+to check the public MAST and NASA Exoplanet Archive endpoints without
+downloading observations.
 
 The command above uses `-m "not network"` and deselects the opt-in network
 test. Test counts are revision-specific. Warnings from optional Lightkurve components do not by

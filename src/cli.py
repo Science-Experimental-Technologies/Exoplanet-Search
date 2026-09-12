@@ -4,39 +4,37 @@ from __future__ import annotations
 
 import sys
 from pathlib import Path
-from collections.abc import Callable, Sequence
+from collections.abc import Sequence
+from importlib import import_module
 
 
-Command = Callable[[Sequence[str] | None], int]
+COMMANDS = {
+    "baseline": ("src.pipeline", "main"),
+    "scaleup": ("src.scaleup.run_scaleup", "main"),
+    "search": ("src.candidate_search.run_search", "main"),
+    "validate": ("src.independent_validation.run_validation", "main"),
+    "demo": ("src.workbench", "demo_main"),
+    "analyze": ("src.workbench", "analyze_main"),
+    "report": ("src.analysis_report", "main"),
+    "inject": ("src.injection", "main"),
+    "evaluate": ("src.independent_evaluation", "main"),
+    "doctor": ("src.doctor", "main"),
+}
 
 
-def _commands() -> dict[str, Command]:
-    from src.candidate_search.run_search import main as search_main
-    from src.independent_validation.run_validation import main as validate_main
-    from src.pipeline import main as baseline_main
-    from src.scaleup.run_scaleup import main as scaleup_main
-    from src.workbench import demo_main, analyze_main
-    from src.analysis_report import main as report_main
-    from src.injection import main as injection_main
-    from src.independent_evaluation import main as evaluation_main
-
-    return {
-        "baseline": baseline_main,
-        "scaleup": scaleup_main,
-        "search": search_main,
-        "validate": validate_main,
-        "demo": demo_main,
-        "analyze": analyze_main,
-        "report": report_main,
-        "inject": injection_main,
-        "evaluate": evaluation_main,
-    }
+def _command(name: str):
+    target = COMMANDS.get(name)
+    if target is None:
+        return None
+    module_name, attribute = target
+    return getattr(import_module(module_name), attribute)
 
 
 def _print_help() -> None:
     print(
         "SXS | SCIX Exoplanet Search\n\n"
-        "Usage: python -m src.cli <command> [options]\n\n"
+        "Usage: sxs <command> [options]\n"
+        "       python -m src.cli <command> [options]\n\n"
         "Commands:\n"
         "  baseline  Run or inspect the baseline recovery workflow\n"
         "  scaleup   Build the scaled benchmark and qualify the production model\n"
@@ -46,7 +44,8 @@ def _print_help() -> None:
         "  analyze   Analyze a CSV/FITS light curve or a Kepler KIC\n"
         "  report    Rebuild a self-contained analysis HTML report\n"
         "  inject    Measure conditional transit injection recovery\n"
-        "  evaluate  Run nested target-grouped RF evaluation\n\n"
+        "  evaluate  Run nested target-grouped RF evaluation\n"
+        "  doctor    Check the installation and optional service connectivity\n\n"
         "Pass --help after a command to see workflow-specific options."
         "\nLegacy workflows accept --workspace DIR for isolated configs and outputs."
     )
@@ -55,7 +54,7 @@ def _print_help() -> None:
 def _dispatch(arguments, operation) -> int:
     from src.execution import WorkspaceLock
     command_name = arguments.pop(0)
-    command = _commands().get(command_name)
+    command = _command(command_name)
     if command is None:
         raise ValueError(f"Unknown command: {command_name}")
     if "--help" in arguments or "-h" in arguments:
@@ -95,6 +94,10 @@ def main(argv: Sequence[str] | None = None) -> int:
     arguments = list(sys.argv[1:] if argv is None else argv)
     if not arguments or arguments[0] in {"-h", "--help"}:
         _print_help()
+        return 0
+    if arguments[0] in {"-V", "--version"}:
+        from src import __version__
+        print(f"SXS {__version__}")
         return 0
 
     from src.execution import ACTIVE_OPERATION, Operation, WorkspaceBusy

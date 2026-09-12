@@ -16,6 +16,17 @@ SXS exposes the research workflows `baseline`, `scaleup`, `search`, and
 `validate`, plus `demo`, `analyze`, `report`, `inject`, and `evaluate` in the
 [analysis workbench](../guides/workbench.md).
 
+On the main branch, inspect the development version and run the new read-only
+installation diagnosis with:
+
+```bash
+sxs --version
+sxs doctor
+```
+
+Add `--json` for a support-friendly record or `--network` to test the public
+MAST and NASA Exoplanet Archive endpoints without downloading observations.
+
 ## 2. Preview the baseline workflow
 
 ```bash

@@ -1,6 +1,7 @@
 SXS | SCIX Exoplanet Search
 
-Usage: python -m src.cli <command> [options]
+Usage: sxs <command> [options]
+       python -m src.cli <command> [options]
 
 Commands:
   baseline  Run or inspect the baseline recovery workflow
@@ -12,6 +13,7 @@ Commands:
   report    Rebuild a self-contained analysis HTML report
   inject    Measure conditional transit injection recovery
   evaluate  Run nested target-grouped RF evaluation
+  doctor    Check the installation and optional service connectivity
 
 Pass --help after a command to see workflow-specific options.
 Legacy workflows accept --workspace DIR for isolated configs and outputs.

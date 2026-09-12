@@ -3,8 +3,11 @@
 ## Top-level command
 
 ```text
+sxs <command> [options]
 python -m src.cli <command> [options]
 ```
+
+The installed `sxs` command and module form are equivalent.
 
 | Command | Purpose |
 |---|---|
@@ -17,13 +20,34 @@ python -m src.cli <command> [options]
 | `report` | Rebuild an offline HTML analysis report |
 | `inject` | Conditional flux-level injection recovery |
 | `evaluate` | Nested target-grouped RF evaluation and bootstrap intervals |
+| `doctor` | Read-only installation and optional service-connectivity diagnostics |
 
-Passing `--help` after a command prints its current parser reference.
+Passing `--help` after a command prints its current parser reference. Use
+`sxs --version` to print the code version.
 
 See [Analysis Workbench](../guides/workbench.md) for the five new commands.
 They write new output directories and are included in v1.2.0.
 The top-level dispatcher also accepts `--workspace DIR` after a legacy command
 to isolate its configuration and relative outputs.
+
+## `doctor`
+
+!!! note
+    `doctor` is part of the upcoming 1.4.0 release and is currently available
+    from the main branch.
+
+```text
+sxs doctor [--json] [--network] [--timeout SECONDS]
+```
+
+Without `--network`, the command performs no external requests and checks the
+supported Python range, exact direct dependency pins, and packaged default YAML
+configurations. `--json` emits a stable machine-readable record suitable for a
+support ticket. `--network` additionally checks the fixed HTTPS endpoints for
+MAST and the NASA Exoplanet Archive; it does not download mission products.
+
+The command returns `0` when all requested checks pass and `3` when a check
+fails. Invalid arguments use exit code `2`.
 
 ## Exit codes and status
 

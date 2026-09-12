@@ -15,14 +15,14 @@ def test_cli_error_codes_and_interruption_status(tmp_path, monkeypatch, capsys):
     def broken(argv):
         new_run(tmp_path / "failure", "test")
         raise RuntimeError("controlled failure")
-    monkeypatch.setattr("src.cli._commands", lambda: {"fake": broken})
+    monkeypatch.setattr("src.cli._command", lambda name: broken if name == "fake" else None)
     assert main(["fake"]) == 1
     assert "controlled failure" in capsys.readouterr().err
     assert json.loads((tmp_path / "failure/operation.json").read_text())["status"] == "failed"
     def interrupted(argv):
         new_run(tmp_path / "interrupt", "test")
         raise KeyboardInterrupt
-    monkeypatch.setattr("src.cli._commands", lambda: {"fake": interrupted})
+    monkeypatch.setattr("src.cli._command", lambda name: interrupted if name == "fake" else None)
     assert main(["fake"]) == 130
     assert json.loads((tmp_path / "interrupt/operation.json").read_text())["status"] == "interrupted"
     with WorkspaceLock(tmp_path / "interrupt"):

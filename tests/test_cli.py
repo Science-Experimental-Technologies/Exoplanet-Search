@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from src.cli import main
+from src import __version__
 
 
 def test_unified_cli_help(capsys) -> None:
@@ -11,3 +12,9 @@ def test_unified_cli_help(capsys) -> None:
     assert "scaleup" in output
     assert "search" in output
     assert "validate" in output
+    assert "doctor" in output
+
+
+def test_unified_cli_version(capsys) -> None:
+    assert main(["--version"]) == 0
+    assert capsys.readouterr().out.strip() == f"SXS {__version__}"

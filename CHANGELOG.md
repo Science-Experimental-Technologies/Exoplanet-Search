@@ -4,6 +4,22 @@ All notable changes to this project are documented in this file. The format foll
 
 ## [Unreleased]
 
+### Added
+
+- `sxs --version` for an explicit CLI version check.
+- `sxs doctor` for read-only Python, dependency, packaged-configuration, and
+  optional public astronomy service diagnostics, with human-readable and JSON
+  output.
+
+### Changed
+
+- The top-level dispatcher now imports only the selected command, reducing
+  startup cost and preventing unrelated optional-library warnings.
+- Packaging metadata now uses the PEP 639 license-expression and license-files
+  fields while retaining the same source-available license terms.
+- Source-checkout installation now registers an editable `sxs` command after
+  installing the selected dependency profile.
+
 ## [1.3.0] - 2026-09-04
 
 ### Added
