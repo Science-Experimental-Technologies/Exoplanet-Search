@@ -119,6 +119,9 @@ jobs:
             --mount type=bind,src="$GITHUB_WORKSPACE/Dockerfile",dst=/opt/sxs/Dockerfile,readonly \
             --mount type=bind,src="$GITHUB_WORKSPACE/.dockerignore",dst=/opt/sxs/.dockerignore,readonly \
             --mount type=bind,src="$GITHUB_WORKSPACE/pyproject.toml",dst=/opt/sxs/pyproject.toml,readonly \
+            --mount type=bind,src="$GITHUB_WORKSPACE/requirements-core.txt",dst=/opt/sxs/requirements-core.txt,readonly \
+            --mount type=bind,src="$GITHUB_WORKSPACE/requirements-test.txt",dst=/opt/sxs/requirements-test.txt,readonly \
+            --mount type=bind,src="$GITHUB_WORKSPACE/requirements.txt",dst=/opt/sxs/requirements.txt,readonly \
             "$IMAGE" -m pytest -m "not network" -q -p no:cacheprovider
 
       - name: Generate SPDX SBOM
