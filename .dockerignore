@@ -2,6 +2,8 @@
 **
 !Dockerfile
 !.dockerignore
+!requirements-core.txt
+!requirements-test.txt
 !requirements.txt
 !src/
 !src/**

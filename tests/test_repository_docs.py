@@ -1,5 +1,6 @@
 from scripts.check_repository_docs import language_findings, local_link_errors, rnaas_counts
 from scripts.check_wheel import check
+from pathlib import Path
 import pytest
 from zipfile import ZipFile
 
@@ -51,3 +52,18 @@ def test_wheel_check_rejects_test_tools_in_runtime_metadata(tmp_path):
         )
     with pytest.raises(ValueError, match="runtime dependencies: pytest"):
         check(path)
+
+
+def test_container_requirement_files_are_in_build_context():
+    root = Path(__file__).resolve().parents[1]
+    dockerfile = (root / "Dockerfile").read_text(encoding="utf-8")
+    ignore_rules = set((root / ".dockerignore").read_text(encoding="utf-8").splitlines())
+    copied = {
+        token
+        for line in dockerfile.splitlines()
+        if line.startswith("COPY requirements")
+        for token in line.split()[1:-1]
+        if token.startswith("requirements")
+    }
+    assert copied
+    assert {f"!{path}" for path in copied} <= ignore_rules
