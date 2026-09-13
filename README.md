@@ -172,8 +172,9 @@ On Linux or macOS, create the environment with `python3.11 -m venv .venv` and ac
 
 Choose the dependency profile appropriate to the task:
 
-- `requirements-core.txt` — acquisition, preprocessing, BLS, validation, and CI;
-- `requirements.txt` — complete scientific and machine-learning environment;
+- `requirements-core.txt` — production acquisition, preprocessing, BLS, and validation runtime;
+- `requirements-test.txt` — core runtime plus the deterministic test runner;
+- `requirements.txt` — complete production scientific and machine-learning runtime;
 - `requirements-ml.txt` — compatibility alias for the complete environment; and
 - `requirements-docs.txt` — documentation website, manuscript, and PDF build support.
 
@@ -244,6 +245,7 @@ only after verifying that those artifacts belong to the same run. See the
 Verify the deterministic core with:
 
 ```powershell
+python -m pip install -r requirements-test.txt
 python -m pytest -m "not network"
 python -m src.cli baseline --config configs/base.yaml --dry-run
 ```

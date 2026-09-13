@@ -51,6 +51,7 @@ through catalog validation. A dry run does not execute those stages.
 ## 3. Run deterministic tests
 
 ```bash
+python -m pip install -r requirements-test.txt
 python -m pytest -m "not network"
 ```
 

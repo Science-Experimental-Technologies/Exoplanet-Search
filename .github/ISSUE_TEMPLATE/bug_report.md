@@ -27,7 +27,7 @@ Describe what you expected and identify the report, test, or documented contract
 - SXS version or commit:
 - Python version:
 - Operating system:
-- Installation file used (`requirements.txt` or `requirements-core.txt`):
+- Installation file used (`requirements.txt`, `requirements-core.txt`, and/or `requirements-test.txt`):
 
 ## Evidence
 

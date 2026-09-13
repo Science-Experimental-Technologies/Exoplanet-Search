@@ -1,17 +1,4 @@
-# Complete SXS stack. All direct dependencies are pinned.
-setuptools==84.0.0
-numpy==1.26.4
-scipy==1.17.1
-pandas==2.3.3
-pyarrow==23.0.1
-astropy==7.2.2
-astroquery==0.4.11
-lightkurve==2.6.0
-batman-package==2.5.3
-scikit-learn==1.6.1
-matplotlib==3.11.1
-plotly==6.9.0
-PyYAML==6.0.3
-pytest==9.1.1
+# Complete SXS runtime stack. All direct dependencies are pinned.
+-r requirements-core.txt
 tensorflow==2.18.1
 mlflow==3.16.0

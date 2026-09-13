@@ -12,7 +12,7 @@ Confirm that the virtual environment is active and install the intended
 profile:
 
 ```bash
-python -m pip install -r requirements.txt
+python -m pip install -r requirements-test.txt
 python -m pip check
 ```
 

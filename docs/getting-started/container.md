@@ -7,8 +7,10 @@ integrations; none are provided by this repository.
 
 ## What the image contains
 
-- Python 3.11 and the complete `requirements.txt` scientific environment,
+- Python 3.12 and the complete `requirements.txt` scientific environment,
   including TensorFlow and MLflow.
+- No build or test tooling declared as application dependencies; pytest exists
+  only in the unpublished CI test layer.
 - The SXS source, default YAML configurations, attribution, and license files.
 - A non-root runtime user (UID/GID `10001:10001`).
 

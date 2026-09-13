@@ -1,7 +1,8 @@
 # Isolated experiments and analysis workbench
 
 These commands are included in **v1.2.0**. Install the release wheel or use a
-current checkout with `requirements-core.txt`.
+current checkout with `requirements-core.txt`. Install `requirements-test.txt`
+only when running the repository test suite.
 They do not replace the archived research metrics or confirm planets.
 
 ## 1. Safe cache, resume, and workspaces

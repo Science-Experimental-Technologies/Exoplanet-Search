@@ -1,5 +1,4 @@
 # Core runtime and shared scientific stack. All direct dependencies are pinned.
-setuptools==84.0.0
 numpy==1.26.4
 scipy==1.17.1
 pandas==2.3.3
@@ -12,4 +11,3 @@ scikit-learn==1.6.1
 matplotlib==3.11.1
 plotly==6.9.0
 PyYAML==6.0.3
-pytest==9.1.1

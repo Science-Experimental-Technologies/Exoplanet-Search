@@ -96,6 +96,22 @@ jobs:
           docker run --rm "$IMAGE" baseline --config configs/base.yaml --to-stage 0
           docker run --rm --entrypoint python "$IMAGE" -m pip check
           docker run --rm --entrypoint python "$IMAGE" -c "import os, tensorflow, mlflow; assert os.getuid() == 10001"
+
+      - name: Build test-only image layer
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          target: test
+          platforms: linux/amd64
+          load: true
+          tags: ${{ steps.image.outputs.name }}:test-${{ github.sha }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Run deterministic tests in test-only layer
+        env:
+          IMAGE: ${{ steps.image.outputs.name }}:test-${{ github.sha }}
+        run: |
           docker run --rm --entrypoint python \
             --mount type=bind,src="$GITHUB_WORKSPACE/tests",dst=/opt/sxs/tests,readonly \
             --mount type=bind,src="$GITHUB_WORKSPACE/scripts",dst=/opt/sxs/scripts,readonly \

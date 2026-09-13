@@ -23,8 +23,9 @@ been scientifically reproduced on all platforms. See the latest CI results.
 
 | File | Intended use |
 |---|---|
-| `requirements-core.txt` | Acquisition, preprocessing, BLS, independent validation, tests, and CI |
-| `requirements.txt` | Complete environment including RF/CNN training, TensorFlow, and MLflow |
+| `requirements-core.txt` | Production acquisition, preprocessing, BLS, and independent-validation runtime |
+| `requirements-test.txt` | Core runtime plus pytest for deterministic and opt-in network tests |
+| `requirements.txt` | Complete production runtime including RF/CNN training, TensorFlow, and MLflow |
 | `requirements-ml.txt` | Compatibility alias for the complete environment |
 | `requirements-docs.txt` | Documentation website and publication/PDF utilities |
 
@@ -56,7 +57,7 @@ dependency profile from the matching source release.
     py -3.11 -m venv .venv
     .\.venv\Scripts\Activate.ps1
     python -m pip install --upgrade pip
-    python -m pip install -r requirements.txt
+    python -m pip install -r requirements.txt -r requirements-test.txt
     python -m pip install --no-deps -e .
     ```
 
@@ -68,7 +69,7 @@ dependency profile from the matching source release.
     python3.11 -m venv .venv
     source .venv/bin/activate
     python -m pip install --upgrade pip
-    python -m pip install -r requirements.txt
+    python -m pip install -r requirements.txt -r requirements-test.txt
     python -m pip install --no-deps -e .
     ```
 
@@ -80,7 +81,7 @@ dependency profile from the matching source release.
     python3.11 -m venv .venv
     source .venv/bin/activate
     python -m pip install --upgrade pip
-    python -m pip install -r requirements.txt
+    python -m pip install -r requirements.txt -r requirements-test.txt
     python -m pip install --no-deps -e .
     ```
 
@@ -110,6 +111,7 @@ Compare the result with `SHA256SUMS.txt` on the release page.
 ## Verify the environment
 
 ```bash
+python -m pip install -r requirements-test.txt
 sxs --version
 python -m pip check
 python -m pytest -m "not network"

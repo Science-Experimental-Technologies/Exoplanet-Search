@@ -1,0 +1,3 @@
+# Deterministic test environment layered on the core runtime.
+-r requirements-core.txt
+pytest==9.1.1

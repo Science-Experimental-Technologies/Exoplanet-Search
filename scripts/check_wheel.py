@@ -1,7 +1,9 @@
 """Check the built wheel's module layout and run its CLI outside the checkout."""
 
 import argparse
+from email.parser import BytesParser
 from pathlib import Path
+import re
 import subprocess
 import sys
 import tempfile
@@ -21,6 +23,18 @@ def check(wheel: Path) -> None:
         entry = next(name for name in names if name.endswith(".dist-info/entry_points.txt"))
         if "sxs = src.cli:main" not in archive.read(entry).decode():
             raise ValueError("Wheel CLI entry point does not match src.cli:main")
+        metadata_entry = next(name for name in names if name.endswith(".dist-info/METADATA"))
+        metadata = BytesParser().parsebytes(archive.read(metadata_entry))
+        dependencies = {
+            re.split(r"[\s(<>=!~;\[]", value, maxsplit=1)[0].lower().replace("_", "-")
+            for value in metadata.get_all("Requires-Dist", [])
+        }
+        forbidden = dependencies & {"pytest", "setuptools"}
+        if forbidden:
+            raise ValueError(
+                "Wheel declares development/build tools as runtime dependencies: "
+                + ", ".join(sorted(forbidden))
+            )
     with tempfile.TemporaryDirectory(prefix="sxs-wheel-check-") as temporary:
         code = "import sys; sys.path.insert(0, sys.argv[1]); from src.cli import main; raise SystemExit(main(['--help']))"
         result = subprocess.run([sys.executable, "-I", "-c", code, str(wheel.resolve())],

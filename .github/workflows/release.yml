@@ -25,12 +25,14 @@ jobs:
         with:
           python-version: "3.11"
           cache: pip
-          cache-dependency-path: requirements-core.txt
+          cache-dependency-path: |
+            requirements-core.txt
+            requirements-test.txt
 
-      - name: Install deterministic core
+      - name: Install deterministic test environment
         run: |
           python -m pip install --upgrade pip
-          python -m pip install -r requirements-core.txt
+          python -m pip install -r requirements-test.txt
 
       - name: Verify tagged revision
         run: |

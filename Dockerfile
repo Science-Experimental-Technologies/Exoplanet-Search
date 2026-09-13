@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM python:3.12-slim-bookworm
+FROM python:3.12-slim-bookworm AS runtime
 
 LABEL org.opencontainers.image.title="SXS — SCIX Exoplanet Search" \
       org.opencontainers.image.description="Kepler transit recovery and independent candidate vetting. No confirmed discoveries." \
@@ -15,8 +15,8 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     HOME=/home/sxs
 
 # Keep dependency installation cacheable, and include CPU TensorFlow for baseline training.
-COPY requirements.txt /tmp/sxs-requirements.txt
-RUN python -m pip install --no-cache-dir -r /tmp/sxs-requirements.txt \
+COPY requirements-core.txt requirements.txt /tmp/
+RUN python -m pip install --no-cache-dir -r /tmp/requirements.txt \
     && python -m pip check \
     && groupadd --gid 10001 sxs \
     && useradd --uid 10001 --gid sxs --create-home sxs
@@ -32,3 +32,14 @@ RUN mkdir -p data models reports /opt/.sxs-locks \
 USER 10001:10001
 ENTRYPOINT ["python", "-m", "src.cli"]
 CMD ["--help"]
+
+# CI-only layer used by the container workflow; it is never published.
+FROM runtime AS test
+USER root
+COPY requirements-core.txt requirements-test.txt /tmp/
+RUN python -m pip install --no-cache-dir -r /tmp/requirements-test.txt \
+    && python -m pip check
+USER 10001:10001
+
+# Keep the default Docker build identical to the dependency-minimal runtime.
+FROM runtime AS production
