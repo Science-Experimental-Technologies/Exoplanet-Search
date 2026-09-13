@@ -23,6 +23,7 @@ COMMANDS = {
     "init": ("src.workspace", "main"),
     "status": ("src.workspace_status", "main"),
     "support-bundle": ("src.support_bundle", "main"),
+    "verify": ("src.verify", "main"),
 }
 
 
@@ -53,7 +54,8 @@ def _print_help() -> None:
         "  config-check  Validate workflow YAML without running scientific stages\n"
         "  init      Create an isolated workspace with validated configurations\n"
         "  status    Inspect workspace configuration and recorded workflow state\n"
-        "  support-bundle  Create a privacy-conscious diagnostic ZIP\n\n"
+        "  support-bundle  Create a privacy-conscious diagnostic ZIP\n"
+        "  verify    Verify checkpoint identity and recorded file hashes\n\n"
         "Pass --help after a command to see workflow-specific options."
         "\nLegacy workflows accept --workspace DIR for isolated configs and outputs."
     )

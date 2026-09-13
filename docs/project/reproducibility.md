@@ -93,3 +93,15 @@ fingerprints. Keep old results for audit and start a new isolated experiment;
 do not hand-edit checkpoint identities. See the
 [workbench guide](../guides/workbench.md#1-safe-cache-resume-and-workspaces)
 for locks, partial progress, and limitations after abrupt termination.
+
+Use the read-only integrity command before relying on a saved checkpoint:
+
+```bash
+sxs verify WORKSPACE --workflow baseline
+```
+
+Repeat `--workflow` to select multiple checkpoints, or omit it to inspect all
+resume-capable workflows. Verification recomputes the runtime/config identity
+and the hashes of files explicitly recorded in each checkpoint. Recorded paths
+outside the workspace are rejected before hashing. This does not inspect
+unrecorded files, external services, or scientific correctness.

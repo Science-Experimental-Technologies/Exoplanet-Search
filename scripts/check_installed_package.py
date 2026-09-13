@@ -37,6 +37,12 @@ def check(wheel: Path) -> None:
             [str(cli), "config-check", "--json"], cwd=root, text=True
         ))
         assert config_report["valid"] and len(config_report["checks"]) == 4
+        verification = subprocess.run(
+            [str(cli), "verify", "workspace", "--workflow", "baseline", "--json"],
+            cwd=root, capture_output=True, text=True
+        )
+        assert verification.returncode == 3
+        assert "baseline checkpoint is absent" in json.loads(verification.stdout)["issues"]
         assert json.loads((root / "demo/expected.json").read_text())["best_period_recovered"]
         assert (root / "demo/report.html").is_file()
         assert json.loads((root / "demo/operation.json").read_text())["status"] == "completed"

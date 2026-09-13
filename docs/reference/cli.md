@@ -25,6 +25,7 @@ The installed `sxs` command and module form are equivalent.
 | `init` | Create or inspect an isolated, marked workflow workspace |
 | `status` | Inspect configuration and recorded workspace state without mutation |
 | `support-bundle` | Create a bounded, privacy-conscious diagnostic ZIP |
+| `verify` | Verify checkpoint identity and recorded file hashes |
 
 Passing `--help` after a command prints its current parser reference. Use
 `sxs --version` to print the code version.
@@ -122,6 +123,23 @@ operation/checkpoint/run status. It excludes configuration contents,
 observations, candidate tables, models, logs, environment variables,
 credentials, and absolute workspace paths. No network request is made. Always
 review `diagnostics.json` before sharing the archive.
+
+## `verify`
+
+```text
+sxs verify [WORKSPACE]
+  [--workflow {baseline,scaleup,search}]
+  [--json]
+```
+
+The default workspace is the current directory and the default selection is all
+three resume-capable workflows. Repeat `--workflow` to verify more than one
+explicit checkpoint. The command recomputes the current config/runtime/source
+identity and SHA-256 for every file recorded by each checkpoint. A recorded path
+outside the workspace is rejected before opening it. Missing checkpoints,
+identity mismatches, changed/missing files, malformed hashes, and unreadable
+records return code 3. This can perform substantial disk I/O. It does not check
+unrecorded files, external services, or scientific validity.
 
 ## Exit codes and status
 

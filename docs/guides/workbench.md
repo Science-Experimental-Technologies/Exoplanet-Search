@@ -16,6 +16,7 @@ python -m src.cli init runs/research-a
 python -m src.cli status runs/research-a
 python -m src.cli baseline --workspace runs/research-a --dry-run
 python -m src.cli baseline --workspace runs/research-a
+python -m src.cli verify runs/research-a --workflow baseline
 python -m src.cli baseline --workspace runs/research-a --resume
 python -m src.cli scaleup --workspace runs/research-a
 python -m src.cli search --workspace runs/research-a
@@ -32,6 +33,14 @@ the last operation record, checkpoint readability, and recorded workflow
 statuses. It deliberately does not recompute checkpoint fingerprints or inspect
 large artifact hashes. A recorded `running` state can be stale after a hard
 process kill; it is not proof that a process is active.
+
+`verify` is the explicit, slower integrity check. It recomputes the selected
+checkpoint identity from the current workflow config, source, runtime, and
+dependency inventory, then hashes every file recorded by that checkpoint. It
+never follows a recorded path outside the selected workspace. An absent
+checkpoint means “not verified” and returns code 3; it is not treated as an
+empty successful run. The command does not assess scientific validity or scan
+unrecorded files.
 
 The complete research sequence needs `requirements.txt` and public archive
 access. Workspace creation copies the checkout's `configs/` directory (or

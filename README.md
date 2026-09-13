@@ -215,6 +215,9 @@ python -m src.cli init runs/research-a
 # Inspect configuration and recorded workflow state without modifying it
 python -m src.cli status runs/research-a
 
+# After a workflow has checkpointed, verify its recorded integrity
+python -m src.cli verify runs/research-a --workflow baseline
+
 # Create a privacy-conscious diagnostic archive for a support request
 python -m src.cli support-bundle runs/research-a --output sxs-support.zip
 

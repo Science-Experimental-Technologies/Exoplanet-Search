@@ -18,6 +18,8 @@ All notable changes to this project are documented in this file. The format foll
   and workflow run-record summaries.
 - `sxs support-bundle [WORKSPACE]` for a bounded diagnostic ZIP that excludes
   scientific data, configuration contents, logs, credentials, and local paths.
+- `sxs verify [WORKSPACE]` for explicit checkpoint identity and recorded-file
+  integrity verification, with containment checks before hashing.
 
 ### Changed
 
