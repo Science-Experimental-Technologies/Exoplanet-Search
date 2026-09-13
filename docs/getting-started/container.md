@@ -9,8 +9,9 @@ integrations; none are provided by this repository.
 
 - Python 3.12 and the complete `requirements.txt` scientific environment,
   including TensorFlow and MLflow.
-- No build or test tooling declared as application dependencies; pytest exists
-  only in the unpublished CI test layer.
+- Pytest exists only in the unpublished CI test layer. The runtime retains
+  setuptools because `batman-package` 2.5.3 needs its `distutils` compatibility
+  shim on Python 3.12.
 - The SXS source, default YAML configurations, attribution, and license files.
 - A non-root runtime user (UID/GID `10001:10001`).
 

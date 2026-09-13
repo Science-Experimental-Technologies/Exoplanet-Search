@@ -1,4 +1,6 @@
 # Core runtime and shared scientific stack. All direct dependencies are pinned.
+# batman-package 2.5.3 imports distutils on Python 3.12; setuptools supplies its shim.
+setuptools==84.0.0
 numpy==1.26.4
 scipy==1.17.1
 pandas==2.3.3

@@ -29,10 +29,10 @@ def check(wheel: Path) -> None:
             re.split(r"[\s(<>=!~;\[]", value, maxsplit=1)[0].lower().replace("_", "-")
             for value in metadata.get_all("Requires-Dist", [])
         }
-        forbidden = dependencies & {"pytest", "setuptools"}
+        forbidden = dependencies & {"pytest"}
         if forbidden:
             raise ValueError(
-                "Wheel declares development/build tools as runtime dependencies: "
+                "Wheel declares test tools as runtime dependencies: "
                 + ", ".join(sorted(forbidden))
             )
     with tempfile.TemporaryDirectory(prefix="sxs-wheel-check-") as temporary:
