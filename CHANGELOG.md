@@ -20,6 +20,8 @@ All notable changes to this project are documented in this file. The format foll
   scientific data, configuration contents, logs, credentials, and local paths.
 - `sxs verify [WORKSPACE]` for explicit checkpoint identity and recorded-file
   integrity verification, with containment checks before hashing.
+- Installable `full` and `test` package extras for complete ML workflows and
+  repository testing without manually composing requirement files.
 
 ### Changed
 
@@ -31,6 +33,9 @@ All notable changes to this project are documented in this file. The format foll
   fields while retaining the same source-available license terms.
 - Source-checkout installation now registers an editable `sxs` command after
   installing the selected dependency profile.
+- Runtime and test dependencies are separated in wheel and container metadata;
+  pytest is no longer installed by default, while the Python 3.12 compatibility
+  shim required by `batman-package` remains explicit.
 
 ## [1.3.0] - 2026-09-04
 

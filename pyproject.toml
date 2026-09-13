@@ -8,6 +8,17 @@ version = "1.4.0.dev0"
 description = "Reproducible exoplanet transit recovery pipeline using public light curves"
 readme = "README.md"
 requires-python = ">=3.11,<3.13"
+keywords = ["astronomy", "exoplanets", "Kepler", "transit photometry", "box least squares"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: Science/Research",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Astronomy",
+]
 authors = [
   { name = "Rasya Andrean" },
 ]
@@ -18,10 +29,22 @@ license = "LicenseRef-SXS-Source-Available-Commercial-1.0"
 license-files = ["LICENSE", "NOTICE"]
 dynamic = ["dependencies"]
 
+[project.optional-dependencies]
+full = [
+  "tensorflow==2.18.1",
+  "mlflow==3.16.0",
+]
+test = [
+  "pytest==9.1.1",
+]
+
 [project.urls]
 Homepage = "https://science-experimental-technologies.github.io/Exoplanet-Search/"
 Repository = "https://github.com/Science-Experimental-Technologies/Exoplanet-Search"
 Documentation = "https://science-experimental-technologies.github.io/Exoplanet-Search/"
+Issues = "https://github.com/Science-Experimental-Technologies/Exoplanet-Search/issues"
+Changelog = "https://github.com/Science-Experimental-Technologies/Exoplanet-Search/blob/main/CHANGELOG.md"
+DOI = "https://doi.org/10.5281/zenodo.22294859"
 
 [project.scripts]
 sxs = "src.cli:main"

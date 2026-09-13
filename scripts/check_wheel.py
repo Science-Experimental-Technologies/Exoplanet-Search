@@ -10,6 +10,30 @@ import tempfile
 from zipfile import ZipFile
 
 
+def check_metadata(data: bytes) -> None:
+    metadata = BytesParser().parsebytes(data)
+    declared = metadata.get_all("Requires-Dist", [])
+
+    def name(value: str) -> str:
+        return re.split(r"[\s(<>=!~;\[]", value, maxsplit=1)[0].lower().replace("_", "-")
+
+    runtime_dependencies = {
+        name(value)
+        for value in declared
+        if ";" not in value or "extra ==" not in value.split(";", 1)[1].lower()
+    }
+    forbidden = runtime_dependencies & {"pytest"}
+    if forbidden:
+        raise ValueError(
+            "Wheel declares test tools as runtime dependencies: "
+            + ", ".join(sorted(forbidden))
+        )
+    extras = {value.lower() for value in metadata.get_all("Provides-Extra", [])}
+    missing = {"full", "test"} - extras
+    if missing:
+        raise ValueError("Wheel is missing optional dependency profiles: " + ", ".join(sorted(missing)))
+
+
 def check(wheel: Path) -> None:
     with ZipFile(wheel) as archive:
         names = archive.namelist()
@@ -24,17 +48,7 @@ def check(wheel: Path) -> None:
         if "sxs = src.cli:main" not in archive.read(entry).decode():
             raise ValueError("Wheel CLI entry point does not match src.cli:main")
         metadata_entry = next(name for name in names if name.endswith(".dist-info/METADATA"))
-        metadata = BytesParser().parsebytes(archive.read(metadata_entry))
-        dependencies = {
-            re.split(r"[\s(<>=!~;\[]", value, maxsplit=1)[0].lower().replace("_", "-")
-            for value in metadata.get_all("Requires-Dist", [])
-        }
-        forbidden = dependencies & {"pytest"}
-        if forbidden:
-            raise ValueError(
-                "Wheel declares test tools as runtime dependencies: "
-                + ", ".join(sorted(forbidden))
-            )
+        check_metadata(archive.read(metadata_entry))
     with tempfile.TemporaryDirectory(prefix="sxs-wheel-check-") as temporary:
         code = "import sys; sys.path.insert(0, sys.argv[1]); from src.cli import main; raise SystemExit(main(['--help']))"
         result = subprocess.run([sys.executable, "-I", "-c", code, str(wheel.resolve())],

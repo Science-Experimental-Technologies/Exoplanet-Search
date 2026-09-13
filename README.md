@@ -164,8 +164,7 @@ cd Exoplanet-Search
 py -3.11 -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
-python -m pip install --no-deps -e .
+python -m pip install -e ".[full,test]"
 ```
 
 On Linux or macOS, create the environment with `python3.11 -m venv .venv` and activate it with `source .venv/bin/activate`.
@@ -177,6 +176,11 @@ Choose the dependency profile appropriate to the task:
 - `requirements.txt` — complete production scientific and machine-learning runtime;
 - `requirements-ml.txt` — compatibility alias for the complete environment; and
 - `requirements-docs.txt` — documentation website, manuscript, and PDF build support.
+
+The equivalent source-checkout extras are `.[full]` for TensorFlow/MLflow and
+`.[test]` for pytest. A normal `pip install .` remains the smaller production
+installation. These extras are part of the `1.4.0.dev0` development metadata
+and are not retroactively available from the published `1.3.0` wheel.
 
 ## Reproduction
 

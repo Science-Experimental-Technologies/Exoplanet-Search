@@ -1,8 +1,11 @@
-from scripts.check_repository_docs import language_findings, local_link_errors, rnaas_counts
-from scripts.check_wheel import check
 from pathlib import Path
-import pytest
+import tomllib
 from zipfile import ZipFile
+
+import pytest
+
+from scripts.check_repository_docs import language_findings, local_link_errors, rnaas_counts
+from scripts.check_wheel import check, check_metadata
 
 
 def test_language_scan_ignores_code_and_english_names():
@@ -54,6 +57,14 @@ def test_wheel_check_rejects_test_tools_in_runtime_metadata(tmp_path):
         check(path)
 
 
+def test_wheel_metadata_allows_test_extra_but_not_default_test_dependency():
+    check_metadata(
+        b"Metadata-Version: 2.4\nName: package\nVersion: 1\n"
+        b"Provides-Extra: full\nProvides-Extra: test\n"
+        b'Requires-Dist: pytest==9.1.1; extra == "test"\n'
+    )
+
+
 def test_container_requirement_files_are_in_build_context():
     root = Path(__file__).resolve().parents[1]
     dockerfile = (root / "Dockerfile").read_text(encoding="utf-8")
@@ -67,3 +78,18 @@ def test_container_requirement_files_are_in_build_context():
     }
     assert copied
     assert {f"!{path}" for path in copied} <= ignore_rules
+
+
+def test_optional_dependency_pins_match_requirement_profiles():
+    root = Path(__file__).resolve().parents[1]
+    project = tomllib.loads((root / "pyproject.toml").read_text(encoding="utf-8"))["project"]
+
+    def pins(filename: str) -> set[str]:
+        return {
+            line.strip()
+            for line in (root / filename).read_text(encoding="utf-8").splitlines()
+            if line.strip() and not line.lstrip().startswith(("#", "-r "))
+        }
+
+    assert set(project["optional-dependencies"]["full"]) == pins("requirements.txt")
+    assert set(project["optional-dependencies"]["test"]) == pins("requirements-test.txt")

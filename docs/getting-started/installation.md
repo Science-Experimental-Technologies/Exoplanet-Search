@@ -31,6 +31,11 @@ been scientifically reproduced on all platforms. See the latest CI results.
 
 Use the complete environment for an end-to-end research reproduction.
 
+From a source checkout, `python -m pip install -e ".[full,test]"` installs the
+same complete runtime plus pytest. The extras belong to the `1.4.0.dev0`
+development metadata; the already-published `1.3.0` wheel supports only its
+default core installation.
+
 ## Install from PyPI
 
 For normal CLI use, install the production package in a Python 3.11 or 3.12
@@ -57,8 +62,7 @@ dependency profile from the matching source release.
     py -3.11 -m venv .venv
     .\.venv\Scripts\Activate.ps1
     python -m pip install --upgrade pip
-    python -m pip install -r requirements.txt -r requirements-test.txt
-    python -m pip install --no-deps -e .
+    python -m pip install -e ".[full,test]"
     ```
 
 === "macOS"
@@ -69,8 +73,7 @@ dependency profile from the matching source release.
     python3.11 -m venv .venv
     source .venv/bin/activate
     python -m pip install --upgrade pip
-    python -m pip install -r requirements.txt -r requirements-test.txt
-    python -m pip install --no-deps -e .
+    python -m pip install -e ".[full,test]"
     ```
 
 === "Linux"
@@ -81,8 +84,7 @@ dependency profile from the matching source release.
     python3.11 -m venv .venv
     source .venv/bin/activate
     python -m pip install --upgrade pip
-    python -m pip install -r requirements.txt -r requirements-test.txt
-    python -m pip install --no-deps -e .
+    python -m pip install -e ".[full,test]"
     ```
 
 ## Install from a release bundle

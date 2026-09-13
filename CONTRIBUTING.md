@@ -10,10 +10,10 @@ Fork and clone the repository, then create an isolated Python environment:
 py -3.11 -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
-python -m pip install -r requirements.txt -r requirements-test.txt
+python -m pip install -e ".[full,test]"
 ```
 
-On Linux or macOS, create the environment with `python3.11 -m venv .venv` and activate with `source .venv/bin/activate`. The non-network test suite installs through `requirements-test.txt`; full training and TensorFlow/MLflow checks additionally require `requirements.txt`. Install `requirements-docs.txt` as well for documentation builds.
+On Linux or macOS, create the environment with `python3.11 -m venv .venv` and activate with `source .venv/bin/activate`. The `test` and `full` extras mirror the pins in `requirements-test.txt` and `requirements.txt`; CI installs those files directly for explicit reproducibility. Install `requirements-docs.txt` as well for documentation builds.
 
 The CI workflow installs `requirements-test.txt` and runs the non-network suite
 and installed-wheel checks on Ubuntu, Windows, and macOS with Python 3.11 and

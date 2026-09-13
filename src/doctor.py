@@ -54,7 +54,10 @@ def _declared_requirements() -> list[tuple[str, str]]:
 
     pins: list[tuple[str, str]] = []
     for raw in raw_requirements:
-        requirement = raw.split(";", 1)[0].strip()
+        requirement, separator, marker = raw.partition(";")
+        if separator and re.search(r"\bextra\s*==", marker, re.IGNORECASE):
+            continue
+        requirement = requirement.strip()
         match = re.fullmatch(r"([A-Za-z0-9_.-]+)==([^\s]+)", requirement)
         if match:
             pins.append((match.group(1), match.group(2)))

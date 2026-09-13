@@ -35,3 +35,17 @@ def test_doctor_rejects_invalid_timeout() -> None:
         assert exc.code == 2
     else:
         raise AssertionError("invalid timeout should be rejected")
+
+
+def test_doctor_ignores_unselected_optional_dependencies(monkeypatch) -> None:
+    monkeypatch.setattr(doctor.metadata, "version", lambda _name: doctor.__version__)
+    monkeypatch.setattr(
+        doctor.metadata,
+        "requires",
+        lambda _name: [
+            "numpy==1.26.4",
+            'tensorflow==2.18.1; extra == "full"',
+            'pytest==9.1.1; extra == "test"',
+        ],
+    )
+    assert doctor._declared_requirements() == [("numpy", "1.26.4")]
