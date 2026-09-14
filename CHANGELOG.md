@@ -22,6 +22,8 @@ All notable changes to this project are documented in this file. The format foll
   integrity verification, with containment checks before hashing.
 - Installable `full` and `test` package extras for complete ML workflows and
   repository testing without manually composing requirement files.
+- `sxs citation` for text, BibTeX, or JSON citation metadata tied to the latest
+  DOI-backed software release.
 
 ### Changed
 
@@ -36,6 +38,9 @@ All notable changes to this project are documented in this file. The format foll
 - Runtime and test dependencies are separated in wheel and container metadata;
   pytest is no longer installed by default, while the Python 3.12 compatibility
   shim required by `batman-package` remains explicit.
+- The README's isolated-workspace reproduction sequence now keeps scale-up,
+  search, and validation in the initialized workspace instead of accidentally
+  returning to the source checkout.
 
 ## [1.3.0] - 2026-09-04
 

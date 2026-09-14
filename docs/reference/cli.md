@@ -26,9 +26,22 @@ The installed `sxs` command and module form are equivalent.
 | `status` | Inspect configuration and recorded workspace state without mutation |
 | `support-bundle` | Create a bounded, privacy-conscious diagnostic ZIP |
 | `verify` | Verify checkpoint identity and recorded file hashes |
+| `citation` | Print the preferred citation for the archived software release |
 
 Passing `--help` after a command prints its current parser reference. Use
 `sxs --version` to print the code version.
+
+## `citation`
+
+```text
+sxs citation [--format {text,bibtex,json}]
+```
+
+The default text form is ready to paste into a reference list. `bibtex` emits
+an `@software` entry, while `json` provides the same fields for scripts. The
+command cites the latest DOI-backed release rather than the unreleased code
+version in the current checkout. Its metadata is regression-checked against
+`CITATION.cff`.
 
 See [Analysis Workbench](../guides/workbench.md) for the five new commands.
 They write new output directories and are included in v1.2.0.

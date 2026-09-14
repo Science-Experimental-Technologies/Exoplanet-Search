@@ -230,13 +230,13 @@ python -m src.cli support-bundle runs/research-a --output sxs-support.zip
 python -m src.cli baseline --workspace runs/research-a
 
 # Reproduce scaled training and model qualification
-python -m src.cli scaleup --config configs/scaleup.yaml
+python -m src.cli scaleup --workspace runs/research-a
 
 # Run the bounded candidate screen
-python -m src.cli search --config configs/candidate_search.yaml
+python -m src.cli search --workspace runs/research-a
 
 # Run the independent evidence audit
-python -m src.cli validate --config configs/independent_validation.yaml --stage all
+python -m src.cli validate --workspace runs/research-a --stage all
 ```
 
 Full searches can download public mission products, consume substantial storage, and run expensive period grids. Review the chosen configuration before execution.

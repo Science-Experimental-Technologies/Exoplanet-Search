@@ -39,7 +39,7 @@ def check(wheel: Path) -> None:
         names = archive.namelist()
         if "cli.py" in names:
             raise ValueError("Wheel contains stale flattened modules; rebuild from a clean source tree")
-        for required in ("src/__init__.py", "src/cli.py", "src/doctor.py", "src/config_check.py", "src/workspace.py", "src/workspace_status.py", "src/support_bundle.py", "src/verify.py", "src/pipeline.py", "src/default_configs/base.yaml",
+        for required in ("src/__init__.py", "src/cli.py", "src/citation.py", "src/doctor.py", "src/config_check.py", "src/workspace.py", "src/workspace_status.py", "src/support_bundle.py", "src/verify.py", "src/pipeline.py", "src/default_configs/base.yaml",
                          "src/default_configs/scaleup.yaml", "src/default_configs/candidate_search.yaml",
                          "src/default_configs/independent_validation.yaml"):
             if required not in names:
@@ -50,12 +50,25 @@ def check(wheel: Path) -> None:
         metadata_entry = next(name for name in names if name.endswith(".dist-info/METADATA"))
         check_metadata(archive.read(metadata_entry))
     with tempfile.TemporaryDirectory(prefix="sxs-wheel-check-") as temporary:
-        code = "import sys; sys.path.insert(0, sys.argv[1]); from src.cli import main; raise SystemExit(main(['--help']))"
-        result = subprocess.run([sys.executable, "-I", "-c", code, str(wheel.resolve())],
-                                cwd=temporary, check=True, capture_output=True, text=True)
-        if "SXS | SCIX Exoplanet Search" not in result.stdout:
-            raise ValueError("Wheel help output missing expected CLI heading")
-    print(f"Wheel layout and isolated CLI help passed: {wheel.name}")
+        code = (
+            "import sys; sys.path.insert(0, sys.argv[1]); "
+            "from src.cli import main; raise SystemExit(main(sys.argv[2:]))"
+        )
+        checks = (
+            (["--help"], "SXS | SCIX Exoplanet Search"),
+            (["citation", "--format", "json"], "10.5281/zenodo.22294859"),
+        )
+        for arguments, expected in checks:
+            result = subprocess.run(
+                [sys.executable, "-I", "-c", code, str(wheel.resolve()), *arguments],
+                cwd=temporary,
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+            if expected not in result.stdout:
+                raise ValueError(f"Wheel CLI output missing expected value: {expected}")
+    print(f"Wheel layout and isolated CLI help/citation passed: {wheel.name}")
 
 
 if __name__ == "__main__":

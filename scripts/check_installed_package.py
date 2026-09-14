@@ -25,6 +25,7 @@ def check(wheel: Path) -> None:
                           ["init", "workspace", "--json"],
                           ["status", "workspace", "--json"],
                           ["support-bundle", "workspace", "--output", "support.zip", "--json"],
+                          ["citation", "--format", "bibtex"],
                           ["demo", "--output", "demo"],
                           ["baseline", "--workspace", "workspace", "--dry-run"]):
             subprocess.run([str(cli), *arguments], cwd=root, check=True)
@@ -37,6 +38,11 @@ def check(wheel: Path) -> None:
             [str(cli), "config-check", "--json"], cwd=root, text=True
         ))
         assert config_report["valid"] and len(config_report["checks"]) == 4
+        citation = json.loads(subprocess.check_output(
+            [str(cli), "citation", "--format", "json"], cwd=root, text=True
+        ))
+        assert citation["version"] == "1.3.0"
+        assert citation["doi"] == "10.5281/zenodo.22294859"
         verification = subprocess.run(
             [str(cli), "verify", "workspace", "--workflow", "baseline", "--json"],
             cwd=root, capture_output=True, text=True
@@ -50,7 +56,7 @@ def check(wheel: Path) -> None:
         assert (root / "support.zip").is_file()
         origin = subprocess.check_output([str(python), "-I", "-c", "import src; print(src.__file__)"], cwd=root, text=True).strip()
         assert Path(origin).resolve().is_relative_to(environment.resolve()), origin
-    print("Installed console script, offline demo, and packaged workspace defaults passed")
+    print("Installed console script, citation, offline demo, and packaged workspace defaults passed")
 
 
 if __name__ == "__main__":

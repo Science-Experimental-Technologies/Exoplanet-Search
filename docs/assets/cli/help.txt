@@ -19,6 +19,7 @@ Commands:
   status    Inspect workspace configuration and recorded workflow state
   support-bundle  Create a privacy-conscious diagnostic ZIP
   verify    Verify checkpoint identity and recorded file hashes
+  citation  Print the preferred archived-software citation
 
 Pass --help after a command to see workflow-specific options.
 Legacy workflows accept --workspace DIR for isolated configs and outputs.

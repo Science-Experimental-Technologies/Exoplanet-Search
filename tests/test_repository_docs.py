@@ -39,7 +39,7 @@ def test_wheel_check_rejects_flattened_src_layout(tmp_path):
 def test_wheel_check_rejects_test_tools_in_runtime_metadata(tmp_path):
     path = tmp_path / "wrong.whl"
     required = (
-        "src/__init__.py", "src/cli.py", "src/doctor.py", "src/config_check.py",
+        "src/__init__.py", "src/cli.py", "src/citation.py", "src/doctor.py", "src/config_check.py",
         "src/workspace.py", "src/workspace_status.py", "src/support_bundle.py",
         "src/verify.py", "src/pipeline.py", "src/default_configs/base.yaml",
         "src/default_configs/scaleup.yaml", "src/default_configs/candidate_search.yaml",
