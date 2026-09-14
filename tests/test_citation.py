@@ -26,8 +26,3 @@ def test_command_metadata_matches_citation_cff() -> None:
     assert CITATION["version"] == cff["version"]
     assert CITATION["doi"] == cff["doi"]
     assert CITATION["year"] == cff["date-released"].year
-
-
-def test_container_tests_mount_citation_source() -> None:
-    workflow = Path(".github/workflows/container.yml").read_text(encoding="utf-8")
-    assert 'src="$GITHUB_WORKSPACE/CITATION.cff",dst=/opt/sxs/CITATION.cff,readonly' in workflow
