@@ -41,6 +41,9 @@ All notable changes to this project are documented in this file. The format foll
 - The README's isolated-workspace reproduction sequence now keeps scale-up,
   search, and validation in the initialized workspace instead of accidentally
   returning to the source checkout.
+- Updated the runtime scikit-learn pin to 1.9.1 and the documentation pypdf pin
+  to 6.18.0 after cross-platform dependency checks and local ML compatibility
+  tests.
 
 ## [1.3.0] - 2026-09-04
 
