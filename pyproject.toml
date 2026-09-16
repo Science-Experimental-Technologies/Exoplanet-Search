@@ -44,7 +44,7 @@ Repository = "https://github.com/Science-Experimental-Technologies/Exoplanet-Sea
 Documentation = "https://science-experimental-technologies.github.io/Exoplanet-Search/"
 Issues = "https://github.com/Science-Experimental-Technologies/Exoplanet-Search/issues"
 Changelog = "https://github.com/Science-Experimental-Technologies/Exoplanet-Search/blob/main/CHANGELOG.md"
-DOI = "https://doi.org/10.5281/zenodo.22294858"
+DOI = "https://doi.org/10.5281/zenodo.22794079"
 
 [project.scripts]
 sxs = "src.cli:main"

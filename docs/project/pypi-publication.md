@@ -1,13 +1,14 @@
 # PyPI publication
 
-Version 1.3.0 is published on both package indexes:
+Final version 1.4.0 is published on both package indexes:
 
-- [PyPI production package](https://pypi.org/project/scix-exoplanet-search/1.3.0/)
-- [TestPyPI verification package](https://test.pypi.org/project/scix-exoplanet-search/1.3.0/)
+- [PyPI production package](https://pypi.org/project/scix-exoplanet-search/1.4.0/)
+- [TestPyPI verification package](https://test.pypi.org/project/scix-exoplanet-search/1.4.0/)
 
 The production page, anonymous wheel download, complete dependency installation,
-installed `sxs --help`, core scientific imports, and `pip check` were verified on
-2026-09-11 with Python 3.11. `pip check` reported no broken requirements.
+installed CLI, packaged configurations, demo, baseline dry-run, and `pip check`
+were verified on 2026-09-16 with Python 3.11. `sxs doctor` passed all 13 local
+checks and `pip check` reported no broken requirements.
 
 ## Trusted publisher configuration
 
@@ -29,15 +30,18 @@ credentials; no long-lived PyPI token is stored in repository secrets.
 ## Verified publication sequence
 
 1. The TestPyPI trusted publisher uploaded the release in
-   [workflow run 2](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/actions/runs/34487604382).
-2. The TestPyPI wheel was installed anonymously and its package version and
-   `sxs` console entry point were verified.
+   [workflow run 4](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/actions/runs/35088986987).
+2. The TestPyPI JSON API reported the expected wheel, version, and Python range.
+   Its SHA-256 matched the GitHub Release wheel.
 3. The production trusted publisher uploaded the identical release wheel after
    environment approval in
-   [workflow run 3](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/actions/runs/34489363948).
-4. A clean production installation resolved the full dependency set, ran
-   `sxs --help`, imported NumPy, SciPy, pandas, Astropy, Lightkurve,
-   scikit-learn, and batman, and passed `pip check`.
+   [workflow run 5](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/actions/runs/35089286710).
+4. The production wheel SHA-256 was
+   `7bceb7953528f00768ff418bd5c183f4df690cb14df1bbca4d254d03184d7ddc`,
+   identical to the GitHub Release and TestPyPI wheels.
+5. A clean production installation resolved the complete dependency set, passed
+   `pip check`, reported `SXS 1.4.0`, passed `sxs doctor`, generated the demo,
+   and completed a baseline dry-run.
 
 The workflow downloads the already published GitHub release wheel, verifies it
 against `SHA256SUMS.txt`, checks its layout and CLI, and passes that same file to

@@ -5,7 +5,7 @@
 The repository contains a complete research narrative and a condensed RNAAS
 draft. Neither a local PDF nor a successful software test certifies scientific
 peer review, journal acceptance, or submission readiness. The software releases
-are archived separately at [Zenodo](https://doi.org/10.5281/zenodo.22294858);
+are archived separately at [Zenodo](https://doi.org/10.5281/zenodo.22794079);
 that software DOI does not imply a journal submission or acceptance.
 
 The legacy `publication_ready` field in the validation run JSON means that the

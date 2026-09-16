@@ -56,7 +56,7 @@ def check(wheel: Path) -> None:
         )
         checks = (
             (["--help"], "SXS | SCIX Exoplanet Search"),
-            (["citation", "--format", "json"], "10.5281/zenodo.22294858"),
+            (["citation", "--format", "json"], "10.5281/zenodo.22794079"),
         )
         for arguments, expected in checks:
             result = subprocess.run(

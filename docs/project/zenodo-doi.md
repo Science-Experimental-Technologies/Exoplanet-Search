@@ -1,48 +1,41 @@
 # Zenodo archive and DOI
 
-SXS v1.3.0 is preserved as a public Zenodo software record. Use the version
-DOI when citing that exact release and the concept DOI when referring to the
-evolving software across versions.
+Final SXS v1.4.0 is preserved as a public Zenodo software record. Use the
+version DOI when citing that exact release and the concept DOI when referring
+to the complete software archive family.
 
 | Identifier | Value |
 |---|---|
-| Version DOI | [`10.5281/zenodo.22294859`](https://doi.org/10.5281/zenodo.22294859) |
+| Version DOI | [`10.5281/zenodo.22794079`](https://doi.org/10.5281/zenodo.22794079) |
 | Concept DOI | [`10.5281/zenodo.22294858`](https://doi.org/10.5281/zenodo.22294858) |
-| Zenodo record | [`zenodo.org/records/22294859`](https://zenodo.org/records/22294859) |
-| GitHub release | [`v1.3.0`](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/tag/v1.3.0) |
-| Archived commit | `f2641544c4192bf0bc220e630fc299c9bb50be13` |
-| Publication date | 2026-09-04 |
+| Zenodo record | [`zenodo.org/records/22794079`](https://zenodo.org/records/22794079) |
+| GitHub release | [`v1.4.0`](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/tag/v1.4.0) |
+| Archived commit | `3464a59533c57622ec49012e3f79c491abd936f9` |
+| Publication date | 2026-09-16 |
 
 ## Archived object
 
-Zenodo's GitHub integration preserved
-`Science-Experimental-Technologies/Exoplanet-Search-v1.3.0.zip` (21,249,195
-bytes; MD5 `cce95b5e6321cd77c83f6997c090c743`). The archive is the tagged repository
-source. Platform bundles, the standalone wheel, checksums, and the preprint are
+Zenodo's GitHub integration preserved the tagged v1.4.0 repository source.
+Platform bundles, the standalone wheel, checksums, and the preprint are
 distributed separately on the GitHub release page.
 
 The record identifies Rasya Andrean as creator, Science Experimental
-Technologies as affiliation, software version v1.3.0, the tagged repository as
+Technologies as affiliation, software version v1.4.0, the tagged repository as
 a related work, and the project repository as the code repository. Its notes
 record independent funding by Rasya Andrean and Urus Foundation.
 
 The archived software is governed by the custom
-[SXS Source-Available Commercial License 1.0](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/blob/v1.3.0/LICENSE),
+[SXS Source-Available Commercial License 1.0](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/blob/v1.4.0/LICENSE),
 not a Creative Commons software license. Zenodo record metadata are CC0 under
 Zenodo policy; that separate metadata rule does not replace the license attached
 to the archived files.
 
-## Release procedure
+## Final archive status
 
-For a future numbered release:
-
-1. update and validate `CITATION.cff`, version metadata, and the changelog;
-2. pass CI, documentation, CodeQL, container, and release checks before tagging;
-3. create a new immutable semantic-version tag rather than moving an old tag;
-4. verify the automatically archived creator, version, date, file, related
-   repository, funding note, copyright, and custom software license; and
-5. add the new version DOI to release-specific citation material while keeping
-   the concept DOI stable.
+The v1.4.0 tag is the final planned feature release. Its release workflow,
+platform bundles, wheel, checksums, container image, PyPI publication, and
+Zenodo archive were completed on 2026-09-16. The concept DOI remains stable for
+the full version history.
 
 Zenodo defaults non-dataset deposits to CC BY when it cannot map a custom
 software license. Therefore, every automatically created SXS record must be

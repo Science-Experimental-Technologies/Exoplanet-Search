@@ -10,12 +10,13 @@ the project license.
 Andrean, R. (2026). SCIX Exoplanet Search (SXS): Reproducible Kepler
 Transit Recovery and Independent Vetting (Version 1.4.0).
 Science Experimental Technologies.
-https://doi.org/10.5281/zenodo.22294858
+https://doi.org/10.5281/zenodo.22794079
 ```
 
-The concept DOI [`10.5281/zenodo.22294858`](https://doi.org/10.5281/zenodo.22294858)
-represents all SXS versions and resolves to the latest archive. Use the
-version-specific DOI shown by Zenodo when exact-release identification is required.
+The version DOI [`10.5281/zenodo.22794079`](https://doi.org/10.5281/zenodo.22794079)
+identifies final release v1.4.0. The concept DOI
+[`10.5281/zenodo.22294858`](https://doi.org/10.5281/zenodo.22294858)
+represents the complete SXS archive family.
 
 GitHub's **Cite this repository** control reads `CITATION.cff` and can export
 common citation formats.

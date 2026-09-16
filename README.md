@@ -16,7 +16,7 @@
   <a href="https://github.com/Science-Experimental-Technologies/Exoplanet-Search/actions/workflows/public-distribution.yml"><img src="https://github.com/Science-Experimental-Technologies/Exoplanet-Search/actions/workflows/public-distribution.yml/badge.svg" alt="Public distribution test"></a>
   <a href="https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/latest"><img src="https://img.shields.io/github/v/release/Science-Experimental-Technologies/Exoplanet-Search?display_name=tag&label=release&color=16A3B6" alt="Latest release"></a>
   <a href="https://pypi.org/project/scix-exoplanet-search/"><img src="https://img.shields.io/pypi/v/scix-exoplanet-search?label=PyPI&color=16A3B6" alt="PyPI package version"></a>
-  <a href="https://doi.org/10.5281/zenodo.22294858"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.22294858.svg" alt="Zenodo concept DOI 10.5281/zenodo.22294858"></a>
+  <a href="https://doi.org/10.5281/zenodo.22794079"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.22794079.svg" alt="Zenodo DOI 10.5281/zenodo.22794079"></a>
   <a href="pyproject.toml"><img src="https://img.shields.io/badge/Python-3.11%20%7C%203.12-3776AB?logo=python&logoColor=white" alt="Python 3.11 and 3.12"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-SXS%20Source--Available-16A3B6" alt="SXS Source-Available Commercial License 1.0"></a>
   <a href="DISCLAIMER.md"><img src="https://img.shields.io/badge/discovery%20status-none%20confirmed-667085" alt="No confirmed discovery"></a>
@@ -287,7 +287,7 @@ Project-authored evidence is tracked in these records:
 - [Independent validation](reports/independent_validation.md)
 - [RNAAS-length manuscript draft](reports/rnaas_draft.md)
 - [AASTeX RNAAS submission package](manuscript/README.md)
-- [Zenodo software archive](https://doi.org/10.5281/zenodo.22294858) and [archival record](docs/project/zenodo-doi.md)
+- [Zenodo v1.4.0 software archive](https://doi.org/10.5281/zenodo.22794079) and [archival record](docs/project/zenodo-doi.md)
 - [Documentation and consistency audit](reports/documentation_audit.md)
 - [Workbench implementation and verification](reports/workbench_verification.md)
 - [Archived research preprint v1.0.0](output/pdf/sxs_preprint_v1.0.0.pdf) — see [publication status and corrections](docs/project/publication.md) before reuse
@@ -326,12 +326,12 @@ If SXS materially supports your research or technical work, cite the release met
 Andrean, R. (2026). SCIX Exoplanet Search (SXS): Reproducible Kepler
 Transit Recovery and Independent Vetting (Version 1.4.0).
 Science Experimental Technologies.
-https://doi.org/10.5281/zenodo.22294858
+https://doi.org/10.5281/zenodo.22794079
 ```
 
-The concept DOI above resolves to the latest archived SXS version. Cite the
-version-specific DOI recorded on Zenodo when exact-release identification is
-required.
+Use the version DOI above for the final v1.4.0 release. The concept DOI
+[`10.5281/zenodo.22294858`](https://doi.org/10.5281/zenodo.22294858) represents
+the complete SXS archive family.
 
 Also cite the relevant mission archives, catalogs, and scientific software—including [Lightkurve](https://lightkurve.github.io/lightkurve/), [Astroquery](https://astroquery.readthedocs.io/), and [`batman`](https://lkreidberg.github.io/batman/)—when their data or methods are used.
 
