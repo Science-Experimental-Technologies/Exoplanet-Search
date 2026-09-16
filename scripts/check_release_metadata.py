@@ -3,10 +3,14 @@
 from pathlib import Path
 import sys
 import tomllib
+
 import yaml
-from src import __version__
 
 root = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(root))
+
+from src import __version__  # noqa: E402
+
 expected = sys.argv[1]
 project = tomllib.loads((root / "pyproject.toml").read_text(encoding="utf-8"))
 citation = yaml.safe_load((root / "CITATION.cff").read_text(encoding="utf-8"))
