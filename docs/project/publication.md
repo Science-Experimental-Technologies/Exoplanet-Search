@@ -4,8 +4,8 @@
 
 The repository contains a complete research narrative and a condensed RNAAS
 draft. Neither a local PDF nor a successful software test certifies scientific
-peer review, journal acceptance, or submission readiness. The v1.3.0 software
-is archived separately at [Zenodo](https://doi.org/10.5281/zenodo.22294859);
+peer review, journal acceptance, or submission readiness. The software releases
+are archived separately at [Zenodo](https://doi.org/10.5281/zenodo.22294858);
 that software DOI does not imply a journal submission or acceptance.
 
 The legacy `publication_ready` field in the validation run JSON means that the
@@ -19,9 +19,9 @@ submission, acceptance, or external scientific validation.
 | `output/pdf/sxs_preprint_v1.0.0.pdf` | Archived research PDF; not automatically synchronized with current Markdown |
 | `CITATION.cff` | Software release citation; research-report metadata is a separate reference |
 
-Public software releases `v1.0.0`, `v1.1.0`, `v1.2.0`, and `v1.3.0` are not the same thing as the
+Public software releases `v1.0.0` through final `v1.4.0` are not the same thing as the
 research labels “v1” (baseline) and “v2” (scaled benchmark/search). The research
-PDF remains version 1.0.0; versions 1.1.0 through 1.3.0 are software releases. A
+PDF remains version 1.0.0; versions 1.1.0 through 1.4.0 are software releases. A
 `main` container tag is a moving build, not a new numbered release.
 
 ## Corrections to read with the archived PDF

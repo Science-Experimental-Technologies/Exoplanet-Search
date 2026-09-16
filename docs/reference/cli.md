@@ -51,8 +51,7 @@ to isolate its configuration and relative outputs.
 ## `doctor`
 
 !!! note
-    `doctor` is part of the upcoming 1.4.0 release and is currently available
-    from the main branch.
+    `doctor` was introduced in the final 1.4.0 release.
 
 ```text
 sxs doctor [--json] [--network] [--timeout SECONDS]
@@ -71,8 +70,7 @@ fails. Invalid arguments use exit code `2`.
 ## `config-check`
 
 !!! info
-    `config-check` is part of the upcoming 1.4.0 release and is currently
-    available from the main branch.
+    `config-check` was introduced in the final 1.4.0 release.
 
 ```text
 sxs config-check [CONFIG ...]
@@ -90,8 +88,7 @@ artifacts. It returns `0` when every file passes and `3` when any file fails.
 ## `init`
 
 !!! tip
-    `init` is part of the upcoming 1.4.0 release and is currently available
-    from the main branch.
+    `init` was introduced in the final 1.4.0 release.
 
 ```text
 sxs init WORKSPACE [--json]
@@ -107,8 +104,7 @@ network request, or observation download.
 ## `status`
 
 !!! example
-    `status` is part of the upcoming 1.4.0 release and is currently available
-    from the main branch.
+    `status` was introduced in the final 1.4.0 release.
 
 ```text
 sxs status [WORKSPACE] [--json]

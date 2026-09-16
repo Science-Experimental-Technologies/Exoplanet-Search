@@ -11,9 +11,9 @@ CITATION = {
     "author": "Rasya Andrean",
     "year": 2026,
     "title": "SCIX Exoplanet Search (SXS): Reproducible Kepler Transit Recovery and Independent Vetting",
-    "version": "1.3.0",
+    "version": "1.4.0",
     "publisher": "Science Experimental Technologies",
-    "doi": "10.5281/zenodo.22294859",
+    "doi": "10.5281/zenodo.22294858",
     "repository": "https://github.com/Science-Experimental-Technologies/Exoplanet-Search",
 }
 
@@ -33,7 +33,7 @@ def render_bibtex() -> str:
 
     return "\n".join(
         (
-            "@software{sxs_1_3_0,",
+            "@software{sxs_1_4_0,",
             "  author = {Andrean, Rasya},",
             f"  title = {{{CITATION['title']}}},",
             f"  year = {{{CITATION['year']}}},",

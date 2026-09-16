@@ -1,6 +1,10 @@
 # Contributing to SXS
 
-Thank you for helping improve SXS. Contributions may address software reliability, documentation, reproducibility, or clearly scoped astronomy-methodology questions. By participating, you agree to follow [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
+Version 1.4.0 is the final planned feature release, so general feature
+development is closed. Focused contributions that correct critical security,
+packaging, reproducibility, or scientific-record integrity defects may still be
+considered. By participating, you agree to follow
+[CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
 
 ## Development setup
 
@@ -46,7 +50,8 @@ The repository does not currently enforce a separate formatter or linter in CI. 
 ## Issues
 
 - Use the bug template for reproducible software or data-processing failures.
-- Use the feature/research template for methodology proposals.
+- New feature and methodology proposals are retained for historical discussion
+  but are not planned for implementation after v1.4.0.
 - Search existing issues first.
 - Do not post credentials, unpublished private data, or sensitive vulnerability details in a public issue; follow [SECURITY.md](SECURITY.md).
 

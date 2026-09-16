@@ -6,9 +6,9 @@ authors:
   - family-names: "Andrean"
     given-names: "Rasya"
     affiliation: "Science Experimental Technologies"
-version: 1.3.0
-date-released: 2026-09-04
-doi: "10.5281/zenodo.22294859"
+version: 1.4.0
+date-released: 2026-09-16
+doi: "10.5281/zenodo.22294858"
 license-url: "https://github.com/Science-Experimental-Technologies/Exoplanet-Search/blob/main/LICENSE"
 url: "https://science-experimental-technologies.github.io/Exoplanet-Search/"
 contact:
@@ -17,8 +17,8 @@ contact:
 repository-code: "https://github.com/Science-Experimental-Technologies/Exoplanet-Search"
 identifiers:
   - type: doi
-    value: "10.5281/zenodo.22294859"
-    description: "Version DOI for the SXS v1.3.0 software archive"
+    value: "10.5281/zenodo.22294858"
+    description: "Concept DOI for all archived SXS software releases"
 abstract: >-
   A reproducible computational astronomy pipeline for Kepler light-curve
   acquisition, preprocessing, Box Least Squares transit recovery,

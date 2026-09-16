@@ -16,7 +16,7 @@
   <a href="https://github.com/Science-Experimental-Technologies/Exoplanet-Search/actions/workflows/public-distribution.yml"><img src="https://github.com/Science-Experimental-Technologies/Exoplanet-Search/actions/workflows/public-distribution.yml/badge.svg" alt="Public distribution test"></a>
   <a href="https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/latest"><img src="https://img.shields.io/github/v/release/Science-Experimental-Technologies/Exoplanet-Search?display_name=tag&label=release&color=16A3B6" alt="Latest release"></a>
   <a href="https://pypi.org/project/scix-exoplanet-search/"><img src="https://img.shields.io/pypi/v/scix-exoplanet-search?label=PyPI&color=16A3B6" alt="PyPI package version"></a>
-  <a href="https://doi.org/10.5281/zenodo.22294859"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.22294859.svg" alt="Zenodo DOI 10.5281/zenodo.22294859"></a>
+  <a href="https://doi.org/10.5281/zenodo.22294858"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.22294858.svg" alt="Zenodo concept DOI 10.5281/zenodo.22294858"></a>
   <a href="pyproject.toml"><img src="https://img.shields.io/badge/Python-3.11%20%7C%203.12-3776AB?logo=python&logoColor=white" alt="Python 3.11 and 3.12"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-SXS%20Source--Available-16A3B6" alt="SXS Source-Available Commercial License 1.0"></a>
   <a href="DISCLAIMER.md"><img src="https://img.shields.io/badge/discovery%20status-none%20confirmed-667085" alt="No confirmed discovery"></a>
@@ -37,6 +37,11 @@
 
 > [!IMPORTANT]
 > SXS does **not** claim the discovery, validation, or confirmation of a new exoplanet. Model scores prioritize review; they are not planetary probabilities. Every candidate output requires independent scientific confirmation.
+
+> [!NOTE]
+> Version 1.4.0 is the final planned feature release. This repository remains
+> available as a reproducible scientific and software record; only critical
+> security, packaging, or record-integrity corrections are planned.
 
 ## Abstract
 
@@ -106,7 +111,7 @@ SXS supports Python 3.11 and 3.12. Windows received the full workstation researc
 Install the verified production package in a virtual environment:
 
 ```bash
-python -m pip install scix-exoplanet-search==1.3.0
+python -m pip install scix-exoplanet-search==1.4.0
 sxs --help
 sxs demo --output demo
 ```
@@ -120,16 +125,16 @@ source release.
 
 | Platform | Release bundle | Installation entry point |
 |---|---|---|
-| Windows | [Download `.zip`](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/download/v1.3.0/sxs-v1.3.0-windows-python.zip) | `PLATFORM_INSTALL.md` using PowerShell |
-| macOS | [Download `.tar.gz`](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/download/v1.3.0/sxs-v1.3.0-macos-python.tar.gz) | `PLATFORM_INSTALL.md` using Terminal |
-| Linux | [Download `.tar.gz`](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/download/v1.3.0/sxs-v1.3.0-linux-python.tar.gz) | `PLATFORM_INSTALL.md` using a POSIX shell |
+| Windows | [Download `.zip`](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/download/v1.4.0/sxs-v1.4.0-windows-python.zip) | `PLATFORM_INSTALL.md` using PowerShell |
+| macOS | [Download `.tar.gz`](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/download/v1.4.0/sxs-v1.4.0-macos-python.tar.gz) | `PLATFORM_INSTALL.md` using Terminal |
+| Linux | [Download `.tar.gz`](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/download/v1.4.0/sxs-v1.4.0-linux-python.tar.gz) | `PLATFORM_INSTALL.md` using a POSIX shell |
 
-All three bundles contain the same Python source and scientific record. Verify downloads against [`SHA256SUMS.txt`](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/download/v1.3.0/SHA256SUMS.txt).
+All three bundles contain the same Python source and scientific record. Verify downloads against [`SHA256SUMS.txt`](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/download/v1.4.0/SHA256SUMS.txt).
 
-For CLI use without a checkout, download the [standalone wheel](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/download/v1.3.0/scix_exoplanet_search-1.3.0-py3-none-any.whl), verify its checksum, and install it in a Python virtual environment:
+For CLI use without a checkout, download the [standalone wheel](https://github.com/Science-Experimental-Technologies/Exoplanet-Search/releases/download/v1.4.0/scix_exoplanet_search-1.4.0-py3-none-any.whl), verify its checksum, and install it in a Python virtual environment:
 
 ```bash
-python -m pip install scix_exoplanet_search-1.3.0-py3-none-any.whl
+python -m pip install scix_exoplanet_search-1.4.0-py3-none-any.whl
 sxs demo --output demo
 ```
 
@@ -147,11 +152,11 @@ is public. Anonymous pull and runtime verification for the numbered release is
 performed by the Public distribution workflow; no GitHub login is needed.
 
 ```bash
-docker pull ghcr.io/science-experimental-technologies/exoplanet-search:v1.3.0
-docker run --rm ghcr.io/science-experimental-technologies/exoplanet-search:v1.3.0 --help
+docker pull ghcr.io/science-experimental-technologies/exoplanet-search:v1.4.0
+docker run --rm ghcr.io/science-experimental-technologies/exoplanet-search:v1.4.0 --help
 ```
 
-`v1.3.0` is the numbered container release; `main` follows tested default-branch builds.
+`v1.4.0` is the final numbered container release; `main` retains the final tested source state.
 See the [container guide](docs/getting-started/container.md) for persistent data,
 digest pinning, local builds, and initial package visibility setup. There are no
 npm, NuGet, Maven, or RubyGems packages: SXS currently has no SDK in those languages.
@@ -179,8 +184,8 @@ Choose the dependency profile appropriate to the task:
 
 The equivalent source-checkout extras are `.[full]` for TensorFlow/MLflow and
 `.[test]` for pytest. A normal `pip install .` remains the smaller production
-installation. These extras are part of the `1.4.0.dev0` development metadata
-and are not retroactively available from the published `1.3.0` wheel.
+installation. These extras are available from the final `1.4.0` source and wheel
+and are not retroactively available from earlier releases.
 
 ## Reproduction
 
@@ -282,7 +287,7 @@ Project-authored evidence is tracked in these records:
 - [Independent validation](reports/independent_validation.md)
 - [RNAAS-length manuscript draft](reports/rnaas_draft.md)
 - [AASTeX RNAAS submission package](manuscript/README.md)
-- [Zenodo software archive](https://doi.org/10.5281/zenodo.22294859) and [archival record](docs/project/zenodo-doi.md)
+- [Zenodo software archive](https://doi.org/10.5281/zenodo.22294858) and [archival record](docs/project/zenodo-doi.md)
 - [Documentation and consistency audit](reports/documentation_audit.md)
 - [Workbench implementation and verification](reports/workbench_verification.md)
 - [Archived research preprint v1.0.0](output/pdf/sxs_preprint_v1.0.0.pdf) — see [publication status and corrections](docs/project/publication.md) before reuse
@@ -319,14 +324,14 @@ If SXS materially supports your research or technical work, cite the release met
 
 ```text
 Andrean, R. (2026). SCIX Exoplanet Search (SXS): Reproducible Kepler
-Transit Recovery and Independent Vetting (Version 1.3.0).
+Transit Recovery and Independent Vetting (Version 1.4.0).
 Science Experimental Technologies.
-https://doi.org/10.5281/zenodo.22294859
+https://doi.org/10.5281/zenodo.22294858
 ```
 
-Use the version DOI above when citing v1.3.0. The concept DOI
-[`10.5281/zenodo.22294858`](https://doi.org/10.5281/zenodo.22294858)
-resolves to the latest archived SXS version.
+The concept DOI above resolves to the latest archived SXS version. Cite the
+version-specific DOI recorded on Zenodo when exact-release identification is
+required.
 
 Also cite the relevant mission archives, catalogs, and scientific software—including [Lightkurve](https://lightkurve.github.io/lightkurve/), [Astroquery](https://astroquery.readthedocs.io/), and [`batman`](https://lkreidberg.github.io/batman/)—when their data or methods are used.
 

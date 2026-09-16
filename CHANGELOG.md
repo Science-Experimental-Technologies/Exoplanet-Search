@@ -4,6 +4,8 @@ All notable changes to this project are documented in this file. The format foll
 
 ## [Unreleased]
 
+## [1.4.0] - 2026-09-16
+
 ### Added
 
 - `sxs --version` for an explicit CLI version check.
@@ -26,6 +28,9 @@ All notable changes to this project are documented in this file. The format foll
   DOI-backed software release.
 
 ### Changed
+
+- Declared v1.4.0 the final planned feature release, with future maintenance
+  limited to critical security, packaging, and scientific-record corrections.
 
 - Baseline, scale-up, candidate-search, and independent-validation entry points
   now reject invalid configurations before creating workflow artifacts.
@@ -148,7 +153,8 @@ All notable changes to this project are documented in this file. The format foll
 - The scale-up program expanded the labeled data, froze model selection, conducted the bounded candidate search, completed independent validation, and prepared publication artifacts.
 - Public version numbering begins with the `1.0.0` release.
 
-[Unreleased]: https://github.com/Science-Experimental-Technologies/Exoplanet-Search/compare/v1.3.0...HEAD
+[Unreleased]: https://github.com/Science-Experimental-Technologies/Exoplanet-Search/compare/v1.4.0...HEAD
+[1.4.0]: https://github.com/Science-Experimental-Technologies/Exoplanet-Search/compare/v1.3.0...v1.4.0
 [1.3.0]: https://github.com/Science-Experimental-Technologies/Exoplanet-Search/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/Science-Experimental-Technologies/Exoplanet-Search/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/Science-Experimental-Technologies/Exoplanet-Search/compare/v1.0.0...v1.1.0

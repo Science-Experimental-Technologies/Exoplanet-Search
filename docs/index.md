@@ -24,6 +24,11 @@ hide:
     0 strong candidates, 1 weak candidate, and 19 likely false positives. Model
     scores prioritize review; they are not planetary probabilities.
 
+!!! note "Project status"
+    Version 1.4.0 is the final planned feature release. The repository remains
+    available as a reproducible scientific and software record; only critical
+    security, packaging, or record-integrity corrections are planned.
+
 ## What SXS does
 
 SXS turns public mission data into an auditable evidence record. It acquires

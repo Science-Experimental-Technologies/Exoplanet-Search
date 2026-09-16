@@ -2,7 +2,9 @@
 
 ## Supported version
 
-Security fixes are considered for the latest public release and the current default branch.
+Version 1.4.0 is the final planned feature release. Critical security fixes are
+considered for v1.4.0 and the current default branch; earlier releases are not
+supported.
 
 ## Reporting a vulnerability
 

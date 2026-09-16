@@ -8,15 +8,14 @@ the project license.
 
 ```text
 Andrean, R. (2026). SCIX Exoplanet Search (SXS): Reproducible Kepler
-Transit Recovery and Independent Vetting (Version 1.3.0).
+Transit Recovery and Independent Vetting (Version 1.4.0).
 Science Experimental Technologies.
-https://doi.org/10.5281/zenodo.22294859
+https://doi.org/10.5281/zenodo.22294858
 ```
 
-The version DOI `10.5281/zenodo.22294859` identifies the archived v1.3.0
-software release. The concept DOI
-[`10.5281/zenodo.22294858`](https://doi.org/10.5281/zenodo.22294858)
-represents all SXS versions and resolves to the latest archive.
+The concept DOI [`10.5281/zenodo.22294858`](https://doi.org/10.5281/zenodo.22294858)
+represents all SXS versions and resolves to the latest archive. Use the
+version-specific DOI shown by Zenodo when exact-release identification is required.
 
 GitHub's **Cite this repository** control reads `CITATION.cff` and can export
 common citation formats.
@@ -50,9 +49,10 @@ candidate classifications.
 
 ## Version choice
 
-Cite the exact version or commit used. Release 1.3.0 adds verified public
-distribution, security attestations, publication tooling, and the permanent
-Zenodo archive to the source-available software. The documentation website
-follows the default branch.
+Cite the exact version or commit used. Final release 1.4.0 adds installation
+diagnostics, configuration validation, isolated workspace management, checkpoint
+verification, support bundles, citation export, dependency profiles, and their
+associated distribution checks. The documentation website follows the final
+source state on the default branch.
 The scientific preprint artifact remains version 1.0.0 because
 the research metrics did not change in the packaging/documentation release.
