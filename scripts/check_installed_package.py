@@ -42,7 +42,7 @@ def check(wheel: Path) -> None:
             [str(cli), "citation", "--format", "json"], cwd=root, text=True
         ))
         assert citation["version"] == "1.4.0"
-        assert citation["doi"] == "10.5281/zenodo.22794079"
+        assert citation["doi"] == "10.5281/zenodo.22294858"
         verification = subprocess.run(
             [str(cli), "verify", "workspace", "--workflow", "baseline", "--json"],
             cwd=root, capture_output=True, text=True

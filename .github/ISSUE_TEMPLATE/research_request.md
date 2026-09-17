@@ -1,30 +1,37 @@
 ---
-name: Feature or research request
-about: Propose a software feature or methodologically justified research extension
-title: "[Research] "
-labels: enhancement, research
+name: Scientific-record correction
+about: Propose a correction to the frozen methodology, evidence, or publication record
+title: "[Record] "
+labels: research
 assignees: ""
 ---
 
-## Research question or need
+> SXS v1.4.0 is the final planned feature release. New features and research
+> extensions are not scheduled. Use this template only for a documented defect
+> or omission in the frozen scientific record.
 
-State the problem before proposing an implementation.
+## Record defect or omission
 
-## Proposed change
+Identify the exact report, artifact, metric, or methodological statement at issue.
 
-Describe the feature, data source, experiment, or validation method.
+## Proposed correction
+
+Describe the smallest correction that preserves the historical record.
 
 ## Scientific rationale
 
-Explain how the proposal improves validity, reproducibility, completeness, or interpretability. Cite relevant primary literature or official documentation when applicable.
+Explain why the current record is incorrect or incomplete. Cite relevant primary
+literature, official documentation, or repository evidence when applicable.
 
 ## Evaluation plan
 
-Define target-group leakage controls, comparison baselines, metrics, acceptance criteria, and expected computational cost.
+Define the evidence needed to accept the correction and whether any metric,
+candidate category, or manuscript statement would change.
 
 ## Data and provenance
 
-Identify required data, licensing or acknowledgment constraints, cache size, and whether new versioned artifacts are needed.
+Identify required data, provenance, licensing or acknowledgment constraints, and
+whether corrected versioned artifacts would be required.
 
 ## Claim boundary
 

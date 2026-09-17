@@ -10,6 +10,10 @@ assignees: ""
 
 Describe the observed problem and its scientific or software impact.
 
+SXS v1.4.0 is the final planned feature release. Maintenance is limited to
+critical security, packaging, reproducibility, and scientific-record integrity
+corrections; report security-sensitive details privately through `SECURITY.md`.
+
 ## Reproduction
 
 Provide the smallest reproducible command, configuration changes, and relevant target or artifact identifiers. Do not attach raw credentials or private data.

@@ -17,7 +17,7 @@ Run the AAS-recommended word-count command before submission:
 texcount -v3 -merge -incbib -dir -sub=none -utf8 -sum rnaas.tex
 ```
 
-The v1.3.0 software archive resolves at
-[`10.5281/zenodo.22294859`](https://doi.org/10.5281/zenodo.22294859).
+The final v1.4.0 software archive resolves at
+[`10.5281/zenodo.22794079`](https://doi.org/10.5281/zenodo.22794079).
 The software license and the journal article's CC BY 4.0 publishing license are
 separate rights grants.

@@ -13,7 +13,7 @@ CITATION = {
     "title": "SCIX Exoplanet Search (SXS): Reproducible Kepler Transit Recovery and Independent Vetting",
     "version": "1.4.0",
     "publisher": "Science Experimental Technologies",
-    "doi": "10.5281/zenodo.22794079",
+    "doi": "10.5281/zenodo.22294858",
     "repository": "https://github.com/Science-Experimental-Technologies/Exoplanet-Search",
 }
 

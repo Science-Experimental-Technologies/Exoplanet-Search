@@ -21,6 +21,11 @@ represents the complete SXS archive family.
 GitHub's **Cite this repository** control reads `CITATION.cff` and can export
 common citation formats.
 
+The top-level DOI in the immutable package metadata and `sxs citation` remains
+the stable concept DOI because the version DOI did not exist until Zenodo
+archived the release. `CITATION.cff` also records the subsequently assigned
+v1.4.0 version DOI in its identifiers; use that exact DOI in publications.
+
 The top-level CFF entry identifies the software release. The separately listed
 research report remains version 1.0.0; it does not replace the software citation.
 

@@ -44,7 +44,7 @@ Checked against:
 
 `python scripts/check_repository_docs.py` counts whitespace-separated tokens conservatively, including Markdown table separators. Abstract count excludes its heading. Body count starts at Data and Methods and includes headings, table cells, acknowledgments, and availability text, but excludes abstract and references. Total count includes the entire file, including title, author/affiliation, abstract, references, and formatting tokens.
 
-Counts after the public software DOI was inserted on 2026-09-04: **116 abstract words; 653 body words; 860 total tokens**. These satisfy the official abstract limit of 150 and total limit of 1,500; the final submission-system count must still be checked. The earlier 741-word count used an older draft and counting convention.
+Counts after the final public software DOI was inserted on 2026-09-17: **116 abstract words; 654 body words; 861 total tokens**. These satisfy the official abstract limit of 150 and total limit of 1,500; the final submission-system count must still be checked. The earlier 741-word count used an older draft and counting convention.
 
 ## AASTeX package check
 
@@ -54,7 +54,7 @@ repository's Markdown checker; its single table reproduces every row above;
 and the prose retains the same values for the v1
 and v2 benchmarks, screening counts, shortlist, FAP threshold, weak signal,
 period, FAP, catalog result, and limitations. It adds no candidate or discovery
-claim. Its availability statement identifies the public v1.3.0 software DOI;
+claim. Its availability statement identifies the final public v1.4.0 software DOI;
 the bibliography contains only sources named in the manuscript.
 
 The local environment does not provide `texcount` or an AASTeX LaTeX
